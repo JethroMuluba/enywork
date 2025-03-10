@@ -22,7 +22,7 @@ export default function AboutSection() {
           <div className="order-1 lg:order-2 flex flex-col gap-12">
             <div className="flex flex-col gap-3">
               <h2 className="section-title">A Propos de nous</h2>
-              <p className="section-subtitle">Mieux nous connaître, c'est vous donner de l'assurance.</p>
+              <p className="section-subtitle">Mieux nous connaître, c&apos;est vous donner de l&apos;assurance.</p>
             </div>
 
             <div className="flex flex-col gap-8">
@@ -34,8 +34,8 @@ export default function AboutSection() {
 
               <p className="text-secondary-light">
                 Créée depuis le mois de novembre 2017, la start-up ENYWORK vise à connecter les institutions
-                universitaires autour d'une base de données commune facilitant le contrôle d'authenticité des documents
-                académiques livrées et la traçabilité du parcours de l'étudiant.
+                universitaires autour d&apos;une base de données commune facilitant le contrôle d&apos;authenticité des documents
+                académiques livrées et la traçabilité du parcours de l&apos;étudiant.
               </p>
             </div>
 
