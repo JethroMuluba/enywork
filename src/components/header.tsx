@@ -5,9 +5,12 @@ import Link from "next/link"
 import Image from "next/image"
 import { Mail, MapPin, Phone, Menu, ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import data from "@/data/data.json"
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const logoEnywork = data.header[0].logo || '/default-logo.svg';
+  const logoEnyworkAlt = data.header[0]["logo-alt"] || 'Default Logo Alt Text';
 
   return (
     <header className="w-full">
@@ -34,11 +37,11 @@ export default function Header() {
       </div>
 
       {/* Main Header */}
-      <div className="py-4 shadow-sm">
+      <div className="py-4 px-15 shadow-sm">
         <div className="container-custom flex justify-between items-center">
           {/* Logo */}
           <Link href="/" className="relative h-[60px] w-[151px]">
-            <Image src="/placeholder.svg?height=60&width=151" alt="Enywork Logo" width={151} height={60} priority />
+            <Image src={logoEnywork} alt={logoEnyworkAlt} width={151} height={60} priority />
           </Link>
 
           {/* Desktop Navigation */}
