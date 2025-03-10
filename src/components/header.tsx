@@ -6,6 +6,7 @@ import Image from "next/image"
 import { Mail, MapPin, Phone, Menu, ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import data from "@/data/data.json"
+import { HeaderButton } from "./ui/headerButton"
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -24,20 +25,20 @@ export default function Header() {
 
           <div className="flex items-center gap-2">
             <MapPin className="w-4 h-4 text-white" />
-            <span className="text-xs text-white font-made-infinity">
+            <span className="text-xs text-white">
               Ancienne Galerie Présidentielle, 6è niveau, Local 6B8, Kinshasa/Gombe
             </span>
           </div>
 
           <div className="flex items-center gap-2">
             <Phone className="w-4 h-4 text-white" />
-            <span className="text-xs text-white font-made-infinity">+243 899 467 398</span>
+            <span className="text-xs text-white">+243 899 467 398</span>
           </div>
         </div>
       </div>
 
       {/* Main Header */}
-      <div className="py-4 px-15 shadow-sm">
+      <div className="py-4 px-15 shadow-sm text-sm poppins-regular">
         <div className="container-custom flex justify-between items-center">
           {/* Logo */}
           <Link href="/" className="relative h-[60px] w-[151px]">
@@ -72,9 +73,11 @@ export default function Header() {
           </nav>
 
           {/* Contact Button & Mobile Menu */}
-          <div className="flex items-center gap-4">
-            <Link href="/contact" className="hidden md:flex btn-primary">
-              <span>CONTACT</span>
+
+          <HeaderButton />
+          {/* <div className="flex items-center gap-4">
+            <Link href="/#" className="hidden md:flex btn-primary">
+              <span>CHATS</span>
               <ArrowRight className="w-5 h-5" />
             </Link>
 
@@ -86,7 +89,7 @@ export default function Header() {
             >
               <Menu className="w-5 h-5" />
             </Button>
-          </div>
+          </div> */}
         </div>
       </div>
 
