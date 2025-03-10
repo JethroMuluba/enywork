@@ -4,9 +4,10 @@ import { useState } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { Mail, MapPin, Phone, Menu, ArrowRight } from "lucide-react"
-import { Button } from "@/components/ui/button"
+// import { Button } from "@/components/ui/button"
 import data from "@/data/data.json"
 import { HeaderButton } from "./ui/headerButton"
+import { Button } from "./ui/button"
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -75,11 +76,11 @@ export default function Header() {
           {/* Contact Button & Mobile Menu */}
 
           <HeaderButton />
-          {/* <div className="flex items-center gap-4">
-            <Link href="/#" className="hidden md:flex btn-primary">
+          <div className="flex items-center gap-4">
+            {/* <Link href="/#" className="hidden md:flex btn-primary">
               <span>CHATS</span>
               <ArrowRight className="w-5 h-5" />
-            </Link>
+            </Link> */}
 
             <Button
               variant="default"
@@ -89,7 +90,7 @@ export default function Header() {
             >
               <Menu className="w-5 h-5" />
             </Button>
-          </div> */}
+          </div>
         </div>
       </div>
 
