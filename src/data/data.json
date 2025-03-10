@@ -1,0 +1,446 @@
+{
+    "header": [
+        {
+            "id" : 0,
+            "logo" : "https://res.cloudinary.com/dr8ofciki/image/upload/v1741366220/Enywork/Logo-Enywork.png",
+            "logo-alt" : "Enywork Logo"
+        },
+
+        {
+            "id" : 1,
+            "nav-links" : [
+                {
+                    "id" : 0,
+                    "name" : "ACCUEIL"
+                },
+
+                {
+                    "id" : 1,
+                    "name" : "A PROPOS"
+                },
+
+                {
+                    "id" : 2,
+                    "name" : "RÉALISATIONS"
+                },
+
+                {
+                    "id" : 3,
+                    "name" : "NOS SERVICES"
+                },
+
+                {
+                    "id" : 4,
+                    "name" : "NOTRE ÉQUIPE"
+                },
+
+                {
+                    "id" : 5,
+                    "name" : "BLOG"
+                }
+            ]   
+        }
+    ],
+
+    "footer": [
+        {
+            "logo" : "url",
+            "subtitle" : "Travaillons ensemble sur la réussite de vos projets.",
+            "site-menu" : [
+                {
+                    "id" : 0,
+                    "name" : "Accueil"
+                },
+
+                {
+                    "id" : 1,
+                    "name" : "Accueil"
+                },
+
+                {
+                    "id" : 2,
+                    "name" : "Accueil"
+                },
+
+                {
+                    "id" : 3,
+                    "name" : "Accueil"
+                },
+
+                {
+                    "id" : 4,
+                    "name" : "Accueil"
+                },
+
+                {
+                    "id" : 5,
+                    "name" : "Accueil"
+                },
+
+                {
+                    "id" : 6,
+                    "name" : "Accueil"
+                }
+            ],
+            "contacts" : [
+                {
+                    "phone" : "+243 899 467 398",
+                    "mail" : "contact@enywork.com",
+                    "address" : "Ancienne Galerie Présidentielle, 6è niveau, Local 6B8, Kinshasa/Gombe"
+                }
+            ],
+
+            "social-links" : [
+                {
+                    "id" : 0,
+                    "name" : "Instagram",
+                    "link" : "https://www.instagram.com/"
+                },
+
+                {
+                    "id" : 1,
+                    "name" : "Tiktok",
+                    "link" : "https://www.tiktok.com/"
+                },
+
+                {
+                    "id" : 2,
+                    "name" : "Facebook",
+                    "link" : "https://www.facebook.com/"
+                },
+
+                {
+                    "id" : 3,
+                    "name" : "X",
+                    "link" : "https://www.x.com/"
+                },
+
+                {
+                    "id" : 4,
+                    "name" : "Linkedin",
+                    "link" : "https://www.linkedin.com/"
+                }
+        ]
+    }
+    ],
+
+    "home": [
+        {
+            "id" : 0,
+            "hero-section" : [
+                {
+                    "title" : "Digitalisez votre Travail grâce au Numérique",
+                    "subtitle" : "Confiez-nous vos besoin, laissez-vous guider par nos experts et travaillons ensemble sur la réussite de vos projets. ",
+                    "image" : "url"
+                }
+            ]
+        },
+
+        {
+            "id" : 1,
+            "about-us-section" : [
+                {
+                    "image" : "url",
+                    "title" : "A propos de nous",
+                    "subtitle" : "Mieux nous connaître, c'est vous donner de l'assurance.",
+                    "text1" : "ENYWORK, start-up congolais, spécialisée dans la conception et le développement de logiciels sur mesure, implantée en RDC, développe les activités autour des différentes prestations informatiques dédiées aux entreprises et autres (organisation, établissement supérieur et universitaire et particulier).",
+                    "text2" : "Créée depuis le mois de novembre 2017, la start-up ENYWORK vise à connecter les institutions universitaires autour d'une base de données commune facilitant le contrôle d'authenticité des documents académiques livrées et la traçabilité du parcours de l'étudiant."
+                }
+            ]
+        },
+
+        {
+            "id" :2,
+            "optsolution-breadge" : [
+                {
+                    "background" : "url",
+                    "logo-optsolution-white" : "url",
+                    "title" : "Une solution sur mesure pour la gestion efficiente des établissements supérieurs et Universitaires."
+                }
+            ]
+        },
+
+        {
+            "id" : 3,
+            "our-realisation-section" : [
+                {
+                    "title" : "Nos Réalisations",
+                    "subtitle" : "Ce que nous avons accompli dans le passé peut vous inspirer."
+                }
+            ]
+
+        },
+
+        {
+            "id" : 4,
+            "our-services-section" : [
+                {
+                    "title" : "Nos Services",
+                    "subtitle" : "Vous offrir un service de qualité est la raison d'être de notre start-up.",
+                    "services" : [
+                        {
+                            "id" : 0,
+                            "icone" : "url",
+                            "service-name" : "Développement de Logiciels Saas",
+                            "service-detail" : "Solution sur mesure personnalisées et adaptées à vos besoins spécifiques."
+                        },
+
+                        {
+                            "id" : 1,
+                            "icone" : "url",
+                            "service-name" : "Développement des Appli. Web et Mobile",
+                            "service-detail" : "Créez des applications performantes et intuitives pour le web et le mobile."
+                        },
+
+                        {
+                            "id" : 2,
+                            "icone" : "url",
+                            "service-name" : "Hébergement VPS Sécurisé",
+                            "service-detail" : "Infrastructures locale performante à Kinshasa."
+                        },
+
+                        {
+                            "id" : 3,
+                            "icone" : "url",
+                            "service-name" : "Gestion des Données ",
+                            "service-detail" : "Solutions de stockage et analyse de données."
+                        },
+
+                        {
+                            "id" : 4,
+                            "icone" : "url",
+                            "service-name" : "Audit et Consulting",
+                            "service-detail" : "Optimisez votre stratégie digitale avec une expertise sur mesure."
+                        },
+
+                        {
+                            "id" : 5,
+                            "icone" : "url",
+                            "service-name" : "Formation sur les Technologies du Web",
+                            "service-detail" : "Accompagnement dans votre transition numérique."
+                        }
+                    ]
+                }
+            ]
+        },
+
+        {
+            "id" : 5,
+            "our-team" : [
+                {
+                    "title" : "Notre Équipe",
+                    "subtitle" : "Vous offrir un service de qualité est la raison d'être de notre start-up."
+                }
+            ]
+        },
+
+        {
+            "id" : 6,
+            "statistic-breadge" : [
+                {
+                    "title" : "Des solutions d'affaires élaborées avec un objectif et une stratégie",
+                    "subtitle" : "Lorem Upsum Lorem Upsum Lorem UpsumLorem Upsum Lorem Upsum Lorem Upsum Lorem Upsum",
+                    "left-title" : "La bonne solution pour votre entreprise",
+                    "statistic" : [
+                        {
+                            "id" : 0,
+                            "statistic-name" : "Hébergement VSP Sécurisé",
+                            "pourcent" : "80%"
+                        },
+
+                        {
+                            "id" : 1,
+                            "statistic-name" : "Développement de Logiciels Saas",
+                            "pourcent" : "90%"
+                        },
+
+                        {
+                            "id" : 2,
+                            "statistic-name" : "Gestion des Données",
+                            "pourcent" : "85%"
+                        },
+
+                        {
+                            "id" : 3,
+                            "statistic-name" : "Audit et Consulting",
+                            "pourcent" : "70%"
+                        }
+
+                    ]
+                }
+            ]
+        },
+
+        {
+            "id" : 7,
+            "our-partners" : [
+                {
+                    "title" : "Ils nous ont fait confiance",
+                    "partners-logo" : [
+                        {
+                            "id" : 0,
+                            "logo" : "url"
+                        },
+
+                        {
+                            "id" : 1,
+                            "logo" : "url"
+                        },
+
+                        {
+                            "id" : 2,
+                            "logo" : "url"
+                        },
+
+                        {
+                            "id" : 3,
+                            "logo" : "url"
+                        },
+
+                        {
+                            "id" : 4,
+                            "logo" : "url"
+                        },
+
+                        {
+                            "id" : 5,
+                            "logo" : "url"
+                        },
+
+                        {
+                            "id" : 6,
+                            "logo" : "url"
+                        },
+
+                        {
+                            "id" : 7,
+                            "logo" : "url"
+                        },
+
+                        {
+                            "id" : 8,
+                            "logo" : "url"
+                        },
+
+                        {
+                            "id" : 9,
+                            "logo" : "url"
+                        },
+
+                        {
+                            "id" : 10,
+                            "logo" : "url"
+                        },
+
+                        {
+                            "id" : 11,
+                            "logo" : "url"
+                        },
+
+                        {
+                            "id" : 12,
+                            "logo" : "url"
+                        }
+                    ]
+                }
+            ]
+        },
+
+        {
+            "id" : 8,
+            "testimonial-section" : [
+                {
+                    "title" : "Ce qu'ils disent de nous",
+                    "subtitle" : "Des témoignages forts et authentiques provenant des grandes autorités de ce pays et d'ailleurs.",
+                    "testimonial" : [
+                        {
+                            "id" : 0,
+                            "testimonial-name" : "Jethro Muluba",
+                            "testimonial-post" : "Ui & Ux et Dev Web Full-Stack",
+                            "testimonial-image" : "url",
+                            "testimonial-text" : "Une expérience exceptionnelle ! Leur capacité à s'adapter à nos besoins spécifiques a été un atout majeur dans notre croissance rapide."
+                        },
+
+                        {
+                            "id" : 1,
+                            "testimonial-name" : "Jethro Muluba",
+                            "testimonial-post" : "Ui & Ux et Dev Web Full-Stack",
+                            "testimonial-image" : "url",
+                            "testimonial-text" : "Une expérience exceptionnelle ! Leur capacité à s'adapter à nos besoins spécifiques a été un atout majeur dans notre croissance rapide."
+                        },
+
+                        {
+                            "id" : 2,
+                            "testimonial-name" : "Jethro Muluba",
+                            "testimonial-post" : "Ui & Ux et Dev Web Full-Stack",
+                            "testimonial-image" : "url",
+                            "testimonial-text" : "Une expérience exceptionnelle ! Leur capacité à s'adapter à nos besoins spécifiques a été un atout majeur dans notre croissance rapide."
+                        }
+                    ]
+                }
+            ]
+        },
+
+        {
+            "id" : 9,
+            "last-blog-section" : [
+                {
+                    "title" : "Derniers Actualités",
+                    "subtitle" : "Suivez nos actualités pour rester informé de nos événements et bien plus encore.",
+                    "blog" : [
+                        {
+                            "id" : 0,
+                            "blog-image" : "url",
+                            "blog-title" : "Les derniers tendances en développement web 2025",
+                            "blog-subtitle" : "Découvrez les technologie et frameworks qui domineront le développement web cette année...",
+                            "profile-image" : "url",
+                            "profile-name" : "Yusuf Heri",
+                            "profile-post" : "CEO, Enywork"
+                        },
+
+                        {
+                            "id" : 1,
+                            "blog-image" : "url",
+                            "blog-title" : "Cloud Computing: Les meilleures pratiques",
+                            "blog-subtitle" : "Optimisez votre infrastructure cloud avec nos conseil d'experts...",
+                            "profile-image" : "url",
+                            "profile-name" : "Franck Mbuyi",
+                            "profile-post" : "CTO, Enywork"
+                        },
+
+                        {
+                            "id" : 2,
+                            "blog-image" : "url",
+                            "blog-title" : "Guide complet du Design System en 2025",
+                            "blog-subtitle" : "Comment créez et maintenir un design system efficace pour votre équipe...",
+                            "profile-image" : "url",
+                            "profile-name" : "Jethro Muluba",
+                            "profile-post" : "Ui/Ux Designer, Enywork"
+                        }
+                    ]
+                }
+            ]
+        },
+
+        {
+            "id" : 10,
+            "newsletter-breadge" : [
+                {
+                    "background" : "url",
+                    "title" : "Restez Connecter avec nous",
+                    "icone" : "url",
+                    "subtitle" : "Inscrivez-vous à notre newsletter pour recevoir les derniers articles et actualités par email.",
+                    "warning-message" : "Votre adresse email est utilisée par Enywork SARL, en qualité de responsable de traitement, à des fins de prospection commerciale (nouveautés, actualités, services...). Pour connaître notre Politique de données personnelles et en savoir plus sur vos droits, veuillez vous rendre sur la page Protection des données personnelles"
+                }
+            ]
+        }
+    ],
+
+    "about-us" : [
+
+    ],
+
+    "our-realisations" : [
+
+    ]
+}
