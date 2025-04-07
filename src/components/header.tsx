@@ -17,7 +17,7 @@ export default function Header() {
   return (
     <header className="w-full">
       {/* Top Header */}
-      <div className="bg-gradient-to-r from-[#320001] to-[#BD2222] poppins-regular py-2 px-15 hidden md:block">
+      <div className="bg-gradient-to-r from-[#320001] to-[#BD2222] poppins-regular py-2 px-15 hidden lg:block">
         <div className="container-custom flex flex-col md:flex-row justify-between items-center gap-2 md:gap-0">
           <div className="flex items-center gap-2">
             <Mail className="w-4 h-4 text-white" />
@@ -39,7 +39,7 @@ export default function Header() {
       </div>
 
       {/* Main Header */}
-      <div className="py-4 px-15 shadow-sm text-sm poppins-regular">
+      <div className="py-4 px-4 md:px-15 lg:px-25 2xl:px-35 shadow-sm text-sm poppins-regular">
         <div className="container-custom flex justify-between items-center">
           {/* Logo */}
           <Link href="/" className="relative h-[60px] w-[151px]">
@@ -52,7 +52,7 @@ export default function Header() {
               ACCUEIL
             </Link>
             <span className="text-dark-secondary h-3 w-px">|</span>
-            <Link href="/a-propos" className="text-secondary hover:text-primary transition-colors">
+            <Link href="/about" className="text-secondary hover:text-primary transition-colors">
               A PROPOS
             </Link>
             <span className="text-dark-secondary h-3 w-px">|</span>
