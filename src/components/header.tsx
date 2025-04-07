@@ -39,7 +39,7 @@ export default function Header() {
       </div>
 
       {/* Main Header */}
-      <div className="py-4 px-4 md:px-15 lg:px-25 2xl:px-35 shadow-sm text-sm poppins-regular">
+      <div className="py-4 px-4 md:px-8 lg:px-15  shadow-sm text-sm poppins-regular">
         <div className="container-custom flex justify-between items-center">
           {/* Logo */}
           <Link href="/" className="relative h-[60px] w-[151px]">
