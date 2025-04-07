@@ -3,7 +3,7 @@
 import { useState } from "react"
 import Link from "next/link"
 import Image from "next/image"
-import { Mail, MapPin, Phone, Menu, ArrowRight } from "lucide-react"
+import { Mail, MapPin, Phone, Menu, ArrowRight, AlignRight } from "lucide-react"
 // import { Button } from "@/components/ui/button"
 import data from "@/data/data.json"
 import { HeaderButton } from "./ui/headerButton"
@@ -51,23 +51,23 @@ export default function Header() {
             <Link href="/" className="text-secondary border-b border-primary px-1 py-1.5">
               ACCUEIL
             </Link>
-            <span className="text-dark-secondary h-3 w-px">|</span>
+            {/* <span className="text-dark-secondary h-3 w-px">|</span> */}
             <Link href="/about" className="text-secondary hover:text-primary transition-colors">
               A PROPOS
             </Link>
-            <span className="text-dark-secondary h-3 w-px">|</span>
+            {/* <span className="text-dark-secondary h-3 w-px">|</span> */}
             <Link href="/realisations" className="text-secondary hover:text-primary transition-colors">
               RÉALISATIONS
             </Link>
-            <span className="text-dark-secondary h-3 w-px">|</span>
+            {/* <span className="text-dark-secondary h-3 w-px">|</span> */}
             <Link href="/services" className="text-secondary hover:text-primary transition-colors">
               SERVICES
             </Link>
-            <span className="text-dark-secondary h-3 w-px">|</span>
+            {/* <span className="text-dark-secondary h-3 w-px">|</span> */}
             <Link href="/equipe" className="text-secondary hover:text-primary transition-colors">
               ÉQUIPE
             </Link>
-            <span className="text-dark-secondary h-3 w-px">|</span>
+            {/* <span className="text-dark-secondary h-3 w-px">|</span> */}
             <Link href="/blogs" className="text-secondary hover:text-primary transition-colors">
               BLOGS
             </Link>
@@ -75,20 +75,16 @@ export default function Header() {
 
           {/* Contact Button & Mobile Menu */}
 
-          <HeaderButton />
           <div className="flex items-center gap-4">
-            {/* <Link href="/#" className="hidden md:flex btn-primary">
-              <span>CHATS</span>
-              <ArrowRight className="w-5 h-5" />
-            </Link> */}
+            <HeaderButton />
 
             <Button
               variant="default"
               size="icon"
-              className="lg:hidden rounded-full"
+              className="bg-[#E10919] rounded-full"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
-              <Menu className="w-5 h-5" />
+              <AlignRight className="w-5 h-5 text-white" />
             </Button>
           </div>
         </div>
