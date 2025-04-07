@@ -9,9 +9,11 @@ import data from "@/data/data.json"
 import { HeaderButton } from "./ui/headerButton"
 import { Button } from "./ui/button"
 import MenuHamburger from "./MenuHamburger"
+import DesktopMenu from "./desktopMenu"
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isDesktopMenuOpen, setIsDesktopMenuOpen] = useState(false)
   const logoEnywork = data.header[0].logo || '/default-logo.svg';
   const logoEnyworkAlt = data.header[0]["logo-alt"] || 'Default Logo Alt Text';
 
@@ -84,10 +86,13 @@ export default function Header() {
               variant="default"
               size="icon"
               className=" hidden lg:block bg-[#E10919]  rounded-full"
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              onClick={() => setIsDesktopMenuOpen(true)}
+              
             >
-              <AlignRight className="w-5 h-5 text-white m-2" />
+              <AlignRight className="w-5 h-5 text-white m-2"  />
             </Button>
+
+            <DesktopMenu isOpen={isDesktopMenuOpen} onClose={() => setIsDesktopMenuOpen(false)} />
 
           {/* Mobile menu */}
             <MenuHamburger />
