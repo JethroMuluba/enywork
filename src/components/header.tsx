@@ -78,6 +78,7 @@ export default function Header() {
           <div className="flex items-center gap-4">
             <HeaderButton />
 
+          {/* Desktop menu */}
             <Button
               variant="default"
               size="icon"
@@ -86,6 +87,17 @@ export default function Header() {
             >
               <AlignRight className="w-5 h-5 text-white m-2" />
             </Button>
+
+          {/* Mobile menu */}
+          <Button
+              variant="default"
+              size="icon"
+              className=" block lg:hidden bg-[#E10919]  rounded-full"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+            >
+              <AlignRight className="w-5 h-5 text-white m-2" />
+            </Button>
+            
           </div>
         </div>
       </div>
