@@ -39,7 +39,7 @@ return(
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         transition={{ duration: 0.2 }}
-        className="fixed left-0  right-0 top-[4.4rem] "
+        className="fixed left-0  right-0 top-[6rem] "
       >
     <nav className="flex flex-col gap-2 sticky  text-xl bg-white ">
 
