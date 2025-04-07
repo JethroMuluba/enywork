@@ -53,7 +53,7 @@ return(
                 damping: 20,
                 delay: 0.1,
                 }}
-                className='flex items-center  gap-[20px] text-sm font-medium py-[20px] px-[27px]  hover:bg-[#2B2C2C] hover:text-[#FEB633]  '
+                className='flex items-center  gap-[20px] text-sm font-medium py-[20px] px-[27px]  hover:bg-[#E10919] hover:text-white  '
                 >
                     <a href='#home'> ACCUEIL </a>
             </motion.li>
@@ -67,7 +67,7 @@ return(
                 damping: 20,
                 delay: 0.1,
                 }}
-                className='flex items-center  gap-[20px] text-sm font-medium  py-[20px] px-[27px] hover:bg-[#2B2C2C] hover:text-[#FEB633] '
+                className='flex items-center  gap-[20px] text-sm font-medium  py-[20px] px-[27px] hover:bg-[#E10919] hover:text-white'
                 >
                     <a href='#about-me'> A PROPOS </a>
         </motion.li>
@@ -81,7 +81,7 @@ return(
                 damping: 20,
                 delay: 0.1,
                 }}
-                className='flex items-center  gap-[20px] text-sm font-medium py-[20px] px-[27px] hover:bg-[#2B2C2C] hover:text-[#FEB633] '
+                className='flex items-center  gap-[20px] text-sm font-medium py-[20px] px-[27px] hover:bg-[#E10919] hover:text-white'
                 >
                 <a href='#services'> RÉALISATIONS </a>
         </motion.li>
@@ -95,7 +95,7 @@ return(
                 damping: 20,
                 delay: 0.1,
                 }}
-                className='flex items-center  gap-[20px] text-sm font-medium py-[20px] px-[27px] hover:bg-[#2B2C2C] hover:text-[#FEB633] '
+                className='flex items-center  gap-[20px] text-sm font-medium py-[20px] px-[27px] hover:bg-[#E10919] hover:text-white'
                 >
                 <a href='#experiences'> SERVICE </a>
         </motion.li>
@@ -109,7 +109,7 @@ return(
                 damping: 20,
                 delay: 0.1,
                 }}
-                className='flex items-center  gap-[20px] text-sm font-medium py-[20px] px-[27px] hover:bg-[#2B2C2C] hover:text-[#FEB633] '
+                className='flex items-center  gap-[20px] text-sm font-medium py-[20px] px-[27px] hover:bg-[#E10919] hover:text-white'
                 >
                 <a href='#experiences'> ÉQUIPE </a>
         </motion.li>
@@ -124,7 +124,7 @@ return(
                 damping: 20,
                 delay: 0.1,
                 }}
-                className='flex items-center  gap-[20px] text-sm font-medium py-[20px] px-[27px] hover:bg-[#2B2C2C] hover:text-[#FEB633] '
+                className='flex items-center  gap-[20px] text-sm font-medium py-[20px] px-[27px] hover:bg-[#E10919] hover:text-white'
                 >
                 <a href='#contact-me'> BLOGS </a>
         </motion.li>
