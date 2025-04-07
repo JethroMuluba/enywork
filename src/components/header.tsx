@@ -3,11 +3,12 @@
 import { useState } from "react"
 import Link from "next/link"
 import Image from "next/image"
-import { Mail, MapPin, Phone, Menu, ArrowRight, AlignRight } from "lucide-react"
+import { Mail, MapPin, Phone, AlignRight } from "lucide-react"
 // import { Button } from "@/components/ui/button"
 import data from "@/data/data.json"
 import { HeaderButton } from "./ui/headerButton"
 import { Button } from "./ui/button"
+import MenuHamburger from "./MenuHamburger"
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -89,21 +90,14 @@ export default function Header() {
             </Button>
 
           {/* Mobile menu */}
-          <Button
-              variant="default"
-              size="icon"
-              className=" block lg:hidden bg-[#E10919]  rounded-full"
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-            >
-              <AlignRight className="w-5 h-5 text-white m-2" />
-            </Button>
+            <MenuHamburger />
             
           </div>
         </div>
       </div>
 
       {/* Mobile Menu */}
-      {isMenuOpen && (
+      {/* {isMenuOpen && (
         <div className="lg:hidden bg-white shadow-md py-4">
           <div className="container-custom flex flex-col gap-4">
             <Link href="/" className="text-secondary hover:text-primary transition-colors py-2 border-b">
@@ -130,7 +124,7 @@ export default function Header() {
             </Link>
           </div>
         </div>
-      )}
+      )} */}
     </header>
   )
 }
