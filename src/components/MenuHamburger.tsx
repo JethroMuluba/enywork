@@ -8,18 +8,18 @@ function MenuBurger() {
 const [isOpen, setOpen] = useState(false);
 const hamburgerRef = useRef(null);
 
-// useEffect (() => {
-//     const handleClickOutside = (event) => {
-//         if (hamburgerRef.current && !hamburgerRef.current.contains(event.target)) {
-//             setOpen(false);
-//         }
-//     };
+useEffect (() => {
+    const handleClickOutside = (event: MouseEvent) => {
+        if (hamburgerRef.current && !(hamburgerRef.current as HTMLElement).contains(event.target as Node)) {
+            setOpen(false);
+        }
+    };
 
-//     document.addEventListener("mousedown", handleClickOutside);
-//     return () => {
-//         document.removeEventListener("mousedown", handleClickOutside);
-//     };
-// }, []);
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+        document.removeEventListener("mousedown", handleClickOutside);
+    };
+}, []);
 
 // const navigate = useNavigate();
 // const handleClick = (path) => {
