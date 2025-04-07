@@ -81,10 +81,10 @@ export default function Header() {
             <Button
               variant="default"
               size="icon"
-              className="bg-[#E10919] rounded-full"
+              className=" hidden lg:block bg-[#E10919]  rounded-full"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
-              <AlignRight className="w-5 h-5 text-white" />
+              <AlignRight className="w-5 h-5 text-white m-2" />
             </Button>
           </div>
         </div>
