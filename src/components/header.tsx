@@ -12,7 +12,7 @@ import MenuHamburger from "./MenuHamburger"
 import DesktopMenu from "./desktopMenu"
 
 export default function Header() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  // const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isDesktopMenuOpen, setIsDesktopMenuOpen] = useState(false)
   const logoEnywork = data.header[0].logo || '/default-logo.svg';
   const logoEnyworkAlt = data.header[0]["logo-alt"] || 'Default Logo Alt Text';
