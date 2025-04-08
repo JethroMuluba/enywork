@@ -45,9 +45,9 @@ export default function DesktopMenu({ isOpen, onClose }: MobileMenuProps) {
         </div>
 
         {/* Content */}
-        <div className="absolute w-[300px] flex flex-col gap-[25px] left-1/2 -translate-x-1/2 top-[82px]">
+        <div className="absolute w-[300px] flex flex-col gap-[15px] left-1/2 -translate-x-1/2 top-[82px]">
           {/* Heading */}
-          <h4 className="w-[311px] h-[74px] font-medium text-[26px] leading-[37px] text-[#E10919]">
+          <h4 className="w-[311px] h-[74px] font-medium text-[24px] leading-[37px] text-[#E10919]">
             Faisons bouger les choses ensemble
           </h4>
 
