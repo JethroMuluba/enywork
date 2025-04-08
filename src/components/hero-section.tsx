@@ -4,6 +4,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { ArrowRight } from "lucide-react"
 import data  from "@/data/data.json"
+import { motion } from 'framer-motion'
 
 export default function HeroSection() {
     const getTitle = data.home?.[0]?.heroSection?.[0]?.title;
@@ -11,12 +12,8 @@ export default function HeroSection() {
     const getCover = data.home?.[0]?.heroSection?.[0]?.cover;
     const getImage = data.home?.[0]?.heroSection?.[0]?.image;
   return (
-    <section className="relative overflow-hidden h-[734px] hero-section top-22 lg:top-31 py-4 pl-4 md:pl-8 lg:pl-15 custom-bg " style={{ backgroundImage: `url(${getCover})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
-      {/* <div className="absolute inset-0 bg-hero-pattern bg-cover bg-center opacity-20"></div> */}
-
-      <div className=" flex items-center">
-        <div className=" items-center">
-          <div className="flex flex-col gap-6 md:gap-12">
+    <section className="relative overflow-hidden font-[poppins] flex justify-between items-center h-[715px] hero-section top-22 lg:top-31 py-4 pl-4 md:pl-8 lg:pl-15 " style={{ backgroundImage: `url(${getCover})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+          <div className="flex flex-col gap-6 md:gap-12 w-1/2">
             <h1 className="text-3xl md:text-5xl lg:text-6xl font-medium text-white leading-tight">
               {getTitle}
             </h1>
@@ -25,23 +22,27 @@ export default function HeroSection() {
               {getSubTitle}
             </p>
 
-            <Link href="/services" className="btn-primary self-start">
-              <span>DÉCOUVRIR</span>
+            <Link href="/contact" className=" bg-[#E10919] hover:bg-[#B00813] px-8 py-4 rounded-lg font-medium text-white cursor-pointer self-start flex items-center gap-2 ">
+              <span>CONTACTEZ-NOUS</span>
               <ArrowRight className="w-5 h-5" />
             </Link>
           </div>
 
-          <div className="hidden lg:block ">
-            <Image
-              src={getImage || '/placeholder.svg?height=767&width=748'}
-              alt="Digital Innovation"
+          <div className="hidden lg:block w-1/2">
+            <motion.div
+              initial={{ x: 100, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+            >
+              <Image
+                src={getImage || '/placeholder.svg?height=767&width=748'}
+                alt="Digital Innovation"
                 width={748}
                 height={767}
-              className="absolute bottom-0 right-0"
-            />
+                className="w-full h-full object-cover"
+              />
+            </motion.div>
           </div>
-        </div>
-      </div>
     </section>
   )
 }
