@@ -17,8 +17,10 @@ export default function Header() {
   const logoEnywork = data.header[0].logo || '/default-logo.svg';
   const logoEnyworkAlt = data.header[0]["logo-alt"] || 'Default Logo Alt Text';
 
+  
+
   return (
-    <header className="w-full">
+    <header className=" fixed w-full z-50">
       {/* Top Header */}
       <div className="bg-gradient-to-r from-[#320001] to-[#BD2222] poppins-regular py-2 px-15 hidden lg:block">
         <div className="container-custom flex flex-col md:flex-row justify-between items-center gap-2 md:gap-0">
@@ -42,7 +44,7 @@ export default function Header() {
       </div>
 
       {/* Main Header */}
-      <div className="py-4 px-4 md:px-8 lg:px-15  shadow-sm text-sm poppins-regular">
+      <div className="w-full  backdrop-blur-xl py-4 px-4 md:px-8 lg:px-15  shadow-sm text-sm poppins-regular">
         <div className="container-custom flex justify-between items-center">
           {/* Logo */}
           <Link href="/" className="relative h-[60px] w-[151px]">

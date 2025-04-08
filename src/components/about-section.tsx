@@ -37,6 +37,42 @@ export default function AboutSection() {
                 universitaires autour d&apos;une base de données commune facilitant le contrôle d&apos;authenticité des documents
                 académiques livrées et la traçabilité du parcours de l&apos;étudiant.
               </p>
+
+              <p className="text-secondary-light">
+                ENYWORK, start-up congolais, spécialisée dans la conception et le développement de logiciels sur mesure,
+                implantée en RDC, développe les activités autour des différentes prestations informatiques dédiées aux
+                entreprises et autres (organisation, établissement supérieur et universitaire et particulier).
+              </p>
+
+              <p className="text-secondary-light">
+                Créée depuis le mois de novembre 2017, la start-up ENYWORK vise à connecter les institutions
+                universitaires autour d&apos;une base de données commune facilitant le contrôle d&apos;authenticité des documents
+                académiques livrées et la traçabilité du parcours de l&apos;étudiant.
+              </p>
+
+              <p className="text-secondary-light">
+                ENYWORK, start-up congolais, spécialisée dans la conception et le développement de logiciels sur mesure,
+                implantée en RDC, développe les activités autour des différentes prestations informatiques dédiées aux
+                entreprises et autres (organisation, établissement supérieur et universitaire et particulier).
+              </p>
+
+              <p className="text-secondary-light">
+                Créée depuis le mois de novembre 2017, la start-up ENYWORK vise à connecter les institutions
+                universitaires autour d&apos;une base de données commune facilitant le contrôle d&apos;authenticité des documents
+                académiques livrées et la traçabilité du parcours de l&apos;étudiant.
+              </p>
+
+              <p className="text-secondary-light">
+                ENYWORK, start-up congolais, spécialisée dans la conception et le développement de logiciels sur mesure,
+                implantée en RDC, développe les activités autour des différentes prestations informatiques dédiées aux
+                entreprises et autres (organisation, établissement supérieur et universitaire et particulier).
+              </p>
+
+              <p className="text-secondary-light">
+                Créée depuis le mois de novembre 2017, la start-up ENYWORK vise à connecter les institutions
+                universitaires autour d&apos;une base de données commune facilitant le contrôle d&apos;authenticité des documents
+                académiques livrées et la traçabilité du parcours de l&apos;étudiant.
+              </p>
             </div>
 
             <Link href="/contact" className="btn-primary self-start">
