@@ -3,7 +3,7 @@
 import { Button } from "@/components/ui/button"
 import { MessagesSquare } from 'lucide-react';
 
-export function HeaderButton() {
+export function ContactButton() {
   return( 
   
   <Button className="hidden lg:block bg-[#E10919] hover:bg-[#B00813] px-4 py-2 text-white cursor-pointer">

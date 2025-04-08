@@ -53,27 +53,27 @@ export default function Header() {
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center gap-5">
-            <Link href="/" className="text-secondary border-b border-primary px-1 py-1.5">
+            <Link href="/" className="text-secondary border-b border-primary hover:text-[#E10919] transition-colors px-1 py-1.5">
               ACCUEIL
             </Link>
             {/* <span className="text-dark-secondary h-3 w-px">|</span> */}
-            <Link href="/about" className="text-secondary hover:text-primary transition-colors">
+            <Link href="/about" className="text-secondary hover:text-[#E10919] transition-colors">
               A PROPOS
             </Link>
             {/* <span className="text-dark-secondary h-3 w-px">|</span> */}
-            <Link href="/realisations" className="text-secondary hover:text-primary transition-colors">
+            <Link href="/realisations" className="text-secondary hover:text-[#E10919] transition-colors">
               RÉALISATIONS
             </Link>
             {/* <span className="text-dark-secondary h-3 w-px">|</span> */}
-            <Link href="/services" className="text-secondary hover:text-primary transition-colors">
+            <Link href="/services" className="text-secondary hover:text-[#E10919] transition-colors">
               SERVICES
             </Link>
             {/* <span className="text-dark-secondary h-3 w-px">|</span> */}
-            <Link href="/equipe" className="text-secondary hover:text-primary transition-colors">
+            <Link href="/equipe" className="text-secondary hover:text-[#E10919] transition-colors">
               ÉQUIPE
             </Link>
             {/* <span className="text-dark-secondary h-3 w-px">|</span> */}
-            <Link href="/blogs" className="text-secondary hover:text-primary transition-colors">
+            <Link href="/blogs" className="text-secondary hover:text-[#E10919] transition-colors">
               BLOGS
             </Link>
           </nav>
@@ -87,7 +87,7 @@ export default function Header() {
             <Button
               variant="default"
               size="icon"
-              className=" hidden lg:block bg-[#E10919]  rounded-full"
+              className=" hidden lg:block bg-[#E10919] hover:bg-[#B00813]  rounded-full cursor-pointer"
               onClick={() => setIsDesktopMenuOpen(true)}
               
             >
