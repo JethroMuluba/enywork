@@ -10,22 +10,22 @@ interface MobileMenuProps {
 }
 
 export default function DesktopMenu({ isOpen, onClose }: MobileMenuProps) {
-  if (!isOpen) return null;
-
   const desktopMenuRef = useRef(null);
 
-  useEffect (() => {
+  useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
-        if (desktopMenuRef.current && !(desktopMenuRef.current as HTMLElement).contains(event.target as Node)) {
-            onClose();
-        }
+      if (desktopMenuRef.current && !(desktopMenuRef.current as HTMLElement).contains(event.target as Node)) {
+        onClose();
+      }
     };
 
     document.addEventListener("mousedown", handleClickOutside);
     return () => {
-        document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener("mousedown", handleClickOutside);
     };
-}, []);
+  }, [onClose]);
+
+  if (!isOpen) return null;
 
   return (
     <motion.div
