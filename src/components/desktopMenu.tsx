@@ -1,6 +1,8 @@
 "use client"
 import { X, Phone, Mail, MapPin } from "lucide-react"
 import { Instagram, Facebook, Twitter, Linkedin } from "lucide-react"
+import { useEffect, useRef } from "react"
+import { motion } from 'framer-motion';
 
 interface MobileMenuProps {
   isOpen: boolean
@@ -8,10 +10,32 @@ interface MobileMenuProps {
 }
 
 export default function DesktopMenu({ isOpen, onClose }: MobileMenuProps) {
-  if (!isOpen) return null
+  if (!isOpen) return null;
+
+  const desktopMenuRef = useRef(null);
+
+  useEffect (() => {
+    const handleClickOutside = (event: MouseEvent) => {
+        if (desktopMenuRef.current && !(desktopMenuRef.current as HTMLElement).contains(event.target as Node)) {
+            onClose();
+        }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+        document.removeEventListener("mousedown", handleClickOutside);
+    };
+}, []);
 
   return (
-    <div className="fixed inset-0 z-50 flex items-start justify-end top-[2rem]">
+    <motion.div
+      ref={desktopMenuRef}
+      initial={{ x: '100%' }}
+      animate={{ x: isOpen ? 0 : '100%' }}
+      exit={{ x: '100%' }}
+      transition={{ duration: 0.5, ease: 'easeInOut' }}
+      className="absolute left-0 right-0 top-[0.06rem] inset-0 z-50 flex items-start justify-end"
+    >
       <div className="relative w-[390px] h-[691px] bg-white rounded-bl-lg shadow-lg">
         {/* Header */}
         <div className="absolute w-full h-[57px] left-0 top-0 bg-[#F2F2F2]">
@@ -117,7 +141,7 @@ export default function DesktopMenu({ isOpen, onClose }: MobileMenuProps) {
           <span className="text-[20px] leading-[28px] text-white">ALLER SUR L&apos;ESPACE ADMIN</span>
         </div>
       </div>
-    </div>
+    </motion.div>
   )
 }
 
