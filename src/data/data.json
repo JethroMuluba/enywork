@@ -127,11 +127,11 @@
     "home": [
         {
             "id" : 0,
-            "hero-section" : [
+            "heroSection" : [
                 {
                     "title" : "Digitalisez votre Travail grâce au Numérique",
                     "subtitle" : "Confiez-nous vos besoin, laissez-vous guider par nos experts et travaillons ensemble sur la réussite de vos projets. ",
-                    "image" : "url"
+                    "image" : "https://res.cloudinary.com/dr8ofciki/image/upload/v1744114017/Enywork/hero-cover.webp"
                 }
             ]
         },
