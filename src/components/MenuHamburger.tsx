@@ -28,7 +28,7 @@ useEffect (() => {
 
 return(
 <div ref={hamburgerRef}  className=' block lg:hidden top-2'>
-    <div className='bg-[#E10919]  rounded-full'>
+    <div className='bg-[#E10919] hover:bg-[#B00813]  rounded-full'>
         <Hamburger rounded toggled={isOpen} toggle={setOpen} size={20} color="#FFFFFF"  />
     </div>
 
@@ -39,9 +39,9 @@ return(
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         transition={{ duration: 0.2 }}
-        className="fixed left-0  right-0 top-[6rem] "
+        className="fixed left-0  right-0 top-[5.6rem] "
       >
-    <nav className="flex flex-col gap-2 sticky  text-xl bg-white ">
+    <nav className="flex flex-col sticky  text-xl bg-white ">
 
         <ul className='flex flex-col gap-[px] text-[#1C2736] '>
             <motion.li
@@ -130,8 +130,12 @@ return(
         </motion.li>
 
         </ul>
-
+        <button className='bg-[#E10919] hover:bg-[#B00813] px-4 py-4 text-white text-sm font-medium cursor-pointer'>
+            CONTACTEZ-NOUS
+        </button>
     </nav>
+
+
     </motion.div>
     )}
     </AnimatePresence>

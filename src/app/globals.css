@@ -160,6 +160,17 @@
   font-style: italic;
 }
 
+.custom-bg {
+  background-size: cover;
+}
+
+@media (min-width: 640px) {
+  .custom-bg {
+    background-size: center;
+  }
+}
+
+
 @font-face {
   font-family: "MADE INFINITY PERSONAL USE";
   src: url("/src/fonts/MADEINFINITY\\ PERSONALUSE-Regular.otf") format("opentype");

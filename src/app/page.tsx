@@ -3,6 +3,7 @@
 import Header from "@/components/header"
 // import HeroSection from "@/components/hero-section"
 import AboutSection from "@/components/about-section"
+import HeroSection from "@/components/hero-section"
 // import OptSolutionSection from "@/components/optsolution-section"
 // import RealizationsSection from "@/components/realizations-section"
 // import ServicesSection from "@/components/services-section"
@@ -18,7 +19,7 @@ export default function Home() {
   return (
     <main className="min-h-screen">
       <Header />
-      {/* <HeroSection /> */}
+      <HeroSection />
       <AboutSection />
       {/* <OptSolutionSection /> */}
       {/* <RealizationsSection /> */}

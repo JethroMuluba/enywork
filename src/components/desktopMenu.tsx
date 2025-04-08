@@ -36,7 +36,7 @@ export default function DesktopMenu({ isOpen, onClose }: MobileMenuProps) {
       transition={{ duration: 0.5, ease: 'easeInOut' }}
       className="absolute left-0 right-0 top-[0.06rem] inset-0 z-50 flex items-start justify-end"
     >
-      <div className="relative w-[390px] h-[691px] bg-white rounded-bl-lg shadow-lg">
+      <div className="relative w-[390px] h-[590px] bg-white rounded-bl-lg shadow-lg">
         {/* Header */}
         <div className="absolute w-full h-[57px] left-0 top-0 bg-[#F2F2F2]">
           <button onClick={onClose} className="absolute w-[14px] h-[14px] right-[45px] top-1/2 -translate-y-1/2">
@@ -137,9 +137,9 @@ export default function DesktopMenu({ isOpen, onClose }: MobileMenuProps) {
         </div>
 
         {/* Footer */}
-        <div className="absolute w-full h-[82px] left-0 bottom-0 bg-[#E10919] flex items-center justify-center">
+        {/* <div className="absolute w-full h-[82px] left-0 bottom-0 bg-[#E10919] flex items-center justify-center">
           <span className="text-[20px] leading-[28px] text-white">ALLER SUR L&apos;ESPACE ADMIN</span>
-        </div>
+        </div> */}
       </div>
     </motion.div>
   )
