@@ -53,7 +53,7 @@ export default function Header() {
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center gap-5">
-            <Link href="/" className="text-secondary border-b border-primary hover:text-[#E10919] transition-colors px-1 py-1.5">
+            <Link href="/" className="text-secondary  text-[#E10919] transition-colors px-1 py-1.5">
               ACCUEIL
             </Link>
             {/* <span className="text-dark-secondary h-3 w-px">|</span> */}
