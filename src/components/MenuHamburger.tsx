@@ -41,9 +41,9 @@ return(
         transition={{ duration: 0.2 }}
         className="fixed left-0  right-0 top-[5.6rem] "
       >
-    <nav className="flex flex-col sticky  text-xl bg-white ">
+    <nav className="flex flex-col sticky border-t  border-t-[#E5E5E5]  text-xl bg-white ">
 
-        <ul className='flex flex-col gap-[px] text-[#1C2736] '>
+        <ul className='flex flex-col divide-y-1 divide-[#E5E5E5] items-center gap-[px] text-[#1C2736] '>
             <motion.li
                 initial={{ scale: 0, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
@@ -53,7 +53,7 @@ return(
                 damping: 20,
                 delay: 0.1,
                 }}
-                className='flex items-center  gap-[20px] text-sm font-medium py-[20px] px-[27px]  hover:bg-[#E10919] hover:text-white  '
+                className='flex w-full justify-center items-center text-center gap-[20px] text-sm font-medium py-[20px] px-[27px] hover:bg-[#E10919] hover:text-white'
                 >
                     <a href='#home'> ACCUEIL </a>
             </motion.li>
@@ -67,12 +67,12 @@ return(
                 damping: 20,
                 delay: 0.1,
                 }}
-                className='flex items-center  gap-[20px] text-sm font-medium  py-[20px] px-[27px] hover:bg-[#E10919] hover:text-white'
+                className='flex w-full justify-center items-center text-center gap-[20px] text-sm font-medium py-[20px] px-[27px] hover:bg-[#E10919] hover:text-white'
                 >
                     <a href='#about-me'> A PROPOS </a>
-        </motion.li>
+            </motion.li>
 
-        <motion.li
+            <motion.li
                 initial={{ scale: 0, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 transition={{
@@ -81,12 +81,12 @@ return(
                 damping: 20,
                 delay: 0.1,
                 }}
-                className='flex items-center  gap-[20px] text-sm font-medium py-[20px] px-[27px] hover:bg-[#E10919] hover:text-white'
+                className='flex w-full justify-center items-center text-center gap-[20px] text-sm font-medium py-[20px] px-[27px] hover:bg-[#E10919] hover:text-white'
                 >
                 <a href='#services'> RÉALISATIONS </a>
-        </motion.li>
+            </motion.li>
 
-        <motion.li
+            <motion.li
                 initial={{ scale: 0, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 transition={{
@@ -95,12 +95,12 @@ return(
                 damping: 20,
                 delay: 0.1,
                 }}
-                className='flex items-center  gap-[20px] text-sm font-medium py-[20px] px-[27px] hover:bg-[#E10919] hover:text-white'
+                className='flex w-full justify-center items-center text-center gap-[20px] text-sm font-medium py-[20px] px-[27px] hover:bg-[#E10919] hover:text-white'
                 >
                 <a href='#experiences'> SERVICE </a>
-        </motion.li>
+            </motion.li>
 
-        <motion.li
+            <motion.li
                 initial={{ scale: 0, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 transition={{
@@ -109,13 +109,12 @@ return(
                 damping: 20,
                 delay: 0.1,
                 }}
-                className='flex items-center  gap-[20px] text-sm font-medium py-[20px] px-[27px] hover:bg-[#E10919] hover:text-white'
+                className='flex w-full justify-center items-center text-center gap-[20px] text-sm font-medium py-[20px] px-[27px] hover:bg-[#E10919] hover:text-white'
                 >
                 <a href='#experiences'> ÉQUIPE </a>
-        </motion.li>
+            </motion.li>
 
-
-        <motion.li
+            <motion.li
                 initial={{ scale: 0, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 transition={{
@@ -124,15 +123,14 @@ return(
                 damping: 20,
                 delay: 0.1,
                 }}
-                className='flex items-center  gap-[20px] text-sm font-medium py-[20px] px-[27px] hover:bg-[#E10919] hover:text-white'
+                className='flex w-full justify-center items-center text-center gap-[20px] text-sm font-medium py-[20px] px-[27px] hover:bg-[#E10919] hover:text-white'
                 >
                 <a href='#contact-me'> BLOGS </a>
-        </motion.li>
-
+            </motion.li>
         </ul>
-        <button className='bg-[#E10919] hover:bg-[#B00813] px-4 py-4 text-white text-sm font-medium cursor-pointer'>
+        {/* <button className='bg-[#E10919] hover:bg-[#B00813] px-4 py-4 text-white text-sm font-medium cursor-pointer'>
             CONTACTEZ-NOUS
-        </button>
+        </button> */}
     </nav>
 
 
