@@ -139,9 +139,9 @@
 
         {
             "id" : 1,
-            "about-us-section" : [
+            "aboutUsSection" : [
                 {
-                    "image" : "url",
+                    "image" : "https://res.cloudinary.com/dr8ofciki/image/upload/v1745409097/Enywork/enywork-about-image.webp",
                     "title" : "A propos de nous",
                     "subtitle" : "Mieux nous connaître, c'est vous donner de l'assurance.",
                     "text1" : "ENYWORK, start-up congolais, spécialisée dans la conception et le développement de logiciels sur mesure, implantée en RDC, développe les activités autour des différentes prestations informatiques dédiées aux entreprises et autres (organisation, établissement supérieur et universitaire et particulier).",

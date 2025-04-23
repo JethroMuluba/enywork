@@ -17,7 +17,7 @@ import HeroSection from "@/components/hero-section"
 
 export default function Home() {
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen pt-[92px] lg:pt-[124px] ">
       <Header />
       <HeroSection />
       <AboutSection />

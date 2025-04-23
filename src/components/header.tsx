@@ -20,7 +20,7 @@ export default function Header() {
   
 
   return (
-    <header className=" fixed w-full z-50">
+    <header className=" fixed top-0 left-0 w-full z-50">
       {/* Top Header */}
       <div className="bg-gradient-to-r from-[#320001] to-[#BD2222] poppins-regular py-2 px-15 hidden lg:block">
         <div className="container-custom flex flex-col md:flex-row justify-between items-center gap-2 md:gap-0">
@@ -44,7 +44,7 @@ export default function Header() {
       </div>
 
       {/* Main Header */}
-      <div className="w-full bg-white  backdrop-blur-xl py-4 px-4 md:px-8 lg:px-15  shadow-sm text-sm poppins-regular">
+      <div className="w-full bg-[#F2F2F2] backdrop-blur-xl py-4 px-4 md:px-8 lg:px-15  shadow-sm text-sm poppins-regular">
         <div className="container-custom flex justify-between items-center">
           {/* Logo */}
           <Link href="/" className="relative h-[60px] w-[151px]">
