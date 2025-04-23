@@ -12,13 +12,13 @@ export default function HeroSection() {
     const getCover = data.home?.[0]?.heroSection?.[0]?.cover;
     const getImage = data.home?.[0]?.heroSection?.[0]?.image;
   return (
-    <section className="bg-fixed overflow-hidden font-[poppins] flex justify-between items-center h-[600px] lg:h-full md:pl-8 lg:pl-15 " style={{ backgroundImage: `url(${getCover})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+    <section className="bg-fixed overflow-hidden font-[poppins] flex justify-between items-center h-[600px] lg:h-full  lg:pl-15 " style={{ backgroundImage: `url(${getCover})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
           <motion.div 
           initial={{ x: -100, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="flex flex-col items-center lg:items-start gap-6 md:gap-8 lg:w-1/2 px-5">
-            <h1 className=" text-center lg:text-left text-3xl md:text-5xl lg:text-6xl font-semibold text-white leading-tight">
+            <h1 className=" text-center lg:text-left text-4xl md:text-5xl lg:text-6xl font-semibold text-white leading-tight">
               {getTitle}
             </h1>
 
