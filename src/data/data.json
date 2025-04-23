@@ -152,10 +152,10 @@
 
         {
             "id" :2,
-            "optsolution-breadge" : [
+            "optsolutionBreadge" : [
                 {
-                    "background" : "url",
-                    "logo-optsolution-white" : "url",
+                    "background" : "https://res.cloudinary.com/dr8ofciki/image/upload/v1745423139/Enywork/Background-optsolution.webp",
+                    "logoOptsolutionWhite" : "https://res.cloudinary.com/dr8ofciki/image/upload/v1745423387/Enywork/optsolution-white-logo.png",
                     "title" : "Une solution sur mesure pour la gestion efficiente des établissements supérieurs et Universitaires."
                 }
             ]
