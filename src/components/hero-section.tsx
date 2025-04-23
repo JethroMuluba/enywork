@@ -12,7 +12,7 @@ export default function HeroSection() {
     const getCover = data.home?.[0]?.heroSection?.[0]?.cover;
     const getImage = data.home?.[0]?.heroSection?.[0]?.image;
   return (
-    <section className="relative bg-fixed overflow-hidden font-[poppins] flex justify-between items-center h-[600px] lg:h-[715px] hero-section top-22 lg:top-31 py-4 pl-4 md:pl-8 lg:pl-15 " style={{ backgroundImage: `url(${getCover})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+    <section className="relative bg-fixed overflow-hidden font-[poppins] flex justify-between items-center h-[600px] lg:h-[715px] hero-section top-22 lg:top-31 py-4 md:pl-8 lg:pl-15 " style={{ backgroundImage: `url(${getCover})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
           <motion.div 
           initial={{ x: -100, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
