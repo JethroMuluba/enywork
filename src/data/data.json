@@ -166,7 +166,32 @@
             "ourRealisationSection" : [
                 {
                     "title" : "Nos Réalisations",
-                    "subtitle" : "Ce que nous avons accompli dans le passé peut vous inspirer."
+                    "subtitle" : "Ce que nous avons accompli dans le passé peut vous inspirer.",
+                    "realizationItems" : [
+                        {
+                            "id": 1,
+                            "image": "/placeholder.svg?height=257&width=387",
+                            "category": "Développement de Logiciels Saas",
+                            "title": "OptSolution",
+                            "link": "https://optsolution.net/"
+                        },
+
+                        {
+                            "id": 1,
+                            "image": "/placeholder.svg?height=257&width=387",
+                            "category": "Hébergement VPS",
+                            "title": "ISTM Campus",
+                            "link": "/realisations/optsolution"
+                        },
+
+                        {
+                            "id": 1,
+                            "image": "/placeholder.svg?height=257&width=387",
+                            "category": "Formation sur le Technologie du Web",
+                            "title": "Min. ESU",
+                            "link": "/realisations/optsolution"
+                        }
+                    ]
                 }
             ]
 
