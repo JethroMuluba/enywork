@@ -61,10 +61,18 @@ export default function RealizationsSection() {
             ))}
           </div>
 
-          <Link href="/realisations" className="btn-primary">
+          <motion.div
+                initial={{ y: 100, opacity: 0 }}
+                animate={isInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
+                transition={{ duration: 2, ease: "easeOut" }}
+          >
+          <Link href="/realisations" className="bg-[#E10919] hover:bg-[#B00813] px-8 py-4 rounded-lg font-medium text-white cursor-pointer flex items-center gap-2">
             <span>VOIR PLUS</span>
             <ArrowRight className="w-5 h-5" />
           </Link>
+          </motion.div>
+
+
         </div>
       </div>
     </section>
