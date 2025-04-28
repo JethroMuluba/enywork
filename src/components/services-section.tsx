@@ -58,19 +58,27 @@ export default function ServicesSection(): JSX.Element {
         <SectionTitle title={getTitle} subTitle={getSubTitle} />
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {serviceItems.map((service) => (
-              <div key={service.id} className="bg-white rounded-lg shadow-lg p-8 transition-transform duration-300 hover:scale-110">
+            {serviceItems.map((service, index) => (
+              <motion.div 
+              initial={{ y: 100, opacity: 0 }}
+              animate={isInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
+              transition={{ 
+                    duration: 1.5, 
+                    ease: "easeOut",
+                    delay: index * 0.8 
+                }}
+              key={service.id} className="bg-white rounded-lg shadow-lg p-8 transition-transform duration-300 hover:scale-110">
                 <div className="mb-4 text-[#E10919]">{service.icon}</div>
                 <h3 className="text-xl md:text-2xl font-semibold text-[#1C2736] mb-3">{service.title}</h3>
                 <p className="text-[#3B4E6A]">{service.description}</p>
-              </div>
+              </motion.div>
             ))}
           </div>
 
           <motion.div
                 initial={{ y: 100, opacity: 0 }}
                 animate={isInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
-                transition={{ duration: 2, ease: "easeOut" }}
+                transition={{ duration: 8, ease: "easeOut" }}
           >
           <Link href="/contact" className="bg-[#E10919] hover:bg-[#B00813] px-8 py-4 rounded-lg font-medium text-white cursor-pointer flex items-center gap-2">
             <span>DEMANDEZ UN DEVIS</span>
