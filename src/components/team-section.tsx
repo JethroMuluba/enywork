@@ -48,7 +48,7 @@ export default function TeamSection() {
               initial={{ y: 100, opacity: 0 }}
               animate={isInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
               transition={{ 
-                  duration: 1.5, 
+                  duration: 1, 
                   ease: "easeOut",
                   delay: index * 0.8 
               }}
