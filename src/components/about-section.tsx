@@ -52,7 +52,7 @@ export default function AboutSection() {
               </motion.p>
             </div>
 
-            <div className="flex flex-col gap-8 text-[#1C2736] text-base">
+            <div className="flex flex-col gap-8 text-[#3B4E6A] text-base">
               <motion.p
                             initial={{ y: 100, opacity: 0 }}
                             animate={isInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
