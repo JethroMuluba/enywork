@@ -1,7 +1,10 @@
 import { JSX } from 'react'
-import { CodeXml, MonitorSmartphone, Database, LineChartIcon as ChartLine, Server, Presentation  } from "lucide-react"
+import Link from "next/link"
+import { CodeXml, MonitorSmartphone, Database, LineChartIcon as ChartLine, Server, Presentation, ArrowRight } from "lucide-react"
 import SectionTitle from './ui/sectionTitle'
 import data from '@/data/data.json'
+import { motion, useInView } from 'framer-motion'
+import { useRef } from 'react'
 
 const serviceItems = [
   {
@@ -46,21 +49,34 @@ export default function ServicesSection(): JSX.Element {
     // const serviceTems = data.home?.[4]?.ourServicesSection?.[0]?.services;
     const getTitle = data.home?.[4]?.ourServicesSection?.[0]?.title || 'Nos services';
     const getSubTitle = data.home?.[4]?.ourServicesSection?.[0]?.subtitle || 'Vous offrir un service de qualité est la raison d’être de notre start-up.';
+    const ref = useRef(null);
+    const isInView = useInView(ref, { once: true, margin: "-100px" });
   return (
-    <section className="bg-[#F2F2F2] font-[poppins] py-20 px-4 md:px-8 lg:px-25">
+    <section ref={ref}  className="bg-[#F2F2F2] font-[poppins] py-20 px-4 md:px-8 lg:px-25">
       <div className="container-custom">
         <div className="flex flex-col items-center gap-12 md:gap-16">
         <SectionTitle title={getTitle} subTitle={getSubTitle} />
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {serviceItems.map((service) => (
-              <div key={service.id} className="bg-white rounded-lg shadow-lg hover:shadow-2xl p-8">
+              <div key={service.id} className="bg-white rounded-lg shadow-lg p-8 transition-transform duration-300 hover:scale-110">
                 <div className="mb-4 text-[#E10919]">{service.icon}</div>
                 <h3 className="text-xl md:text-2xl font-semibold text-[#1C2736] mb-3">{service.title}</h3>
                 <p className="text-[#3B4E6A]">{service.description}</p>
               </div>
             ))}
           </div>
+
+          <motion.div
+                initial={{ y: 100, opacity: 0 }}
+                animate={isInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
+                transition={{ duration: 2, ease: "easeOut" }}
+          >
+          <Link href="/contact" className="bg-[#E10919] hover:bg-[#B00813] px-8 py-4 rounded-lg font-medium text-white cursor-pointer flex items-center gap-2">
+            <span>DEMANDEZ UN DEVIS</span>
+            <ArrowRight className="w-5 h-5" />
+          </Link>
+          </motion.div>
         </div>
       </div>
     </section>
