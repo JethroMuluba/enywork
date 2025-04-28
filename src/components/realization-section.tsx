@@ -18,11 +18,20 @@ export default function RealizationsSection() {
     <section ref={ref} className="bg-[#F2F2F2] font-[poppins] py-16 md:py-24 px-4 md:px-8 lg:px-25">
         <div className="container-custom">
             <div className="flex flex-col items-center gap-12 md:gap-16">
-                <SectionTitle title={getTitle} subTitle={getSubTitle} />
+                <SectionTitle title={getTitle} subTitle={getSubTitle} />      
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {realizationItems?.map((item) => (
-                        <div key={item.id} className="bg-white rounded-lg shadow-lg overflow-hidden">
+                    {realizationItems?.map((item, index) => (
+                        <motion.div 
+                        initial={{ y: 100, opacity: 0 }}
+                        animate={isInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
+                        transition={{ 
+                            duration: 1.5, 
+                            ease: "easeOut",
+                            delay: index * 0.8 
+                        }}
+                        key={item.id} 
+                        className="bg-white rounded-lg shadow-lg overflow-hidden">
                                 <div className="relative h-64 w-full">
                                     <Image 
                                     src={item.image || "/placeholder.svg"} 
@@ -48,7 +57,7 @@ export default function RealizationsSection() {
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </Link>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
 
