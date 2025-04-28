@@ -8,7 +8,7 @@ import OptSolutionSection from "@/components/optsolution-section"
 import RealizationsSection from "@/components/realization-section"
 import ServicesSection from "@/components/services-section"
 import TeamSection from "@/components/team-section"
-// import StatisticsSection from "@/components/statistics-section"
+import StatisticsSection from "@/components/statistics-section"
 // import PartnersSection from "@/components/partners-section"
 // import TestimonialsSection from "@/components/testimonials-section"
 // import BlogSection from "@/components/blog-section"
@@ -25,7 +25,7 @@ export default function Home() {
       <RealizationsSection />
       <ServicesSection />
       <TeamSection />
-      {/* <StatisticsSection /> */}
+      <StatisticsSection />
       {/* <PartnersSection /> */}
       {/* <TestimonialsSection /> */}
       {/* <BlogSection /> */}

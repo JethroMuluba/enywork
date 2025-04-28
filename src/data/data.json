@@ -262,11 +262,12 @@
 
         {
             "id" : 6,
-            "statistic-breadge" : [
+            "statisticBreadge" : [
                 {
                     "title" : "Des solutions d'affaires élaborées avec un objectif et une stratégie",
                     "subtitle" : "Lorem Upsum Lorem Upsum Lorem UpsumLorem Upsum Lorem Upsum Lorem Upsum Lorem Upsum",
                     "left-title" : "La bonne solution pour votre entreprise",
+                    "cover" : "https://res.cloudinary.com/dr8ofciki/image/upload/v1745856936/Enywork/statistics-bg.webp",
                     "statistic" : [
                         {
                             "id" : 0,
