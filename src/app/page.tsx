@@ -7,9 +7,7 @@ import HeroSection from "@/components/hero-section"
 import OptSolutionSection from "@/components/optsolution-section"
 import RealizationsSection from "@/components/realization-section"
 import ServicesSection from "@/components/services-section"
-// import RealizationsSection from "@/components/realizations-section"
-// import ServicesSection from "@/components/services-section"
-// import TeamSection from "@/components/team-section"
+import TeamSection from "@/components/team-section"
 // import StatisticsSection from "@/components/statistics-section"
 // import PartnersSection from "@/components/partners-section"
 // import TestimonialsSection from "@/components/testimonials-section"
@@ -26,7 +24,7 @@ export default function Home() {
       <OptSolutionSection />
       <RealizationsSection />
       <ServicesSection />
-      {/* <TeamSection /> */}
+      <TeamSection />
       {/* <StatisticsSection /> */}
       {/* <PartnersSection /> */}
       {/* <TestimonialsSection /> */}

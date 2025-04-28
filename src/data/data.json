@@ -252,10 +252,10 @@
 
         {
             "id" : 5,
-            "our-team" : [
+            "ourTeam" : [
                 {
                     "title" : "Notre Équipe",
-                    "subtitle" : "Vous offrir un service de qualité est la raison d'être de notre start-up."
+                    "subtitle" : "Rencontrer nos spécialistes vous donne un aperçu d’une réalisation réussie de vos projets."
                 }
             ]
         },
