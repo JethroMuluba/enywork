@@ -32,12 +32,12 @@ export default function RealizationsSection() {
                         }}
                         key={item.id} 
                         className="bg-white rounded-lg shadow-lg overflow-hidden">
-                                <div className="relative h-64 w-full">
+                                <div className="relative h-64 w-full overflow-hidden">
                                     <Image 
                                     src={item.image || "/placeholder.svg"} 
                                     alt={item.title} 
                                     fill 
-                                    className="object-cover"
+                                    className="object-cover transition-transform duration-300 hover:scale-110"
                                     onError={(e) => {
                                     const target = e.target as HTMLImageElement;
                                     target.src = "/placeholder.svg";
