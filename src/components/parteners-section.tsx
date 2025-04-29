@@ -21,10 +21,10 @@ const logos = [
   '/partenaire_business_m_pesa.png',
   '/UNIKIK.jpg',
   '/Logo Unilu.png',
-  '/public/1024px-Rawbank_logo.png',
-  '/public/1024px-Rawbank_logo.png',
-  '/public/1024px-Rawbank_logo.png',
-  '/public/1024px-Rawbank_logo.png',
+  '/INA LOGO.png',
+  '/Logo 1.png',
+  '/Logo 10.png',
+  '/Logo 2.png',
 
   // Ajoute ici les chemins de tes logos (dans public ou en URL)
 ]
@@ -38,7 +38,7 @@ const PartenersSection = () => {
                   initial={{ y: 100, opacity: 0 }}
                   animate={isInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
                   transition={{ duration: 0.5, ease: "easeOut" }}
-                  className=" text-4xl lg:text-4xl text-center font-semibold text-amber-300 mb-12"> 
+                  className=" text-4xl lg:text-4xl text-center font-semibold text-[#1C2736] mb-12"> 
               Ils nous font confiance
           </motion.h2>
           <Marquee gradient={false} speed={40} pauseOnHover={true}>
@@ -47,7 +47,7 @@ const PartenersSection = () => {
                 <img
                   src={logo || "/placeholder.svg"}
                   alt={`Partenaire ${idx + 1}`}
-                  className="h-20 w-auto object-contain grayscale hover:grayscale-0 transition duration-300"
+                  className="h-20 w-auto object-contain transition duration-300"
                 />
               </div>
             ))}
