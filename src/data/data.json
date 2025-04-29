@@ -375,33 +375,36 @@
 
         {
             "id" : 8,
-            "testimonial-section" : [
+            "testimonialSection" : [
                 {
                     "title" : "Ce qu'ils disent de nous",
                     "subtitle" : "Des témoignages forts et authentiques provenant des grandes autorités de ce pays et d'ailleurs.",
                     "testimonial" : [
                         {
                             "id" : 0,
-                            "testimonial-name" : "Jethro Muluba",
-                            "testimonial-post" : "Ui & Ux et Dev Web Full-Stack",
-                            "testimonial-image" : "url",
-                            "testimonial-text" : "Une expérience exceptionnelle ! Leur capacité à s'adapter à nos besoins spécifiques a été un atout majeur dans notre croissance rapide."
+                            "name" : "Ysuf Heri",
+                            "role" : "CEO & Développeur Web Full-Stack",
+                            "image" : "https://res.cloudinary.com/dr8ofciki/image/upload/v1745853594/Enywork/yusuf-heri-profile.jpg",
+                            "quote" : "Une expérience exceptionnelle ! Leur capacité à s'adapter à nos besoins spécifiques a été un atout majeur dans notre croissance rapide.",
+                            "highlighted" : true
                         },
 
                         {
                             "id" : 1,
-                            "testimonial-name" : "Jethro Muluba",
-                            "testimonial-post" : "Ui & Ux et Dev Web Full-Stack",
-                            "testimonial-image" : "url",
-                            "testimonial-text" : "Une expérience exceptionnelle ! Leur capacité à s'adapter à nos besoins spécifiques a été un atout majeur dans notre croissance rapide."
+                            "name" : "Franck Mbuyi",
+                            "role" : "CTO & Développeur Mobile",
+                            "image" : "https://res.cloudinary.com/dr8ofciki/image/upload/v1745853771/Enywork/franck-mbuyi-profile.png",
+                            "quote" : "Une expérience exceptionnelle ! Leur capacité à s'adapter à nos besoins spécifiques a été un atout majeur dans notre croissance rapide.",
+                            "highlighted" : false
                         },
 
                         {
                             "id" : 2,
-                            "testimonial-name" : "Jethro Muluba",
-                            "testimonial-post" : "Ui & Ux et Dev Web Full-Stack",
-                            "testimonial-image" : "url",
-                            "testimonial-text" : "Une expérience exceptionnelle ! Leur capacité à s'adapter à nos besoins spécifiques a été un atout majeur dans notre croissance rapide."
+                            "name" : "Jethro Muluba",
+                            "role" : "Ui & Ux et Dev Web Full-Stack",
+                            "image" : "https://res.cloudinary.com/dr8ofciki/image/upload/v1745852687/Enywork/jethro-muluba-profile.png",
+                            "quote" : "Une expérience exceptionnelle ! Leur capacité à s'adapter à nos besoins spécifiques a été un atout majeur dans notre croissance rapide.",
+                            "highlighted" : true
                         }
                     ]
                 }
