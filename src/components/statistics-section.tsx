@@ -27,7 +27,7 @@ export default function StatisticsSection() {
                 animate={isInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
                 transition={{ duration: 1.5, ease: "easeOut" }}
             >
-              <Link href="/contact" className="bg-[#E10919] hover:bg-[#B00813] px-8 py-4 rounded-lg font-medium text-white cursor-pointer flex items-center gap-2 justify-center">
+              <Link href="/contact" className="inline-flex bg-[#E10919] hover:bg-[#B00813] px-8 py-4 rounded-lg font-medium text-white cursor-pointer items-center gap-2 self-center lg:self-start">
                 <span>DEMANDEZ UN DEVIS</span>
                 <ArrowRight className="w-5 h-5" />
               </Link>
