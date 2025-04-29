@@ -16,17 +16,25 @@ export default function StatisticsSection() {
         <div className="relative overflow-hidden font-[poppins] flex justify-center items-center h-[600px] lg:h-full" style={{ backgroundImage: `url(${getCover})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
           <div className="absolute inset-0 bg-[#1C2736] opacity-75"></div>
           <div className="relative flex flex-col gap-10 z-10 text-center lg:text-left max-w-3xl px-4 md:px-8 lg:px-20">
-            <h2 className="text-2xl font-medium text-white ">
+            <motion.h2 
+                initial={{ y: 100, opacity: 0 }}
+                animate={isInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
+                transition={{ duration: 1, ease: "easeOut" }}
+            className="text-2xl font-medium text-white ">
               {getTitle}
-            </h2>
-            <p className="text-white">
+            </motion.h2>
+            <motion.p 
+                initial={{ y: 100, opacity: 0 }}
+                animate={isInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
+                transition={{ duration: 1.5, ease: "easeOut" }}
+            className="text-white">
               {getSubTitle}
-            </p>
+            </motion.p>
 
             <motion.div
                 initial={{ y: 100, opacity: 0 }}
                 animate={isInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
-                transition={{ duration: 1.5, ease: "easeOut" }}
+                transition={{ duration: 2, ease: "easeOut" }}
             >
               <Link href="/contact" className="inline-flex bg-[#E10919] hover:bg-[#B00813] px-8 py-4 rounded-lg font-medium text-white cursor-pointer items-center gap-2 self-center lg:self-start">
                 <span>DEMANDEZ UN DEVIS</span>
