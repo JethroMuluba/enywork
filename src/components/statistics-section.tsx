@@ -1,8 +1,9 @@
 import Link from "next/link"
 import { ArrowRight } from "lucide-react"
 import { motion, useInView } from 'framer-motion'
-import { useRef } from 'react'
+import { useRef, useEffect, useState } from 'react'
 import data from '@/data/data.json'
+import { Line } from 'rc-progress'
 
 export default function StatisticsSection() {
   const getCover = data.home?.[6]?.statisticBreadge?.[0].cover;
@@ -10,6 +11,38 @@ export default function StatisticsSection() {
   const getSubTitle = data.home?.[6]?.statisticBreadge?.[0].subtitle;
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
+
+  // Données factorisées pour les stats
+  const stats = [
+    { label: "Strategic marketing", value: 80 },
+    { label: "eCommerce development", value: 90 },
+    { label: "Strategic marketing", value: 75 },
+    { label: "Financial guidance", value: 90 },
+  ];
+
+  // Animation des barres
+  const [animatedValues, setAnimatedValues] = useState(stats.map(() => 0));
+
+  useEffect(() => {
+    if (isInView) {
+      stats.forEach((stat, idx) => {
+        let start = 0;
+        const step = () => {
+          start += 1;
+          setAnimatedValues(prev => {
+            const copy = [...prev];
+            copy[idx] = Math.min(start, stat.value);
+            return copy;
+          });
+          if (start < stat.value) {
+            setTimeout(step, 20);
+          }
+        };
+        step();
+      });
+    }
+  }, [isInView]);
+
   return (
     <section ref={ref} className="font-[poppins] py-20 ">
       <div className="grid grid-cols-1 lg:grid-cols-2">
@@ -44,52 +77,29 @@ export default function StatisticsSection() {
           </div>
         </div>
 
-        <div className="bg-[#1C2736] py-16 md:py-24 px-6 md:px-12">
+        <div className="bg-[#1C2736] text-white py-16 md:py-24 px-6 md:px-12">
           <div className="max-w-xl mx-auto lg:ml-0 lg:mr-auto">
-            <h2 className="text-3xl md:text-4xl font-medium text-white">
+            <h2 className="text-2xl text-center lg:text-left font-medium text-white">
               La bonne solution pour votre entreprise
             </h2>
 
-            <div className="space-y-8  ">
-              <div className="space-y-3">
-                <div className="flex justify-between items-center">
-                  <span className="text-xl text-light-secondary">Strategic marketing</span>
-                  <span className="text-xl text-light-secondary">80%</span>
+            <div className="space-y-8 text-base ">
+              {stats.map((stat, idx) => (
+                <div className="space-y-3" key={idx}>
+                  <div className="flex justify-between items-center">
+                    <span className=" text-light-secondary">{stat.label}</span>
+                    <span className=" text-light-secondary">{stat.value}%</span>
+                  </div>
+                  <Line
+                    percent={animatedValues[idx]}
+                    strokeWidth={3}
+                    strokeColor="#E10919"
+                    trailWidth={2}
+                    trailColor="#e5e7eb"
+                    className="rounded-xs"
+                  />
                 </div>
-                <div className="w-full h-6 bg-light-tertiary rounded-lg overflow-hidden">
-                  <div className="h-full bg-primary rounded-lg" style={{ width: "80%" }}></div>
-                </div>
-              </div>
-
-              <div className="space-y-3">
-                <div className="flex justify-between items-center">
-                  <span className="text-xl text-light-secondary">eCommerce development</span>
-                  <span className="text-xl text-light-secondary">90%</span>
-                </div>
-                <div className="w-full h-6 bg-light-tertiary rounded-lg overflow-hidden">
-                  <div className="h-full bg-primary rounded-lg" style={{ width: "90%" }}></div>
-                </div>
-              </div>
-
-              <div className="space-y-3">
-                <div className="flex justify-between items-center">
-                  <span className="text-xl text-light-secondary">Strategic marketing</span>
-                  <span className="text-xl text-light-secondary">75%</span>
-                </div>
-                <div className="w-full h-6 bg-light-tertiary rounded-lg overflow-hidden">
-                  <div className="h-full bg-primary rounded-lg" style={{ width: "75%" }}></div>
-                </div>
-              </div>
-
-              <div className="space-y-3">
-                <div className="flex justify-between items-center">
-                  <span className="text-xl text-light-secondary">Financial guidance</span>
-                  <span className="text-xl text-light-secondary">90%</span>
-                </div>
-                <div className="w-full h-6 bg-light-tertiary rounded-lg overflow-hidden">
-                  <div className="h-full bg-primary rounded-lg" style={{ width: "90%" }}></div>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
         </div>
