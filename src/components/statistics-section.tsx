@@ -9,6 +9,7 @@ export default function StatisticsSection() {
   const getCover = data.home?.[6]?.statisticBreadge?.[0].cover;
   const getTitle = data.home?.[6]?.statisticBreadge?.[0].title;
   const getSubTitle = data.home?.[6]?.statisticBreadge?.[0].subtitle;
+  const getLeftTitle = data.home?.[6]?.statisticBreadge?.[0].leftTitle;
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
@@ -84,7 +85,7 @@ export default function StatisticsSection() {
                 animate={isInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
                 transition={{ duration: 1, ease: "easeOut" }}
             className="text-2xl text-center lg:text-left font-medium text-white">
-              La bonne solution pour votre entreprise
+              {getLeftTitle}
             </motion.h2>
 
             <div className="space-y-8 text-base ">
