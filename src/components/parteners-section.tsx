@@ -3,11 +3,29 @@ import { motion, useInView } from 'framer-motion'
 import Marquee from 'react-fast-marquee'
 
 const logos = [
-  '/logo1.png',
-  '/logo2.png',
-  '/logo3.png',
-  '/logo4.png',
-  '/logo5.png',
+  '/LOGO_MIN_ESU 2024.png',
+  '/Logo-ADN-BLACK.png',
+  '/1024px-Rawbank_logo.png',
+  '/esmicom logo white.png',
+  '/f7a04481-45c2-4635-8b45-0d96077b24e2.png',
+  '/Illicocash_Logo_Light-background.png',
+  '/images.jpeg',
+  '/images.png',
+  '/INA LOGO.png',
+  '/logo hEC.png',
+  '/logo inbtp.png',
+  '/logo-white.webp',
+  '/Logo_Afriland 2.0.png',
+  '/omnitech-logo-rakkacash.png',
+  '/orange_money.png',
+  '/partenaire_business_m_pesa.png',
+  '/UNIKIK.jpg',
+  '/Logo Unilu.png',
+  '/public/1024px-Rawbank_logo.png',
+  '/public/1024px-Rawbank_logo.png',
+  '/public/1024px-Rawbank_logo.png',
+  '/public/1024px-Rawbank_logo.png',
+
   // Ajoute ici les chemins de tes logos (dans public ou en URL)
 ]
 
@@ -20,14 +38,14 @@ const PartenersSection = () => {
                   initial={{ y: 100, opacity: 0 }}
                   animate={isInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
                   transition={{ duration: 0.5, ease: "easeOut" }}
-                  className=" text-4xl lg:text-4xl text-center font-semibold text-[#1C2736] mb-12"> 
+                  className=" text-4xl lg:text-4xl text-center font-semibold text-amber-300 mb-12"> 
               Ils nous font confiance
           </motion.h2>
           <Marquee gradient={false} speed={40} pauseOnHover={true}>
-            {logos.map((logo, idx) => (
+            {logos?.map((logo, idx) => (
               <div key={idx} className="mx-8 flex items-center">
                 <img
-                  src={logo}
+                  src={logo || "/placeholder.svg"}
                   alt={`Partenaire ${idx + 1}`}
                   className="h-20 w-auto object-contain grayscale hover:grayscale-0 transition duration-300"
                 />
