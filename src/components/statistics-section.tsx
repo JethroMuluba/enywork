@@ -88,7 +88,7 @@ export default function StatisticsSection() {
                 <div className="space-y-3" key={idx}>
                   <div className="flex justify-between items-center">
                     <span className=" text-light-secondary">{stat.label}</span>
-                    <span className=" text-light-secondary">{stat.value}%</span>
+                    <span className=" text-light-secondary">{Math.round(animatedValues[idx])}%</span>
                   </div>
                   <Line
                     percent={animatedValues[idx]}
