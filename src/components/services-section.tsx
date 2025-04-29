@@ -48,7 +48,7 @@ const serviceItems = [
 export default function ServicesSection(): JSX.Element {
     // const serviceTems = data.home?.[4]?.ourServicesSection?.[0]?.services;
     const getTitle = data.home?.[4]?.ourServicesSection?.[0]?.title || 'Nos services';
-    const getSubTitle = data.home?.[4]?.ourServicesSection?.[0]?.subtitle || 'Vous offrir un service de qualité est la raison d’être de notre start-up.';
+    const getSubTitle = data.home?.[4]?.ourServicesSection?.[0]?.subtitle || "Vous offrir un service de qualité est la raison d'être de notre start-up.";
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true, margin: "-100px" });
   return (
@@ -67,10 +67,10 @@ export default function ServicesSection(): JSX.Element {
                     ease: "easeOut",
                     delay: index * 0.8 
                 }}
-              key={service.id} className="bg-white rounded-lg shadow-lg p-8 transition-transform duration-300 hover:scale-110">
-                <div className="mb-4 text-[#E10919]">{service.icon}</div>
-                <h3 className="text-xl md:text-2xl font-semibold text-[#1C2736] mb-3">{service.title}</h3>
-                <p className="text-[#3B4E6A]">{service.description}</p>
+              key={service.id} className="group bg-white hover:bg-[#E10919] rounded-lg shadow-lg p-8 transition-all duration-300 hover:scale-110">
+                <div className="mb-4 text-[#E10919] group-hover:text-white">{service.icon}</div>
+                <h3 className="text-xl md:text-2xl font-semibold text-[#1C2736] mb-3 group-hover:text-white">{service.title}</h3>
+                <p className="text-[#3B4E6A] group-hover:text-white">{service.description}</p>
               </motion.div>
             ))}
           </div>
