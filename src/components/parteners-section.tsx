@@ -43,13 +43,17 @@ const PartenersSection = () => {
           </motion.h2>
           <Marquee gradient={false} speed={40} pauseOnHover={true}>
             {logos?.map((logo, idx) => (
-              <div key={idx} className="mx-8 flex items-center">
+              <motion.div 
+              initial={{ y: 100, opacity: 0 }}
+              animate={isInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
+              transition={{ duration: 1, ease: "easeOut" }}
+              key={idx} className="mx-8 flex items-center">
                 <img
                   src={logo || "/placeholder.svg"}
                   alt={`Partenaire ${idx + 1}`}
                   className="h-20 w-auto object-contain transition duration-300"
                 />
-              </div>
+              </motion.div>
             ))}
           </Marquee>
       </div>
