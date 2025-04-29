@@ -44,9 +44,9 @@ export default function StatisticsSection() {
   }, [isInView]);
 
   return (
-    <section ref={ref} className="font-[poppins] py-20 ">
+    <section ref={ref} className="font-[poppins] ">
       <div className="grid grid-cols-1 lg:grid-cols-2">
-        <div className="relative overflow-hidden font-[poppins] flex justify-center items-center h-[600px] lg:h-full" style={{ backgroundImage: `url(${getCover})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+        <div className="relative overflow-hidden font-[poppins] flex justify-center items-center lg:items-start py-18 h-[600px] lg:h-full" style={{ backgroundImage: `url(${getCover})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
           <div className="absolute inset-0 bg-[#1C2736] opacity-75"></div>
           <div className="relative flex flex-col gap-10 z-10 text-center lg:text-left max-w-3xl px-4 md:px-8 lg:px-20">
             <motion.h2 
@@ -77,8 +77,8 @@ export default function StatisticsSection() {
           </div>
         </div>
 
-        <div className="bg-[#1C2736] text-white py-16 md:py-24 px-6 md:px-12">
-          <div className="max-w-xl mx-auto lg:ml-0 lg:mr-auto">
+        <div className="bg-[#1C2736] text-white py-18 px-4 md:px-8 lg:px-20">
+          <div className="max-w-xl mx-auto flex flex-col gap-8">
             <h2 className="text-2xl text-center lg:text-left font-medium text-white">
               La bonne solution pour votre entreprise
             </h2>
