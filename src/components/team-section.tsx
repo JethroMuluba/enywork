@@ -42,7 +42,7 @@ export default function TeamSection() {
         <div className="flex flex-col items-center gap-12">
             <SectionTitle title={getTitle} subTitle={getSubTitle} />
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12 px-40">
             {teamMembers.map((member, index) => (
               <motion.div 
               initial={{ y: 100, opacity: 0 }}
@@ -53,7 +53,7 @@ export default function TeamSection() {
                   delay: index * 0.8 
               }}
               key={member.id} className="bg-white rounded-lg shadow-lg overflow-hidden">
-                <div className="relative h-100 w-full transition-transform duration-300 hover:scale-110">
+                <div className="relative h-85 w-full transition-transform duration-300 hover:scale-110">
                   <Image src={member.image || "/placeholder.svg"} alt={`${member.firstname}`+ ' '+`${member.lastname}`} fill className="object-cover" />
                 </div>
 
