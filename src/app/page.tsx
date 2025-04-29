@@ -9,7 +9,7 @@ import RealizationsSection from "@/components/realization-section"
 import ServicesSection from "@/components/services-section"
 import TeamSection from "@/components/team-section"
 import StatisticsSection from "@/components/statistics-section"
-// import PartnersSection from "@/components/partners-section"
+import PartnersSection from "@/components/parteners-section"
 // import TestimonialsSection from "@/components/testimonials-section"
 // import BlogSection from "@/components/blog-section"
 // import NewsletterSection from "@/components/newsletter-section"
@@ -17,7 +17,7 @@ import StatisticsSection from "@/components/statistics-section"
 
 export default function Home() {
   return (
-    <main className="min-h-screen pt-[92px] lg:pt-[124px] ">
+    <main className="min-h-screen font-[poppins] pt-[92px] lg:pt-[124px] ">
       <Header />
       <HeroSection />
       <AboutSection />
@@ -26,7 +26,7 @@ export default function Home() {
       <ServicesSection />
       <TeamSection />
       <StatisticsSection />
-      {/* <PartnersSection /> */}
+      <PartnersSection />
       {/* <TestimonialsSection /> */}
       {/* <BlogSection /> */}
       {/* <NewsletterSection /> */}
