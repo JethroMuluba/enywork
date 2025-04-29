@@ -6,6 +6,8 @@ import data from '@/data/data.json'
 
 export default function StatisticsSection() {
   const getCover = data.home?.[6]?.statisticBreadge?.[0].cover;
+  const getTitle = data.home?.[6]?.statisticBreadge?.[0].title;
+  const getSubTitle = data.home?.[6]?.statisticBreadge?.[0].subtitle;
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
   return (
@@ -14,12 +16,11 @@ export default function StatisticsSection() {
         <div className="relative overflow-hidden font-[poppins] flex justify-center items-center h-[600px] lg:h-full" style={{ backgroundImage: `url(${getCover})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
           <div className="absolute inset-0 bg-[#1C2736] opacity-75"></div>
           <div className="relative flex flex-col gap-10 z-10 text-center lg:text-left max-w-3xl px-4 md:px-8 lg:px-20">
-            <h2 className="text-3xl md:text-4xl font-medium text-white ">
-              Des solutions d'affaires élaborées avec un objectif et une stratégie
+            <h2 className="text-2xl font-medium text-white ">
+              {getTitle}
             </h2>
-            <p className="text-lg md:text-xl text-white">
-              Nous développons des solutions numériques adaptées à vos besoins spécifiques pour optimiser vos processus
-              d'affaires.
+            <p className="text-white">
+              {getSubTitle}
             </p>
 
             <motion.div
