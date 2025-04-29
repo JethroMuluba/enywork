@@ -79,13 +79,25 @@ export default function StatisticsSection() {
 
         <div className="bg-[#1C2736] text-white py-18 px-4 md:px-8 lg:px-20">
           <div className="max-w-xl mx-auto flex flex-col gap-8">
-            <h2 className="text-2xl text-center lg:text-left font-medium text-white">
+            <motion.h2 
+                initial={{ y: 100, opacity: 0 }}
+                animate={isInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
+                transition={{ duration: 1, ease: "easeOut" }}
+            className="text-2xl text-center lg:text-left font-medium text-white">
               La bonne solution pour votre entreprise
-            </h2>
+            </motion.h2>
 
             <div className="space-y-8 text-base ">
               {stats.map((stat, idx) => (
-                <div className="space-y-3" key={idx}>
+                <motion.div 
+                initial={{ y: 100, opacity: 0 }}
+                animate={isInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
+                transition={{ 
+                    duration: 0.8, 
+                    ease: "easeOut",
+                    delay: idx * 0.5 
+                }}
+                className="space-y-3" key={idx}>
                   <div className="flex justify-between items-center">
                     <span className=" text-light-secondary">{stat.label}</span>
                     <span className=" text-light-secondary">{Math.round(animatedValues[idx])}%</span>
@@ -98,7 +110,7 @@ export default function StatisticsSection() {
                     trailColor="#e5e7eb"
                     className="rounded-xs"
                   />
-                </div>
+                </motion.div>
               ))}
             </div>
           </div>
