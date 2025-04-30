@@ -12,7 +12,7 @@ import StatisticsSection from "@/components/statistics-section"
 import PartnersSection from "@/components/parteners-section"
 import TestimonialsSection from "@/components/testimonials-section"
 import BlogSection from "@/components/blog-section"
-// import NewsletterSection from "@/components/newsletter-section"
+import NewsletterSection from "@/components/news-letters"
 // import Footer from "@/components/footer"
 
 export default function Home() {
@@ -29,7 +29,7 @@ export default function Home() {
       <PartnersSection />
       <TestimonialsSection />
       <BlogSection />
-      {/* <NewsletterSection /> */}
+      <NewsletterSection />
       {/* <Footer /> */}
     </main>
   )
