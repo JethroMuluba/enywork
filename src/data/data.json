@@ -460,7 +460,8 @@
                     "title" : "Restez Connecter avec nous",
                     "icone" : "https://res.cloudinary.com/dr8ofciki/image/upload/v1746028293/Enywork/icone-box-letter.png",
                     "subtitle" : "Abonnez-vous à notre newsletter pour recevoir les dernières actualités et mises à jour directement dans votre boîte de réception.",
-                    "warning" : "Votre adresse email est utilisée par Enywork SARL, en qualité de responsable de traitement, à des fins de prospection commerciale (nouveautés, actualités, services...). Pour connaître notre Politique de données personnelles et en savoir plus sur vos droits, veuillez vous rendre sur la page Protection des données personnelles"
+                    "warning" : "Votre adresse email est utilisée par Enywork SARL, en qualité de responsable de traitement, à des fins de prospection commerciale (nouveautés, actualités, services...). Pour connaître notre Politique de données personnelles et en savoir plus sur vos droits, veuillez vous rendre sur la page Protection des données personnelles",
+                    "button" : "S'ABONNER"
                 }
             ]
         }

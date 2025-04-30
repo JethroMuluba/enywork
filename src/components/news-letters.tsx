@@ -3,7 +3,7 @@
 import type React from "react"
 
 import { useState } from "react"
-import { ArrowRight, Mail } from "lucide-react"
+import { ArrowRight } from "lucide-react"
 import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
 import data from '@/data/data.json'
@@ -18,6 +18,7 @@ export default function NewsletterSection() {
     const getCover = data.home?.[10]?.newsletterBreadge?.[0].cover;
     const getWarning = data.home?.[10]?.newsletterBreadge?.[0].warning;
     const getIcone = data.home?.[10]?.newsletterBreadge?.[0].icone;
+    const getButtonText = data.home?.[10]?.newsletterBreadge?.[0].button;
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault()
@@ -81,7 +82,7 @@ export default function NewsletterSection() {
                 </p>
                 </div>
                 <button type="submit" className="bg-[#E10919] hover:bg-[#B00813]  h-14 text-white px-8 py-4 rounded-lg font-medium text-whitcursor-pointer flex justify-center items-center gap-2">
-                    <span>S'ABONNER</span>
+                    <span>{getButtonText} </span>
                     <ArrowRight className="w-5 h-5" />
                 </button>
 
