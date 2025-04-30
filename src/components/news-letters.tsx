@@ -7,6 +7,7 @@ import { ArrowRight, Mail } from "lucide-react"
 import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
 import data from '@/data/data.json'
+import Image from "next/image"
 
 export default function NewsletterSection() {
     const [email, setEmail] = useState("")
@@ -16,6 +17,7 @@ export default function NewsletterSection() {
     const getSubTitle = data.home?.[10]?.newsletterBreadge?.[0].subtitle;
     const getCover = data.home?.[10]?.newsletterBreadge?.[0].cover;
     const getWarning = data.home?.[10]?.newsletterBreadge?.[0].warning;
+    const getIcone = data.home?.[10]?.newsletterBreadge?.[0].icone;
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault()
@@ -26,40 +28,51 @@ export default function NewsletterSection() {
     }
 
   return (
-    <section ref={ref} className="bg-fixed overflow-hidden font-[poppins] flex justify-between items-center px-4 md:px-8 lg:px-25 relative" style={{ backgroundImage: `url(${getCover})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
-      <div className="container-custom">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
+    <section ref={ref} className="relative overflow-hidden font-[poppins] flex justify-between items-center py-12 px-4 md:px-8 lg:px-30" style={{ backgroundImage: `url(${getCover})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-[#1C2736] opacity-75 z-0" aria-hidden="true"></div>
+      <div className="container-custom relative z-10">
+        <div className="flex flex-col lg:flex-row gap-8 items-center">
           <div>
-            <h2 className="text-2xl md:text-3xl font-medium text-white leading-tight">{getTitle} </h2>
+            <h2 className="text-2xl md:text-3xl text-center lg:text-left font-medium text-white leading-tight">{getTitle} </h2>
           </div>
 
-          <div className="flex items-center gap-4">
-            <Mail className="hidden md:block w-16 h-16 text-primary" />
-            <p className="text-white">
+          <div className="flex flex-col lg:flex-row items-center gap-4">
+                <div className="relative w-22 h-22 md:w-28 md:h-28 lg:w-28 lg:h-28">
+                    <Image
+                        src={getIcone || "/placeholder.svg"}
+                        alt="QuillInboxNewsletter"
+                        fill
+                        className="object-contain transition-all animate-pulse duration-600 hover:scale-110"
+                        sizes="(max-width: 768px) 2rem, (max-width: 1024px) 2rem, 2rem"
+                    />
+                </div>
+            <p className="text-white text-center lg:text-left ">
                 {getSubTitle}
             </p>
           </div>
 
           <div>
-            <form onSubmit={handleSubmit} className="flex flex-col gap-5">
-              <div className="flex flex-col md:flex-row gap-4">
+            <form onSubmit={handleSubmit} className="flex flex-col lg:flex-row gap-5">
+              <div className="flex flex-col gap-4">
                 <input
                   type="email"
                   placeholder="Saisissez votre Email"
-                  className="flex-1 px-4 py-2 rounded"
+                  className="flex-1 bg-white px-4 py-4 rounded"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required
                 />
-                <button type="submit" className="btn-primary whitespace-nowrap">
-                  <span>S'ABONNER</span>
-                  <ArrowRight className="w-5 h-5" />
-                </button>
-              </div>
 
-              <p className="text-xs text-white">
-                {getWarning}
-              </p>
+                <p className="text-xs text-white text-center lg:text-left">
+                    {getWarning}
+                </p>
+                </div>
+                <button type="submit" className="bg-[#E10919] hover:bg-[#B00813]  h-14 text-white px-8 py-4 rounded-lg font-medium text-whitcursor-pointer flex justify-center items-center gap-2">
+                    <span>S'ABONNER</span>
+                    <ArrowRight className="w-5 h-5" />
+                </button>
+
             </form>
           </div>
         </div>
