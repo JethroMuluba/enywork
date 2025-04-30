@@ -4,8 +4,7 @@ import { Mail, MapPin, Phone, Instagram, Twitter, Facebook, Linkedin } from "luc
 import data from "@/data/data.json"
 
 export default function Footer() {
-    const logoEnywork = data.header[0].logo || '/default-logo.svg';
-    const logoEnyworkAlt = data.header[0]["logo-alt"] || 'Default Logo Alt Text';
+    const logoEnywork = data.header[0].logo || '/placeholder.svg';
   return (
     <footer className="bg-[#141926] text-white">
       <div className="container-custom py-12 px-4 md:px-8 lg:px-30">
