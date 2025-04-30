@@ -60,25 +60,44 @@ export default function ServicesSection(): JSX.Element {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {serviceItems.map((service, index) => (
               <motion.div 
-              initial={{ y: 100, opacity: 0 }}
-              animate={isInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
+              initial={{ scale: 0, opacity: 0 }}
+              animate={isInView ? { scale: 1, opacity: 1 } :{ scale: 0, opacity: 1 }}
               transition={{ 
-                    duration: 1.5, 
-                    ease: "easeOut",
-                    delay: index * 0.8 
+                    type: "spring",
+                    stiffness: 960,
+                    damping: 80,
+                    duration: 1, 
+                    ease: [0, 0.71, 0.2, 1.01],
+                    delay: index * 0.3 
                 }}
+
+                
               key={service.id} className="group bg-white hover:bg-[#E10919] rounded-lg shadow-lg p-8 transition-all duration-300 hover:scale-110">
                 <div className="mb-4 text-[#E10919] group-hover:text-white">{service.icon}</div>
                 <h3 className="text-xl md:text-2xl font-semibold text-[#1C2736] mb-3 group-hover:text-white">{service.title}</h3>
                 <p className="text-[#3B4E6A] group-hover:text-white">{service.description}</p>
               </motion.div>
+
+              
             ))}
+
           </div>
 
           <motion.div
-                initial={{ y: 100, opacity: 0 }}
-                animate={isInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
-                transition={{ duration: 8, ease: "easeOut" }}
+              initial={{ scale: 0, opacity: 0 }}
+              animate={isInView ? { scale: 1, opacity: 1 } : { scale: 1, opacity: 0 }}
+              transition={{
+              type: "spring",
+              stiffness: 260,
+              damping: 20,
+              delay: 2.3,
+              }}
+
+              whileHover={{ scale: 1.1 }}
+              onHoverStart={e => {}}
+              onHoverEnd={e => {}}
+              whileFocus={{ scale: 1.2 }}
+              whileTap={{ scale: 0.8 }}
           >
           <Link href="/contact" className="bg-[#E10919] hover:bg-[#B00813] px-8 py-4 rounded-lg font-medium text-white cursor-pointer flex items-center gap-2">
             <span>DEMANDEZ UN DEVIS</span>
