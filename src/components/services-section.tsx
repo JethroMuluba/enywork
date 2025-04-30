@@ -90,7 +90,7 @@ export default function ServicesSection(): JSX.Element {
               type: "spring",
               stiffness: 260,
               damping: 20,
-              delay: 2.3,
+              delay: 0.1,
               }}
 
               whileHover={{ scale: 1.1 }}
