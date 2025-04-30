@@ -454,13 +454,13 @@
 
         {
             "id" : 10,
-            "newsletter-breadge" : [
+            "newsletterBreadge" : [
                 {
-                    "background" : "url",
+                    "cover" : "https://res.cloudinary.com/dr8ofciki/image/upload/v1746022741/Enywork/news-letter-bg.png",
                     "title" : "Restez Connecter avec nous",
-                    "icone" : "url",
-                    "subtitle" : "Inscrivez-vous à notre newsletter pour recevoir les derniers articles et actualités par email.",
-                    "warning-message" : "Votre adresse email est utilisée par Enywork SARL, en qualité de responsable de traitement, à des fins de prospection commerciale (nouveautés, actualités, services...). Pour connaître notre Politique de données personnelles et en savoir plus sur vos droits, veuillez vous rendre sur la page Protection des données personnelles"
+                    "icone" : "https://res.cloudinary.com/dr8ofciki/image/upload/v1746023046/Enywork/QuillInboxNewsletter.png",
+                    "subtitle" : "Abonnez-vous à notre newsletter pour recevoir les dernières actualités et mises à jour directement dans votre boîte de réception.",
+                    "warning" : "Votre adresse email est utilisée par Enywork SARL, en qualité de responsable de traitement, à des fins de prospection commerciale (nouveautés, actualités, services...). Pour connaître notre Politique de données personnelles et en savoir plus sur vos droits, veuillez vous rendre sur la page Protection des données personnelles"
                 }
             ]
         }

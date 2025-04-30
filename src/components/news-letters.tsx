@@ -4,31 +4,39 @@ import type React from "react"
 
 import { useState } from "react"
 import { ArrowRight, Mail } from "lucide-react"
+import { motion, useInView } from 'framer-motion'
+import { useRef } from 'react'
+import data from '@/data/data.json'
 
 export default function NewsletterSection() {
-  const [email, setEmail] = useState("")
+    const [email, setEmail] = useState("")
+    const ref = useRef(null);
+    const isInView = useInView(ref, { once: true, margin: "-100px" });
+    const getTitle = data.home?.[10]?.newsletterBreadge?.[0].title;
+    const getSubTitle = data.home?.[10]?.newsletterBreadge?.[0].subtitle;
+    const getCover = data.home?.[10]?.newsletterBreadge?.[0].cover;
+    const getWarning = data.home?.[10]?.newsletterBreadge?.[0].warning;
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    // Handle newsletter subscription
-    console.log("Subscribing email:", email)
-    setEmail("")
-    // Show success message or handle errors
-  }
+    const handleSubmit = (e: React.FormEvent) => {
+        e.preventDefault()
+        // Handle newsletter subscription
+        console.log("Subscribing email:", email)
+        setEmail("")
+        // Show success message or handle errors
+    }
 
   return (
-    <section className="py-12 md:py-16 bg-secondary bg-opacity-75 bg-blend-overlay bg-[url('/placeholder.svg?height=278&width=1535')]">
+    <section ref={ref} className="bg-fixed overflow-hidden font-[poppins] flex justify-between items-center px-4 md:px-8 lg:px-25 relative" style={{ backgroundImage: `url(${getCover})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
       <div className="container-custom">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
           <div>
-            <h2 className="text-2xl md:text-3xl font-medium text-white leading-tight">Restez Connecter avec Nous</h2>
+            <h2 className="text-2xl md:text-3xl font-medium text-white leading-tight">{getTitle} </h2>
           </div>
 
           <div className="flex items-center gap-4">
             <Mail className="hidden md:block w-16 h-16 text-primary" />
             <p className="text-white">
-              Abonnez-vous à notre newsletter pour recevoir les dernières actualités et mises à jour directement dans
-              votre boîte de réception.
+                {getSubTitle}
             </p>
           </div>
 
@@ -50,10 +58,7 @@ export default function NewsletterSection() {
               </div>
 
               <p className="text-xs text-white">
-                Votre adresse email est utilisée par Enywork SARL, en qualité de responsable de traitement, à des fins
-                de prospection commerciale (nouveautés, actualités, services...). Pour connaître notre Politique de
-                données personnelles et en savoir plus sur vos droits, veuillez vous rendre sur la page Protection des
-                données personnelles
+                {getWarning}
               </p>
             </form>
           </div>
