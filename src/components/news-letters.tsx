@@ -33,11 +33,19 @@ export default function NewsletterSection() {
       <div className="absolute inset-0 bg-[#1C2736] opacity-75 z-0" aria-hidden="true"></div>
       <div className="container-custom relative z-10">
         <div className="flex flex-col lg:flex-row gap-8 items-center">
-          <div>
+          <motion.div
+                    initial={{ y: 100, opacity: 0 }}
+                    animate={isInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
+                    transition={{ duration: 1, ease: "easeOut" }}
+          >
             <h2 className="text-2xl md:text-3xl text-center lg:text-left font-medium text-white leading-tight">{getTitle} </h2>
-          </div>
+          </motion.div>
 
-          <div className="flex flex-row items-center gap-4">
+          <motion.div
+                    initial={{ y: 100, opacity: 0 }}
+                    animate={isInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
+                    transition={{ duration: 1.5, ease: "easeOut" }}
+          className="flex flex-row items-center gap-4">
                 <div className="relative w-30 h-30">
                     <Image
                         src={getIcone || "/placeholder.svg"}
@@ -50,9 +58,13 @@ export default function NewsletterSection() {
             <p className="text-white text-left ">
                 {getSubTitle}
             </p>
-          </div>
+          </motion.div>
 
-          <div>
+          <motion.div
+                    initial={{ y: 100, opacity: 0 }}
+                    animate={isInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
+                    transition={{ duration: 2, ease: "easeOut" }}
+          >
             <form onSubmit={handleSubmit} className="flex flex-col lg:flex-row gap-5">
               <div className="flex flex-col gap-4">
                 <input
@@ -74,7 +86,7 @@ export default function NewsletterSection() {
                 </button>
 
             </form>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>
