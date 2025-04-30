@@ -93,8 +93,8 @@ export default function ServicesSection(): JSX.Element {
               }}
 
               whileHover={{ scale: 1.1 }}
-              onHoverStart={e => {}}
-              onHoverEnd={e => {}}
+              onHoverStart={() => {}}
+              onHoverEnd={() => {}}
               whileFocus={{ scale: 1.2 }}
               whileTap={{ scale: 0.8 }}
           >

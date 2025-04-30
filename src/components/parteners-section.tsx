@@ -1,6 +1,7 @@
 import React, { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
 import Marquee from 'react-fast-marquee'
+import Image from 'next/image'
 
 const logos = [
   '/LOGO_MIN_ESU 2024.png',
@@ -48,10 +49,12 @@ const PartenersSection = () => {
               animate={isInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
               transition={{ duration: 1, ease: "easeOut" }}
               key={idx} className="mx-8 flex items-center">
-                <img
+                <Image
                   src={logo || "/placeholder.svg"}
                   alt={`Partenaire ${idx + 1}`}
-                  className="h-20 w-auto object-contain transition duration-300"
+                  width={120}
+                  height={48}
+                  className="h-12 w-auto object-contain transition duration-300"
                 />
               </motion.div>
             ))}
