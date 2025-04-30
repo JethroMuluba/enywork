@@ -7,42 +7,6 @@ import { useRef } from 'react'
 import data from '@/data/data.json'
 
 
-const blogPosts = [
-  {
-    id: 1,
-    title: "Les derniers tendances en développement web 2025",
-    excerpt: "Découvrez les technologie et frameworks qui domineront le développement web cette année...",
-    image: "/placeholder.svg?height=257&width=387",
-    author: {
-      name: "Yusuf Heri",
-      role: "CEO Enywork",
-      avatar: "/placeholder.svg?height=48&width=48",
-    },
-  },
-  {
-    id: 2,
-    title: "Les derniers tendances en développement web 2025",
-    excerpt: "Découvrez les technologie et frameworks qui domineront le développement web cette année...",
-    image: "/placeholder.svg?height=257&width=387",
-    author: {
-      name: "Franck Mbuyi",
-      role: "CTO Enywork",
-      avatar: "/placeholder.svg?height=48&width=48",
-    },
-  },
-  {
-    id: 3,
-    title: "Les derniers tendances en développement web 2025",
-    excerpt: "Découvrez les technologie et frameworks qui domineront le développement web cette année...",
-    image: "/placeholder.svg?height=257&width=387",
-    author: {
-      name: "Jethro Muluba",
-      role: "Dev Full-Stack",
-      avatar: "/placeholder.svg?height=48&width=48",
-    },
-  },
-]
-
 export default function BlogSection() {
     const getTitle = data.home?.[9]?.lastBlogSection?.[0].title || "Derniers Actualités";
     const getSubTitle = data.home?.[9]?.lastBlogSection?.[0].subtitle || "Suivez nos actualités pour rester informé de nos événements et bien plus encore.";

@@ -1,63 +1,64 @@
-import React, { useRef } from 'react'
-import { motion, useInView } from 'framer-motion'
-import Marquee from 'react-fast-marquee'
+import React from 'react';
+import { useKeenSlider } from 'keen-slider/react';
+import 'keen-slider/keen-slider.min.css';
 
-const logos = [
-  '/LOGO_MIN_ESU 2024.png',
-  '/Logo-ADN-BLACK.png',
-  '/1024px-Rawbank_logo.png',
-  '/esmicom logo white.png',
-  '/f7a04481-45c2-4635-8b45-0d96077b24e2.png',
-  '/Illicocash_Logo_Light-background.png',
-  '/images.jpeg',
-  '/images.png',
-  '/INA LOGO.png',
-  '/logo hEC.png',
-  '/logo inbtp.png',
-  '/logo-white.webp',
-  '/Logo_Afriland 2.0.png',
-  '/omnitech-logo-rakkacash.png',
-  '/orange_money.png',
-  '/partenaire_business_m_pesa.png',
-  '/UNIKIK.jpg',
-  '/Logo Unilu.png',
-  '/INA LOGO.png',
-  '/Logo 1.png',
-  '/Logo 10.png',
-  '/Logo 2.png',
+interface Partner {
+  id: number;
+  logo: string;
+  alt: string;
+}
 
-  // Ajoute ici les chemins de tes logos (dans public ou en URL)
+const partners: Partner[] = [
+  {
+    id: 1,
+    logo: "https://res.cloudinary.com/dr8ofciki/image/upload/v1741366220/Enywork/Logo-Enywork.png",
+    alt: "Partner 1"
+  },
+  {
+    id: 2,
+    logo: "https://res.cloudinary.com/dr8ofciki/image/upload/v1741366220/Enywork/Logo-Enywork.png",
+    alt: "Partner 2"
+  },
+  {
+    id: 3,
+    logo: "https://res.cloudinary.com/dr8ofciki/image/upload/v1741366220/Enywork/Logo-Enywork.png",
+    alt: "Partner 3"
+  },
+  {
+    id: 4,
+    logo: "https://res.cloudinary.com/dr8ofciki/image/upload/v1741366220/Enywork/Logo-Enywork.png",
+    alt: "Partner 4"
+  }
 ]
 
 const PartenersSection = () => {
-    const ref = useRef(null);
-    const isInView = useInView(ref, { once: true, margin: "-100px" })
-    return (
-      <div ref={ref} className='py-20 px-4 md:px-8 lg:px-25'>
-          <motion.h2 
-                  initial={{ y: 100, opacity: 0 }}
-                  animate={isInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
-                  transition={{ duration: 0.5, ease: "easeOut" }}
-                  className=" text-4xl lg:text-4xl text-center font-semibold text-[#1C2736] mb-12"> 
-              Ils nous font confiance
-          </motion.h2>
-          <Marquee gradient={false} speed={40} pauseOnHover={true}>
-            {logos?.map((logo, idx) => (
-              <motion.div 
-              initial={{ y: 100, opacity: 0 }}
-              animate={isInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
-              transition={{ duration: 1, ease: "easeOut" }}
-              key={idx} className="mx-8 flex items-center">
-                <img
-                  src={logo || "/placeholder.svg"}
-                  alt={`Partenaire ${idx + 1}`}
-                  className="h-20 w-auto object-contain transition duration-300"
-                />
-              </motion.div>
-            ))}
-          </Marquee>
+  const [sliderRef] = useKeenSlider({
+    loop: true,
+    mode: "free",
+    slides: {
+      perView: 4,
+      spacing: 15,
+    },
+  });
+
+  return (
+    <div className="bg-white py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 className="text-3xl font-bold text-center mb-8">Nos Partenaires</h2>
+        <div ref={sliderRef} className="keen-slider">
+          {partners.map((partner) => (
+            <div key={partner.id} className="keen-slider__slide">
+              <img
+                src={partner.logo}
+                alt={partner.alt}
+                className="h-12 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300"
+              />
+            </div>
+          ))}
+        </div>
       </div>
-    )
-}
+    </div>
+  );
+};
 
 export default PartenersSection;

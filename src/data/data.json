@@ -425,7 +425,7 @@
                             "subtitle" : "Découvrez les technologie et frameworks qui domineront le développement web cette année...",
                             "avatar" : "https://res.cloudinary.com/dr8ofciki/image/upload/v1745853594/Enywork/yusuf-heri-profile.jpg",
                             "name" : "Yusuf Heri",
-                            "role<" : "CEO, Enywork"
+                            "role" : "CEO, Enywork"
                         },
 
                         {
@@ -435,7 +435,7 @@
                             "subtitle" : "Optimisez votre infrastructure cloud avec nos conseil d'experts...",
                             "avatar" : "https://res.cloudinary.com/dr8ofciki/image/upload/v1745853771/Enywork/franck-mbuyi-profile.png",
                             "name" : "Franck Mbuyi",
-                            "role<" : "CTO, Enywork"
+                            "role" : "CTO, Enywork"
                         },
 
                         {
@@ -445,7 +445,7 @@
                             "subtitle" : "Comment créez et maintenir un design system efficace pour votre équipe...",
                             "avatar" : "https://res.cloudinary.com/dr8ofciki/image/upload/v1745852687/Enywork/jethro-muluba-profile.png",
                             "name" : "Jethro Muluba",
-                            "role<" : "Ui/Ux Designer, Enywork"
+                            "role" : "Ui/Ux Designer, Enywork"
                         }
                     ]
                 }
