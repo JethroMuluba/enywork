@@ -413,39 +413,39 @@
 
         {
             "id" : 9,
-            "last-blog-section" : [
+            "lastBlogSection" : [
                 {
                     "title" : "Derniers Actualités",
                     "subtitle" : "Suivez nos actualités pour rester informé de nos événements et bien plus encore.",
                     "blog" : [
                         {
                             "id" : 0,
-                            "blog-image" : "url",
-                            "blog-title" : "Les derniers tendances en développement web 2025",
-                            "blog-subtitle" : "Découvrez les technologie et frameworks qui domineront le développement web cette année...",
-                            "profile-image" : "url",
-                            "profile-name" : "Yusuf Heri",
-                            "profile-post" : "CEO, Enywork"
+                            "image" : "https://res.cloudinary.com/dr8ofciki/image/upload/v1746010546/Enywork/blog-1.jpg",
+                            "title" : "Les derniers tendances en développement web 2025",
+                            "subtitle" : "Découvrez les technologie et frameworks qui domineront le développement web cette année...",
+                            "avatar" : "https://res.cloudinary.com/dr8ofciki/image/upload/v1745853594/Enywork/yusuf-heri-profile.jpg",
+                            "name" : "Yusuf Heri",
+                            "role" : "CEO, Enywork"
                         },
 
                         {
                             "id" : 1,
-                            "blog-image" : "url",
-                            "blog-title" : "Cloud Computing: Les meilleures pratiques",
-                            "blog-subtitle" : "Optimisez votre infrastructure cloud avec nos conseil d'experts...",
-                            "profile-image" : "url",
-                            "profile-name" : "Franck Mbuyi",
-                            "profile-post" : "CTO, Enywork"
+                            "image" : "https://res.cloudinary.com/dr8ofciki/image/upload/v1746010546/Enywork/blog-2.jpg",
+                            "title" : "Cloud Computing: Les meilleures pratiques",
+                            "subtitle" : "Optimisez votre infrastructure cloud avec nos conseil d'experts...",
+                            "avatar" : "https://res.cloudinary.com/dr8ofciki/image/upload/v1745853771/Enywork/franck-mbuyi-profile.png",
+                            "name" : "Franck Mbuyi",
+                            "role" : "CTO, Enywork"
                         },
 
                         {
                             "id" : 2,
-                            "blog-image" : "url",
-                            "blog-title" : "Guide complet du Design System en 2025",
-                            "blog-subtitle" : "Comment créez et maintenir un design system efficace pour votre équipe...",
-                            "profile-image" : "url",
-                            "profile-name" : "Jethro Muluba",
-                            "profile-post" : "Ui/Ux Designer, Enywork"
+                            "image" : "https://res.cloudinary.com/dr8ofciki/image/upload/v1746010546/Enywork/blog-3.jpg",
+                            "title" : "Guide complet du Design System en 2025",
+                            "subtitle" : "Comment créez et maintenir un design system efficace pour votre équipe...",
+                            "avatar" : "https://res.cloudinary.com/dr8ofciki/image/upload/v1745852687/Enywork/jethro-muluba-profile.png",
+                            "name" : "Jethro Muluba",
+                            "role" : "Ui/Ux Designer, Enywork"
                         }
                     ]
                 }
