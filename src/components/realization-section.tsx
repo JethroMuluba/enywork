@@ -37,7 +37,7 @@ export default function RealizationsSection() {
                                     src={item.image || "/placeholder.svg"} 
                                     alt={item.title} 
                                     fill 
-                                    className="object-cover transition-transform duration-300 hover:scale-110"
+                                    className="object-cover transition-transform duration-600 hover:scale-110"
                                     onError={(e) => {
                                     const target = e.target as HTMLImageElement;
                                     target.src = "/placeholder.svg";

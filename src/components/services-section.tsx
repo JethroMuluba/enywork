@@ -46,7 +46,6 @@ const serviceItems = [
 ]
 
 export default function ServicesSection(): JSX.Element {
-    // const serviceTems = data.home?.[4]?.ourServicesSection?.[0]?.services;
     const getTitle = data.home?.[4]?.ourServicesSection?.[0]?.title || 'Nos services';
     const getSubTitle = data.home?.[4]?.ourServicesSection?.[0]?.subtitle || "Vous offrir un service de qualité est la raison d'être de notre start-up.";
     const ref = useRef(null);
@@ -72,7 +71,7 @@ export default function ServicesSection(): JSX.Element {
                 }}
 
                 
-              key={service.id} className="group bg-white hover:bg-[#E10919] rounded-lg shadow-lg p-8 transition-all duration-300 hover:scale-110">
+              key={service.id} className="group bg-white hover:bg-[#E10919] rounded-lg shadow-lg p-8 transition-all duration-600 hover:scale-110">
                 <div className="mb-4 text-[#E10919] group-hover:text-white">{service.icon}</div>
                 <h3 className="text-xl md:text-2xl font-semibold text-[#1C2736] mb-3 group-hover:text-white">{service.title}</h3>
                 <p className="text-[#3B4E6A] group-hover:text-white">{service.description}</p>

@@ -14,14 +14,22 @@ export default function BlogSection() {
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true, margin: "-100px" });
   return (
-    <section className="py-20 px-4 md:px-8 lg:px-30 2xl:45">
+    <section ref={ref} className="py-20 px-4 md:px-8 lg:px-30 2xl:45">
       <div className="container-custom">
         <div className="flex flex-col items-center gap-12 md:gap-16">
             <SectionTitle title={getTitle} subTitle={getSubTitle} />
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
-            {blogData?.map((post) => (
-              <div key={post.id} className="bg-white rounded-lg shadow-lg overflow-hidden">
+            {blogData?.map((post, index) => (
+                <motion.div 
+                    initial={{ y: 100, opacity: 0 }}
+                    animate={isInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
+                    transition={{ 
+                        duration: 1.5, 
+                        ease: "easeOut",
+                        delay: index * 0.8 
+                    }}
+                    key={post.id} className="bg-white rounded-lg shadow-lg overflow-hidden">
                 <div className="relative h-64 w-full">
                   <Image src={post.image || "/placeholder.svg"} alt={post.title} fill className="object-cover transition-all duration-600 hover:scale-110" />
                 </div>
@@ -36,10 +44,10 @@ export default function BlogSection() {
                     <div className="flex items-center gap-4">
                       <div className="relative w-12 h-12 rounded-full overflow-hidden">
                         <Image
-                          src={post.avatar || "/placeholder.svg"}
-                          alt={post.name}
-                          fill
-                          className="object-cover"
+                            src={post.avatar || "/placeholder.svg"}
+                            alt={post.name}
+                            fill
+                            className="object-cover"
                         />
                       </div>
                       <p className="text-secondary-light">
@@ -56,16 +64,20 @@ export default function BlogSection() {
                     </Link>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
 
-          <div className="flex justify-center gap-2 mt-4">
-            <span className="w-3 h-3 rounded-full bg-light-quaternary"></span>
-            <span className="w-3 h-3 rounded-full bg-white border-2 border-primary"></span>
-            <span className="w-3 h-3 rounded-full bg-light-quaternary"></span>
-            <span className="w-3 h-3 rounded-full bg-light-quaternary"></span>
-          </div>
+            <motion.div
+                    initial={{ y: 100, opacity: 0 }}
+                    animate={isInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
+                    transition={{ duration: 5, ease: "easeOut" }}
+            >
+            <Link href="/blog" className="bg-[#E10919] hover:bg-[#B00813] px-8 py-4 rounded-lg font-medium text-white cursor-pointer flex items-center gap-2">
+                <span>VOIR PLUS</span>
+                <ArrowRight className="w-5 h-5" />
+            </Link>
+            </motion.div>
         </div>
       </div>
     </section>

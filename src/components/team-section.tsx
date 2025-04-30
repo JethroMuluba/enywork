@@ -53,7 +53,7 @@ export default function TeamSection() {
                   delay: index * 0.8 
               }}
               key={member.id} className="bg-white rounded-lg shadow-lg overflow-hidden">
-                <div className="relative h-85 2xl:h-95 w-full transition-transform duration-300 hover:scale-110">
+                <div className="relative h-85 2xl:h-95 w-full transition-transform duration-600 hover:scale-110">
                   <Image src={member.image || "/placeholder.svg"} alt={`${member.firstname}`+ ' '+`${member.lastname}`} fill className="object-cover" />
                 </div>
 
