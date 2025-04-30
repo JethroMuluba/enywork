@@ -2,25 +2,37 @@ import Link from "next/link"
 import Image from "next/image"
 import { Mail, MapPin, Phone, Instagram, Twitter, Facebook, Linkedin } from "lucide-react"
 import data from "@/data/data.json"
+import { motion, useInView } from 'framer-motion'
+import { useRef } from 'react'
 
 export default function Footer() {
     const logoEnywork = data.header[0].logo || '/placeholder.svg';
+    const ref = useRef(null);
+    const isInView = useInView(ref, { once: true, margin: "-100px" });
   return (
-    <footer className="bg-[#141926] text-white">
+    <footer ref={ref} className="bg-[#141926] text-white">
       <div className="container-custom py-12 px-4 md:px-8 lg:px-30">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+        <div className="flex flex-col lg:flex-row justify-center gap-20">
           {/* Company Info */}
-          <div className="flex flex-col gap-6">
+          <motion.div
+                    initial={{ y: 100, opacity: 0 }}
+                    animate={isInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
+                    transition={{ duration: 1, ease: "easeOut" }}
+            className="flex flex-col items-center lg:items-start gap-6">
             <Link href="/" className="relative h-[60px] w-[151px]">
               <Image src={logoEnywork} alt="Enywork Logo" width={151} height={60} />
             </Link>
-            <p className="text-light-secondary">Travaillons ensemble sur la réussite de vos projets.</p>
-          </div>
+            <p className="text-light-secondary text-center lg:text-left">Travaillons ensemble sur la réussite de vos projets.</p>
+          </motion.div>
 
           {/* Site Menu */}
-          <div className="flex flex-col gap-4">
-            <h3 className="text-base font-medium mb-2">MENU DU SITE</h3>
-            <div className="flex flex-col gap-2">
+          <motion.div 
+                    initial={{ y: 100, opacity: 0 }}
+                    animate={isInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
+                    transition={{ duration: 1.5, ease: "easeOut" }}
+          className="flex flex-col gap-4">
+            <h3 className="text-base text-center lg:text-left font-medium mb-2">MENU DU SITE</h3>
+            <div className="flex flex-col gap-2 text-center lg:text-left">
               <Link href="/" className="text-light-secondary hover:text-white transition-colors">
                 Accueil
               </Link>
@@ -43,11 +55,15 @@ export default function Footer() {
                 Contact
               </Link>
             </div>
-          </div>
+          </motion.div>
 
           {/* Contact Info */}
-          <div className="flex flex-col gap-4">
-            <h3 className="text-base font-medium mb-2">NOS CONTACTS</h3>
+          <motion.div 
+                    initial={{ y: 100, opacity: 0 }}
+                    animate={isInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
+                    transition={{ duration: 2, ease: "easeOut" }}
+          className="flex flex-col items-center lg:items-start gap-4">
+            <h3 className="text-base font-medium text-center lg:text-left mb-2">NOS CONTACTS</h3>
             <div className="flex flex-col gap-3">
               <div className="flex items-center gap-3">
                 <Phone className="w-6 h-6 text-[#E10919]" />
@@ -58,22 +74,30 @@ export default function Footer() {
                 <span className="text-light-secondary">contact@enywork.com</span>
               </div>
             </div>
-          </div>
+          </motion.div>
 
           {/* Address & Social */}
           <div className="flex flex-col gap-8">
-            <div>
-              <h3 className="text-base font-medium mb-4">NOTRE ADRESSE</h3>
+            <motion.div 
+                    initial={{ y: 100, opacity: 0 }}
+                    animate={isInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
+                    transition={{ duration: 2.5, ease: "easeOut" }}
+            className="flex flex-col items-center lg:items-start">
+              <h3 className="text-base font-medium text-center lg:text-left mb-4">NOTRE ADRESSE</h3>
               <div className="flex items-start gap-3">
                 <MapPin className="w-6 h-6 text-[#E10919] flex-shrink-0 mt-1" />
                 <span className="text-light-secondary">
                   Ancienne Galerie Présidentielle, 6è niveau, Local 6B8, Kinshasa/Gombe
                 </span>
               </div>
-            </div>
+            </motion.div>
 
-            <div>
-              <h3 className="text-base font-medium mb-4">SUIVEZ-NOUS SUR :</h3>
+            <motion.div 
+                    initial={{ y: 100, opacity: 0 }}
+                    animate={isInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
+                    transition={{ duration: 3, ease: "easeOut" }}
+            className="flex flex-col items-center lg:items-start">
+              <h3 className="text-base font-medium text-center lg:text-left mb-4">SUIVEZ-NOUS SUR :</h3>
               <div className="flex gap-3">
                 <Link
                   href="#"
@@ -104,17 +128,21 @@ export default function Footer() {
                   <Linkedin className="w-5 h-5 text-white" />
                 </Link>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>
 
       {/* Copyright */}
-      <div className="bg-[#1C2736] py-6">
+      <motion.div 
+                    initial={{ y: 100, opacity: 0 }}
+                    animate={isInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
+                    transition={{ duration: 1, ease: "easeOut" }}
+      className="bg-[#1C2736] py-6 px-4 md:px-8 lg:px-30">
         <div className="container-custom text-center">
           <p className="text-white">Copyright © 2017 - {new Date().getFullYear()} Design by Enywork SARL</p>
         </div>
-      </div>
+      </motion.div>
     </footer>
   )
 }
