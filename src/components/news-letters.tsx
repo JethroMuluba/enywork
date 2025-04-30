@@ -37,17 +37,17 @@ export default function NewsletterSection() {
             <h2 className="text-2xl md:text-3xl text-center lg:text-left font-medium text-white leading-tight">{getTitle} </h2>
           </div>
 
-          <div className="flex flex-col lg:flex-row items-center gap-4">
-                <div className="relative w-22 h-22 md:w-28 md:h-28 lg:w-28 lg:h-28">
+          <div className="flex flex-row items-center gap-4">
+                <div className="relative w-30 h-30">
                     <Image
                         src={getIcone || "/placeholder.svg"}
                         alt="QuillInboxNewsletter"
                         fill
                         className="object-contain transition-all animate-pulse duration-600 hover:scale-110"
-                        sizes="(max-width: 768px) 2rem, (max-width: 1024px) 2rem, 2rem"
+                        sizes="8rem"
                     />
                 </div>
-            <p className="text-white text-center lg:text-left ">
+            <p className="text-white text-left ">
                 {getSubTitle}
             </p>
           </div>
