@@ -33,7 +33,7 @@ export default function NewsletterSection() {
       {/* Overlay */}
       <div className="absolute inset-0 bg-[#1C2736] opacity-75 z-0" aria-hidden="true"></div>
       <div className="container-custom relative z-10">
-        <div className="flex flex-col lg:flex-row gap-8 items-center">
+        <div className="flex flex-col lg:flex-row gap-8 lg:justify-between lg:gap-20 items-center">
           <motion.div
                     initial={{ y: 100, opacity: 0 }}
                     animate={isInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
