@@ -10,10 +10,12 @@ import { HeaderButton } from "./ui/headerButton"
 import { Button } from "./ui/button"
 import MenuHamburger from "./MenuHamburger"
 import DesktopMenu from "./desktopMenu"
+import { usePathname } from "next/navigation";
+
 
 export default function Header() {
-  // const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const [isDesktopMenuOpen, setIsDesktopMenuOpen] = useState(false)
+  const pathname = usePathname();
+  const [isDesktopMenuOpen, setIsDesktopMenuOpen] = useState(false);
   const logoEnywork = data.header[0].logo || '/default-logo.svg';
   const logoEnyworkAlt = data.header[0]["logo-alt"] || 'Default Logo Alt Text';
 
@@ -53,27 +55,52 @@ export default function Header() {
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center gap-5">
-            <Link href="/" className="text-secondary  text-[#E10919] transition-colors px-1 py-1.5">
+            <Link 
+              href="/" 
+              className={`text-secondary transition-colors px-1 py-1.5 ${
+                pathname === "/" ? "text-[#E10919]" : "hover:text-[#E10919]"
+              }`}
+            >
               ACCUEIL
             </Link>
-            {/* <span className="text-dark-secondary h-3 w-px">|</span> */}
-            <Link href="/about" className="text-secondary hover:text-[#E10919] transition-colors">
+            <Link 
+              href="/about" 
+              className={`text-secondary transition-colors ${
+                pathname === "/about" ? "text-[#E10919]" : "hover:text-[#E10919]"
+              }`}
+            >
               A PROPOS
             </Link>
-            {/* <span className="text-dark-secondary h-3 w-px">|</span> */}
-            <Link href="/realisations" className="text-secondary hover:text-[#E10919] transition-colors">
+            <Link 
+              href="/realisations" 
+              className={`text-secondary transition-colors ${
+                pathname === "/realisations" ? "text-[#E10919]" : "hover:text-[#E10919]"
+              }`}
+            >
               RÉALISATIONS
             </Link>
-            {/* <span className="text-dark-secondary h-3 w-px">|</span> */}
-            <Link href="/services" className="text-secondary hover:text-[#E10919] transition-colors">
+            <Link 
+              href="/services" 
+              className={`text-secondary transition-colors ${
+                pathname === "/services" ? "text-[#E10919]" : "hover:text-[#E10919]"
+              }`}
+            >
               SERVICES
             </Link>
-            {/* <span className="text-dark-secondary h-3 w-px">|</span> */}
-            <Link href="/equipe" className="text-secondary hover:text-[#E10919] transition-colors">
+            <Link 
+              href="/equipe" 
+              className={`text-secondary transition-colors ${
+                pathname === "/equipe" ? "text-[#E10919]" : "hover:text-[#E10919]"
+              }`}
+            >
               ÉQUIPE
             </Link>
-            {/* <span className="text-dark-secondary h-3 w-px">|</span> */}
-            <Link href="/blogs" className="text-secondary hover:text-[#E10919] transition-colors">
+            <Link 
+              href="/blogs" 
+              className={`text-secondary transition-colors ${
+                pathname === "/blogs" ? "text-[#E10919]" : "hover:text-[#E10919]"
+              }`}
+            >
               BLOGS
             </Link>
           </nav>
