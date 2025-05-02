@@ -473,7 +473,7 @@
             "hero" : [
                 {
                     "id" :0,
-                    "cover" : "url",
+                    "cover" : "https://res.cloudinary.com/dr8ofciki/image/upload/v1746201641/Enywork/about-hero.webp",
                     "pattern" : "https://res.cloudinary.com/dr8ofciki/image/upload/v1744118684/Enywork/hero-cover-v1.webp",
                     "title" : "A Propos de Nous",
                     "subTitle" : "Mieux nous connaître, c'est vous donner de l'assurance."
