@@ -12,7 +12,7 @@ export default function Footer() {
   return (
     <footer ref={ref} className="bg-[#141926] text-white">
       <div className="container-custom py-12 px-4 md:px-8 lg:px-30">
-        <div className="flex flex-col lg:flex-row justify-center gap-20">
+        <div className="flex flex-col lg:flex-row justify-between lg:justify-center gap-10 lg:gap-32">
           {/* Company Info */}
           <motion.div
                     initial={{ y: 100, opacity: 0 }}
@@ -30,8 +30,8 @@ export default function Footer() {
                     initial={{ y: 100, opacity: 0 }}
                     animate={isInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
                     transition={{ duration: 1.5, ease: "easeOut" }}
-          className="flex flex-col gap-4">
-            <h3 className="text-base text-center lg:text-left font-medium mb-2">MENU DU SITE</h3>
+          className="flex flex-col items-center lg:items-start gap-4">
+            <h3 className="text-base text-center lg:text-left font-medium mb-2">MENU</h3>
             <div className="flex flex-col gap-2 text-center lg:text-left">
               <Link href="/" className="text-light-secondary hover:text-white transition-colors">
                 Accueil
@@ -39,13 +39,13 @@ export default function Footer() {
               <Link href="/services" className="text-light-secondary hover:text-white transition-colors">
                 Services
               </Link>
-              <Link href="/a-propos" className="text-light-secondary hover:text-white transition-colors">
+              <Link href="/about" className="text-light-secondary hover:text-white transition-colors">
                 A propos
               </Link>
               <Link href="/realisations" className="text-light-secondary hover:text-white transition-colors">
                 Réalisations
               </Link>
-              <Link href="/equipe" className="text-light-secondary hover:text-white transition-colors">
+              <Link href="/team" className="text-light-secondary hover:text-white transition-colors">
                 Équipe
               </Link>
               <Link href="/blogs" className="text-light-secondary hover:text-white transition-colors">
