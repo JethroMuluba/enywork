@@ -1,7 +1,6 @@
 import React from 'react'
 import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
-import data from '@/data/data.json'
 
 interface HeroProps {
     title : string;
