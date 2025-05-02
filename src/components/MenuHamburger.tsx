@@ -55,7 +55,7 @@ return(
                 }}
                 className='flex w-full justify-center items-center text-center gap-[20px] text-sm font-medium py-[20px] px-[27px] hover:bg-[#E10919] hover:text-white'
                 >
-                    <a href='#home'> ACCUEIL </a>
+                    <a href='/'> ACCUEIL </a>
             </motion.li>
 
             <motion.li
@@ -69,7 +69,7 @@ return(
                 }}
                 className='flex w-full justify-center items-center text-center gap-[20px] text-sm font-medium py-[20px] px-[27px] hover:bg-[#E10919] hover:text-white'
                 >
-                    <a href='#about-me'> A PROPOS </a>
+                    <a href='about'> A PROPOS </a>
             </motion.li>
 
             <motion.li
@@ -83,7 +83,7 @@ return(
                 }}
                 className='flex w-full justify-center items-center text-center gap-[20px] text-sm font-medium py-[20px] px-[27px] hover:bg-[#E10919] hover:text-white'
                 >
-                <a href='#services'> RÉALISATIONS </a>
+                <a href='realizations'> RÉALISATIONS </a>
             </motion.li>
 
             <motion.li
@@ -97,7 +97,7 @@ return(
                 }}
                 className='flex w-full justify-center items-center text-center gap-[20px] text-sm font-medium py-[20px] px-[27px] hover:bg-[#E10919] hover:text-white'
                 >
-                <a href='#experiences'> SERVICE </a>
+                <a href='services'> SERVICE </a>
             </motion.li>
 
             <motion.li
@@ -111,7 +111,7 @@ return(
                 }}
                 className='flex w-full justify-center items-center text-center gap-[20px] text-sm font-medium py-[20px] px-[27px] hover:bg-[#E10919] hover:text-white'
                 >
-                <a href='#experiences'> ÉQUIPE </a>
+                <a href='team'> ÉQUIPE </a>
             </motion.li>
 
             <motion.li
@@ -125,7 +125,7 @@ return(
                 }}
                 className='flex w-full justify-center items-center text-center gap-[20px] text-sm font-medium py-[20px] px-[27px] hover:bg-[#E10919] hover:text-white'
                 >
-                <a href='#contact-me'> BLOGS </a>
+                <a href='blogs'> BLOGS </a>
             </motion.li>
         </ul>
         {/* <button className='bg-[#E10919] hover:bg-[#B00813] px-4 py-4 text-white text-sm font-medium cursor-pointer'>
