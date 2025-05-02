@@ -72,9 +72,9 @@ export default function Header() {
               A PROPOS
             </Link>
             <Link 
-              href="/realisations" 
+              href="/realizations" 
               className={`text-secondary transition-colors ${
-                pathname === "/realisations" ? "text-[#E10919]" : "hover:text-[#E10919]"
+                pathname === "/realizations" ? "text-[#E10919]" : "hover:text-[#E10919]"
               }`}
             >
               RÉALISATIONS

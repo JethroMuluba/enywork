@@ -34,25 +34,25 @@ export default function Footer() {
           className="flex flex-col items-center lg:items-start gap-4">
             <h3 className="text-base text-center lg:text-left font-medium mb-2">MENU</h3>
             <div className="flex flex-col gap-2 text-center lg:text-left">
-              <Link href="/" className="text-light-secondary hover:text-white transition-colors">
+              <Link href="/" className="text-light-secondary hover:text-[#E10919] transition-colors">
                 Accueil
               </Link>
-              <Link href="/services" className="text-light-secondary hover:text-white transition-colors">
-                Services
-              </Link>
-              <Link href="/about" className="text-light-secondary hover:text-white transition-colors">
+              <Link href="/about" className="text-light-secondary hover:text-[#E10919] transition-colors">
                 A propos
               </Link>
-              <Link href="/realisations" className="text-light-secondary hover:text-white transition-colors">
+              <Link href="/realizations" className="text-light-secondary hover:text-[#E10919] transition-colors">
                 Réalisations
               </Link>
-              <Link href="/team" className="text-light-secondary hover:text-white transition-colors">
+              <Link href="/services" className="text-light-secondary hover:text-[#E10919] transition-colors">
+                Services
+              </Link>
+              <Link href="/team" className="text-light-secondary hover:text-[#E10919] transition-colors">
                 Équipe
               </Link>
-              <Link href="/blogs" className="text-light-secondary hover:text-white transition-colors">
+              <Link href="/blogs" className="text-light-secondary hover:text-[#E10919] transition-colors">
                 Blogs
               </Link>
-              <Link href="/contact" className="text-light-secondary hover:text-white transition-colors">
+              <Link href="/contact" className="text-light-secondary hover:text-[#E10919] transition-colors">
                 Contact
               </Link>
             </div>
