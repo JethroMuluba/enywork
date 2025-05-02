@@ -1,6 +1,6 @@
 import Hamburger from 'hamburger-react'
 import { useEffect, useRef, useState } from 'react';
-// import Link from "next/link";
+import Link from "next/link";
 import { AnimatePresence, motion } from 'framer-motion';
 
 
@@ -55,7 +55,7 @@ return(
                 }}
                 className='flex w-full justify-center items-center text-center gap-[20px] text-sm font-medium py-[20px] px-[27px] hover:bg-[#E10919] hover:text-white'
                 >
-                    <a href='/'> ACCUEIL </a>
+                    <Link href='/'> ACCUEIL </Link>
             </motion.li>
 
             <motion.li
@@ -69,7 +69,7 @@ return(
                 }}
                 className='flex w-full justify-center items-center text-center gap-[20px] text-sm font-medium py-[20px] px-[27px] hover:bg-[#E10919] hover:text-white'
                 >
-                    <a href='about'> A PROPOS </a>
+                    <Link href='/about'> A PROPOS </Link>
             </motion.li>
 
             <motion.li
@@ -83,7 +83,7 @@ return(
                 }}
                 className='flex w-full justify-center items-center text-center gap-[20px] text-sm font-medium py-[20px] px-[27px] hover:bg-[#E10919] hover:text-white'
                 >
-                <a href='realizations'> RÉALISATIONS </a>
+                <Link href='/realizations'> RÉALISATIONS </Link>
             </motion.li>
 
             <motion.li
@@ -97,7 +97,7 @@ return(
                 }}
                 className='flex w-full justify-center items-center text-center gap-[20px] text-sm font-medium py-[20px] px-[27px] hover:bg-[#E10919] hover:text-white'
                 >
-                <a href='services'> SERVICE </a>
+                <Link href='/services'> SERVICE </Link>
             </motion.li>
 
             <motion.li
@@ -111,7 +111,7 @@ return(
                 }}
                 className='flex w-full justify-center items-center text-center gap-[20px] text-sm font-medium py-[20px] px-[27px] hover:bg-[#E10919] hover:text-white'
                 >
-                <a href='team'> ÉQUIPE </a>
+                <Link href='/team'> ÉQUIPE </Link>
             </motion.li>
 
             <motion.li
@@ -125,7 +125,7 @@ return(
                 }}
                 className='flex w-full justify-center items-center text-center gap-[20px] text-sm font-medium py-[20px] px-[27px] hover:bg-[#E10919] hover:text-white'
                 >
-                <a href='blogs'> BLOGS </a>
+                <Link href='/blogs'> BLOGS </Link>
             </motion.li>
         </ul>
         {/* <button className='bg-[#E10919] hover:bg-[#B00813] px-4 py-4 text-white text-sm font-medium cursor-pointer'>
