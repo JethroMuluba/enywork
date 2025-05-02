@@ -2,12 +2,12 @@
 
 import React from 'react'
 
-const Realizations = () => {
+const Team = () => {
   return (
     <main className="min-h-screen font-[poppins] pt-[92px] lg:pt-[124px] ">
-        Realizations Page is on bulding
+        Team Page is on bulding
     </main>
   )
 }
 
-export default Realizations
+export default Team

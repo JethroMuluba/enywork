@@ -88,7 +88,7 @@ export default function Header() {
               SERVICES
             </Link>
             <Link 
-              href="/equipe" 
+              href="/team" 
               className={`text-secondary transition-colors ${
                 pathname === "/equipe" ? "text-[#E10919]" : "hover:text-[#E10919]"
               }`}
@@ -102,6 +102,14 @@ export default function Header() {
               }`}
             >
               BLOGS
+            </Link>
+            <Link 
+              href="/contact" 
+              className={`text-secondary transition-colors ${
+                pathname === "/contact" ? "text-[#E10919]" : "hover:text-[#E10919]"
+              }`}
+            >
+              CONTACT
             </Link>
           </nav>
 
