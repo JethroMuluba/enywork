@@ -467,7 +467,145 @@
         }
     ],
 
-    "about-us" : [
+    "about" : [
+        {
+            "id" : 0,
+            "hero" : [
+                {
+                    "id" :0,
+                    "cover" : "url",
+                    "pattern" : "https://res.cloudinary.com/dr8ofciki/image/upload/v1744118684/Enywork/hero-cover-v1.webp",
+                    "title" : "A Propos de Nous",
+                    "subTitle" : "Mieux nous connaître, c'est vous donner de l'assurance."
+                }
+            ]
+        },
+
+        {
+            "id" : 1,
+            "image" : "url",
+            "title" : "Notre Histoire",
+            "history" : [
+                {
+                    "id" :0,
+                    "text1" : "ENYWORK, start-up congolais, spécialisée dans la conception et le développement de logiciels sur mesure, implantée en RDC, développe les activités autour des différentes prestations informatiques dédiées aux entreprises et autres (organisation, établissement supérieur et universitaire et particulier)."
+                },
+
+                {
+                    "id" :1,
+                    "text2" : "Créée depuis le mois de novembre 2017, la start-up ENYWORK vise à connecter les institutions universitaires autour d’une base de données commune facilitant le contrôle d’authenticité des documents académiques livrées et la traçabilité du parcours de l’étudiant."
+                }
+            ]
+        },
+
+        {
+            "id" : 2,
+            "image" : "url",
+            "title" : "Notre Mission",
+            "mission" : [
+                {
+                    "id" :0,
+                    "text1" : "ENYWORK, start-up congolais, spécialisée dans la conception et le développement de logiciels sur mesure, implantée en RDC, développe les activités autour des différentes prestations informatiques dédiées aux entreprises et autres (organisation, établissement supérieur et universitaire et particulier)."
+                },
+
+                {
+                    "id" :1,
+                    "text2" : "Créée depuis le mois de novembre 2017, la start-up ENYWORK vise à connecter les institutions universitaires autour d’une base de données commune facilitant le contrôle d’authenticité des documents académiques livrées et la traçabilité du parcours de l’étudiant."
+                }
+            ]
+        },
+
+        {
+            "id" : 3,
+            "image" : "url",
+            "title" : "Notre Vision",
+            "vision" : [
+                {
+                    "id" :0,
+                    "text1" : "ENYWORK, start-up congolais, spécialisée dans la conception et le développement de logiciels sur mesure, implantée en RDC, développe les activités autour des différentes prestations informatiques dédiées aux entreprises et autres (organisation, établissement supérieur et universitaire et particulier)."
+                },
+
+                {
+                    "id" :1,
+                    "text2" : "Créée depuis le mois de novembre 2017, la start-up ENYWORK vise à connecter les institutions universitaires autour d’une base de données commune facilitant le contrôle d’authenticité des documents académiques livrées et la traçabilité du parcours de l’étudiant."
+                }
+            ]
+        },
+
+        {
+            "id" : 4,
+            "title" : "Nos Valeurs",
+            "subTitle" : "Sed ut perspiciatis unde omnis iste ",
+            "text" : "ENYWORK, start-up congolais, spécialisée dans la conception et le développement de logiciels sur mesure, implantée en RDC, développe les activités autour des différentes prestations informatiques dédiées aux entreprises et autres (organisation, établissement supérieur et universitaire et particulier).",
+            "values" : [
+                {
+                    "value1" : "Excellence",
+                    "value2" : "Simplicité",
+                    "value3" : "Détermination",
+                    "value4" : "Innovation"  
+                }
+            ]
+        },
+
+        {
+            "id" : 5,
+            "counter" : [
+                {
+                    "id" :0,
+                    "counterTitle" : "ANNÉES D'EXPÉRIENCES",
+                    "counterNumber" :"9"
+                },
+
+                {
+                    "id" :1,
+                    "counterTitle" : "PROJETS RÉALISÉS",
+                    "counterNumber" :"12"
+                },
+
+                {
+                    "id" :2,
+                    "counterTitle" : "TOTAL CLIENTS",
+                    "counterNumber" :"12"
+                },
+
+                {
+                    "id" :3,
+                    "counterTitle" : "PRIX REMPORTÉ",
+                    "counterNumber" :"9"
+                }
+            ]
+        },
+
+        {
+            "id" : 6,
+            "title" : "Notre Galerie",
+            "subTitle" : "Découvrez nos réalisations, notre équipe passionnée et les moments forts qui font vibrer notre agence au quotidien.",
+            "images" : [
+                {
+                    "id" : 0,
+                    "src" : "url",
+                    "alt" : "Gallery Image"
+                },
+
+                {
+                    "id" : 1,
+                    "src" : "url",
+                    "alt" : "Gallery Image"
+                },
+
+                {
+                    "id" : 2,
+                    "src" : "url",
+                    "alt" : "Gallery Image"
+                },
+
+                {
+                    "id" : 3,
+                    "src" : "url",
+                    "alt" : "Gallery Image"
+                }
+            ]
+        }
 
     ],
 

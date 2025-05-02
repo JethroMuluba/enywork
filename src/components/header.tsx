@@ -98,7 +98,7 @@ export default function Header() {
             <Link 
               href="/blogs" 
               className={`text-secondary transition-colors ${
-                pathname === "/blogs" ? "text-[#E10919]" : "hover:text-[#E10919]"
+                pathname.startsWith("/blogs") ? "text-[#E10919]" : "hover:text-[#E10919]"
               }`}
             >
               BLOGS
