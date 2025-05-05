@@ -283,13 +283,13 @@ export default function AboutPage() {
                         </motion.p>
                     </div>
                     {/* Colonne droite */}
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 w-full max-w-md mx-auto">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 w-full">
                         {/* Carte 1 */}
                         <motion.div
                             initial={{ scale: 0, opacity: 0 }}
                             animate={isValuesView ? { scale: 1, opacity: 1 } : { scale: 0, opacity: 1 }}
                             transition={{ type: "spring", stiffness: 960, damping: 80, duration: 1, delay: 0.2 }}
-                            className="flex flex-col items-center justify-center bg-white rounded-lg shadow-lg py-10"
+                            className="w-full flex flex-col items-center justify-center bg-white rounded-lg shadow-lg py-10"
                         >
                             <Crown className="w-10 h-10 text-[#E10919]" />
                             <h2 className="text-[#E10919] text-xl font-semibold mt-2">{values1}</h2>
@@ -299,7 +299,7 @@ export default function AboutPage() {
                             initial={{ scale: 0, opacity: 0 }}
                             animate={isValuesView ? { scale: 1, opacity: 1 } : { scale: 0, opacity: 1 }}
                             transition={{ type: "spring", stiffness: 960, damping: 80, duration: 1, delay: 0.3 }}
-                            className="flex flex-col items-center justify-center bg-[#E10919] rounded-lg shadow-md py-10"
+                            className="w-full flex flex-col items-center justify-center bg-[#E10919] rounded-lg shadow-lg py-10"
                         >
                             <Feather className="w-10 h-10 text-white" />
                             <h2 className="text-white text-xl font-semibold mt-2">{values2}</h2>
@@ -309,7 +309,7 @@ export default function AboutPage() {
                             initial={{ scale: 0, opacity: 0 }}
                             animate={isValuesView ? { scale: 1, opacity: 1 } : { scale: 0, opacity: 1 }}
                             transition={{ type: "spring", stiffness: 960, damping: 80, duration: 1, delay: 0.4 }}
-                            className="flex flex-col items-center justify-center bg-[#E10919] rounded-lg shadow-md py-10"
+                            className="w-full flex flex-col items-center justify-center bg-[#E10919] rounded-lg shadow-lg py-10"
                         >
                             <Rocket className="w-10 h-10 text-white" />
                             <h2 className="text-white text-xl font-semibold mt-2">{values3}</h2>
@@ -319,7 +319,7 @@ export default function AboutPage() {
                             initial={{ scale: 0, opacity: 0 }}
                             animate={isValuesView ? { scale: 1, opacity: 1 } : { scale: 0, opacity: 1 }}
                             transition={{ type: "spring", stiffness: 960, damping: 80, duration: 1, delay: 0.5 }}
-                            className="flex flex-col items-center justify-center bg-white rounded-lg shadow-md py-10"
+                            className="w-full flex flex-col items-center justify-center bg-white rounded-lg shadow-lg py-10"
                         >
                             <Lightbulb className="w-10 h-10 text-[#E10919]" />
                             <h2 className="text-[#E10919] text-xl font-semibold mt-2">{values4}</h2>
