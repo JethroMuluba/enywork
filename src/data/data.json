@@ -483,8 +483,9 @@
 
         {
             "id" : 1,
-            "image" : "url",
+            "image" : "https://res.cloudinary.com/dr8ofciki/image/upload/v1745409097/Enywork/enywork-about-image.webp",
             "title" : "Notre Histoire",
+            "subTitle" :"Mieux nous connaître, c'est vous donner de l'assurance.",
             "history" : [
                 {
                     "id" :0,
@@ -500,8 +501,9 @@
 
         {
             "id" : 2,
-            "image" : "url",
+            "image" : "https://res.cloudinary.com/dr8ofciki/image/upload/v1745409097/Enywork/enywork-about-image.webp",
             "title" : "Notre Mission",
+            "subTitle" :"Mieux nous connaître, c'est vous donner de l'assurance.",
             "mission" : [
                 {
                     "id" :0,
@@ -517,8 +519,9 @@
 
         {
             "id" : 3,
-            "image" : "url",
+            "image" : "https://res.cloudinary.com/dr8ofciki/image/upload/v1745409097/Enywork/enywork-about-image.webp",
             "title" : "Notre Vision",
+            "subTitle" :"Mieux nous connaître, c'est vous donner de l'assurance.",
             "vision" : [
                 {
                     "id" :0,
@@ -553,25 +556,25 @@
                 {
                     "id" :0,
                     "counterTitle" : "ANNÉES D'EXPÉRIENCES",
-                    "counterNumber" :"9"
+                    "counterNumber" : 9
                 },
 
                 {
                     "id" :1,
                     "counterTitle" : "PROJETS RÉALISÉS",
-                    "counterNumber" :"12"
+                    "counterNumber" : 12
                 },
 
                 {
                     "id" :2,
                     "counterTitle" : "TOTAL CLIENTS",
-                    "counterNumber" :"12"
+                    "counterNumber" : 12
                 },
 
                 {
                     "id" :3,
                     "counterTitle" : "PRIX REMPORTÉ",
-                    "counterNumber" :"9"
+                    "counterNumber" : 9
                 }
             ]
         },
@@ -621,5 +624,7 @@
             ]
 
         }
+
+
     ]
 }
