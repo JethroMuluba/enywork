@@ -14,7 +14,7 @@ export default function BlogSection() {
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true, margin: "-100px" });
   return (
-    <section ref={ref} className="py-20 px-4 md:px-8 lg:px-30 2xl:45">
+    <section ref={ref} className="py-20 px-4 md:px-8 lg:px-20 2xl:45">
       <div className="container-custom">
         <div className="flex flex-col items-center gap-12 md:gap-16">
             <SectionTitle title={getTitle} subTitle={getSubTitle} />

@@ -29,7 +29,7 @@ export default function NewsletterSection() {
     }
 
   return (
-    <section ref={ref} className="relative overflow-hidden font-[poppins] flex justify-between items-center py-12 px-4 md:px-8 lg:px-30" style={{ backgroundImage: `url(${getCover})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+    <section ref={ref} className="relative overflow-hidden font-[poppins] flex justify-between items-center py-12 px-4 md:px-8 lg:px-20" style={{ backgroundImage: `url(${getCover})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
       {/* Overlay */}
       <div className="absolute inset-0 bg-[#1C2736] opacity-75 z-0" aria-hidden="true"></div>
       <div className="container-custom relative z-10">

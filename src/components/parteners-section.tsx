@@ -34,7 +34,7 @@ const PartenersSection = () => {
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true, margin: "-100px" })
     return (
-      <div ref={ref} className='py-20 px-4 md:px-8 lg:px-25'>
+      <div ref={ref} className='py-20 px-4 md:px-8 lg:px-20'>
           <motion.h2 
                   initial={{ y: 100, opacity: 0 }}
                   animate={isInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
