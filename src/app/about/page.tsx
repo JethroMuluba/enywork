@@ -5,6 +5,7 @@ import data from '@/data/data.json'
 import Image from "next/image"
 import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
+import StatisticsSection from "@/components/statistics-section"
 
 export default function AboutPage() {
     const getCover = data.about?.[0]?.hero?.[0].cover || "/placeholder.svg";
@@ -33,15 +34,27 @@ export default function AboutPage() {
     const visionText1 = data.about?.[3].vision?.[0].text1;
     const visionText2 = data.about?.[3].vision?.[1].text2;
 
+    // Nos Valeurs
+    const valuesTitle = data.about?.[4].title;
+    const valuesSubTitle = data.about?.[4].subTitle;
+    const valuesText = data.about?.[4].text;
+    const values1 = data.about?.[4].values?.[0].value1;
+    const values2 = data.about?.[4].values?.[0].value2;
+    const values3 = data.about?.[4].values?.[0].value3;
+    const values4 = data.about?.[4].values?.[0].value4;
+    
+
     // Créer des refs séparés pour chaque section
     const storyRef = useRef(null);
     const missionRef = useRef(null);
     const visionRef = useRef(null);
+    const valuesRef = useRef(null);
 
     // Créer des hooks useInView séparés
     const isStoryInView = useInView(storyRef, { once: true, margin: "-100px" });
     const isMissionInView = useInView(missionRef, { once: true, margin: "-100px" });
     const isVisionInView = useInView(visionRef, { once: true, margin: "-100px" });
+    const isValuesView = useInView(valuesRef, { once: true, margin: "-100px"})
 
     return (
         <main className="min-h-screen font-[poppins] pt-[92px] lg:pt-[124px]">
@@ -235,6 +248,63 @@ export default function AboutPage() {
                     </div>
                 </div>
             </section>
+
+            <StatisticsSection/>
+
+            {/* Nos Valeurs */}
+            <section className="bg-[#F2F2F2] font-[poppins] py-20 px-4 md:px-8 lg:px-35">
+                <div ref={valuesRef} className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div className="flex flex-col gap-12">
+                        <div className="flex flex-col gap-5">
+                            <motion.h2 
+                                initial={{ y: 100, opacity: 0 }}
+                                animate={isValuesView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
+                                transition={{ duration: 0.5, ease: "easeOut" }}
+                                className="text-4xl lg:text-4xl text-center lg:text-left font-semibold text-[#1C2736]"
+                            >
+                                {valuesTitle}
+                            </motion.h2>
+                            <motion.p 
+                                initial={{ y: 100, opacity: 0 }}
+                                animate={isValuesView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
+                                transition={{ duration: 1, ease: "easeOut" }}
+                                className="text-center lg:text-left text-xl text-[#3B4E6A]"
+                            >
+                                {valuesSubTitle}
+                            </motion.p>
+                        </div>
+
+                        <div className="flex flex-col gap-8 text-[#3B4E6A] text-base">
+                            <motion.p
+                                initial={{ y: 100, opacity: 0 }}
+                                animate={isValuesView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
+                                transition={{ duration: 1.5, ease: "easeOut" }}
+                                className="text-center lg:text-left"
+                            >
+                                {valuesText}
+                            </motion.p>
+                        </div>
+                    </div>
+                    <div className="flex justify-center">
+                        <div className="hidden lg:block w-1/2">
+                            <motion.div
+                                initial={{ y: 100, opacity: 0 }}
+                                animate={isValuesView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
+                                transition={{ duration: 2, ease: "easeOut" }}
+                            >
+                                <Image
+                                    src={visionImage || '/placeholder.svg?height=767&width=748'}
+                                    alt="Notre Vision"
+                                    width={948}
+                                    height={967}
+                                    className="w-full h-full object-cover"
+                                />
+                            </motion.div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
         </main>
     )
 }
