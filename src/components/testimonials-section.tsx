@@ -30,7 +30,7 @@ export default function TestimonialsSection() {
               key={testimonial.id} className="flex flex-col gap-6">
                 <div 
                 className="flex items-center gap-4">
-                  <div className="relative w-[100px] h-[100px] rounded-full overflow-hidden border-4 border-[#E10919]">
+                  <div className={`relative w-[100px] h-[100px] rounded-full overflow-hidden border-3 ${testimonial.highlighted ? "border-[#E10919] text-white" : " border-white"} shadow-lg `}>
                     <Image
                       src={testimonial.image || "/placeholder.svg"}
                       alt={testimonial.name}
