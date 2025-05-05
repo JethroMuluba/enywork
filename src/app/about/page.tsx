@@ -62,7 +62,7 @@ export default function AboutPage() {
             <HeroForAll title={getTitle} subTitle={getSubTitle} cover={getCover} pattern={getPattern} />
             
             {/* Notre Histoire */}
-            <section className="bg-[#F2F2F2] font-[poppins] py-20 px-4 md:px-8 lg:px-35">
+            <section className="bg-[#F2F2F2] font-[poppins] py-20 px-4 md:px-8 lg:px-20">
                 <div ref={storyRef} className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     <div className="flex flex-col gap-12">
                         <div className="flex flex-col gap-5">
@@ -125,7 +125,7 @@ export default function AboutPage() {
             </section>
 
             {/* Notre Mission */}
-            <section className="bg-[#F2F2F2] font-[poppins] py-20 px-4 md:px-8 lg:px-35">
+            <section className="bg-[#F2F2F2] font-[poppins] py-20 px-4 md:px-8 lg:px-20">
                 <div ref={missionRef} className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     <div className="flex justify-center">
                         <div className="hidden lg:block w-1/2">
@@ -188,7 +188,7 @@ export default function AboutPage() {
             </section>
 
             {/* Notre Vision */}
-            <section className="bg-[#F2F2F2] font-[poppins] py-20 px-4 md:px-8 lg:px-35">
+            <section className="bg-[#F2F2F2] font-[poppins] py-20 px-4 md:px-8 lg:px-20">
                 <div ref={visionRef} className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     <div className="flex flex-col gap-12">
                         <div className="flex flex-col gap-5">
@@ -253,7 +253,7 @@ export default function AboutPage() {
             <StatisticsSection/>
 
             {/* Nos Valeurs */}
-            <section className="bg-white font-[poppins] py-20 px-4 md:px-8 lg:px-35">
+            <section className="bg-white font-[poppins] py-20 px-4 md:px-8 lg:px-20">
                 <div ref={valuesRef} className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     {/* Colonne gauche */}
                     <div className="flex flex-col gap-5 max-w-lg mx-auto lg:mx-0">
@@ -283,13 +283,13 @@ export default function AboutPage() {
                         </motion.p>
                     </div>
                     {/* Colonne droite */}
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 w-full">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
                         {/* Carte 1 */}
                         <motion.div
                             initial={{ scale: 0, opacity: 0 }}
                             animate={isValuesView ? { scale: 1, opacity: 1 } : { scale: 0, opacity: 1 }}
                             transition={{ type: "spring", stiffness: 960, damping: 80, duration: 1, delay: 0.2 }}
-                            className="w-full flex flex-col items-center justify-center bg-white rounded-lg shadow-lg py-10"
+                            className="w-full flex flex-col items-center justify-center bg-white rounded-lg shadow-lg py-10 transition-all duration-600 hover:scale-110"
                         >
                             <Crown className="w-10 h-10 text-[#E10919]" />
                             <h2 className="text-[#E10919] text-xl font-semibold mt-2">{values1}</h2>
@@ -298,8 +298,8 @@ export default function AboutPage() {
                         <motion.div
                             initial={{ scale: 0, opacity: 0 }}
                             animate={isValuesView ? { scale: 1, opacity: 1 } : { scale: 0, opacity: 1 }}
-                            transition={{ type: "spring", stiffness: 960, damping: 80, duration: 1, delay: 0.3 }}
-                            className="w-full flex flex-col items-center justify-center bg-[#E10919] rounded-lg shadow-lg py-10"
+                            transition={{ type: "spring", stiffness: 960, damping: 80, duration: 1.5, delay: 0.4 }}
+                            className="w-full flex flex-col items-center justify-center bg-[#E10919] rounded-lg shadow-lg py-10 transition-all duration-600 hover:scale-110"
                         >
                             <Feather className="w-10 h-10 text-white" />
                             <h2 className="text-white text-xl font-semibold mt-2">{values2}</h2>
@@ -308,21 +308,21 @@ export default function AboutPage() {
                         <motion.div
                             initial={{ scale: 0, opacity: 0 }}
                             animate={isValuesView ? { scale: 1, opacity: 1 } : { scale: 0, opacity: 1 }}
-                            transition={{ type: "spring", stiffness: 960, damping: 80, duration: 1, delay: 0.4 }}
-                            className="w-full flex flex-col items-center justify-center bg-[#E10919] rounded-lg shadow-lg py-10"
+                            transition={{ type: "spring", stiffness: 960, damping: 80, duration: 2, delay: 0.6 }}
+                            className="w-full flex flex-col items-center justify-center  md:bg-[#E10919] rounded-lg shadow-lg py-10 transition-all duration-600 hover:scale-110"
                         >
-                            <Rocket className="w-10 h-10 text-white" />
-                            <h2 className="text-white text-xl font-semibold mt-2">{values3}</h2>
+                            <Rocket className="w-10 h-10 text-[#E10919] md:text-white " />
+                            <h2 className="text-[#E10919] md:text-white text-xl font-semibold mt-2">{values3}</h2>
                         </motion.div>
                         {/* Carte 4 */}
                         <motion.div
                             initial={{ scale: 0, opacity: 0 }}
                             animate={isValuesView ? { scale: 1, opacity: 1 } : { scale: 0, opacity: 1 }}
-                            transition={{ type: "spring", stiffness: 960, damping: 80, duration: 1, delay: 0.5 }}
-                            className="w-full flex flex-col items-center justify-center bg-white rounded-lg shadow-lg py-10"
+                            transition={{ type: "spring", stiffness: 960, damping: 80, duration: 2.5, delay: 0.8 }}
+                            className="w-full flex flex-col items-center justify-center bg-[#E10919] md:text-white md:bg-white rounded-lg shadow-lg py-10 transition-all duration-600 hover:scale-110"
                         >
-                            <Lightbulb className="w-10 h-10 text-[#E10919]" />
-                            <h2 className="text-[#E10919] text-xl font-semibold mt-2">{values4}</h2>
+                            <Lightbulb className="w-10 h-10 text-white md:text-[#E10919]" />
+                            <h2 className="text-white md:text-[#E10919] text-xl font-semibold mt-2">{values4}</h2>
                         </motion.div>
                     </div>
                 </div>
