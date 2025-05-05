@@ -6,6 +6,7 @@ import Image from "next/image"
 import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
 import StatisticsSection from "@/components/statistics-section"
+import { Crown, Feather, Rocket, Lightbulb } from 'lucide-react';
 
 export default function AboutPage() {
     const getCover = data.about?.[0]?.hero?.[0].cover || "/placeholder.svg";
@@ -252,55 +253,77 @@ export default function AboutPage() {
             <StatisticsSection/>
 
             {/* Nos Valeurs */}
-            <section className="bg-[#F2F2F2] font-[poppins] py-20 px-4 md:px-8 lg:px-35">
+            <section className="bg-white font-[poppins] py-20 px-4 md:px-8 lg:px-35">
                 <div ref={valuesRef} className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                    <div className="flex flex-col gap-12">
-                        <div className="flex flex-col gap-5">
-                            <motion.h2 
-                                initial={{ y: 100, opacity: 0 }}
-                                animate={isValuesView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
-                                transition={{ duration: 0.5, ease: "easeOut" }}
-                                className="text-4xl lg:text-4xl text-center lg:text-left font-semibold text-[#1C2736]"
-                            >
-                                {valuesTitle}
-                            </motion.h2>
-                            <motion.p 
-                                initial={{ y: 100, opacity: 0 }}
-                                animate={isValuesView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
-                                transition={{ duration: 1, ease: "easeOut" }}
-                                className="text-center lg:text-left text-xl text-[#3B4E6A]"
-                            >
-                                {valuesSubTitle}
-                            </motion.p>
-                        </div>
-
-                        <div className="flex flex-col gap-8 text-[#3B4E6A] text-base">
-                            <motion.p
-                                initial={{ y: 100, opacity: 0 }}
-                                animate={isValuesView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
-                                transition={{ duration: 1.5, ease: "easeOut" }}
-                                className="text-center lg:text-left"
-                            >
-                                {valuesText}
-                            </motion.p>
-                        </div>
+                    {/* Colonne gauche */}
+                    <div className="flex flex-col gap-5 max-w-lg mx-auto lg:mx-0">
+                        <motion.h2
+                            initial={{ y: 100, opacity: 0 }}
+                            animate={isValuesView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
+                            transition={{ duration: 0.5, ease: "easeOut" }}
+                            className="text-3xl lg:text-4xl text-center  font-semibold text-[#1C2736] lg:text-left"
+                        >
+                            {valuesTitle}
+                        </motion.h2>
+                        <motion.p
+                            initial={{ y: 100, opacity: 0 }}
+                            animate={isValuesView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
+                            transition={{ duration: 1, ease: "easeOut" }}
+                            className="text-xl text-center text-[#3B4E6A] lg:text-left"
+                        >
+                            {valuesSubTitle}
+                        </motion.p>
+                        <motion.p
+                            initial={{ y: 100, opacity: 0 }}
+                            animate={isValuesView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
+                            transition={{ duration: 1.5, ease: "easeOut" }}
+                            className="text-base text-[#3B4E6A] text-center lg:text-left "
+                        >
+                            {valuesText}
+                        </motion.p>
                     </div>
-                    <div className="flex justify-center">
-                        <div className="hidden lg:block w-1/2">
-                            <motion.div
-                                initial={{ y: 100, opacity: 0 }}
-                                animate={isValuesView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
-                                transition={{ duration: 2, ease: "easeOut" }}
-                            >
-                                <Image
-                                    src={visionImage || '/placeholder.svg?height=767&width=748'}
-                                    alt="Notre Vision"
-                                    width={948}
-                                    height={967}
-                                    className="w-full h-full object-cover"
-                                />
-                            </motion.div>
-                        </div>
+                    {/* Colonne droite */}
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 w-full max-w-md mx-auto">
+                        {/* Carte 1 */}
+                        <motion.div
+                            initial={{ scale: 0, opacity: 0 }}
+                            animate={isValuesView ? { scale: 1, opacity: 1 } : { scale: 0, opacity: 1 }}
+                            transition={{ type: "spring", stiffness: 960, damping: 80, duration: 1, delay: 0.2 }}
+                            className="flex flex-col items-center justify-center bg-white rounded-lg shadow-lg py-10"
+                        >
+                            <Crown className="w-10 h-10 text-[#E10919]" />
+                            <h2 className="text-[#E10919] text-xl font-semibold mt-2">{values1}</h2>
+                        </motion.div>
+                        {/* Carte 2 */}
+                        <motion.div
+                            initial={{ scale: 0, opacity: 0 }}
+                            animate={isValuesView ? { scale: 1, opacity: 1 } : { scale: 0, opacity: 1 }}
+                            transition={{ type: "spring", stiffness: 960, damping: 80, duration: 1, delay: 0.3 }}
+                            className="flex flex-col items-center justify-center bg-[#E10919] rounded-lg shadow-md py-10"
+                        >
+                            <Feather className="w-10 h-10 text-white" />
+                            <h2 className="text-white text-xl font-semibold mt-2">{values2}</h2>
+                        </motion.div>
+                        {/* Carte 3 */}
+                        <motion.div
+                            initial={{ scale: 0, opacity: 0 }}
+                            animate={isValuesView ? { scale: 1, opacity: 1 } : { scale: 0, opacity: 1 }}
+                            transition={{ type: "spring", stiffness: 960, damping: 80, duration: 1, delay: 0.4 }}
+                            className="flex flex-col items-center justify-center bg-[#E10919] rounded-lg shadow-md py-10"
+                        >
+                            <Rocket className="w-10 h-10 text-white" />
+                            <h2 className="text-white text-xl font-semibold mt-2">{values3}</h2>
+                        </motion.div>
+                        {/* Carte 4 */}
+                        <motion.div
+                            initial={{ scale: 0, opacity: 0 }}
+                            animate={isValuesView ? { scale: 1, opacity: 1 } : { scale: 0, opacity: 1 }}
+                            transition={{ type: "spring", stiffness: 960, damping: 80, duration: 1, delay: 0.5 }}
+                            className="flex flex-col items-center justify-center bg-white rounded-lg shadow-md py-10"
+                        >
+                            <Lightbulb className="w-10 h-10 text-[#E10919]" />
+                            <h2 className="text-[#E10919] text-xl font-semibold mt-2">{values4}</h2>
+                        </motion.div>
                     </div>
                 </div>
             </section>
