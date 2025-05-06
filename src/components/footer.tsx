@@ -13,7 +13,7 @@ export default function Footer() {
   return (
     <footer ref={ref} className="bg-[#141926] text-white">
       <div className="container-custom py-12 px-4 md:px-8 lg:px-20">
-        <div className="flex flex-col lg:flex-row justify-between lg:justify-center gap-10 lg:gap-32">
+        <div className="flex flex-col lg:flex-row justify-between  gap-10 lg:gap-32">
           {/* Company Info */}
           <motion.div
                     initial={{ y: 100, opacity: 0 }}

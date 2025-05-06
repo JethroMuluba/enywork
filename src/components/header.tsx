@@ -144,35 +144,6 @@ export default function Header() {
         </div>
       </div>
 
-      {/* Mobile Menu */}
-      {/* {isMenuOpen && (
-        <div className="lg:hidden bg-white shadow-md py-4">
-          <div className="container-custom flex flex-col gap-4">
-            <Link href="/" className="text-secondary hover:text-primary transition-colors py-2 border-b">
-              ACCUEIL
-            </Link>
-            <Link href="/a-propos" className="text-secondary hover:text-primary transition-colors py-2 border-b">
-              A PROPOS
-            </Link>
-            <Link href="/realisations" className="text-secondary hover:text-primary transition-colors py-2 border-b">
-              RÉALISATIONS
-            </Link>
-            <Link href="/services" className="text-secondary hover:text-primary transition-colors py-2 border-b">
-              SERVICES
-            </Link>
-            <Link href="/equipe" className="text-secondary hover:text-primary transition-colors py-2 border-b">
-              ÉQUIPE
-            </Link>
-            <Link href="/blogs" className="text-secondary hover:text-primary transition-colors py-2 border-b">
-              BLOGS
-            </Link>
-            <Link href="/contact" className="btn-primary self-start">
-              <span>CONTACT</span>
-              <ArrowRight className="w-5 h-5" />
-            </Link>
-          </div>
-        </div>
-      )} */}
     </motion.header>
   )
 }
