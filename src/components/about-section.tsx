@@ -79,7 +79,7 @@ export default function AboutSection() {
               transition={{ duration: 2.5, ease: "easeOut" }}
               className="flex justify-center lg:justify-start"
             >
-              <Link href="/about" className="bg-[#E10919] hover:bg-[#B00813] px-8 py-4 rounded-lg font-medium text-white cursor-pointer flex items-center gap-2">
+              <Link href="/about" className="bg-[#E10919] hover:bg-[#B00813] px-8 py-4 rounded-lg text-white cursor-pointer flex items-center gap-2">
                 <span>SAVOIR PLUS</span>
                 <ArrowRight className="w-5 h-5" />
               </Link>

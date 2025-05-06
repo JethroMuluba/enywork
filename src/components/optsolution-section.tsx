@@ -16,10 +16,10 @@ export default function OptSolutionSection() {
     const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section ref={ref} className="bg-fixed overflow-hidden font-[poppins] flex justify-between items-center px-4 md:px-8 lg:px-20 relative" style={{ backgroundImage: `url(${getCover})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+    <section ref={ref} className="bg-fixed overflow-hidden flex justify-between items-center px-4 md:px-8 lg:px-20 relative" style={{ backgroundImage: `url(${getCover})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
       <div className="absolute inset-0 bg-[#1C2736] opacity-75"></div>
       <div className="container-custom relative z-10 py-20 lg:py-12">
-        <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-15">
+        <div className="flex flex-col lg:flex-row 3xl:justify-center items-center gap-8 lg:gap-30">
           <motion.div 
             animate={isInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
             transition={{ duration: 0.5, ease: "easeOut" }}
@@ -37,7 +37,7 @@ export default function OptSolutionSection() {
             animate={isInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
             transition={{ duration: 1, ease: "easeOut" }}
             className="flex-1">
-            <p className="text-xl  text-white text-center ">
+            <p className="text-2xl  text-white text-center lg:text-left ">
               {getTitle}
             </p>
           </motion.div>
@@ -48,7 +48,7 @@ export default function OptSolutionSection() {
             transition={{ duration: 1.5, ease: "easeOut" }}
             className="flex justify-center lg:justify-start"
           >
-            <Link href="https://optsolution.net/" target="blank" className="bg-[#E10919] hover:bg-[#B00813] px-8 py-4 rounded-lg font-medium text-white cursor-pointer flex items-center gap-2">
+            <Link href="https://optsolution.net/" target="blank" className="bg-[#E10919] hover:bg-[#B00813] px-8 py-4 rounded-lg font-normal text-white cursor-pointer flex items-center gap-2">
               <span>DÉCOUVRIR</span>
               <ArrowRight className="w-5 h-5" />
             </Link>
