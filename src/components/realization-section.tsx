@@ -15,7 +15,7 @@ export default function RealizationsSection() {
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true, margin: "-100px" });
   return (
-    <section ref={ref} className="bg-white font-[poppins] py-20 px-4 md:px-8 lg:px-25">
+    <section ref={ref} className="bg-white py-20 px-4 md:px-8 lg:px-25">
         <div className="container-custom">
             <div className="flex flex-col items-center gap-12 ">
                 <SectionTitle title={getTitle} subTitle={getSubTitle} />      
@@ -46,8 +46,8 @@ export default function RealizationsSection() {
                                 </div>
 
                 <div className="p-6">
-                  <p className="text-primary text-lg text-[#E10919] font-medium mb-2">{item.category}</p>
-                  <h3 className="text-2xl font-semibold text-secondary text-[#1C2736] mb-4">{item.title}</h3>
+                  <p className="text-primary text-lg text-[#E10919] mb-2">{item.category}</p>
+                  <h3 className="text-2xl font-medium text-secondary text-[#1C2736] mb-4">{item.title}</h3>
                   <Link
                     href={item.link}
                     target="blank"
