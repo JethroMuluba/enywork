@@ -116,7 +116,7 @@ export default function AboutPage() {
                                     alt="Enywork en Formation du Personnel"
                                     width={948}
                                     height={967}
-                                    className="w-full h-full object-cover"
+                                    className="w-full h-full object-cover transition-transform duration-600 hover:scale-110"
                                 />
                             </motion.div>
                         </div>
@@ -139,7 +139,7 @@ export default function AboutPage() {
                                     alt="Notre Mission"
                                     width={948}
                                     height={967}
-                                    className="w-full h-full object-cover"
+                                    className="w-full h-full object-cover transition-transform duration-600 hover:scale-110transition-transform duration-600 hover:scale-110"
                                 />
                             </motion.div>
                         </div>
@@ -242,7 +242,7 @@ export default function AboutPage() {
                                     alt="Notre Vision"
                                     width={948}
                                     height={967}
-                                    className="w-full h-full object-cover"
+                                    className="w-full h-full object-cover transition-transform duration-600 hover:scale-110"
                                 />
                             </motion.div>
                         </div>
