@@ -98,7 +98,7 @@ export default function ServicesSection(): JSX.Element {
               whileFocus={{ scale: 1.2 }}
               whileTap={{ scale: 0.8 }}
           >
-          <Link href="/contact" className="bg-[#E10919] hover:bg-[#B00813] px-8 py-4 rounded-lg font-medium text-white cursor-pointer flex items-center gap-2">
+          <Link href="/contact" className="bg-[#E10919] hover:bg-[#B00813] px-8 py-4 rounded-lg text-white cursor-pointer flex items-center gap-2">
             <span>DEMANDEZ UN DEVIS</span>
             <ArrowRight className="w-5 h-5" />
           </Link>

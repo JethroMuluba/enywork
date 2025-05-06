@@ -37,7 +37,7 @@ export default function TeamSection() {
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true, margin: "-100px" });
   return (
-    <section ref={ref}  className="bg-white font-[poppins] py-20 px-4 md:px-8 lg:px-25">
+    <section ref={ref}  className="bg-white py-20 px-4 md:px-8 lg:px-25">
       <div className="container-custom">
         <div className="flex flex-col items-center gap-12">
             <SectionTitle title={getTitle} subTitle={getSubTitle} />
@@ -58,7 +58,7 @@ export default function TeamSection() {
                 </div>
 
                 <div className="p-6 text-center">
-                    <div className="flex justify-center text-center font-semibold gap-2">
+                    <div className="flex justify-center text-center font-medium gap-2">
                     <p className="text-2xl text-[#1C2736] text-secondary mb-3">{member.firstname}</p> 
                     <p className="text-2xl text-[#E10919] text-secondary mb-3">{member.lastname} </p>
                     </div>
@@ -89,7 +89,7 @@ export default function TeamSection() {
                 animate={isInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
                 transition={{ duration: 5, ease: "easeOut" }}
           >
-          <Link href="/team" className="bg-[#E10919] hover:bg-[#B00813] px-8 py-4 rounded-lg font-medium text-white cursor-pointer flex items-center gap-2">
+          <Link href="/team" className="bg-[#E10919] hover:bg-[#B00813] px-8 py-4 rounded-lg text-white cursor-pointer flex items-center gap-2">
             <span>VOIR PLUS</span>
             <ArrowRight className="w-5 h-5" />
           </Link>
