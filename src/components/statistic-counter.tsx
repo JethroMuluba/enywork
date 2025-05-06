@@ -57,16 +57,16 @@ export default function StatisticCounter() {
   ]
 
   return (
-    <section ref={ref} className="relative w-full h-[449px]">
-      <div className="absolute w-[1057px] h-[201px] left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
-        <div className="flex flex-row items-center gap-[67px]">
+    <section ref={ref} className="relative w-full min-h-[449px] py-20">
+      <div className="container mx-auto px-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:flex lg:flex-row items-center justify-center gap-8 lg:gap-[67px]">
           {stats.map((stat, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ duration: 0.5, delay: index * 0.2 }}
-              className="relative w-[214px] h-[201px] group"
+              className="relative w-full lg:w-[214px] h-[201px] group"
             >
               {/* Icon Circle */}
               <motion.div 
@@ -81,17 +81,17 @@ export default function StatisticCounter() {
 
               {/* Number */}
               <div className="absolute left-1/2 -translate-x-1/2 top-[65px] flex items-center gap-[10px]">
-                <span className=" text-[64px] leading-[91px] text-[#1C2736]">
+                <span className="text-4xl md:text-5xl lg:text-[64px] leading-[91px] text-[#1C2736]">
                   {stat.number}
                 </span>
-                <span className=" text-[64px] leading-[91px] text-[#1C2736]">
+                <span className="text-4xl md:text-5xl lg:text-[64px] leading-[91px] text-[#1C2736]">
                   +
                 </span>
               </div>
 
               {/* Label */}
               <div className="absolute left-1/2 -translate-x-1/2 top-[171px]">
-                <p className=" text-[18px] leading-[30px] text-[#1C2736] whitespace-nowrap">
+                <p className="text-base md:text-lg lg:text-[18px] leading-[30px] text-[#1C2736] whitespace-nowrap text-center">
                   {stat.label}
                 </p>
               </div>
