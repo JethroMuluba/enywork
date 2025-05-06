@@ -44,7 +44,7 @@ export default function TestimonialsSection() {
                   </div>
                 </div>
 
-                <div className="relative">
+                <div className="relative transition-transform duration-600 hover:scale-110">
                   <div
                     className={`px-6 py-8 rounded-lg shadow-lg relative ${testimonial.highlighted ? "bg-[#E10919] text-white" : "bg-white text-[#3B4E6A]"}`}
                   >

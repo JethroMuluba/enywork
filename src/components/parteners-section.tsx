@@ -39,7 +39,7 @@ const PartenersSection = () => {
                   initial={{ y: 100, opacity: 0 }}
                   animate={isInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
                   transition={{ duration: 0.5, ease: "easeOut" }}
-                  className=" text-4xl lg:text-4xl text-center font-semibold text-[#1C2736] mb-12"> 
+                  className=" text-4xl lg:text-4xl text-center font-medium text-[#1C2736] mb-12"> 
               Ils nous font confiance
           </motion.h2>
           <Marquee gradient={false} speed={40} pauseOnHover={true}>
