@@ -45,9 +45,9 @@ export default function StatisticsSection() {
   }, [isInView]);
 
   return (
-    <section ref={ref} className="font-[poppins] ">
+    <section ref={ref}>
       <div className="grid grid-cols-1 lg:grid-cols-2">
-        <div className="relative overflow-hidden font-[poppins] flex justify-center items-center lg:items-start py-18 h-[600px] lg:h-full" style={{ backgroundImage: `url(${getCover})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+        <div className="relative overflow-hidden flex justify-center items-center lg:items-start py-18 h-[600px] lg:h-full" style={{ backgroundImage: `url(${getCover})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
           <div className="absolute inset-0 bg-[#1C2736] opacity-75"></div>
           <div className="relative flex flex-col gap-10 z-10 text-center lg:text-left max-w-3xl px-4 md:px-8 lg:px-20">
             <motion.h2 
@@ -70,7 +70,7 @@ export default function StatisticsSection() {
                 animate={isInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
                 transition={{ duration: 2, ease: "easeOut" }}
             >
-              <Link href="/contact" className="inline-flex bg-[#E10919] hover:bg-[#B00813] px-8 py-4 rounded-lg font-medium text-white cursor-pointer items-center gap-2 self-center lg:self-start">
+              <Link href="/contact" className="inline-flex bg-[#E10919] hover:bg-[#B00813] px-8 py-4 rounded-lg text-white cursor-pointer items-center gap-2 self-center lg:self-start">
                 <span>DEMANDEZ UN DEVIS</span>
                 <ArrowRight className="w-5 h-5" />
               </Link>
