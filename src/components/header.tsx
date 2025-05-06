@@ -11,6 +11,7 @@ import { Button } from "./ui/button"
 import MenuHamburger from "./MenuHamburger"
 import DesktopMenu from "./desktopMenu"
 import { usePathname } from "next/navigation";
+import { motion } from 'framer-motion'
 
 
 export default function Header() {
@@ -22,10 +23,15 @@ export default function Header() {
   
 
   return (
-    <header className=" fixed top-0 left-0 w-full z-50">
+    <motion.header 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 1.5 }}
+            className=" fixed top-0 left-0 w-full z-50">
       {/* Top Header */}
       <div className="bg-gradient-to-r from-[#320001] to-[#BD2222] py-2 lg:px-20 3xl:px-45 hidden lg:block">
-        <div className="container-custom flex flex-col md:flex-row justify-between font-normal items-center gap-2 md:gap-0">
+        <div className="container-custom flex flex-col md:flex-row justify-between font-light items-center gap-2 md:gap-0">
           <div className="flex items-center gap-2">
             <Mail className="w-4 h-4 text-white" />
             <span className="text-xs text-white  ">contact@enywork.com</span>
@@ -167,7 +173,7 @@ export default function Header() {
           </div>
         </div>
       )} */}
-    </header>
+    </motion.header>
   )
 }
 

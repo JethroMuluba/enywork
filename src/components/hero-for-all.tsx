@@ -13,7 +13,13 @@ const HeroForAll = ({title, subTitle, cover, pattern} : HeroProps) => {
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true, margin: "-100px" });
   return (
-    <section ref = {ref} className="relative w-full h-[576px] bg-gradient-to-r from-[#320001] to-[#BD2222] overflow-hidden " style={{ backgroundImage: `url(${cover})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+    <motion.section 
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 1.5 }}
+        ref = {ref} className="relative w-full h-[576px] bg-gradient-to-r from-[#320001] to-[#BD2222] overflow-hidden " style={{ backgroundImage: `url(${cover})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
+    >
         <div className="absolute inset-0 bg-hero-pattern bg-cover bg-center opacity-80 " style={{ backgroundImage: `url(${pattern})`, backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
         <div className="container-custom relative z-10 h-full flex items-center justify-center">
             <div className="flex flex-col items-center gap-3 text-center px-4 md:px-8 lg:px-20">
@@ -33,7 +39,7 @@ const HeroForAll = ({title, subTitle, cover, pattern} : HeroProps) => {
                 </motion.p>
             </div>
         </div>
-</section>
+</motion.section>
   )
 }
 

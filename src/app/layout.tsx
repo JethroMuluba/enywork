@@ -6,8 +6,28 @@ import Header from "@/components/header"
 import Footer from "@/components/footer"
 
 
+
 const madeInfinityFont = LocalFont({
   src :[
+    {
+      path :'../fonts/MADEINFINITY-PERSONALUSE-Thin.otf',
+      weight: '100',
+      style: 'thin',
+    },
+
+    {
+      path :'../fonts/MADEINFINITY-PERSONALUSE-Light.otf',
+      weight: '200',
+      style: 'extralight',
+    },
+
+
+    {
+      path :'../fonts/MADEINFINITY-PERSONALUSE-Light.otf',
+      weight: '300',
+      style: 'light',
+    },
+
     {
       path :'../fonts/MADEINFINITY-PERSONALUSE-Regular.otf',
       weight: '400',
@@ -21,20 +41,8 @@ const madeInfinityFont = LocalFont({
     },
 
     {
-      path :'../fonts/MADEINFINITY-PERSONALUSE-Thin.otf',
-      weight: '100',
-      style: 'thin',
-    },
-
-    {
-      path :'../fonts/MADEINFINITY-PERSONALUSE-Light.otf',
-      weight: '300',
-      style: 'light',
-    },
-
-    {
       path :'../fonts/MADEINFINITY-PERSONALUSE-Regular.otf',
-      weight: '600',
+      weight: '650',
       style: 'semibold',
     },
 
@@ -42,6 +50,18 @@ const madeInfinityFont = LocalFont({
       path :'../fonts/MADEINFINITY-PERSONALUSE-Black.otf',
       weight: '700',
       style: 'bold',
+    },
+
+    {
+      path :'../fonts/MADEINFINITY-PERSONALUSE-Black.otf',
+      weight: '800',
+      style: 'extrabold',
+    },
+
+    {
+      path :'../fonts/MADEINFINITY-PERSONALUSE-Black.otf',
+      weight: '900',
+      style: 'black',
     }
   ]
 })
@@ -57,11 +77,13 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="fr" className={madeInfinityFont.className} >
+    <html lang="fr" className={madeInfinityFont.className}>
       <body>
-        <Header/>
-        {children}
-        <Footer/>
+        <div>
+          <Header/>
+          {children}
+          <Footer/>
+        </div>
       </body>
     </html>
   )
