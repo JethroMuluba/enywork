@@ -7,6 +7,7 @@ import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
 import StatisticsSection from "@/components/statistics-section"
 import { Crown, Feather, Rocket, Lightbulb } from 'lucide-react';
+import BrochuresDownload from "@/components/brochure-download"
 
 export default function AboutPage() {
     const getCover = data.about?.[0]?.hero?.[0].cover || "/placeholder.svg";
@@ -327,6 +328,9 @@ export default function AboutPage() {
                     </div>
                 </div>
             </section>
+
+            {/* Brochure */}
+            <BrochuresDownload/>
 
         </main>
     )
