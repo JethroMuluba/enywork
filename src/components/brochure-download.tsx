@@ -1,5 +1,4 @@
 import Link from "next/link"
-import Image from "next/image"
 import { Download  } from "lucide-react"
 import data from "@/data/data.json"
 import { motion, useInView } from 'framer-motion'
@@ -10,8 +9,8 @@ import { useRef } from 'react'
 
 export default function BrochuresDownload() {
     const getCover=data.home?.[2]?.optsolutionBreadge?.[0]?.background;
-    const getLogo=data.home?.[2]?.optsolutionBreadge?.[0]?.logoOptsolutionWhite;
-    const getTitle=data.home?.[2]?.optsolutionBreadge?.[0]?.title;
+    const getTitle=data.about?.[6]?.brochureDownloader?.[0]?.title;
+    const getSubTitle=data.about?.[6]?.brochureDownloader?.[0]?.subTitle;
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true, margin: "-100px" });
 
@@ -26,11 +25,11 @@ export default function BrochuresDownload() {
             transition={{ duration: 1, ease: "easeOut" }}
             className="flex flex-col gap-4 ">
             <p className="text-3xl lg:text-4xl font-medium  text-white text-center lg:text-left ">
-                Curieux d’en savoir plus sur nous ?
+                {getTitle}
             </p>
 
             <p className="text- text-xl text-center text-white lg:text-left ">
-                Téléchargez notre brochure !
+                {getSubTitle}
             </p>
             
           </motion.div>

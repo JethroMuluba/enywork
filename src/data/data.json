@@ -581,6 +581,16 @@
 
         {
             "id" : 6,
+            "brochureDownloader" : [
+                {
+                    "title" : "Curieux d’en savoir plus sur nous ?",
+                    "subTitle" : "Téléchargez notre brochure !"
+                }
+            ]
+        },
+
+        {
+            "id" : 7,
             "title" : "Notre Galerie",
             "subTitle" : "Découvrez nos réalisations, notre équipe passionnée et les moments forts qui font vibrer notre agence au quotidien.",
             "images" : [
