@@ -29,7 +29,7 @@ export default function AboutSection() {
                 alt="Enywork en Formation du Personnel"
                 width={948}
                 height={967}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover transition-transform duration-600 hover:scale-110"
               />
             </motion.div>
           </div>
@@ -41,14 +41,15 @@ export default function AboutSection() {
                             initial={{ y: 100, opacity: 0 }}
                             animate={isInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
                             transition={{ duration: 0.5, ease: "easeOut" }}
-              className=" text-4xl lg:text-4xl text-center lg:text-left font-semibold text-[#1C2736] "> {getTitle} 
+              className=" text-4xl lg:text-4xl text-center lg:text-left font-medium text-[#1C2736] "> 
+                {getTitle} 
               </motion.h2>
               <motion.p 
                             initial={{ y: 100, opacity: 0 }}
                             animate={isInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
                             transition={{ duration: 1, ease: "easeOut" }}
               className="text-center lg:text-left text-xl text-[#3B4E6A] "> 
-              {getSubTitle} 
+                {getSubTitle} 
               </motion.p>
             </div>
 
