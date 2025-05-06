@@ -23,7 +23,7 @@ export default function Footer() {
             <Link href="/" className="relative h-[60px] w-[151px]">
               <Image src={logoEnywork} alt="Enywork Logo" width={151} height={60} />
             </Link>
-            <p className="text-light-secondary text-center lg:text-left">Travaillons ensemble sur la réussite de vos projets.</p>
+            <p className="text-light-secondary font-light text-center lg:text-left">Travaillons ensemble sur la réussite de vos projets.</p>
           </motion.div>
 
           {/* Site Menu */}
@@ -33,7 +33,7 @@ export default function Footer() {
                     transition={{ duration: 1.5, ease: "easeOut" }}
           className="flex flex-col items-center lg:items-start gap-4">
             <h3 className="text-base text-center lg:text-left font-medium mb-2">MENU</h3>
-            <div className="flex flex-col gap-2 text-center lg:text-left">
+            <div className="flex flex-col gap-2 text-center font-light lg:text-left">
               <Link href="/" className="text-light-secondary hover:text-[#E10919] transition-colors">
                 Accueil
               </Link>
@@ -63,7 +63,7 @@ export default function Footer() {
                     initial={{ y: 100, opacity: 0 }}
                     animate={isInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
                     transition={{ duration: 2, ease: "easeOut" }}
-          className="flex flex-col items-center lg:items-start gap-4">
+          className="flex flex-col items-center font-light lg:items-start gap-4">
             <h3 className="text-base font-medium text-center lg:text-left mb-2">NOS CONTACTS</h3>
             <div className="flex flex-col gap-3">
               <div className="flex items-center gap-3">
@@ -87,7 +87,7 @@ export default function Footer() {
               <h3 className="text-base font-medium text-center lg:text-left mb-4">NOTRE ADRESSE</h3>
               <div className="flex items-start gap-3">
                 <MapPin className="w-6 h-6 text-[#E10919] flex-shrink-0 mt-1" />
-                <span className="text-light-secondary">
+                <span className="text-light-secondary font-light">
                   Ancienne Galerie Présidentielle, 6è niveau, Local 6B8, Kinshasa/Gombe
                 </span>
               </div>
@@ -141,7 +141,7 @@ export default function Footer() {
                     transition={{ duration: 1, ease: "easeOut" }}
       className="bg-[#1C2736] py-6 px-4 md:px-8 lg:px-30">
         <div className="container-custom text-center">
-          <p className="text-white font-normal">Copyright © 2017 - {new Date().getFullYear()} Design by Enywork SARL</p>
+          <p className="text-white font-light">Copyright © 2017 - {new Date().getFullYear()} Design by Enywork SARL</p>
         </div>
       </motion.div>
     </footer>
