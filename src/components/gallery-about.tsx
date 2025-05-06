@@ -38,7 +38,7 @@ export default function GalleryAbout() {
             transition={{ duration: 0.5 }}
             className="flex flex-col items-center gap-[13px] max-w-[821px]"
           >
-            <h2 className="text-2xl md:text-3xl lg:text-[36px] leading-[52px] text-[#1C2736] text-center">
+            <h2 className="text-2xl md:text-3xl lg:text-[36px] font-medium leading-[52px] text-[#1C2736] text-center">
               Notre Galerie
             </h2>
             <p className="text-base md:text-lg lg:text-[20px] leading-[28px] text-[#3B4E6A] text-center">
