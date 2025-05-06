@@ -77,7 +77,7 @@ export default function NewsletterSection() {
                   required
                 />
 
-                <p className="text-xs text-white text-center lg:text-left">
+                <p className="text-xs text-white text-center font-light lg:text-left">
                     {getWarning}
                 </p>
                 </div>
