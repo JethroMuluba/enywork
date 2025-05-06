@@ -58,11 +58,11 @@ export default function AboutPage() {
     const isValuesView = useInView(valuesRef, { once: true, margin: "-100px"})
 
     return (
-        <main className="min-h-screen font-[poppins] pt-[92px] lg:pt-[124px]">
+        <main className="min-h-screen pt-[92px] lg:pt-[124px]">
             <HeroForAll title={getTitle} subTitle={getSubTitle} cover={getCover} pattern={getPattern} />
             
             {/* Notre Histoire */}
-            <section className="bg-[#F2F2F2] font-[poppins] py-20 px-4 md:px-8 lg:px-20">
+            <section className="bg-[#F2F2F2] py-20 px-4 md:px-8 lg:px-20">
                 <div ref={storyRef} className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     <div className="flex flex-col gap-12">
                         <div className="flex flex-col gap-5">
@@ -70,7 +70,7 @@ export default function AboutPage() {
                                 initial={{ y: 100, opacity: 0 }}
                                 animate={isStoryInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
                                 transition={{ duration: 0.5, ease: "easeOut" }}
-                                className="text-4xl lg:text-4xl text-center lg:text-left font-semibold text-[#1C2736]"
+                                className="text-4xl lg:text-4xl text-center lg:text-left font-medium text-[#1C2736]"
                             >
                                 {storyTitle}
                             </motion.h2>
@@ -125,7 +125,7 @@ export default function AboutPage() {
             </section>
 
             {/* Notre Mission */}
-            <section className="bg-[#F2F2F2] font-[poppins] py-20 px-4 md:px-8 lg:px-20">
+            <section className="bg-[#F2F2F2] py-20 px-4 md:px-8 lg:px-20">
                 <div ref={missionRef} className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     <div className="flex justify-center">
                         <div className="hidden lg:block w-1/2">
@@ -150,7 +150,7 @@ export default function AboutPage() {
                                 initial={{ y: 100, opacity: 0 }}
                                 animate={isMissionInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
                                 transition={{ duration: 0.5, ease: "easeOut" }}
-                                className="text-4xl lg:text-4xl text-center lg:text-left font-semibold text-[#1C2736]"
+                                className="text-4xl lg:text-4xl text-center lg:text-left font-medium text-[#1C2736]"
                             >
                                 {missionTitle}
                             </motion.h2>
@@ -188,7 +188,7 @@ export default function AboutPage() {
             </section>
 
             {/* Notre Vision */}
-            <section className="bg-[#F2F2F2] font-[poppins] py-20 px-4 md:px-8 lg:px-20">
+            <section className="bg-[#F2F2F2] py-20 px-4 md:px-8 lg:px-20">
                 <div ref={visionRef} className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     <div className="flex flex-col gap-12">
                         <div className="flex flex-col gap-5">
@@ -196,7 +196,7 @@ export default function AboutPage() {
                                 initial={{ y: 100, opacity: 0 }}
                                 animate={isVisionInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
                                 transition={{ duration: 0.5, ease: "easeOut" }}
-                                className="text-4xl lg:text-4xl text-center lg:text-left font-semibold text-[#1C2736]"
+                                className="text-4xl lg:text-4xl text-center lg:text-left font-medium text-[#1C2736]"
                             >
                                 {visionTitle}
                             </motion.h2>
@@ -253,7 +253,7 @@ export default function AboutPage() {
             <StatisticsSection/>
 
             {/* Nos Valeurs */}
-            <section className="bg-white font-[poppins] py-20 px-4 md:px-8 lg:px-20">
+            <section className="bg-white py-20 px-4 md:px-8 lg:px-20">
                 <div ref={valuesRef} className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     {/* Colonne gauche */}
                     <div className="flex flex-col gap-5 max-w-lg mx-auto lg:mx-0">
@@ -261,7 +261,7 @@ export default function AboutPage() {
                             initial={{ y: 100, opacity: 0 }}
                             animate={isValuesView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
                             transition={{ duration: 0.5, ease: "easeOut" }}
-                            className="text-3xl lg:text-4xl text-center  font-semibold text-[#1C2736] lg:text-left"
+                            className="text-3xl lg:text-4xl text-center  font-medium text-[#1C2736] lg:text-left"
                         >
                             {valuesTitle}
                         </motion.h2>
@@ -292,7 +292,7 @@ export default function AboutPage() {
                             className="w-full flex flex-col items-center justify-center bg-white rounded-lg shadow-lg py-10 transition-all duration-600 hover:scale-110"
                         >
                             <Crown className="w-10 h-10 text-[#E10919]" />
-                            <h2 className="text-[#E10919] text-xl font-semibold mt-2">{values1}</h2>
+                            <h2 className="text-[#E10919] text-xl font-medium mt-2">{values1}</h2>
                         </motion.div>
                         {/* Carte 2 */}
                         <motion.div
@@ -302,7 +302,7 @@ export default function AboutPage() {
                             className="w-full flex flex-col items-center justify-center bg-[#E10919] rounded-lg shadow-lg py-10 transition-all duration-600 hover:scale-110"
                         >
                             <Feather className="w-10 h-10 text-white" />
-                            <h2 className="text-white text-xl font-semibold mt-2">{values2}</h2>
+                            <h2 className="text-white text-xl font-medium mt-2">{values2}</h2>
                         </motion.div>
                         {/* Carte 3 */}
                         <motion.div
@@ -312,7 +312,7 @@ export default function AboutPage() {
                             className="w-full flex flex-col items-center justify-center  md:bg-[#E10919] rounded-lg shadow-lg py-10 transition-all duration-600 hover:scale-110"
                         >
                             <Rocket className="w-10 h-10 text-[#E10919] md:text-white " />
-                            <h2 className="text-[#E10919] md:text-white text-xl font-semibold mt-2">{values3}</h2>
+                            <h2 className="text-[#E10919] md:text-white text-xl font-medium mt-2">{values3}</h2>
                         </motion.div>
                         {/* Carte 4 */}
                         <motion.div
@@ -322,7 +322,7 @@ export default function AboutPage() {
                             className="w-full flex flex-col items-center justify-center bg-[#E10919] md:text-white md:bg-white rounded-lg shadow-lg py-10 transition-all duration-600 hover:scale-110"
                         >
                             <Lightbulb className="w-10 h-10 text-white md:text-[#E10919]" />
-                            <h2 className="text-white md:text-[#E10919] text-xl font-semibold mt-2">{values4}</h2>
+                            <h2 className="text-white md:text-[#E10919] text-xl font-medium mt-2">{values4}</h2>
                         </motion.div>
                     </div>
                 </div>

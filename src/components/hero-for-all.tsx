@@ -27,7 +27,7 @@ const HeroForAll = ({title, subTitle, cover, pattern} : HeroProps) => {
                     initial={{ y: 100, opacity: 0 }}
                     animate={isInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
                     transition={{ duration: 1, ease: "easeOut" }}
-                className="text-4xl md:text-5xl lg:text-6xl font-semibold text-white">
+                className="text-4xl md:text-5xl lg:text-6xl font-medium text-white">
                     {title}
                 </motion.h1>
                 <motion.p 

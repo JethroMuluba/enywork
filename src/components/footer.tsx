@@ -141,7 +141,7 @@ export default function Footer() {
                     transition={{ duration: 1, ease: "easeOut" }}
       className="bg-[#1C2736] py-6 px-4 md:px-8 lg:px-30">
         <div className="container-custom text-center">
-          <p className="text-white">Copyright © 2017 - {new Date().getFullYear()} Design by Enywork SARL</p>
+          <p className="text-white font-normal">Copyright © 2017 - {new Date().getFullYear()} Design by Enywork SARL</p>
         </div>
       </motion.div>
     </footer>
