@@ -12,7 +12,7 @@ export default function HeroSection() {
     const getCover = data.home?.[0]?.heroSection?.[0]?.cover;
     const getImage = data.home?.[0]?.heroSection?.[0]?.image;
   return (
-    <section className="bg-fixed overflow-hidden font-[poppins] flex justify-between items-center h-[600px] lg:h-full  lg:pl-15 " style={{ backgroundImage: `url(${getCover})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+    <section className="bg-fixed overflow-hidden flex justify-between items-center h-[600px] lg:h-full  lg:pl-15 " style={{ backgroundImage: `url(${getCover})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
           <motion.div 
           initial={{ x: -100, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
@@ -22,7 +22,7 @@ export default function HeroSection() {
               {getTitle}
             </h1>
 
-            <p className="text-xl lg:text-2xl text-white text-center lg:text-left">
+            <p className="text-xl lg:text-2xl font-regular text-white text-center lg:text-left">
               {getSubTitle}
             </p>
 

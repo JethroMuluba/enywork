@@ -15,7 +15,7 @@ export default function AboutSection() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section ref={ref} className="bg-[#F2F2F2] font-[poppins] py-20 px-4 md:px-8 lg:px-25 ">
+    <section ref={ref} className="bg-[#F2F2F2] py-20 px-4 md:px-8 lg:px-25 ">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="order-2 lg:order-1 flex justify-center">
           <div className=" hidden lg:block w-1/2 ">

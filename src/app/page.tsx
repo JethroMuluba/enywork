@@ -17,7 +17,7 @@ import NewsletterSection from "@/components/news-letters"
 
 export default function Home() {
   return (
-    <main className="min-h-screen font-[poppins] pt-[92px] lg:pt-[124px] ">
+    <main className="min-h-screen pt-[92px] lg:pt-[124px] ">
       {/* <Header /> */}
       <HeroSection />
       <AboutSection />

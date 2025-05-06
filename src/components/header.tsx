@@ -24,11 +24,11 @@ export default function Header() {
   return (
     <header className=" fixed top-0 left-0 w-full z-50">
       {/* Top Header */}
-      <div className="bg-gradient-to-r from-[#320001] to-[#BD2222] poppins-regular py-2 lg:px-20 3xl:px-45 hidden lg:block">
-        <div className="container-custom flex flex-col md:flex-row justify-between items-center gap-2 md:gap-0">
+      <div className="bg-gradient-to-r from-[#320001] to-[#BD2222] py-2 lg:px-20 3xl:px-45 hidden lg:block">
+        <div className="container-custom flex flex-col md:flex-row justify-between font-normal items-center gap-2 md:gap-0">
           <div className="flex items-center gap-2">
             <Mail className="w-4 h-4 text-white" />
-            <span className="text-xs text-white ">contact@enywork.com</span>
+            <span className="text-xs text-white  ">contact@enywork.com</span>
           </div>
 
           <div className="flex items-center gap-2">
@@ -46,7 +46,7 @@ export default function Header() {
       </div>
 
       {/* Main Header */}
-      <div className="w-full bg-white backdrop-blur-xl py-4 px-4 md:px-8 lg:px-20 3xl:px-45 shadow-sm text-sm poppins-regular">
+      <div className="w-full bg-white backdrop-blur-xl py-4 px-4 md:px-8 lg:px-20 3xl:px-45 shadow-sm text-sm">
         <div className="container-custom flex justify-between items-center">
           {/* Logo */}
           <Link href="/" className="relative h-[60px] w-[151px]">
@@ -54,10 +54,10 @@ export default function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center gap-5">
+          <nav className="hidden lg:flex items-center gap-5 font-normal">
             <Link 
               href="/" 
-              className={`text-secondary transition-colors px-1 py-1.5 ${
+              className={`text-[#1C2736] transition-colors px-1 py-1.5 ${
                 pathname === "/" ? "text-[#E10919]" : "hover:text-[#E10919]"
               }`}
             >
@@ -65,7 +65,7 @@ export default function Header() {
             </Link>
             <Link 
               href="/about" 
-              className={`text-secondary transition-colors ${
+              className={`text-[#1C2736] transition-colors ${
                 pathname === "/about" ? "text-[#E10919]" : "hover:text-[#E10919]"
               }`}
             >
@@ -73,7 +73,7 @@ export default function Header() {
             </Link>
             <Link 
               href="/realizations" 
-              className={`text-secondary transition-colors ${
+              className={`text-[#1C2736] transition-colors ${
                 pathname === "/realizations" ? "text-[#E10919]" : "hover:text-[#E10919]"
               }`}
             >
@@ -81,7 +81,7 @@ export default function Header() {
             </Link>
             <Link 
               href="/services" 
-              className={`text-secondary transition-colors ${
+              className={`text-[#1C2736] transition-colors ${
                 pathname === "/services" ? "text-[#E10919]" : "hover:text-[#E10919]"
               }`}
             >
@@ -89,7 +89,7 @@ export default function Header() {
             </Link>
             <Link 
               href="/team" 
-              className={`text-secondary transition-colors ${
+              className={`text-[#1C2736] transition-colors ${
                 pathname === "/equipe" ? "text-[#E10919]" : "hover:text-[#E10919]"
               }`}
             >
@@ -97,7 +97,7 @@ export default function Header() {
             </Link>
             <Link 
               href="/blogs" 
-              className={`text-secondary transition-colors ${
+              className={`text-[#1C2736] transition-colors ${
                 pathname.startsWith("/blogs") ? "text-[#E10919]" : "hover:text-[#E10919]"
               }`}
             >
@@ -105,7 +105,7 @@ export default function Header() {
             </Link>
             <Link 
               href="/contact" 
-              className={`text-secondary transition-colors ${
+              className={`text-[#1C2736] transition-colors ${
                 pathname === "/contact" ? "text-[#E10919]" : "hover:text-[#E10919]"
               }`}
             >
