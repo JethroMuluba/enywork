@@ -636,5 +636,19 @@
         }
 
 
+    ],
+
+    "blogs" : [
+        {
+            "id":0,
+            "hero" :[
+                {
+                    "title" : "Nos Actualités",
+                    "subTitle" : "Suivez nos actualités pour rester informé de nos événements et bien plus encore.",
+                    "cover" :"https://res.cloudinary.com/dr8ofciki/image/upload/v1744118684/Enywork/hero-cover-v1.webp",
+                    "pattern":"https://res.cloudinary.com/dr8ofciki/image/upload/v1744118684/Enywork/hero-cover-v1.webp"
+                }
+            ]
+        }
     ]
 }
