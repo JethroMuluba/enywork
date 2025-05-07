@@ -18,30 +18,30 @@ const BlogVedette = () => {
                 initial={{ y: 100, opacity: 0 }}
                 animate={isInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
                 transition={{ duration: 1, ease: "easeOut" }}
-            className="relative h-[600px] w-full rounded-lg overflow-hidden shadow-lg">
+            className="relative h-100 lg:h-[600px] w-full rounded-lg overflow-hidden shadow-lg">
           <Image
             src="/placeholder.svg?height=696&width=757"
             alt="Hébergement VPS local"
             fill
-            className="object-cover"
+            className="object-cover transition-all duration-600 hover:scale-110"
           />
         </motion.div>
 
         <div className="flex flex-col gap-10">
           <span className="text-2xl text-[#E10919]">Article Vedette</span>
 
-          <h2 className="text-2xl md:text-3xl font-medium text-secondary leading-tight">
+          <h2 className="text-2xl md:text-3xl font-medium text-[#1C2736] leading-tight">
             Hébergement VPS local à Kinshasa : Boostez vos performances web
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
               <p className="text-[#3B4E6A]">Par</p>
-              <p className="text-secondary">Jethro Muluba</p>
+              <p className="text-[#1C2736]">Jethro Muluba</p>
             </div>
             <div>
               <p className="text-[#3B4E6A]">Date</p>
-              <p className="text-secondary">12 Jan. 2025</p>
+              <p className="text-[#1C2736]">12 Jan. 2025</p>
             </div>
           </div>
 
@@ -51,8 +51,8 @@ const BlogVedette = () => {
             professionnels...
           </p>
 
-          <Link href="/contact" className="btn-primary self-start">
-            <span>DÉCOUVRIR NOS SERVICES</span>
+          <Link href="/blogs/1" className="bg-[#E10919] hover:bg-[#B00813] px-8 py-4 rounded-lg font-normal text-white cursor-pointer self-center lg:self-start flex items-center gap-2">
+            <span>LIRE L’ARTICLE COMPLET</span>
             <ArrowRight className="w-5 h-5" />
           </Link>
         </div>
