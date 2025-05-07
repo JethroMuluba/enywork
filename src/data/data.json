@@ -596,25 +596,25 @@
             "images" : [
                 {
                     "id" : 0,
-                    "src" : "url",
+                    "src" : "https://res.cloudinary.com/dr8ofciki/image/upload/v1746010546/Enywork/blog-1.jpg",
                     "alt" : "Gallery Image"
                 },
 
                 {
                     "id" : 1,
-                    "src" : "url",
+                    "src" : "https://res.cloudinary.com/dr8ofciki/image/upload/v1746010543/Enywork/blog-3.jpg",
                     "alt" : "Gallery Image"
                 },
 
                 {
                     "id" : 2,
-                    "src" : "url",
+                    "src" : "https://res.cloudinary.com/dr8ofciki/image/upload/v1746010543/Enywork/blog-2.jpg",
                     "alt" : "Gallery Image"
                 },
 
                 {
                     "id" : 3,
-                    "src" : "url",
+                    "src" : "https://res.cloudinary.com/dr8ofciki/image/upload/v1745856936/Enywork/statistics-bg.webp",
                     "alt" : "Gallery Image"
                 }
             ]
