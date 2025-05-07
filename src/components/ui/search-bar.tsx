@@ -1,15 +1,20 @@
 'use client'
 import React from 'react'
-import {
-    Search,
-    ListFilter ,
-    X,
-  } from "lucide-react"
+import {Search, ListFilter ,X } from "lucide-react"
+import { motion, useInView } from 'framer-motion'
+import { useRef } from 'react'
+
 
 const SearchBar = () => {
+    const ref = useRef(null);
+    const isInView = useInView(ref, { once: true, margin: "-100px" });
   return (
-    <section className="relative flex justify-center px-4 -mt-16 mb-16">
-      <div className="w-full max-w-3xl">
+    <section ref={ref} className="relative flex justify-center px-4 -mt-16">
+      <motion.div 
+        initial={{ y: 100, opacity: 0 }}
+        animate={isInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
+        transition={{ duration: 1, ease: "easeOut" }}
+        className="w-full max-w-3xl">
         <div className="bg-white rounded-xl shadow-2xl p-4 md:p-8">
           <div className="flex flex-col md:flex-row gap-4 items-center justify-center">
             <div className="relative flex-1 w-full">
@@ -18,9 +23,9 @@ const SearchBar = () => {
                 <input
                   type="text"
                   placeholder="RECHERCHE UN ARTICLE"
-                  className="bg-transparent border-none outline-none flex-1 text-secondary-light placeholder-[#A1A1AA] placeholder:text-base text-center md:text-left "
+                  className="bg-transparent border-none outline-none flex-1 text-[#3B4E6A] placeholder-[#A1A1AA] placeholder:text-base text-center md:text-left "
                 />
-                <X className="w-4 h-4 text-light-quaternary cursor-pointer" />
+                <X className="w-4 h-4 text-[#A1A1AA] cursor-pointer" />
               </div>
             </div>
             <button className="bg-[#E10919] hover:bg-[#B00813] text-white font-semibold rounded-md px-6 py-3 flex items-center gap-2 transition-colors duration-300 whitespace-nowrap shadow-md">
@@ -29,7 +34,7 @@ const SearchBar = () => {
             </button>
           </div>
         </div>
-      </div>
+      </motion.div>
     </section>
   )
 }
