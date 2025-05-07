@@ -1,7 +1,7 @@
-import { motion, useInView, AnimatePresence, PanInfo } from 'framer-motion'
+import { motion, useInView, AnimatePresence, PanInfo, useMotionValue, useTransform } from 'framer-motion'
 import { useRef, useState } from 'react'
 import Image from 'next/image'
-import { ArrowRight, X, ChevronLeft, ChevronRight } from 'lucide-react'
+import { ArrowRight, X, ChevronLeft, ChevronRight, ZoomIn, ZoomOut } from 'lucide-react'
 import Link from 'next/link'
 import SectionTitle from "./ui/sectionTitle"
 import data from '@/data/data.json'
@@ -14,6 +14,9 @@ export default function GalleryAbout() {
   const isInView = useInView(ref, { once: true, margin: "-100px" })
   
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
+  const [scale, setScale] = useState(1);
+  const x = useMotionValue(0);
+  const y = useMotionValue(0);
 
   const handleImageClick = (index: number) => {
     setSelectedImage(index);
@@ -41,11 +44,49 @@ export default function GalleryAbout() {
       if (info.offset.x > threshold) {
         // Swipe right - go to previous image
         setSelectedImage((selectedImage - 1 + images.length) % images.length);
+        resetZoom();
       } else if (info.offset.x < -threshold) {
         // Swipe left - go to next image
         setSelectedImage((selectedImage + 1) % images.length);
+        resetZoom();
       }
     }
+  };
+
+  const handleWheelZoom = (event: React.WheelEvent<HTMLDivElement>) => {
+    const delta = event.deltaY;
+    const newScale = Math.min(Math.max(scale - delta * 0.001, 1), 3);
+    setScale(newScale);
+  };
+
+  const handleTouchZoom = (event: React.TouchEvent<HTMLDivElement>) => {
+    if (event.touches.length === 2) {
+      const touch1 = event.touches[0];
+      const touch2 = event.touches[1];
+      const distance = Math.hypot(
+        touch2.clientX - touch1.clientX,
+        touch2.clientY - touch1.clientY
+      );
+      
+      if (event.type === 'touchstart') {
+        event.currentTarget.setAttribute('data-initial-distance', distance.toString());
+      } else if (event.type === 'touchmove') {
+        const initialDistance = parseFloat(event.currentTarget.getAttribute('data-initial-distance') || '0');
+        const scaleChange = distance / initialDistance;
+        const newScale = Math.min(Math.max(scale * scaleChange, 1), 3);
+        setScale(newScale);
+      }
+    }
+  };
+
+  const resetZoom = () => {
+    setScale(1);
+    x.set(0);
+    y.set(0);
+  };
+
+  const handleDoubleClick = () => {
+    setScale(scale === 1 ? 2 : 1);
   };
 
   return (
@@ -112,13 +153,23 @@ export default function GalleryAbout() {
               dragConstraints={{ left: 0, right: 0 }}
               dragElastic={0.2}
               onDragEnd={handleDragEnd}
+              style={{ x, y }}
             >
-              <Image
-                src={images[selectedImage].src}
-                alt={images[selectedImage].alt}
-                fill
-                className="object-contain rounded-lg"
-              />
+              <motion.div
+                className="relative w-full h-full"
+                style={{ scale }}
+                onWheel={handleWheelZoom}
+                onTouchStart={handleTouchZoom}
+                onTouchMove={handleTouchZoom}
+                onDoubleClick={handleDoubleClick}
+              >
+                <Image
+                  src={images[selectedImage].src}
+                  alt={images[selectedImage].alt}
+                  fill
+                  className="object-contain rounded-lg"
+                />
+              </motion.div>
               
               {/* Close Button */}
               <button
@@ -127,6 +178,22 @@ export default function GalleryAbout() {
               >
                 <X className="w-[26px] h-[26px] text-white" />
               </button>
+
+              {/* Zoom Controls - Hidden on mobile */}
+              <div className="hidden md:flex absolute bottom-4 right-4 flex gap-2">
+                <button
+                  onClick={() => setScale(Math.min(scale + 0.2, 3))}
+                  className="w-[46px] h-[46px] bg-[#E10919] hover:bg-[#B00813] rounded-full flex items-center justify-center transition-colors duration-300"
+                >
+                  <ZoomIn className="w-[26px] h-[26px] text-white" />
+                </button>
+                <button
+                  onClick={() => setScale(Math.max(scale - 0.2, 1))}
+                  className="w-[46px] h-[46px] bg-[#E10919] hover:bg-[#B00813] rounded-full flex items-center justify-center transition-colors duration-300"
+                >
+                  <ZoomOut className="w-[26px] h-[26px] text-white" />
+                </button>
+              </div>
 
               {/* Navigation Buttons - Hidden on mobile */}
               <div className="hidden md:flex absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 w-[1315px] justify-between px-4">
