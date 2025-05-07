@@ -1,4 +1,4 @@
-import { motion, useInView, AnimatePresence, PanInfo, useMotionValue, useTransform } from 'framer-motion'
+import { motion, useInView, AnimatePresence, PanInfo, useMotionValue } from 'framer-motion'
 import { useRef, useState } from 'react'
 import Image from 'next/image'
 import { ArrowRight, X, ChevronLeft, ChevronRight, ZoomIn, ZoomOut } from 'lucide-react'
