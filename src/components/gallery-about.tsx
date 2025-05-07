@@ -174,13 +174,13 @@ export default function GalleryAbout() {
               {/* Close Button */}
               <button
                 onClick={handleClose}
-                className="hidden md:flex absolute right-0 top-0 md:-right-12 w-[46px] h-[46px] bg-[#E10919] hover:bg-[#B00813] rounded-full items-center justify-center transition-colors duration-300"
+                className="hidden lg:flex absolute right-0 top-0 md:-right-12 w-[46px] h-[46px] bg-[#E10919] hover:bg-[#B00813] rounded-full items-center justify-center transition-colors duration-300"
               >
                 <X className="w-[26px] h-[26px] text-white" />
               </button>
 
               {/* Zoom Controls - Hidden on mobile */}
-              <div className="hidden md:flex absolute bottom-4 right-4 flex gap-2">
+              <div className="hidden lg:flex absolute bottom-4 right-4 gap-2">
                 <button
                   onClick={() => setScale(Math.min(scale + 0.2, 3))}
                   className="w-[46px] h-[46px] bg-[#E10919] hover:bg-[#B00813] rounded-full flex items-center justify-center transition-colors duration-300"
