@@ -10,6 +10,8 @@ import { Crown, Feather, Rocket, Lightbulb } from 'lucide-react';
 import BrochuresDownload from "@/components/brochure-download"
 import StatisticCounter from "@/components/statistic-counter"
 import GalleryAbout from "@/components/gallery-about"
+import PartnersSection from "@/components/parteners-section"
+
 
 export default function AboutPage() {
     const getCover = data.about?.[0]?.hero?.[0].cover || "/placeholder.svg";
@@ -335,6 +337,8 @@ export default function AboutPage() {
             <BrochuresDownload/>
             <StatisticCounter/>
             <GalleryAbout/>
+            <PartnersSection />
+
 
         </main>
     )

@@ -59,7 +59,7 @@ export default function StatisticCounter() {
   ]
 
   return (
-    <section ref={ref} className="relative w-full min-h-[449px] py-20">
+    <section ref={ref} className="relative w-full min-h-[400px] py-20">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:flex lg:flex-row items-center justify-center gap-8 lg:gap-[67px]">
           {stats.map((stat, index) => (
