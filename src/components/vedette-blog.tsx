@@ -11,7 +11,7 @@ const BlogVedette = () => {
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true, margin: "-100px" });
   return (
-    <section ref={ref} className="py-16 md:py-24 px-4 md:px-8 lg:px-20">
+    <section ref={ref} className="py-12 md:py-24 px-4 md:px-8 lg:px-20">
     <div className="container-custom">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         <motion.div 
@@ -28,13 +28,13 @@ const BlogVedette = () => {
         </motion.div>
 
         <div className="flex flex-col gap-10">
-          <span className="text-2xl text-[#E10919]">Article Vedette</span>
+          <span className="text-2xl text-center lg:text-left text-[#E10919]">Article Vedette</span>
 
-          <h2 className="text-2xl md:text-3xl font-medium text-[#1C2736] leading-tight">
+          <h2 className="text-2xl md:text-3xl text-center lg:text-left font-medium text-[#1C2736] leading-tight">
             Hébergement VPS local à Kinshasa : Boostez vos performances web
           </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className=" flex justify-center lg:justify-start gap-15">
             <div>
               <p className="text-[#3B4E6A]">Par</p>
               <p className="text-[#1C2736]">Jethro Muluba</p>
@@ -45,7 +45,7 @@ const BlogVedette = () => {
             </div>
           </div>
 
-          <p className="text-[#3B4E6A]">
+          <p className="text-[#3B4E6A] text-center lg:text-left ">
             Enywork est fier de vous annoncer la disponibilité de nos serveurs locaux situés à Kinshasa. Profitez
             d'un hébergement VPS (Serveur Privé Virtuel) rapide, sécurisé et parfaitement adapté à vos besoins
             professionnels...

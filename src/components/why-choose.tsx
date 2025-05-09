@@ -32,7 +32,7 @@ const WhyChoose = () => {
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true, margin: "-100px" });
   return (
-    <section ref={ref} className="py-16 md:py-24 bg-[#F2F2F2] px-4 md:px-8 lg:px-20">
+    <section ref={ref} className="py-16 bg-[#F2F2F2] px-4 md:px-8 lg:px-20">
         <div className="container-custom">
           <motion.h2 
             initial={{ y: 100, opacity: 0 }}
