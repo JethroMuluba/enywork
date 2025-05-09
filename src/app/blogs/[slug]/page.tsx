@@ -1,19 +1,19 @@
 'use client'
 
 import React from 'react'
-// import { GetStaticPaths, GetStaticProps } from 'next';
-// import { useRouter } from 'next/router';
 import data from '@/data/data.json';
+import { useState } from "react"
 import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
 import Link from "next/link"
 import Image from "next/image"
 import { ArrowLeft, Check, SendHorizontal  } from "lucide-react"
+import NewsletterSection from '@/components/news-letters';
 
 // Données simulées pour les articles de blog
 const blogPosts = [
   {
-    id: "1",
+    id: "0",
     title: "Comment optimiser votre stratégie digitale en 2025",
     subtitle: "Un guide complet pour améliorer votre présence en ligne et maximiser vos résultats",
     date: "15 Janvier 2025",
@@ -79,7 +79,7 @@ const blogPosts = [
     ],
   },
   {
-    id: "2",
+    id: "1",
     title: "Les derniers tendances en développement web 2025",
     subtitle: "Découvrez les technologies et frameworks qui domineront le développement web cette année",
     date: "10 Janvier 2025",
@@ -138,7 +138,7 @@ const blogPosts = [
     comments: [],
   },
   {
-    id: "3",
+    id: "2",
     title: "L'importance de l'UX/UI dans le développement d'applications",
     subtitle: "Découvrez pourquoi l'expérience utilisateur est cruciale pour le succès de vos applications",
     date: "5 Janvier 2025",
@@ -201,7 +201,7 @@ const blogPosts = [
 // Données simulées pour les articles connexes
 const relatedPosts = [
   {
-    id: "2",
+    id: "4",
     title: "Les derniers tendances en développement web 2025",
     excerpt: "Découvrez les technologies et frameworks qui domineront le développement web cette année...",
     image: "/placeholder.svg?height=257&width=387",
@@ -212,7 +212,7 @@ const relatedPosts = [
     },
   },
   {
-    id: "3",
+    id: "5",
     title: "L'importance de l'UX/UI dans le développement d'applications",
     excerpt: "Découvrez pourquoi l'expérience utilisateur est cruciale pour le succès de vos applications...",
     image: "/placeholder.svg?height=257&width=387",
@@ -223,7 +223,7 @@ const relatedPosts = [
     },
   },
   {
-    id: "4",
+    id: "6",
     title: "Sécurité web : les meilleures pratiques en 2025",
     excerpt: "Protégez votre application web contre les menaces avec ces conseils de sécurité essentiels...",
     image: "/placeholder.svg?height=257&width=387",
@@ -236,17 +236,27 @@ const relatedPosts = [
 ]
 
 
-const SingelBlog = ({ params }: { params: { id: string } }) => {
+const SingelBlog = ({ params }: { params: { slug: string } }) => {
   // Trouver l'article correspondant à l'ID
-  const post = blogPosts.find((post) => post.id === params.id) || blogPosts[0];
+  const post = blogPosts.find((post) => post.id === params.slug) || blogPosts[0];
 
   // Filtrer les articles connexes pour exclure l'article actuel
-  const filteredRelatedPosts = relatedPosts.filter((relatedPost) => relatedPost.id !== params.id);
+  const filteredRelatedPosts = relatedPosts.filter((relatedPost) => relatedPost.id !== params.slug);
 
   const getCover = data.about?.[0]?.hero?.[0].cover || "/placeholder.svg";
   const getPattern = data.about?.[0]?.hero?.[0].pattern || "/placeholder.svg";
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const [message, setMessage] = useState("")
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault()
+    // Handle newsletter subscription
+    console.log("User blog comments message is :", message)
+    setMessage("")
+    // Show success message or handle errors
+}
+
   return (
     <main className="min-h-screen pt-[92px] lg:pt-[124px] ">
       {/* Hero Section */}
@@ -459,21 +469,25 @@ const SingelBlog = ({ params }: { params: { id: string } }) => {
             )}
 
             {/* Comment Form */}
-            <div className="space-y-6">
+            <form onSubmit={handleSubmit} className="space-y-6">
               <div className="bg-white p-6 rounded-lg">
                 <textarea
+                  onChange={(e) => setMessage(e.target.value)}
                   placeholder="Votre commentaire..."
                   className="w-full h-24 border-none outline-none resize-none text-secondary-light"
                 ></textarea>
               </div>
-              <button className="bg-[#E10919] hover:bg-[#B00813] px-8 py-4 rounded-lg text-white cursor-pointer flex items-center gap-2                       ">
+              <button type="submit" className="bg-[#E10919] hover:bg-[#B00813] px-8 py-4 rounded-lg text-white cursor-pointer flex items-center gap-2                       ">
                 <span>ENVOYER LE MESSAGE</span>
                 <SendHorizontal  className="w-5 h-5" />
               </button>
-            </div>
+            </form>
           </div>
         </div>
       </section>
+
+
+      <NewsletterSection/>
     </main>
   )
 }

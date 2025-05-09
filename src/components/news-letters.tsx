@@ -77,10 +77,12 @@ export default function NewsletterSection() {
                   required
                 />
 
-                <p className="text-xs text-white text-center font-light lg:text-left">
-                    {getWarning}
-                </p>
+                  <p className="text-xs text-white text-center font-light lg:text-left">
+                      {getWarning}
+                  </p>
+
                 </div>
+
                 <button type="submit" className="bg-[#E10919] hover:bg-[#B00813]  h-14 text-white px-8 py-4 rounded-lg text-whitcursor-pointer flex justify-center items-center gap-2">
                     <span>{getButtonText} </span>
                     <ArrowRight className="w-5 h-5" />
