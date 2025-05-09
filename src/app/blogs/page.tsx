@@ -8,6 +8,8 @@ import BlogSection from '@/components/blog-section'
 import BlogVedette from '@/components/vedette-blog'
 import NewsletterSection from "@/components/news-letters"
 import WhyChoose from "@/components/why-choose"
+import TeamSection from "@/components/team-section"
+
 
 
 const Blogs = () => {
@@ -23,6 +25,8 @@ const Blogs = () => {
         <BlogVedette/>
         <NewsletterSection/>
         <WhyChoose/>
+        <TeamSection />
+
     </main>
   )
 }
