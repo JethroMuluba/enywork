@@ -6,6 +6,8 @@ import data from '@/data/data.json'
 import SearchBar from '@/components/ui/search-bar'
 import BlogSection from '@/components/blog-section'
 import BlogVedette from '@/components/vedette-blog'
+import NewsletterSection from "@/components/news-letters"
+import WhyChoose from "@/components/why-choose"
 
 
 const Blogs = () => {
@@ -19,6 +21,8 @@ const Blogs = () => {
         <SearchBar/>
         <BlogSection/>
         <BlogVedette/>
+        <NewsletterSection/>
+        <WhyChoose/>
     </main>
   )
 }

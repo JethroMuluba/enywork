@@ -18,7 +18,7 @@ const BlogVedette = () => {
                 initial={{ y: 100, opacity: 0 }}
                 animate={isInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
                 transition={{ duration: 1, ease: "easeOut" }}
-            className="relative h-100 lg:h-[600px] w-full rounded-lg overflow-hidden shadow-lg">
+            className="relative h-100 lg:h-[550px] w-full rounded-lg overflow-hidden shadow-lg">
           <Image
             src="/placeholder.svg?height=696&width=757"
             alt="Hébergement VPS local"
