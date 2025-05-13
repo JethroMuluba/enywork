@@ -47,12 +47,12 @@ const BlogVedette = () => {
 
           <p className="text-[#3B4E6A] text-center lg:text-left ">
             Enywork est fier de vous annoncer la disponibilité de nos serveurs locaux situés à Kinshasa. Profitez
-            d'un hébergement VPS (Serveur Privé Virtuel) rapide, sécurisé et parfaitement adapté à vos besoins
+            d`&apos;`un hébergement VPS (Serveur Privé Virtuel) rapide, sécurisé et parfaitement adapté à vos besoins
             professionnels...
           </p>
 
           <Link href="/blogs/1" className="bg-[#E10919] hover:bg-[#B00813] px-8 py-4 rounded-lg font-normal text-white cursor-pointer self-center lg:self-start flex items-center gap-2">
-            <span>LIRE L’ARTICLE COMPLET</span>
+            <span>LIRE L`&apos;`ARTICLE COMPLET</span>
             <ArrowRight className="w-5 h-5" />
           </Link>
         </div>
