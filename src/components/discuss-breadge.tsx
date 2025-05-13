@@ -35,7 +35,7 @@ export default function DiscussBreadge() {
                 animate={isInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
                 transition={{ duration: 2, ease: "easeOut" }}
           >
-          <Link href="/team" className="bg-white hover:bg-[#F2F2F2] px-8 py-4 rounded-lg text-[#E10919] cursor-pointer flex items-center gap-2">
+          <Link href="/contact" className="bg-white hover:bg-[#F2F2F2] px-8 py-4 rounded-lg text-[#E10919] cursor-pointer flex items-center gap-2">
             <span>DEMANDEZ UN DEVIS</span>
             <ArrowRight className="w-5 h-5" />
           </Link>
