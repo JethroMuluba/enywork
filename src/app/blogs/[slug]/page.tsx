@@ -475,7 +475,7 @@ export default function BlogPostPage({ params }: any) {
                     required
                   />
                   <button type="submit" className="btn-primary whitespace-nowrap">
-                    <span>S'ABONNER</span>
+                    <span>S`&apos;`ABONNER</span>
                     <ArrowLeft className="w-5 h-5 rotate-180" />
                   </button>
                 </div>
