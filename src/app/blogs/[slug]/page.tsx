@@ -235,14 +235,14 @@ const relatedPosts = [
   },
 ]
 
-interface SlubParamsProps {
+interface BlogPostPageProps {
   params : {
   slug : string
   }
 }
 
 
-const SingelBlog = ({ params }: SlubParamsProps ) => {
+const BlogPostPage =({ params }: BlogPostPageProps ) => {
   // Trouver l'article correspondant à l'ID
   const post = blogPosts.find((post) => post.id === params.slug) || blogPosts[0];
 
@@ -498,4 +498,4 @@ const SingelBlog = ({ params }: SlubParamsProps ) => {
   )
 }
 
-export default SingelBlog
+export default BlogPostPage
