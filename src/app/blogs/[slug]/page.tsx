@@ -35,7 +35,7 @@ const blogPosts = [
       },
       {
         type: "image",
-        src: "/placeholder.svg?height=498&width=769",
+        src: "https://res.cloudinary.com/dr8ofciki/image/upload/v1746010546/Enywork/blog-1.jpg",
         alt: "Stratégie digitale illustration",
       },
       {
@@ -52,7 +52,7 @@ const blogPosts = [
       },
       {
         type: "image",
-        src: "/placeholder.svg?height=498&width=769",
+        src: "https://res.cloudinary.com/dr8ofciki/image/upload/v1745497080/Enywork/vps-bg.webp",
         alt: "Analyse de données marketing",
       },
       {
@@ -72,7 +72,7 @@ const blogPosts = [
     comments: [
       {
         author: "Josué Simba",
-        avatar: "/placeholder.svg?height=82&width=82",
+        avatar: "https://res.cloudinary.com/dr8ofciki/image/upload/v1746806585/Enywork/josu%C3%A9-simba-profile.png",
         text: "Excellent article, très instructif ! Je suis content d'apprendre cela.",
         date: "Il y a 2 jours",
       },
@@ -101,7 +101,7 @@ const blogPosts = [
       },
       {
         type: "image",
-        src: "/placeholder.svg?height=498&width=769",
+        src: "https://res.cloudinary.com/dr8ofciki/image/upload/v1746010543/Enywork/blog-2.jpg",
         alt: "Développement web moderne",
       },
       {
@@ -118,7 +118,7 @@ const blogPosts = [
       },
       {
         type: "image",
-        src: "/placeholder.svg?height=498&width=769",
+        src: "https://res.cloudinary.com/dr8ofciki/image/upload/v1745497227/Enywork/meeting-house.webp",
         alt: "Intelligence artificielle dans le développement",
       },
       {
@@ -160,7 +160,7 @@ const blogPosts = [
       },
       {
         type: "image",
-        src: "/placeholder.svg?height=498&width=769",
+        src: "https://res.cloudinary.com/dr8ofciki/image/upload/v1746010543/Enywork/blog-3.jpg",
         alt: "Design UX/UI moderne",
       },
       {
@@ -177,7 +177,7 @@ const blogPosts = [
       },
       {
         type: "image",
-        src: "/placeholder.svg?height=498&width=769",
+        src: "https://res.cloudinary.com/dr8ofciki/image/upload/v1745856936/Enywork/statistics-bg.webp",
         alt: "Processus de design UX",
       },
       {
@@ -335,7 +335,7 @@ const SingelBlog = ({ params }: { params: { slug: string } }) => {
                 )
               } else if (item.type === "heading") {
                 return (
-                  <h2 key={index} className="text-3xl font-medium text-[#1C2736] text-center mb-8">
+                  <h2 key={index} className="text-3xl text-center lg:text-left font-medium text-[#1C2736] text-center mb-8">
                     {item.text}
                   </h2>
                 )
@@ -396,8 +396,8 @@ const SingelBlog = ({ params }: { params: { slug: string } }) => {
 
                 <div className="p-6 flex flex-col gap-5">
                   <div>
-                    <h3 className="text-primary font-medium text-lg mb-2">{relatedPost.title}</h3>
-                    <p className="text-secondary-light">{relatedPost.excerpt}</p>
+                    <h3 className="text-[#E10919] font-medium text-lg mb-2">{relatedPost.title}</h3>
+                    <p className="text-[#1C2736]">{relatedPost.excerpt}</p>
                   </div>
 
                   <div className="flex flex-col gap-4">
@@ -410,14 +410,14 @@ const SingelBlog = ({ params }: { params: { slug: string } }) => {
                           className="object-cover"
                         />
                       </div>
-                      <p className="text-secondary-light">
+                      <p className="text-[#3B4E6A]">
                         Par {relatedPost.author.name}, {relatedPost.author.role}
                       </p>
                     </div>
 
                     <Link
                       href={`/blogs/${relatedPost.id}`}
-                      className="flex items-center text-secondary hover:text-primary transition-colors"
+                      className="flex items-center text-[#3B4E6A] hover:text-[#1C2736] transition-colors"
                     >
                       <span>Lire plus</span>
                       <ArrowLeft className="w-4 h-4 ml-2 rotate-180" />
@@ -452,18 +452,18 @@ const SingelBlog = ({ params }: { params: { slug: string } }) => {
                     <div className="flex-1">
                       <div className="relative">
                         <div className="bg-white p-4 rounded-lg relative">
-                          <div className="absolute -left-4 top-4 w-4 h-4 bg-white transform rotate-45"></div>
+                          <div className="absolute -left-2 top-4 w-4 h-4 bg-white transform rotate-45"></div>
                           <h3 className="font-medium text-[#1C2736] mb-2">{comment.author}</h3>
                           <p className="text-[#1C2736]-light">{comment.text}</p>
                         </div>
-                        <p className="text-secondary-light mt-2">{comment.date}</p>
+                        <p className="text-[#3B4E6A] mt-2">{comment.date}</p>
                       </div>
                     </div>
                   </div>
                 ))}
               </div>
             ) : (
-              <p className="text-secondary-light mb-10">
+              <p className="text-[#3B4E6A] mb-10">
                 Aucun commentaire pour le moment. Soyez le premier à commenter !
               </p>
             )}
@@ -474,7 +474,7 @@ const SingelBlog = ({ params }: { params: { slug: string } }) => {
                 <textarea
                   onChange={(e) => setMessage(e.target.value)}
                   placeholder="Votre commentaire..."
-                  className="w-full h-24 border-none outline-none resize-none text-secondary-light"
+                  className="w-full h-24 border-none outline-none resize-none text-[#3B4E6A]"
                 ></textarea>
               </div>
               <button type="submit" className="bg-[#E10919] hover:bg-[#B00813] px-8 py-4 rounded-lg text-white cursor-pointer flex items-center gap-2                       ">

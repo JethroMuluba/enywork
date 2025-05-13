@@ -101,7 +101,8 @@ export default function Footer() {
               <h3 className="text-base font-medium text-center lg:text-left mb-4">SUIVEZ-NOUS SUR :</h3>
               <div className="flex gap-3">
                 <Link
-                  href="#"
+                  href="https://www.instagram.com/enywork"
+                  target= "blank"
                   aria-label="Instagram"
                   className="bg-[#E10919] rounded-full p-2 hover:bg-[#E10919]/80 transition-colors"
                 >
@@ -110,6 +111,7 @@ export default function Footer() {
                 <Link
                   href="#"
                   aria-label="Twitter"
+                  target= "blank"
                   className="bg-[#E10919] rounded-full p-2 hover:bg-[#E10919]/80 transition-colors"
                 >
                   <Twitter className="w-5 h-5 text-white" />
@@ -117,6 +119,7 @@ export default function Footer() {
                 <Link
                   href="#"
                   aria-label="Facebook"
+                  target= "blank"
                   className="bg-[#E10919] rounded-full p-2 hover:bg-[#E10919]/80 transition-colors"
                 >
                   <Facebook className="w-5 h-5 text-white" />
@@ -124,6 +127,7 @@ export default function Footer() {
                 <Link
                   href="#"
                   aria-label="LinkedIn"
+                  target= "blank"
                   className="bg-[#E10919] rounded-full p-2 hover:bg-[#E10919]/80 transition-colors"
                 >
                   <Linkedin className="w-5 h-5 text-white" />
