@@ -235,14 +235,14 @@ const relatedPosts = [
   },
 ]
 
-// interface BlogPostPageProps {
-//   params : {
-//   slug : string
-//   }
-// }
+interface BlogPostPageProps {
+  params : {
+  slug : string
+  }
+}
 
 
-const BlogPostPage =({ params }: any ) => {
+const BlogPostPage =({ params }: BlogPostPageProps ) => {
   // Trouver l'article correspondant à l'ID
   const post = blogPosts.find((post) => post.id === params.slug) || blogPosts[0];
 
@@ -341,7 +341,7 @@ const BlogPostPage =({ params }: any ) => {
                 )
               } else if (item.type === "heading") {
                 return (
-                  <h2 key={index} className="text-3xl text-center lg:text-left font-medium text-[#1C2736] text-center mb-8">
+                  <h2 key={index} className="text-3xl text-center lg:text-left font-medium text-[#1C2736] mb-8">
                     {item.text}
                   </h2>
                 )
