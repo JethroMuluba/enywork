@@ -9,6 +9,7 @@ import BlogVedette from '@/components/vedette-blog'
 import NewsletterSection from "@/components/news-letters"
 import WhyChoose from "@/components/why-choose"
 import TeamSection from "@/components/team-section"
+import DiscussBreadge from '@/components/discuss-breadge'
 
 
 
@@ -25,6 +26,7 @@ const Blogs = () => {
         <BlogVedette/>
         <NewsletterSection/>
         <WhyChoose/>
+        <DiscussBreadge/>
         <TeamSection />
 
     </main>
