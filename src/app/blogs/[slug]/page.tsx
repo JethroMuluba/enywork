@@ -235,8 +235,14 @@ const relatedPosts = [
   },
 ]
 
+interface SlubParamsProps {
+  params : {
+  slug : string
+  }
+}
 
-const SingelBlog = ({ params }: { params: { slug: string } }) => {
+
+const SingelBlog = ({ params }: SlubParamsProps ) => {
   // Trouver l'article correspondant à l'ID
   const post = blogPosts.find((post) => post.id === params.slug) || blogPosts[0];
 
