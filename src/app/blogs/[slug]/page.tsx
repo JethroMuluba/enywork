@@ -242,7 +242,7 @@ const relatedPosts = [
 // }
 
 
-const BlogPostPage =({ params }: { params: { slug: string } } ) => {
+const BlogPostPage =({ params }: any ) => {
   // Trouver l'article correspondant à l'ID
   const post = blogPosts.find((post) => post.id === params.slug) || blogPosts[0];
 
