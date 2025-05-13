@@ -30,8 +30,13 @@ export default function BlogSection() {
                         delay: index * 0.8 
                     }}
                     key={post.id} className="bg-white rounded-lg shadow-lg overflow-hidden">
-                <div className="relative h-64 w-full">
-                  <Image src={post.image || "/placeholder.svg"} alt={post.title} fill className="object-cover transition-all duration-600 hover:scale-110" />
+                <div className="relative h-64 w-full cursor-pointer">
+                  <Link href={`/blogs/${post.id}`} >   
+                    <Image src={post.image || "/placeholder.svg"} alt={post.title} 
+                      fill 
+                      className="object-cover transition-all duration-600 hover:scale-110" />
+                  </Link>
+
                 </div>
 
                 <div className="p-6 flex flex-col gap-5">
@@ -42,13 +47,19 @@ export default function BlogSection() {
 
                   <div className="flex flex-col gap-4 text-[#3B4E6A]">
                     <div className="flex items-center gap-4">
-                      <div className="relative w-12 h-12 rounded-full overflow-hidden">
+                      <div className="relative w-12 h-12 rounded-full overflow-hidden cursor-hand">
+                        <Link
+                          href="/team"
+                          className = "cursor-pointer"
+                        >
                         <Image
                             src={post.avatar || "/placeholder.svg"}
                             alt={post.name}
                             fill
                             className="object-cover"
                         />
+                        </Link>
+
                       </div>
                       <p className="text-secondary-light">
                         Par {post.name}, {post.role}
