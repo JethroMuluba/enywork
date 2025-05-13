@@ -229,8 +229,14 @@ const relatedPosts = [
   },
 ]
 
+interface PageProps {
+  params :{
+    slug: string
+  }
+}
+
 // Approche 1: Utiliser any pour contourner le problème de typage
-export default function BlogPostPage({ params }: any) {
+export default function BlogPostPage({ params }: PageProps) {
   // Trouver l'article correspondant à l'ID
   const post = blogPosts.find((post) => post.id === params.slug) || blogPosts[0]
 
