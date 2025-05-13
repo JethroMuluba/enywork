@@ -235,14 +235,14 @@ const relatedPosts = [
   },
 ]
 
-interface BlogPostPageProps {
-  params : {
-  slug : string
-  }
-}
+// interface BlogPostPageProps {
+//   params : {
+//   slug : string
+//   }
+// }
 
 
-const BlogPostPage =({ params }: BlogPostPageProps ) => {
+const BlogPostPage =({ params }: { params: { slug: string } } ) => {
   // Trouver l'article correspondant à l'ID
   const post = blogPosts.find((post) => post.id === params.slug) || blogPosts[0];
 
