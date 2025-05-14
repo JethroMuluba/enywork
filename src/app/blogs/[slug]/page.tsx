@@ -237,13 +237,13 @@ interface BlogPostPageProps {
   params: Promise<{
     slug: string
   }>
-  searchParams?: {
+  searchParams?: Promise<{
     [key: string]: string | string[] | undefined
-  }
+  }>
 }
 
 const BlogPostPage = async ({ params }: BlogPostPageProps) => {
-  const resolvedParams = await params;
+  const resolvedParams = await params;  
   // Trouver l'article correspondant à l'ID
   const post = blogPosts.find((post) => post.id === resolvedParams.slug) || blogPosts[0];
   const filteredRelatedPosts = relatedPosts.filter((relatedPost) => relatedPost.id !== resolvedParams.slug);
