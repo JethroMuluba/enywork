@@ -1,7 +1,7 @@
 import Link from "next/link"
 import { ArrowRight } from "lucide-react"
 import { motion, useInView } from 'framer-motion'
-import { useRef, useEffect, useState } from 'react'
+import { useRef, useEffect, useState, useMemo } from 'react'
 import data from '@/data/data.json'
 import { Line } from 'rc-progress'
 
@@ -13,13 +13,12 @@ export default function StatisticsSection() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
-  // Données factorisées pour les stats
-  const stats = [
+  const stats = useMemo(() => [
     { label: "Strategic marketing", value: 80 },
     { label: "eCommerce development", value: 90 },
     { label: "Strategic marketing", value: 75 },
     { label: "Financial guidance", value: 90 },
-  ];
+  ], []);
 
   // Animation des barres
   const [animatedValues, setAnimatedValues] = useState(stats.map(() => 0));
@@ -42,7 +41,7 @@ export default function StatisticsSection() {
         step();
       });
     }
-  }, [isInView]);
+  }, [isInView, stats]);
 
   return (
     <section ref={ref}>
