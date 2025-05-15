@@ -54,7 +54,7 @@ const PartenersSection = () => {
                   alt={`Partenaire ${idx + 1}`}
                   width={120}
                   height={48}
-                  className="h-20 w-auto object-contain transition duration-300"
+                  className="h-16 w-auto object-contain transition duration-300"
                 />
               </motion.div>
             ))}
