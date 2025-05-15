@@ -69,7 +69,7 @@ const BlogPostClient = ({ post, filteredRelatedPosts, getCover, getPattern }: Bl
   }
 
   return (
-    <main className="min-h-screen pt-[92px] lg:pt-[124px] ">
+    <main className="min-h-screen pt-[92px] lg:pt-[124px]  ">
       {/* Hero Section */}
       <motion.section 
         initial={{ opacity: 0 }}
@@ -137,7 +137,7 @@ const BlogPostClient = ({ post, filteredRelatedPosts, getCover, getPattern }: Bl
       </motion.section>
 
       {/* Single Blog Section */}
-      <section className="py-16">
+      <section className="py-16 px-4 md:px-8 lg:px-20">
         <div className="container-custom">
           <div className="max-w-3xl mx-auto">
             {post.content.map((item: ContentItem, index: number) => {
@@ -149,7 +149,7 @@ const BlogPostClient = ({ post, filteredRelatedPosts, getCover, getPattern }: Bl
                 )
               } else if (item.type === "heading") {
                 return (
-                  <h2 key={index} className="text-3xl text-center lg:text-left font-medium text-[#1C2736] mb-8">
+                  <h2 key={index} className="text-3xl lg:text-center text-left font-medium text-[#1C2736] mb-8">
                     {item.text}
                   </h2>
                 )
@@ -173,7 +173,7 @@ const BlogPostClient = ({ post, filteredRelatedPosts, getCover, getPattern }: Bl
       </section>
 
       {/* Key Points Section */}
-      <section className="py-16 bg-[#F2F2F2]">
+      <section className="py-16 bg-[#F2F2F2] px-4 md:px-8 lg:px-20">
         <div className="container-custom">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl font-medium text-[#1C2736] mb-6">Points clés à retenir</h2>
@@ -181,7 +181,7 @@ const BlogPostClient = ({ post, filteredRelatedPosts, getCover, getPattern }: Bl
               {post.keyPoints.map((point: string, index: number) => (
                 <div key={index} className="flex items-start gap-3">
                   <div className="mt-1.5">
-                    <Check className="w-5 h-5 text-secondary-light" />
+                    <Check className="w-5 h-5 text-[#E10919]" />
                   </div>
                   <p className="text-[#3B4E6A]">{point}</p>
                 </div>
@@ -192,9 +192,9 @@ const BlogPostClient = ({ post, filteredRelatedPosts, getCover, getPattern }: Bl
       </section>
 
       {/* Related Articles Section */}
-      <section className="py-20 px-4 md:px-8 lg:px-20 2xl:45">
+      <section className="py-20 px-4 md:px-8 lg:px-20 2xl:45 ">
         <div className="container-custom">
-          <h2 className="text-3xl font-medium text-secondary mb-12">Articles similaires</h2>
+          <h2 className="text-3xl font-medium text-[#1C2736] lg:text-center mb-12">Articles similaires</h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredRelatedPosts.map((relatedPost) => (

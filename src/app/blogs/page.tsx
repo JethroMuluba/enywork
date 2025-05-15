@@ -19,7 +19,7 @@ const Blogs = () => {
   const getTitle = data.blogs?.[0]?.hero?.[0].title || "Hero Title";
   const getSubTitle = data.blogs?.[0]?.hero?.[0].subTitle || "Hero Sub-title";
   return (
-    <main className="min-h-screen pt-[92px] lg:pt-[124px] ">
+    <main className="min-h-screen pt-[92px] lg:pt-[124px]  ">
         <HeroForAll title={getTitle} subTitle={getSubTitle} cover={getCover} pattern={getPattern} />
         <SearchBar/>
         <BlogSection/>
