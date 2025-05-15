@@ -11,7 +11,7 @@ const VedetteRealization = () => {
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true, margin: "-100px" });
   return (
-    <section ref={ref} className="py-12 md:py-24 px-4 md:px-8 lg:px-20">
+    <section ref={ref} className="bg-[#F2F2F2] py-12 md:py-24 px-4 md:px-8 lg:px-20">
     <div className="container-custom">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         <motion.div 
