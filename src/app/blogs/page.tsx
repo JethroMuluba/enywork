@@ -4,7 +4,7 @@ import HeroForAll from '@/components/hero-for-all'
 import React from 'react'
 import data from '@/data/data.json'
 import SearchBar from '@/components/ui/search-bar'
-import BlogSection from '@/components/blog-section'
+import BlogSection from '@/components/blog-section-for-page'
 import BlogVedette from '@/components/vedette-blog'
 import NewsletterSection from "@/components/news-letters"
 import WhyChoose from "@/components/why-choose"

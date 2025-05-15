@@ -86,7 +86,7 @@ const BlogPostClient = ({ post, filteredRelatedPosts, getCover, getPattern }: Bl
         style={{ backgroundImage: `url(${getCover})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
       >
         <div className="absolute inset-0 bg-hero-pattern bg-cover bg-center opacity-80" style={{ backgroundImage: `url(${getPattern})`, backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
-        <div className="container-custom relative z-10 h-full flex items-center">
+        <div className="container-custom relative z-10 h-full flex items-center justify-center">
           <div className="flex flex-col gap-4 px-4 md:px-8 lg:px-20">
             <motion.div
               initial={{ y: 100, opacity: 0 }}
