@@ -5,6 +5,10 @@ import HeroForAll from "@/components/hero-for-all"
 import data from '@/data/data.json'
 import RealizationsSectionForPage from '@/components/realization-section-for-page'
 import VedetteRealization from '@/components/vedette-realization'
+import OptSolutionSection from '@/components/optsolution-section'
+import StatisticCounter from '@/components/statistic-counter'
+import BrochuresDownload from '@/components/brochure-download'
+import PartenersSection from '@/components/parteners-section'
 
 const Realizations = () => {
   const getCover = data.about?.[0]?.hero?.[0].cover || "/placeholder.svg";
@@ -16,6 +20,10 @@ const Realizations = () => {
       <HeroForAll title={getTitle} subTitle={getSubTitle} cover={getCover} pattern={getPattern} />
       <RealizationsSectionForPage/>
       <VedetteRealization/>
+      <OptSolutionSection/>
+      <StatisticCounter/>
+      <BrochuresDownload/>
+      <PartenersSection/>
       
     </main>
   )
