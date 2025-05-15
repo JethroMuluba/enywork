@@ -295,7 +295,7 @@ const BlogPostClient = ({ post, filteredRelatedPosts, getCover, getPattern }: Bl
                         <div className="bg-white p-4 rounded-lg relative">
                           <div className="absolute -left-2 top-4 w-4 h-4 bg-white transform rotate-45"></div>
                           <h3 className="font-medium text-[#1C2736] mb-2">{comment.author}</h3>
-                          <p className="text-[#1C2736]-light">{comment.text}</p>
+                          <p className="text-[#3B4E6A]">{comment.text}</p>
                         </div>
                         <p className="text-[#3B4E6A] mt-2">{comment.date}</p>
                       </div>
