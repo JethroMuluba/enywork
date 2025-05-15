@@ -23,7 +23,7 @@ export default function HeroSection() {
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="flex flex-col items-center lg:items-start gap-6 md:gap-8 lg:w-1/2 px-5">
-            <h1 className=" text-center lg:text-left text-4xl md:text-5xl lg:text-6xl font-medium text-white leading-tight">
+            <h1 className=" text-center lg:text-left text-4xl md:text-5xl lg:text-6xl font-semibold text-white leading-tight">
               {getTitle}
             </h1>
 
