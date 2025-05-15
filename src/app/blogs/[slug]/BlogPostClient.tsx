@@ -172,7 +172,7 @@ const BlogPostClient = ({ post, filteredRelatedPosts, getCover, getPattern }: Bl
                       alt={item.alt || ""}
                       width={769}
                       height={498}
-                      className="rounded-lg w-full"
+                      className="rounded-lg w-full transition-transform duration-600 hover:scale-110"
                     />
                   </div>
                 )
