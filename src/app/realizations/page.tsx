@@ -11,7 +11,8 @@ const Realizations = () => {
   const getSubTitle = data.realizations?.[0]?.hero?.[0].subTitle || "Hero Sub-title";
   return (
     <main className="min-h-screen pt-[92px] lg:pt-[124px] ">
-                    <HeroForAll title={getTitle} subTitle={getSubTitle} cover={getCover} pattern={getPattern} />
+      <HeroForAll title={getTitle} subTitle={getSubTitle} cover={getCover} pattern={getPattern} />
+      
     </main>
   )
 }

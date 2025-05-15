@@ -781,5 +781,13 @@
                 }
             ]
         }
+    ],
+    "services" : [
+        {
+            "id" : 0,
+            "title" : "Nos Services",
+            "subTitle" : "Vous offrir un service de qualité est la raison d’être de notre start-up.",
+            "cover" : "url"
+        }
     ]
 }
