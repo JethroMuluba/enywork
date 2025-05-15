@@ -1,7 +1,6 @@
 import type React from "react"
 import type { Metadata } from "next"
 import "./globals.css"
-import LocalFont from 'next/font/local'
 import Header from "@/components/header"
 import Footer from "@/components/footer"
 import { Outfit } from 'next/font/google'

@@ -1,8 +1,6 @@
 import { JSX } from 'react'
 import Link from "next/link"
 import { CodeXml, MonitorSmartphone, Database, LineChartIcon as ChartLine, Server, Presentation, ArrowRight } from "lucide-react"
-import SectionTitle from './ui/sectionTitle'
-import data from '@/data/data.json'
 import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
 
