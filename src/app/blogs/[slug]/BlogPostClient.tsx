@@ -57,7 +57,12 @@ interface BlogPostClientProps {
 
 const BlogPostClient = ({ post, filteredRelatedPosts, getCover, getPattern }: BlogPostClientProps) => {
   const ref = useRef(null);
+  const similareRef = useRef(null);
+  const singleBlogRef = useRef(null);
+  const commentRef = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const isCommentInView = useInView(commentRef, { once: true, margin: "-100px" });
+  const isSimilareBlogInView = useInView(similareRef, { once: true, margin: "-100px" });
   const [message, setMessage] = useState("")
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -137,7 +142,13 @@ const BlogPostClient = ({ post, filteredRelatedPosts, getCover, getPattern }: Bl
       </motion.section>
 
       {/* Single Blog Section */}
-      <section className="py-16 px-4 md:px-8 lg:px-20">
+      <motion.section 
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 1.5 }}
+              ref={singleBlogRef} 
+      className="py-16 px-4 md:px-8 lg:px-20">
         <div className="container-custom">
           <div className="max-w-3xl mx-auto">
             {post.content.map((item: ContentItem, index: number) => {
@@ -170,7 +181,7 @@ const BlogPostClient = ({ post, filteredRelatedPosts, getCover, getPattern }: Bl
             })}
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Key Points Section */}
       <section className="py-16 bg-[#F2F2F2] px-4 md:px-8 lg:px-20">
@@ -192,19 +203,31 @@ const BlogPostClient = ({ post, filteredRelatedPosts, getCover, getPattern }: Bl
       </section>
 
       {/* Related Articles Section */}
-      <section className="py-20 px-4 md:px-8 lg:px-20 2xl:45 ">
+      <section ref={similareRef} className="py-20 px-4 md:px-8 lg:px-20 2xl:45 ">
         <div className="container-custom">
-          <h2 className="text-3xl font-medium text-[#1C2736] lg:text-center mb-12">Articles similaires</h2>
+          <motion.h2 
+                          initial={{ y: 100, opacity: 0 }}
+                          animate={isSimilareBlogInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
+                          transition={{ duration: 0.5, ease: "easeOut" }}
+          className="text-3xl font-medium text-[#1C2736] lg:text-center mb-12">Articles similaires</motion.h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredRelatedPosts.map((relatedPost) => (
-              <div key={relatedPost.id} className="bg-white rounded-lg shadow-lg overflow-hidden">
+            {filteredRelatedPosts.map((relatedPost, index) => (
+              <motion.div 
+              initial={{ y: 100, opacity: 0 }}
+              animate={isSimilareBlogInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
+              transition={{ 
+                  duration: 1.5, 
+                  ease: "easeOut",
+                  delay: index * 0.8 
+              }}
+              key={relatedPost.id} className="bg-white rounded-lg shadow-lg overflow-hidden">
                 <div className="relative h-64 w-full">
                   <Image
                     src={relatedPost.image || "/placeholder.svg"}
                     alt={relatedPost.title}
                     fill
-                    className="object-cover"
+                    className="object-cover transition-transform duration-600 hover:scale-110"
                   />
                 </div>
 
@@ -238,15 +261,19 @@ const BlogPostClient = ({ post, filteredRelatedPosts, getCover, getPattern }: Bl
                     </Link>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
 
       {/* Comments Section */}
-      <section className="py-16 bg-[#F2F2F2]">
-        <div className="container-custom">
+      <section ref={commentRef} className="py-16 bg-[#F2F2F2] px-4 md:px-8 lg:px-20">
+        <motion.div 
+                        initial={{ y: 100, opacity: 0 }}
+                        animate={isCommentInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
+                        transition={{ duration: 1, ease: "easeOut" }}
+        className="container-custom">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl font-medium text-[#1C2736] mb-10">Commentaires</h2>
 
@@ -297,7 +324,7 @@ const BlogPostClient = ({ post, filteredRelatedPosts, getCover, getPattern }: Bl
               </button>
             </form>
           </div>
-        </div>
+        </motion.div>
       </section>
 
       <NewsletterSection/>
