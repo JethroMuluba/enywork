@@ -51,7 +51,7 @@ const VedetteRealization = () => {
           </div>
 
           <p className="text-[#3B4E6A] text-left ">
-          Notre équipe a relevé le défi de créer une platefome innovente qui a transformé la gestion du pointage interne numérisée de l'agence de pilotage, de coordination et de suivi des conventions de collaboration aboutissant à une augmentation de 45% de la productivité.
+          Notre équipe a relevé le défi de créer une platefome innovente qui a transformé la gestion du pointage interne numérisée de l&apos;agence de pilotage, de coordination et de suivi des conventions de collaboration aboutissant à une augmentation de 45% de la productivité.
           </p>
 
           <Link href="/contact" className="bg-[#E10919] hover:bg-[#B00813] px-8 py-4 rounded-lg font-normal text-white cursor-pointer self-center lg:self-start flex items-center gap-2">

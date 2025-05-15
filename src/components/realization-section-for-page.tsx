@@ -4,7 +4,6 @@ import { ArrowRight } from "lucide-react"
 import data from "@/data/data.json"
 import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
-import SectionTitle from "./ui/sectionTitle"
 
 
 export default function RealizationsSectionForPage() {

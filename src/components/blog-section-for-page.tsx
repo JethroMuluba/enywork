@@ -1,7 +1,6 @@
 import Link from "next/link"
 import Image from "next/image"
 import { ArrowRight } from "lucide-react"
-import SectionTitle from "./ui/sectionTitle"
 import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
 import data from '@/data/data.json'
