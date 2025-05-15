@@ -31,7 +31,7 @@ export default function Footer() {
                     initial={{ y: 100, opacity: 0 }}
                     animate={isInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
                     transition={{ duration: 1.5, ease: "easeOut" }}
-          className="flex flex-col items-center lg:items-start gap-4">
+          className="lg:flex-col items-center lg:items-start gap-4 hidden lg:block">
             <h3 className="text-base text-center lg:text-left font-medium mb-2">MENU</h3>
             <div className="flex flex-col gap-2 text-center font-light lg:text-left">
               <Link href="/" className="text-light-secondary hover:text-[#E10919] transition-colors">
