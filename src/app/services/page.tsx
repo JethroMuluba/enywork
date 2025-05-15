@@ -3,6 +3,11 @@
 import React from 'react'
 import HeroForAll from "@/components/hero-for-all"
 import data from '@/data/data.json'
+import ServicesSection from "@/components/services-section-for-page"
+import WhyChoose from '@/components/why-choose'
+import TestimonialsSection from '@/components/testimonials-section'
+import DiscussBreadgePassInAction from '@/components/discuss-breadge-pass-in-action'
+import PartenersSection from '@/components/parteners-section'
 
 const Services = () => {
   const getCover = data.about?.[0]?.hero?.[0].cover || "/placeholder.svg";
@@ -12,6 +17,16 @@ const Services = () => {
   return (
     <main className="min-h-screen font-[poppins] pt-[92px] lg:pt-[124px] ">
         <HeroForAll title={getTitle} subTitle={getSubTitle} cover={getCover} pattern={getPattern} />
+
+        <ServicesSection />
+        <WhyChoose/>
+        <TestimonialsSection/>
+        <DiscussBreadgePassInAction/>
+        <PartenersSection/>
+
+
+
+
     </main>
   )
 }
