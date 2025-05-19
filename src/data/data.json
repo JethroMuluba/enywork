@@ -789,5 +789,27 @@
             "subTitle" : "Vous offrir un service de qualité est la raison d’être de notre start-up.",
             "cover" : "url"
         }
+    ],
+
+    "team" : [
+        {
+            "id": 0,
+            "hero" :[
+                {
+                    "title" : "Notre Équipe",
+                    "subTitle" : "Rencontrer nos spécialistes vous donne un aperçu d’une réalisation réussie de vos projets."
+                }
+            ]
+        },
+
+        {
+            "id": 1,
+            "intro" : [
+                {
+                    "title" : "Derrière chaque innovation, une équipe passionnée !",
+                    "subTitle" : "Notre équipe d’experts en développement, design et stratégie digitale façonne l’avenir numérique avec créativité et excellence."
+                }
+            ]
+        }
     ]
 }
