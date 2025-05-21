@@ -15,7 +15,7 @@ const Team = () => {
   return (
     <main className="min-h-screen pt-[92px] lg:pt-[124px]  ">
         <HeroForAll title={getTitle} subTitle={getSubTitle} cover={getCover} pattern={getPattern} />
-        <div className='bg-[#F2F2F2] h-auto lg:h-[274px] flex justify-center items-center px-4 md:px-8 lg:px-65'>
+        <div className='bg-[#F2F2F2] h-auto lg:h-[274px] flex justify-center items-center py-16 px-4 md:px-8 lg:px-65'>
           <SectionTitle title={getTitle2} subTitle={getSubTitle2} />
         </div>
 
