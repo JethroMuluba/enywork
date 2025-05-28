@@ -3,6 +3,8 @@ import Image from 'next/image'
 import { Instagram, Linkedin, Facebook, Twitter } from 'lucide-react'
 import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
+import Link from "next/link"
+
 
 
 const teams = [
@@ -12,7 +14,8 @@ const teams = [
     members: [
       {
         id: 1,
-        name: 'Yusuf Heri',
+        firstname: 'Yusuf',
+        lastname : 'Heri',
         role: 'CEO, Expert en gestion de projets digitaux innovants.',
         avatar: "https://res.cloudinary.com/dr8ofciki/image/upload/v1745853594/Enywork/yusuf-heri-profile.jpg",
         socials: {
@@ -24,7 +27,8 @@ const teams = [
       },
       {
         id: 2,
-        name: 'Frank Mbuyi',
+        firstname: 'Frank',
+        lastname : 'Mbuyi',
         role: 'Directeur Technique, Développeur Web Full-Stack.',
         avatar: "https://res.cloudinary.com/dr8ofciki/image/upload/v1745853771/Enywork/franck-mbuyi-profile.png",
         socials: {
@@ -42,7 +46,8 @@ const teams = [
     members: [
       {
         id: 1,
-        name: 'Victor Kasereka',
+        firstname: 'Victor',
+        lastname: 'Kasereka',
         role: 'Head of Software Development, Développeur Full-Stack.',
         avatar: '/placeholder.svg',
         socials: {
@@ -54,7 +59,8 @@ const teams = [
       },
       {
         id: 2,
-        name: 'Daima Muhiya',
+        firstname: 'Daima',
+        lastname: 'Muhiya',
         role: 'Développeur Web Full-Stack.',
         avatar: '/placeholder.svg',
         socials: {
@@ -72,9 +78,10 @@ const teams = [
     members: [
       {
         id: 1,
-        name: 'Junior Mupasa',
+        firstname: 'Junior',
+        lastname: 'Mupasa',
         role: 'Sales Manager',
-        avatar: '/placeholder.svg',
+        avatar: 'https://res.cloudinary.com/dr8ofciki/image/upload/v1745852687/Enywork/jethro-muluba-profile.png',
         socials: {
           instagram: '#',
           linkedin: '#',
@@ -84,7 +91,8 @@ const teams = [
       },
       {
         id: 2,
-        name: 'Jethro Muluba',
+        firstname: 'Jethro',
+        lastname: 'Muluba',
         role: 'Spécialiste en Marketing Digital et Développeur Web Full-Stack',
         avatar: "https://res.cloudinary.com/dr8ofciki/image/upload/v1745852687/Enywork/jethro-muluba-profile.png",
         socials: {
@@ -96,9 +104,10 @@ const teams = [
       },
       {
         id :3,
-        name: 'Carmel Kingudi',
+        firstname: 'Carmel',
+        lastname: 'Kingudi',
         role: 'Partnership Manager',
-        avatar: '/placeholder.svg',
+        avatar: 'https://res.cloudinary.com/dr8ofciki/image/upload/v1745852687/Enywork/jethro-muluba-profile.png',
         socials: {
           instagram: '#',
           linkedin: '#',
@@ -114,9 +123,10 @@ const teams = [
     members: [
       {
         id: 1,
-        name: 'Hervé Kimbau',
+        firstname: 'Hervé',
+        lastname: 'Kimbau',
         role: 'Customer Support Manager',
-        avatar: '/placeholder.svg',
+        avatar: 'https://res.cloudinary.com/dr8ofciki/image/upload/v1745852687/Enywork/jethro-muluba-profile.png',
         socials: {
           instagram: '#',
           linkedin: '#',
@@ -126,9 +136,10 @@ const teams = [
       },
       {
         id: 2,
-        name: 'Josué Simba',
+        firstname: 'Josué',
+        lastname: 'Simba',
         role: 'Technical Support Specialist, Développeur Web',
-        avatar: '/placeholder.svg',
+        avatar: 'https://res.cloudinary.com/dr8ofciki/image/upload/v1745852687/Enywork/jethro-muluba-profile.png',
         socials: {
           instagram: '#',
           linkedin: '#',
@@ -144,9 +155,10 @@ const teams = [
     members: [
       {
         id: 1,
-        name: 'Abdoul Karim Pongo',
+        firstname: 'Abdoul',
+        lastname: 'Karim',
         role: 'Human Resources Manager',
-        avatar: '/placeholder.svg',
+        avatar: 'https://res.cloudinary.com/dr8ofciki/image/upload/v1745852687/Enywork/jethro-muluba-profile.png',
         socials: {
           instagram: '#',
           linkedin: '#',
@@ -156,9 +168,10 @@ const teams = [
       },
       {
         id: 2,
-        name: 'Gracia Wumba',
+        firstname: 'Gracia',
+        lastname: 'Wumba',
         role: 'Administrative Assistant',
-        avatar: '/placeholder.svg',
+        avatar: 'https://res.cloudinary.com/dr8ofciki/image/upload/v1745852687/Enywork/jethro-muluba-profile.png',
         socials: {
           instagram: '#',
           linkedin: '#',
@@ -168,9 +181,10 @@ const teams = [
       },
       {
         id: 3,
-        name: 'Jubile Manzambi',
+        firstname: 'Jubile',
+        lastname: 'Manzambi',
         role: 'Finance Manager',
-        avatar: '/placeholder.svg',
+        avatar: 'https://res.cloudinary.com/dr8ofciki/image/upload/v1745852687/Enywork/jethro-muluba-profile.png',
         socials: {
           instagram: '#',
           linkedin: '#',
@@ -186,27 +200,27 @@ const TeamBox = () => {
   const checkTeamData = teams;
   console.log("Données des membres du team :", checkTeamData);
   return (
-    <div className="max-w-screen-xl mx-auto p-6">
+    <div className="">
       {teams.map((team) => {
         const sectionRef = useRef(null);
         const sectionInView = useInView(sectionRef, { once: true, margin: "-100px" });
         return (
-          <section key={team.id} style={{ marginBottom: 48 }}>
+          <section key={team.id} style={{ marginBottom: 48 }} className="" >
             <h2 className="text-center border-b-2 border-gray-200 pb-2 mb-6 text-2xl font-bold">{team.title}</h2>
-            <div ref={sectionRef} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12 justify-center">
+            {/* <div ref={sectionRef} className="flex gap-8 item-center">
               {team.members.map((member, index) => (
                 <motion.div
                   initial={{ y: 100, opacity: 0 }}
                   animate={sectionInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
                   transition={{ duration: 1, ease: "easeOut", delay: index * 0.2 }}
                   key={member.id}
-                  className="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col items-center"
+                  className="bg-white rounded-lg shadow-lg overflow-hidden"
                 >
                   <div className="relative h-85 2xl:h-95 w-full transition-transform duration-600 hover:scale-110">
                     <Image src={member.avatar} alt={member.name} width={500} height={96} className="object-cover" />
                   </div>
-                  <div className="px-4 pb-6 w-full flex-1 flex flex-col items-center">
-                    <div className="font-semibold text-lg text-center mb-1">{member.name || "Nom non disponible"}</div>
+                  <div className="p-6 text-center">
+                    <div className="flex justify-center text-center font-medium gap-2">{member.name || "Nom non disponible"}</div>
                     <div className="text-[#b71c1c] font-medium text-center mb-2">{member.role}</div>
                     <div className="flex gap-4 mt-2">
                       <a href={member.socials.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram"><Instagram size={20} color="#E10919" /></a>
@@ -217,7 +231,51 @@ const TeamBox = () => {
                   </div>
                 </motion.div>
               ))}
+            </div> */}
+
+            <div ref={sectionRef} className="flex flex-wrap gap-8 justify-center">
+            {team.members.map((member, index) => (
+              <motion.div 
+              initial={{ y: 100, opacity: 0 }}
+              animate={sectionInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
+              transition={{ 
+                  duration: 1, 
+                  ease: "easeOut",
+                  delay: index * 0.8 
+              }}
+              key={member.id} className="bg-white rounded-lg shadow-lg overflow-hidden">
+                <div className="relative h-95 2xl:h-95 w-full transition-transform duration-600 hover:scale-110">
+                  <Image src={member.avatar || "/placeholder.svg"} alt={`${member.firstname}`+ ' '+`${member.lastname}`} fill className="object-cover" />
+                </div>
+
+                <div className="p-6 text-center">
+                    <div className="flex justify-center text-center font-medium gap-2">
+                    <p className="text-2xl text-[#1C2736] text-secondary mb-3">{member.firstname}</p> 
+                    <p className="text-2xl text-[#E10919] text-secondary mb-3">{member.lastname} </p>
+                    </div>
+
+                  <p className="text-[#3B4E6A] mb-4">{member.role} </p>
+
+                  <div className="flex justify-center gap-6 text-[#E10919] ">
+                    <Link href="#" aria-label="Instagram">
+                      <Instagram className="w-5 h-5 text-secondary-light hover:text-[#B00813] transition-colors" />
+                    </Link>
+                    <Link href="#" aria-label="Twitter">
+                      <Twitter className="w-5 h-5 text-secondary-light hover:text-[#B00813] transition-colors" />
+                    </Link>
+                    <Link href="#" aria-label="LinkedIn">
+                      <Linkedin className="w-5 h-5 text-secondary-light hover:text-[#B00813] transition-colors" />
+                    </Link>
+                    <Link href="#" aria-label="Facebook">
+                      <Facebook className="w-5 h-5 text-secondary-light hover:text-[#B00813] transition-colors" />
+                    </Link>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
             </div>
+
+
           </section>
         );
       })}
