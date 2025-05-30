@@ -49,7 +49,7 @@ const teams = [
         firstname: 'Victor',
         lastname: 'Kasereka',
         role: 'Head of Software Development, Développeur Full-Stack.',
-        avatar: '/placeholder.svg',
+        avatar: 'https://res.cloudinary.com/dr8ofciki/image/upload/v1747647345/Enywork/victor-kasereka-profile.png',
         socials: {
           instagram: '#',
           linkedin: '#',
@@ -206,7 +206,14 @@ const TeamBox = () => {
         const sectionInView = useInView(sectionRef, { once: true, margin: "-100px" });
         return (
           <section key={team.id} style={{ marginBottom: 48 }} className="" >
-            <h2 className="text-center border-b-2 border-gray-200 pb-2 mb-6 text-2xl font-bold">{team.title}</h2>
+            <motion.h2
+              initial={{ y: 40, opacity: 0 }}
+              animate={sectionInView ? { y: 0, opacity: 1 } : { y: 40, opacity: 0 }}
+              transition={{ duration: 0.8, ease: 'easeOut' }}
+              className="text-center text-[#1C2736] border-b-2 border-gray-200 pb-2 mb-12 text-2xl font-medium"
+            >
+              {team.title}
+            </motion.h2>
             {/* <div ref={sectionRef} className="flex gap-8 item-center">
               {team.members.map((member, index) => (
                 <motion.div
@@ -243,33 +250,34 @@ const TeamBox = () => {
                   ease: "easeOut",
                   delay: index * 0.8 
               }}
-              key={member.id} className="bg-white rounded-lg shadow-lg overflow-hidden">
-                <div className="relative h-95 2xl:h-95 w-full transition-transform duration-600 hover:scale-110">
-                  <Image src={member.avatar || "/placeholder.svg"} alt={`${member.firstname}`+ ' '+`${member.lastname}`} fill className="object-cover" />
+              key={`${team.id}-${member.id}`}
+              className="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col items-center w-80 min-h-[480px] ">
+                <div className="relative w-full" style={{ height: 320 }}>
+                  <Image src={member.avatar || "/placeholder.svg"} alt={`${member.firstname} ${member.lastname}`} fill className="object-cover transition-transform duration-600 hover:scale-110" style={{ borderBottom: '1px solid #eee' }} />
                 </div>
 
-                <div className="p-6 text-center">
-                    <div className="flex justify-center text-center font-medium gap-2">
-                    <p className="text-2xl text-[#1C2736] text-secondary mb-3">{member.firstname}</p> 
-                    <p className="text-2xl text-[#E10919] text-secondary mb-3">{member.lastname} </p>
+                <div className="p-6 text-center flex-1 flex flex-col justify-between w-full">
+                    <div>
+                      <div className="flex justify-center font-medium gap-2">
+                        <p className="text-2xl text-[#1C2736] mb-3">{member.firstname}</p> 
+                        <p className="text-2xl text-[#E10919] mb-3">{member.lastname}</p>
+                      </div>
+                      <p className="text-[#3B4E6A] mb-4 line-clamp-2">{member.role}</p>
                     </div>
-
-                  <p className="text-[#3B4E6A] mb-4">{member.role} </p>
-
-                  <div className="flex justify-center gap-6 text-[#E10919] ">
-                    <Link href="#" aria-label="Instagram">
-                      <Instagram className="w-5 h-5 text-secondary-light hover:text-[#B00813] transition-colors" />
-                    </Link>
-                    <Link href="#" aria-label="Twitter">
-                      <Twitter className="w-5 h-5 text-secondary-light hover:text-[#B00813] transition-colors" />
-                    </Link>
-                    <Link href="#" aria-label="LinkedIn">
-                      <Linkedin className="w-5 h-5 text-secondary-light hover:text-[#B00813] transition-colors" />
-                    </Link>
-                    <Link href="#" aria-label="Facebook">
-                      <Facebook className="w-5 h-5 text-secondary-light hover:text-[#B00813] transition-colors" />
-                    </Link>
-                  </div>
+                    <div className="flex justify-center gap-6 text-[#E10919] mt-4">
+                      <Link href="#" aria-label="Instagram">
+                        <Instagram className="w-5 h-5 text-secondary-light hover:text-[#B00813] transition-colors" />
+                      </Link>
+                      <Link href="#" aria-label="Twitter">
+                        <Twitter className="w-5 h-5 text-secondary-light hover:text-[#B00813] transition-colors" />
+                      </Link>
+                      <Link href="#" aria-label="LinkedIn">
+                        <Linkedin className="w-5 h-5 text-secondary-light hover:text-[#B00813] transition-colors" />
+                      </Link>
+                      <Link href="#" aria-label="Facebook">
+                        <Facebook className="w-5 h-5 text-secondary-light hover:text-[#B00813] transition-colors" />
+                      </Link>
+                    </div>
                 </div>
               </motion.div>
             ))}

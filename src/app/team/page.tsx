@@ -20,7 +20,7 @@ const Team = () => {
           <SectionTitle title={getTitle2} subTitle={getSubTitle2} />
         </section>
 
-        <div className='flex justify-center items-center py-16 px-4 md:px-8 lg:px-65'>
+        <div className='flex justify-center items-center py-16'>
           <TeamBox />
         </div>
         
