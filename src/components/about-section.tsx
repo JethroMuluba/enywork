@@ -17,8 +17,8 @@ export default function AboutSection() {
   return (
     <section ref={ref} className="bg-[#F2F2F2] py-20 px-4 md:px-8 lg:px-25 ">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div className="order-2 lg:order-1 flex justify-center">
-          <div className=" hidden lg:block w-1/2 ">
+          <div className="order-1 flex justify-center">
+          <div className=" w-1/2 ">
             <motion.div
               initial={{ y: 100, opacity: 0 }}
               animate={isInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
@@ -41,14 +41,14 @@ export default function AboutSection() {
                             initial={{ y: 100, opacity: 0 }}
                             animate={isInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
                             transition={{ duration: 0.5, ease: "easeOut" }}
-              className=" text-4xl lg:text-4xl text-center lg:text-left font-medium text-[#1C2736] "> 
+              className=" text-4xl lg:text-4xl text-left font-medium text-[#1C2736] "> 
                 {getTitle} 
               </motion.h2>
               <motion.p 
                             initial={{ y: 100, opacity: 0 }}
                             animate={isInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
                             transition={{ duration: 1, ease: "easeOut" }}
-              className="text-center lg:text-left text-xl text-[#3B4E6A] "> 
+              className="text-left text-xl text-[#3B4E6A] "> 
                 {getSubTitle} 
               </motion.p>
             </div>
@@ -58,7 +58,7 @@ export default function AboutSection() {
                             initial={{ y: 100, opacity: 0 }}
                             animate={isInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
                             transition={{ duration: 1.5, ease: "easeOut" }} 
-              className="text-center lg:text-left">
+              className=" text-lg text-left">
                 {getText1}
               </motion.p>
 
@@ -66,7 +66,7 @@ export default function AboutSection() {
                             initial={{ y: 100, opacity: 0 }}
                             animate={isInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
                             transition={{ duration: 2, ease: "easeOut" }}
-              className="text-center lg:text-left">
+              className="text-lg text-left">
                 {getText2}
               </motion.p>
 
@@ -77,7 +77,7 @@ export default function AboutSection() {
               initial={{ y: 100, opacity: 0 }}
               animate={isInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
               transition={{ duration: 2.5, ease: "easeOut" }}
-              className="flex justify-center lg:justify-start"
+              className="flex justify-start"
             >
               <Link href="/about" className="bg-[#E10919] hover:bg-[#B00813] px-8 py-4 rounded-lg text-white cursor-pointer flex items-center gap-2">
                 <span>SAVOIR PLUS</span>
