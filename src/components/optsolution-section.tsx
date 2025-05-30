@@ -23,13 +23,13 @@ export default function OptSolutionSection() {
           <motion.div 
             animate={isInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
             transition={{ duration: 0.5, ease: "easeOut" }}
-            className="w-full md:w-auto">
+            className="w-full md:w-auto flex justify-center items-center">
             <Image
               src={getLogo || '/placeholder.svg?height=767&width=748'}
               alt="OptSolution Logo"
               width={335}
               height={100}
-              className="max-w-[335px] w-full"
+              className="max-w-[335px] w-full items-center"
             />
           </motion.div>
 
