@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { ReactNode } from 'react'
 import Image from 'next/image'
 import { Instagram, Linkedin, Facebook, Twitter } from 'lucide-react'
 import { motion, useInView } from 'framer-motion'
@@ -196,22 +196,39 @@ const teams = [
   },
 ];
 
+type TeamType = typeof teams[number];
+type TeamSectionProps = {
+  team: TeamType;
+  idx: number;
+  children: (sectionInView: boolean) => ReactNode;
+};
+const TeamSection: React.FC<TeamSectionProps> = ({ team, idx, children }) => {
+  const sectionRef = useRef(null);
+  const sectionInView = useInView(sectionRef, { once: true, margin: "-100px" });
+  const bgColor = idx % 2 === 0 ? "bg-white" : "bg-[#F2F2F2]";
+  return (
+    <section
+      ref={sectionRef}
+      key={team.id}
+      style={{ marginBottom: 48 }}
+      className={`${bgColor} w-screen relative left-1/2 right-1/2 -mx-[50vw] px-0 py-8`}
+    >
+      <div className="max-w-7xl mx-auto px-4">
+        {children(sectionInView)}
+      </div>
+    </section>
+  );
+};
+
 const TeamBox = () => {
   const checkTeamData = teams;
   console.log("Données des membres du team :", checkTeamData);
   return (
     <div className="">
-      {teams.map((team, idx) => {
-        const bgColor = idx % 2 === 0 ? "bg-white" : "bg-[#F2F2F2]";
-        const sectionRef = useRef(null);
-        const sectionInView = useInView(sectionRef, { once: true, margin: "-100px" });
-        return (
-          <section
-            key={team.id}
-            style={{ marginBottom: 48 }}
-            className={`${bgColor} w-screen relative left-1/2 right-1/2 -mx-[50vw] px-0 py-8`}
-          >
-            <div className="max-w-7xl mx-auto px-4">
+      {teams.map((team, idx) => (
+        <TeamSection key={team.id} team={team} idx={idx}>
+          {(sectionInView) => (
+            <>
               <motion.h2
                 initial={{ y: 40, opacity: 0 }}
                 animate={sectionInView ? { y: 0, opacity: 1 } : { y: 40, opacity: 0 }}
@@ -220,78 +237,53 @@ const TeamBox = () => {
               >
                 {team.title}
               </motion.h2>
-              {/* <div ref={sectionRef} className="flex gap-8 item-center">
+              <div className="flex flex-wrap gap-8 justify-center">
                 {team.members.map((member, index) => (
-                  <motion.div
+                  <motion.div 
                     initial={{ y: 100, opacity: 0 }}
                     animate={sectionInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
-                    transition={{ duration: 1, ease: "easeOut", delay: index * 0.2 }}
-                    key={member.id}
-                    className="bg-white rounded-lg shadow-lg overflow-hidden"
+                    transition={{ 
+                        duration: 1, 
+                        ease: "easeOut",
+                        delay: index * 0.8 
+                    }}
+                    key={`${team.id}-${member.id}`}
+                    className="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col items-center w-80 min-h-[480px] "
                   >
-                    <div className="relative h-85 2xl:h-95 w-full transition-transform duration-600 hover:scale-110">
-                      <Image src={member.avatar} alt={member.name} width={500} height={96} className="object-cover" />
+                    <div className="relative w-full" style={{ height: 320 }}>
+                      <Image src={member.avatar || "/placeholder.svg"} alt={`${member.firstname} ${member.lastname}`} fill className="object-cover transition-transform duration-600 hover:scale-110" style={{ borderBottom: '1px solid #eee' }} />
                     </div>
-                    <div className="p-6 text-center">
-                      <div className="flex justify-center text-center font-medium gap-2">{member.name || "Nom non disponible"}</div>
-                      <div className="text-[#b71c1c] font-medium text-center mb-2">{member.role}</div>
-                      <div className="flex gap-4 mt-2">
-                        <a href={member.socials.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram"><Instagram size={20} color="#E10919" /></a>
-                        <a href={member.socials.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><Linkedin size={20} color="#E10919" /></a>
-                        <a href={member.socials.facebook} target="_blank" rel="noopener noreferrer" aria-label="Facebook"><Facebook size={20} color="#E10919" /></a>
-                        <a href={member.socials.twitter} target="_blank" rel="noopener noreferrer" aria-label="Twitter"><Twitter size={20} color="#E10919" /></a>
-                      </div>
+
+                    <div className="p-6 text-center flex-1 flex flex-col justify-between w-full">
+                        <div>
+                          <div className="flex justify-center font-medium gap-2">
+                            <p className="text-2xl text-[#1C2736] mb-3">{member.firstname}</p> 
+                            <p className="text-2xl text-[#E10919] mb-3">{member.lastname}</p>
+                          </div>
+                          <p className="text-[#3B4E6A] mb-4 line-clamp-2">{member.role}</p>
+                        </div>
+                        <div className="flex justify-center gap-6 text-[#E10919] mt-4">
+                          <Link href="#" aria-label="Instagram">
+                            <Instagram className="w-5 h-5 text-secondary-light hover:text-[#B00813] transition-colors" />
+                          </Link>
+                          <Link href="#" aria-label="Twitter">
+                            <Twitter className="w-5 h-5 text-secondary-light hover:text-[#B00813] transition-colors" />
+                          </Link>
+                          <Link href="#" aria-label="LinkedIn">
+                            <Linkedin className="w-5 h-5 text-secondary-light hover:text-[#B00813] transition-colors" />
+                          </Link>
+                          <Link href="#" aria-label="Facebook">
+                            <Facebook className="w-5 h-5 text-secondary-light hover:text-[#B00813] transition-colors" />
+                          </Link>
+                        </div>
                     </div>
                   </motion.div>
                 ))}
-              </div> */}
-
-              <div ref={sectionRef} className="flex flex-wrap gap-8 justify-center">
-              {team.members.map((member, index) => (
-                <motion.div 
-                initial={{ y: 100, opacity: 0 }}
-                animate={sectionInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
-                transition={{ 
-                    duration: 1, 
-                    ease: "easeOut",
-                    delay: index * 0.8 
-                }}
-                key={`${team.id}-${member.id}`}
-                className="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col items-center w-80 min-h-[480px] ">
-                  <div className="relative w-full" style={{ height: 320 }}>
-                    <Image src={member.avatar || "/placeholder.svg"} alt={`${member.firstname} ${member.lastname}`} fill className="object-cover transition-transform duration-600 hover:scale-110" style={{ borderBottom: '1px solid #eee' }} />
-                  </div>
-
-                  <div className="p-6 text-center flex-1 flex flex-col justify-between w-full">
-                      <div>
-                        <div className="flex justify-center font-medium gap-2">
-                          <p className="text-2xl text-[#1C2736] mb-3">{member.firstname}</p> 
-                          <p className="text-2xl text-[#E10919] mb-3">{member.lastname}</p>
-                        </div>
-                        <p className="text-[#3B4E6A] mb-4 line-clamp-2">{member.role}</p>
-                      </div>
-                      <div className="flex justify-center gap-6 text-[#E10919] mt-4">
-                        <Link href="#" aria-label="Instagram">
-                          <Instagram className="w-5 h-5 text-secondary-light hover:text-[#B00813] transition-colors" />
-                        </Link>
-                        <Link href="#" aria-label="Twitter">
-                          <Twitter className="w-5 h-5 text-secondary-light hover:text-[#B00813] transition-colors" />
-                        </Link>
-                        <Link href="#" aria-label="LinkedIn">
-                          <Linkedin className="w-5 h-5 text-secondary-light hover:text-[#B00813] transition-colors" />
-                        </Link>
-                        <Link href="#" aria-label="Facebook">
-                          <Facebook className="w-5 h-5 text-secondary-light hover:text-[#B00813] transition-colors" />
-                        </Link>
-                      </div>
-                  </div>
-                </motion.div>
-              ))}
               </div>
-            </div>
-          </section>
-        );
-      })}
+            </>
+          )}
+        </TeamSection>
+      ))}
     </div>
   );
 }
