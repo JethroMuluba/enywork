@@ -5,7 +5,8 @@ import HeroForAll from "@/components/hero-for-all"
 import data from '@/data/data.json'
 import SectionTitle from '@/components/ui/sectionTitle'
 import TeamBox from '@/components/team-box'
-
+import ApplyOffert from '@/components/apply-offert'
+import PartenersSection from '@/components/parteners-section'
 const Team = () => {
   const getCover = data.about?.[0]?.hero?.[0].cover || "/placeholder.svg";
   const getPattern = data.about?.[0]?.hero?.[0].pattern || "/placeholder.svg";
@@ -20,9 +21,10 @@ const Team = () => {
           <SectionTitle title={getTitle2} subTitle={getSubTitle2} />
         </section>
 
-        <div className='flex justify-center items-center py-16'>
-          <TeamBox />
-        </div>
+        <TeamBox />
+        <ApplyOffert />
+        <PartenersSection />
+
         
     </main>
   )
