@@ -811,5 +811,25 @@
                 }
             ]
         }
+    ],
+
+    "iconeLogo" : [
+        {
+            "id":0,
+            "redIcone" : "https://res.cloudinary.com/dr8ofciki/image/upload/v1748614659/Enywork/E-logo-red.webp"
+        },
+
+        {
+            "id":1,
+            "redIcone" : "https://res.cloudinary.com/dr8ofciki/image/upload/v1748614660/Enywork/E-logo-white.webp"
+        }
+    ],
+
+    "pattern" : [
+        {
+            "id": 0,
+            "pattern" : "https://res.cloudinary.com/dr8ofciki/image/upload/v1748616126/Enywork/Pattern-Bg.png"
+        }
     ]
+
 }
