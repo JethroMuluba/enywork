@@ -52,7 +52,7 @@ export default function Header() {
       </div>
 
       {/* Main Header */}
-      <div className="w-full bg-white backdrop-blur-xl py-4 px-4 md:px-8 lg:px-20 3xl:px-45 shadow-sm text-sm">
+      <div className="w-full bg-white backdrop-blur-xl py-4 px-8 lg:px-20 3xl:px-45 shadow-sm text-sm">
         <div className="container-custom flex justify-between items-center">
           {/* Logo */}
           <Link href="/" className="relative h-[60px] w-[151px]">

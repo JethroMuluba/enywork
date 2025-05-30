@@ -16,7 +16,7 @@ export default function OptSolutionSection() {
     const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section ref={ref} className="bg-fixed overflow-hidden flex justify-between items-center px-4 md:px-8 lg:px-20 relative" style={{ backgroundImage: `url(${getCover})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+    <section ref={ref} className="bg-fixed overflow-hidden flex justify-between items-center px-8 lg:px-20 relative" style={{ backgroundImage: `url(${getCover})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
       <div className="absolute inset-0 bg-[#1C2736] opacity-75"></div>
       <div className="container-custom relative z-10 py-20 lg:py-12">
         <div className="flex flex-col lg:flex-row 3xl:justify-center items-center gap-8 lg:gap-30">
