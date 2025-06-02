@@ -65,7 +65,7 @@ export default function RealizationsSection() {
                 initial={{ y: 100, opacity: 0 }}
                 animate={isInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
                 transition={{ duration: 2, ease: "easeOut" }}
-                 className="flex justify-start px-8"
+                 className="flex justify-center px-8"
           >
           <Link href="/realizations" className="bg-[#E10919] hover:bg-[#B00813] px-8 py-4 rounded-lg text-white cursor-pointer flex items-center gap-2">
             <span>VOIR PLUS</span>

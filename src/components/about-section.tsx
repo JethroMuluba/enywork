@@ -41,14 +41,14 @@ export default function AboutSection() {
                             initial={{ y: 100, opacity: 0 }}
                             animate={isInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
                             transition={{ duration: 0.5, ease: "easeOut" }}
-              className=" text-4xl lg:text-4xl text-left font-medium text-[#1C2736] "> 
+              className=" text-4xl lg:text-4xl text-center lg:text-left font-medium text-[#1C2736] "> 
                 {getTitle} 
               </motion.h2>
               <motion.p 
                             initial={{ y: 100, opacity: 0 }}
                             animate={isInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
                             transition={{ duration: 1, ease: "easeOut" }}
-              className="text-left text-xl text-[#3B4E6A] "> 
+              className="text-center lg:text-left text-xl text-[#3B4E6A] "> 
                 {getSubTitle} 
               </motion.p>
             </div>
@@ -77,7 +77,7 @@ export default function AboutSection() {
               initial={{ y: 100, opacity: 0 }}
               animate={isInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
               transition={{ duration: 2.5, ease: "easeOut" }}
-              className="flex justify-start"
+              className="flex justify-center lg:justify-start"
             >
               <Link href="/about" className="bg-[#E10919] hover:bg-[#B00813] px-8 py-4 rounded-lg text-white cursor-pointer flex items-center gap-2">
                 <span>SAVOIR PLUS</span>
