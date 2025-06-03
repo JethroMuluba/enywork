@@ -36,8 +36,8 @@ const PartenersSection = () => {
     return (
       <div ref={ref} className='py-20 px-8 lg:px-20'>
           <motion.h2 
-                  initial={{ y: 100, opacity: 0 }}
-                  animate={isInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
+                  initial={{ x: 100, opacity: 0 }}
+                  animate={isInView ? { x: 0, opacity: 1 } : { x: 100, opacity: 0 }}
                   transition={{ duration: 0.5, ease: "easeOut" }}
                   className=" text-4xl lg:text-4xl text-center font-medium text-[#1C2736] mb-12"> 
               Ils nous font confiance
