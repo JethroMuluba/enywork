@@ -136,8 +136,8 @@ export default function AboutPage() {
                     <div className="flex order-2 justify-center">
                         <div className=" w-1/2">
                             <motion.div
-                                initial={{ y: 100, opacity: 0 }}
-                                animate={isMissionInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
+                                initial={{ x: -100, opacity: 0 }}
+                                animate={isMissionInView ? { x: 0, opacity: 1 } : { x: -100, opacity: 0 }}
                                 transition={{ duration: 2, ease: "easeOut" }}
                             >
                                 <Image
@@ -153,16 +153,16 @@ export default function AboutPage() {
                     <div className="order-1 lg:order-2 flex flex-col gap-12">
                         <div className="flex flex-col gap-5">
                             <motion.h2 
-                                initial={{ y: 100, opacity: 0 }}
-                                animate={isMissionInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
+                                initial={{ x: 100, opacity: 0 }}
+                                animate={isMissionInView ? { x: 0, opacity: 1 } : { x: 100, opacity: 0 }}
                                 transition={{ duration: 0.5, ease: "easeOut" }}
                                 className="text-4xl lg:text-4xl text-center lg:text-left font-medium text-[#1C2736]"
                             >
                                 {missionTitle}
                             </motion.h2>
                             <motion.p 
-                                initial={{ y: 100, opacity: 0 }}
-                                animate={isMissionInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
+                                initial={{ x: 100, opacity: 0 }}
+                                animate={isMissionInView ? { x: 0, opacity: 1 } : { x: 100, opacity: 0 }}
                                 transition={{ duration: 1, ease: "easeOut" }}
                                 className="text-center lg:text-left text-xl text-[#3B4E6A]"
                             >
@@ -172,8 +172,8 @@ export default function AboutPage() {
 
                         <div className="flex flex-col gap-8 text-[#3B4E6A] text-base">
                             <motion.p
-                                initial={{ y: 100, opacity: 0 }}
-                                animate={isMissionInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
+                                initial={{ x: 100, opacity: 0 }}
+                                animate={isMissionInView ? { x: 0, opacity: 1 } : { x: 100, opacity: 0 }}
                                 transition={{ duration: 1.5, ease: "easeOut" }}
                                 className="text-lg text-left"
                             >
@@ -259,31 +259,31 @@ export default function AboutPage() {
             <StatisticsSection/>
 
             {/* Nos Valeurs */}
-            <section className="bg-white py-20 px-4 md:px-8 lg:px-20">
+            <section className="bg-white py-20 px-8 lg:px-20">
                 <div ref={valuesRef} className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     {/* Colonne gauche */}
                     <div className="flex flex-col gap-5 max-w-lg mx-auto lg:mx-0">
                         <motion.h2
-                            initial={{ y: 100, opacity: 0 }}
-                            animate={isValuesView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
+                            initial={{ x: -100, opacity: 0 }}
+                            animate={isValuesView ? { x: 0, opacity: 1 } : { x: -100, opacity: 0 }}
                             transition={{ duration: 0.5, ease: "easeOut" }}
                             className="text-3xl lg:text-4xl text-center  font-medium text-[#1C2736] lg:text-left"
                         >
                             {valuesTitle}
                         </motion.h2>
                         <motion.p
-                            initial={{ y: 100, opacity: 0 }}
-                            animate={isValuesView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
+                            initial={{ x: -100, opacity: 0 }}
+                            animate={isValuesView ? { x: 0, opacity: 1 } : { x: -100, opacity: 0 }}
                             transition={{ duration: 1, ease: "easeOut" }}
                             className="text-xl text-center text-[#3B4E6A] lg:text-left"
                         >
                             {valuesSubTitle}
                         </motion.p>
                         <motion.p
-                            initial={{ y: 100, opacity: 0 }}
-                            animate={isValuesView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
+                            initial={{ x: -100, opacity: 0 }}
+                            animate={isValuesView ? { x: 0, opacity: 1 } : { x: -100, opacity: 0 }}
                             transition={{ duration: 1.5, ease: "easeOut" }}
-                            className="text-base text-[#3B4E6A] text-center lg:text-left "
+                            className="text-[#3B4E6A] text-lg text-left "
                         >
                             {valuesText}
                         </motion.p>
