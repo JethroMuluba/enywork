@@ -21,7 +21,12 @@ export default function HeroSection() {
           <motion.div 
           initial={{ x: -100, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
+          transition={{ 
+            type: "spring",
+            stiffness:100,
+            damping:10,
+            delay:1
+          }}
           className="flex flex-col items-center lg:items-start gap-6 md:gap-8 lg:w-1/2 px-5">
             <h1 className=" text-center lg:text-left text-4xl md:text-5xl lg:text-6xl font-semibold text-white leading-tight">
               {getTitle}
@@ -41,7 +46,12 @@ export default function HeroSection() {
             <motion.div
               initial={{ x: 100, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
+              transition={{ 
+                type: "spring",
+                stiffness:100,
+                damping:10,
+                delay:0.8
+              }}
             >
               <Image
                 src={getImage || '/placeholder.svg?height=767&width=748'}

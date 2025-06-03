@@ -32,7 +32,7 @@ const WhyChoose = () => {
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true, margin: "-100px" });
   return (
-    <section ref={ref} className="py-16 bg-[#F2F2F2] px-4 md:px-8 lg:px-20">
+    <section ref={ref} className="py-16 bg-[#F2F2F2] px-8 lg:px-20">
         <div className="container-custom">
           <motion.h2 
             initial={{ y: 100, opacity: 0 }}
@@ -56,8 +56,8 @@ const WhyChoose = () => {
                 }}
               key={index} className="group bg-white hover:bg-[#E10919] rounded-lg shadow-lg p-8 transition-all duration-600 hover:scale-110">
                 <div className="mb-4 text-[#E10919] group-hover:text-white">{benefit.icon}</div>
-                <h3 className="text-xl md:text-2xl font-medium text-[#1C2736] mb-3 group-hover:text-white">{benefit.title}</h3>
-                <p className="text-[#3B4E6A] group-hover:text-white">{benefit.description}</p>
+                <h3 className="text-2xl font-medium text-[#1C2736] mb-3 group-hover:text-white">{benefit.title}</h3>
+                <p className="text-[#3B4E6A] text-lg group-hover:text-white">{benefit.description}</p>
               </motion.div>
             ))}
           </div>

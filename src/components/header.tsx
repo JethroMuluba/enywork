@@ -55,9 +55,23 @@ export default function Header() {
       <div className="w-full bg-white backdrop-blur-xl py-4 px-8 lg:px-20 3xl:px-45 shadow-sm text-sm">
         <div className="container-custom flex justify-between items-center">
           {/* Logo */}
-          <Link href="/" className="relative h-[60px] w-[151px]">
-            <Image src={logoEnywork} alt={logoEnyworkAlt} width={151} height={60} priority />
-          </Link>
+
+          <motion.div
+            initial={{ x: -100, opacity: 0 }}
+                    animate={{ x: 0, opacity: 1 }}
+                    transition={{ 
+                      type: "spring",
+                      stiffness:100,
+                      damping:10,
+                      delay:0.4,
+                    
+            }}
+          >
+            <Link href="/" className="relative h-[60px] w-[151px]">
+              <Image src={logoEnywork} alt={logoEnyworkAlt} width={151} height={60} priority />
+            </Link>
+          </motion.div>
+
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center gap-5 font-normal">

@@ -49,7 +49,7 @@ export default function ServicesSection(): JSX.Element {
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true, margin: "-100px" });
   return (
-    <section ref={ref}  className="bg-[#F2F2F2] py-20 px-4 md:px-8 lg:px-20">
+    <section ref={ref}  className="bg-[#F2F2F2] py-20 px-8 lg:px-20">
       <div className="container-custom">
         <div className="flex flex-col items-center gap-12 md:gap-16">
         {/* <SectionTitle title={getTitle} subTitle={getSubTitle} /> */}
@@ -71,8 +71,8 @@ export default function ServicesSection(): JSX.Element {
                 
               key={service.id} className="group bg-white hover:bg-[#E10919] rounded-lg shadow-lg p-8 transition-all duration-600 hover:scale-110">
                 <div className="mb-4 text-[#E10919] group-hover:text-white">{service.icon}</div>
-                <h3 className="text-xl md:text-2xl font-medium text-[#1C2736] mb-3 group-hover:text-white">{service.title}</h3>
-                <p className="text-[#3B4E6A] group-hover:text-white">{service.description}</p>
+                <h3 className="text-2xl font-medium text-[#1C2736] mb-3 group-hover:text-white">{service.title}</h3>
+                <p className="text-[#3B4E6A] text-lg group-hover:text-white">{service.description}</p>
               </motion.div>
 
               
