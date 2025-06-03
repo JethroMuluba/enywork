@@ -67,7 +67,7 @@ export default function AboutPage() {
             <HeroForAll title={getTitle} subTitle={getSubTitle} cover={getCover} pattern={getPattern} />
             
             {/* Notre Histoire */}
-            <section className="bg-[#F2F2F2] py-20 px-4 md:px-8 lg:px-20">
+            <section className="bg-[#F2F2F2] pt-20 lg:py-20 px-8 lg:px-20">
                 <div ref={storyRef} className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     <div className="flex flex-col gap-12">
                         <div className="flex flex-col gap-5">
@@ -94,7 +94,7 @@ export default function AboutPage() {
                                 initial={{ y: 100, opacity: 0 }}
                                 animate={isStoryInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
                                 transition={{ duration: 1.5, ease: "easeOut" }}
-                                className="text-center lg:text-left"
+                                className="text-lg text-left"
                             >
                                 {storyText1}
                             </motion.p>
@@ -103,14 +103,15 @@ export default function AboutPage() {
                                 initial={{ y: 100, opacity: 0 }}
                                 animate={isStoryInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
                                 transition={{ duration: 2, ease: "easeOut" }}
-                                className="text-center lg:text-left"
+                                className="text-lg text-left"
                             >
                                 {storyText2}
                             </motion.p>
                         </div>
                     </div>
+
                     <div className="flex justify-center">
-                        <div className="hidden lg:block w-1/2">
+                        <div className="w-1/2">
                             <motion.div
                                 initial={{ y: 100, opacity: 0 }}
                                 animate={isStoryInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
@@ -130,10 +131,10 @@ export default function AboutPage() {
             </section>
 
             {/* Notre Mission */}
-            <section className="bg-[#F2F2F2] py-20 px-4 md:px-8 lg:px-20">
+            <section className="bg-[#F2F2F2] pt-20 lg:py-20 px-8 lg:px-20">
                 <div ref={missionRef} className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                    <div className="flex justify-center">
-                        <div className="hidden lg:block w-1/2">
+                    <div className="flex order-2 justify-center">
+                        <div className=" w-1/2">
                             <motion.div
                                 initial={{ y: 100, opacity: 0 }}
                                 animate={isMissionInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
@@ -149,7 +150,7 @@ export default function AboutPage() {
                             </motion.div>
                         </div>
                     </div>
-                    <div className="flex flex-col gap-12">
+                    <div className="order-1 lg:order-2 flex flex-col gap-12">
                         <div className="flex flex-col gap-5">
                             <motion.h2 
                                 initial={{ y: 100, opacity: 0 }}
@@ -174,7 +175,7 @@ export default function AboutPage() {
                                 initial={{ y: 100, opacity: 0 }}
                                 animate={isMissionInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
                                 transition={{ duration: 1.5, ease: "easeOut" }}
-                                className="text-center lg:text-left"
+                                className="text-lg text-left"
                             >
                                 {missionText1}
                             </motion.p>
@@ -183,7 +184,7 @@ export default function AboutPage() {
                                 initial={{ y: 100, opacity: 0 }}
                                 animate={isMissionInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
                                 transition={{ duration: 2, ease: "easeOut" }}
-                                className="text-center lg:text-left"
+                                className="text-lg text-left"
                             >
                                 {missionText2}
                             </motion.p>
@@ -193,7 +194,7 @@ export default function AboutPage() {
             </section>
 
             {/* Notre Vision */}
-            <section className="bg-[#F2F2F2] py-20 px-4 md:px-8 lg:px-20">
+            <section className="bg-[#F2F2F2] pt-20 pb-20 lg:py-20 px-8 lg:px-20">
                 <div ref={visionRef} className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     <div className="flex flex-col gap-12">
                         <div className="flex flex-col gap-5">
@@ -220,7 +221,7 @@ export default function AboutPage() {
                                 initial={{ y: 100, opacity: 0 }}
                                 animate={isVisionInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
                                 transition={{ duration: 1.5, ease: "easeOut" }}
-                                className="text-center lg:text-left"
+                                className="text-lg text-left"
                             >
                                 {visionText1}
                             </motion.p>
@@ -229,14 +230,14 @@ export default function AboutPage() {
                                 initial={{ y: 100, opacity: 0 }}
                                 animate={isVisionInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
                                 transition={{ duration: 2, ease: "easeOut" }}
-                                className="text-center lg:text-left"
+                                className="text-lg text-left"
                             >
                                 {visionText2}
                             </motion.p>
                         </div>
                     </div>
                     <div className="flex justify-center">
-                        <div className="hidden lg:block w-1/2">
+                        <div className="w-1/2">
                             <motion.div
                                 initial={{ y: 100, opacity: 0 }}
                                 animate={isVisionInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
