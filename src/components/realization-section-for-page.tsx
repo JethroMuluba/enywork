@@ -12,11 +12,11 @@ export default function RealizationsSectionForPage() {
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true, margin: "-100px" });
   return (
-    <section ref={ref} className="bg-white py-20 px-4 md:px-8 lg:px-25">
+    <section ref={ref} className="bg-white py-20 px-8 lg:px-25">
         <div className="container-custom">
             <div className="flex flex-col items-center gap-12 ">
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="w-full lg:w-none grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {realizationItems?.map((item, index) => (
                         <motion.div 
                         initial={{ y: 100, opacity: 0 }}
@@ -42,12 +42,12 @@ export default function RealizationsSectionForPage() {
                                 </div>
 
                 <div className="p-6">
-                  <p className="text-primary text-lg text-[#E10919] mb-2">{item.category}</p>
+                  <p className="text-primary text-xl text-[#E10919] mb-2">{item.category}</p>
                   <h3 className="text-2xl font-medium text-secondary text-[#1C2736] mb-4">{item.title}</h3>
                   <Link
                     href={item.link}
                     target="blank"
-                    className="flex items-center text-[#3B4E6A] hover:text-[#1C2736] transition-colors cursor-pointer"
+                    className="flex items-center text-lg text-[#3B4E6A] hover:text-[#1C2736] transition-colors cursor-pointer"
                   >
                     <span>Voir le projet</span>
                     <ArrowRight className="w-4 h-4 ml-2" />
@@ -57,7 +57,7 @@ export default function RealizationsSectionForPage() {
             ))}
             </div>
 
-          <motion.div
+          {/* <motion.div
                 initial={{ y: 100, opacity: 0 }}
                 animate={isInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
                 transition={{ duration: 2, ease: "easeOut" }}
@@ -66,7 +66,7 @@ export default function RealizationsSectionForPage() {
             <span>VOIR PLUS</span>
             <ArrowRight className="w-5 h-5" />
           </Link>
-          </motion.div>
+          </motion.div> */}
 
 
         </div>

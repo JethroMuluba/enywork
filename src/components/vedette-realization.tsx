@@ -11,7 +11,7 @@ const VedetteRealization = () => {
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true, margin: "-100px" });
   return (
-    <section ref={ref} className="bg-[#F2F2F2] py-12 md:py-24 px-4 md:px-8 lg:px-20">
+    <section ref={ref} className="bg-[#F2F2F2] py-12 md:py-24 px-8 lg:px-20">
     <div className="container-custom">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         <motion.div 
@@ -34,7 +34,7 @@ const VedetteRealization = () => {
             OpSolver, la gestion du pointage numérisée
           </h2>
 
-          <div className=" flex justify-start gap-15">
+          <div className=" flex justify-start gap-15 text-lg">
             <div>
               <p className="text-[#3B4E6A]">Client</p>
               <p className="text-[#1C2736]">APCSC</p>
@@ -45,12 +45,12 @@ const VedetteRealization = () => {
             </div>
           </div>
 
-          <div>
+          <div className='text-lg'>
               <p className="text-[#3B4E6A]">Technologis</p>
               <p className="text-[#1C2736]">Php, Symphonie, MySql</p>
           </div>
 
-          <p className="text-[#3B4E6A] text-left ">
+          <p className="text-[#3B4E6A] text-left text-lg ">
           Notre équipe a relevé le défi de créer une platefome innovente qui a transformé la gestion du pointage interne numérisée de l&apos;agence de pilotage, de coordination et de suivi des conventions de collaboration aboutissant à une augmentation de 45% de la productivité.
           </p>
 
