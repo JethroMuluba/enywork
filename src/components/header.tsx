@@ -96,7 +96,7 @@ export default function Header() {
             <Link 
               href="/team" 
               className={`text-[#1C2736] transition-colors ${
-                pathname === "/equipe" ? "text-[#E10919]" : "hover:text-[#E10919]"
+                pathname === "/team" ? "text-[#E10919]" : "hover:text-[#E10919]"
               }`}
             >
               ÉQUIPE
