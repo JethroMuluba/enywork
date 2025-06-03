@@ -19,11 +19,11 @@ export default function Footer() {
                     initial={{ y: 100, opacity: 0 }}
                     animate={isInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
                     transition={{ duration: 1, ease: "easeOut" }}
-            className="flex flex-col items-center lg:items-start gap-6">
+            className="flex flex-col items-start gap-6">
             <Link href="/" className="relative h-[60px] w-[151px]">
               <Image src={logoEnywork} alt="Enywork Logo" width={151} height={60} />
             </Link>
-            <p className="text-light-secondary font-light text-center lg:text-left">Travaillons ensemble sur la réussite de vos projets.</p>
+            <p className="text-light-secondary text-lg">Travaillons ensemble sur la réussite de vos projets.</p>
           </motion.div>
 
           {/* Site Menu */}
@@ -31,9 +31,9 @@ export default function Footer() {
                     initial={{ y: 100, opacity: 0 }}
                     animate={isInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
                     transition={{ duration: 1.5, ease: "easeOut" }}
-          className="lg:flex-col items-center lg:items-start gap-4 hidden lg:block">
-            <h3 className="text-base text-center lg:text-left font-medium mb-2">MENU</h3>
-            <div className="flex flex-col gap-2 text-center font-light lg:text-left">
+          className="lg:flex-col items-start gap-4 hidden lg:block">
+            <h3 className="text-lg font-medium mb-2">MENU</h3>
+            <div className="flex flex-col gap-2 text-center font-light lg:text-left text-lg">
               <Link href="/" className="text-light-secondary hover:text-[#E10919] transition-colors">
                 Accueil
               </Link>
@@ -63,14 +63,14 @@ export default function Footer() {
                     initial={{ y: 100, opacity: 0 }}
                     animate={isInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
                     transition={{ duration: 2, ease: "easeOut" }}
-          className="flex flex-col items-center font-light lg:items-start gap-4">
-            <h3 className="text-base font-medium text-center lg:text-left mb-2">NOS CONTACTS</h3>
-            <div className="flex flex-col gap-3">
-              <div className="flex items-center gap-3">
+          className="flex flex-col  font-light gap-4">
+            <h3 className="text-lg font-medium mb-2">NOS CONTACTS</h3>
+            <div className="flex flex-col gap-3 text-lg">
+              <div className="flex  gap-3">
                 <Phone className="w-6 h-6 text-[#E10919]" />
                 <span className="text-light-secondary">+243 899 467 398</span>
               </div>
-              <div className="flex items-center gap-3">
+              <div className="flex  gap-3">
                 <Mail className="w-6 h-6 text-[#E10919]" />
                 <span className="text-light-secondary">contact@enywork.com</span>
               </div>
@@ -83,11 +83,11 @@ export default function Footer() {
                     initial={{ y: 100, opacity: 0 }}
                     animate={isInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
                     transition={{ duration: 2.5, ease: "easeOut" }}
-            className="flex flex-col items-center lg:items-start">
-              <h3 className="text-base font-medium text-center lg:text-left mb-4">NOTRE ADRESSE</h3>
+            className="flex flex-col items-start">
+              <h3 className="text-lg font-medium mb-4">NOTRE ADRESSE</h3>
               <div className="flex items-start gap-3">
                 <MapPin className="w-6 h-6 text-[#E10919] flex-shrink-0 mt-1" />
-                <span className="text-light-secondary font-light">
+                <span className="text-light-secondary font-light text-lg">
                   Ancienne Galerie Présidentielle, 6è niveau, Local 6B8, Kinshasa/Gombe
                 </span>
               </div>
@@ -97,8 +97,8 @@ export default function Footer() {
                     initial={{ y: 100, opacity: 0 }}
                     animate={isInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
                     transition={{ duration: 3, ease: "easeOut" }}
-            className="flex flex-col items-center lg:items-start">
-              <h3 className="text-base font-medium text-center lg:text-left mb-4">SUIVEZ-NOUS SUR :</h3>
+            className="flex flex-col items-start">
+              <h3 className="text-lg font-medium mb-4">SUIVEZ-NOUS SUR :</h3>
               <div className="flex gap-3">
                 <Link
                   href="https://www.instagram.com/enywork"
