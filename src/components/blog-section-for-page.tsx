@@ -11,7 +11,7 @@ export default function BlogSection() {
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true, margin: "-100px" });
   return (
-    <section ref={ref} className="py-20 px-4 md:px-8 lg:px-20 2xl:45">
+    <section ref={ref} className="py-20 px-8 lg:px-20 2xl:45">
       <div className="container-custom">
         <div className="flex flex-col items-center gap-12 md:gap-16">
 
@@ -37,8 +37,8 @@ export default function BlogSection() {
 
                 <div className="p-6 flex flex-col gap-5">
                   <div>
-                    <h3 className="text-[#E10919] font-medium text-lg mb-2">{post.title}</h3>
-                    <p className="text-[#1C2736]">{post.subtitle}</p>
+                    <h3 className="text-[#E10919] font-medium text-2xl mb-2">{post.title}</h3>
+                    <p className="text-[#1C2736] text-lg">{post.subtitle}</p>
                   </div>
 
                   <div className="flex flex-col gap-4 text-[#3B4E6A]">
@@ -57,14 +57,14 @@ export default function BlogSection() {
                         </Link>
 
                       </div>
-                      <p className="text-secondary-light">
+                      <p className="text-secondary-light text-lg">
                         Par {post.name}, {post.role}
                       </p>
                     </div>
 
                     <Link
                       href={`/blogs/${post.id}`}
-                      className="flex items-center text-secondary hover:text-[#1C2736] transition-colors"
+                      className="flex items-center text-secondary hover:text-[#1C2736] text-lg transition-colors"
                     >
                       <span>Lire plus</span>
                       <ArrowRight className="w-4 h-4 ml-2" />
