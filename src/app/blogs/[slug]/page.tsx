@@ -19,9 +19,9 @@ const blogPosts = [
     author: {
       name: "Yusuf Heri",
       role: "CEO Enywork",
-      avatar: "/placeholder.svg?height=48&width=48",
+      avatar: "https://res.cloudinary.com/dr8ofciki/image/upload/v1745853594/Enywork/yusuf-heri-profile.jpg",
     },
-    heroImage: "/placeholder.svg?height=576&width=1534",
+    heroImage: "https://res.cloudinary.com/dr8ofciki/image/upload/v1746010546/Enywork/blog-1.jpg",
     content: [
       {
         type: "paragraph",
