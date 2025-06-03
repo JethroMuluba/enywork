@@ -233,7 +233,7 @@ const TeamBox = () => {
                 initial={{ y: 40, opacity: 0 }}
                 animate={sectionInView ? { y: 0, opacity: 1 } : { y: 40, opacity: 0 }}
                 transition={{ duration: 0.8, ease: 'easeOut' }}
-                className="text-center text-[#1C2736] border-b-2 border-gray-200 pb-2 mb-12 text-2xl font-medium"
+                className="text-center text-[#1C2736] border-b-2 border-gray-200 pb-2 mb-12 text-3xl font-medium"
               >
                 {team.title}
               </motion.h2>
@@ -260,7 +260,7 @@ const TeamBox = () => {
                             <p className="text-2xl text-[#1C2736] mb-3">{member.firstname}</p> 
                             <p className="text-2xl text-[#E10919] mb-3">{member.lastname}</p>
                           </div>
-                          <p className="text-[#3B4E6A] mb-4 line-clamp-2">{member.role}</p>
+                          <p className="text-[#3B4E6A] text-lg mb-4 line-clamp-2">{member.role}</p>
                         </div>
                         <div className="flex justify-center gap-6 text-[#E10919] mt-4">
                           <Link href="#" aria-label="Instagram">
