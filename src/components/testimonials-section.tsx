@@ -1,3 +1,4 @@
+import React from "react"
 import Image from "next/image"
 import SectionTitle from "./ui/sectionTitle"
 import data from "@/data/data.json"
@@ -39,14 +40,14 @@ export default function TestimonialsSection() {
                     />
                   </div>
                   <div>
-                    <h3 className="text-xl font-medium text-secondary">{testimonial.name}</h3>
-                    <p className="text-[#3B4E6A]">{testimonial.role}</p>
+                    <h3 className="text-2xl font-medium text-secondary">{testimonial.name}</h3>
+                    <p className="text-[#3B4E6A] text-lg">{testimonial.role}</p>
                   </div>
                 </div>
 
                 <div className="relative transition-transform duration-600 hover:scale-110">
                   <div
-                    className={`px-6 py-8 rounded-lg shadow-lg relative ${testimonial.highlighted ? "bg-[#E10919] text-white" : "bg-white text-[#3B4E6A]"}`}
+                    className={`px-6 py-8 rounded-lg shadow-lg relative text-lg ${testimonial.highlighted ? "bg-[#E10919] text-white" : "bg-white text-[#3B4E6A]"}`}
                   >
                     <div className="absolute -top-2 left-10 w-4 h-4 transform rotate-45 bg-inherit"></div>
                     <p className="text-center">{testimonial.quote}</p>

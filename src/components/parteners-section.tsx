@@ -34,7 +34,7 @@ const PartenersSection = () => {
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true, margin: "-100px" })
     return (
-      <div ref={ref} className='py-20 px-4 md:px-8 lg:px-20'>
+      <div ref={ref} className='py-20 px-8 lg:px-20'>
           <motion.h2 
                   initial={{ y: 100, opacity: 0 }}
                   animate={isInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
@@ -42,7 +42,7 @@ const PartenersSection = () => {
                   className=" text-4xl lg:text-4xl text-center font-medium text-[#1C2736] mb-12"> 
               Ils nous font confiance
           </motion.h2>
-          <Marquee gradient={false} speed={40} pauseOnHover={true}>
+          <Marquee gradient={true} gradientWidth={120} speed={40} pauseOnHover={true}>
             {logos?.map((logo, idx) => (
               <motion.div 
               initial={{ y: 100, opacity: 0 }}

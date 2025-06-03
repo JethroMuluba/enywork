@@ -51,12 +51,12 @@ export default function ServicesSection(): JSX.Element {
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true, margin: "-100px" });
   return (
-    <section ref={ref}  className="bg-[#F2F2F2] py-20  lg:px-20">
+    <section ref={ref}  className="bg-[#F2F2F2] py-20 px-8 lg:px-20">
       <div className="container-custom">
         <div className="flex flex-col md:items-center gap-12 md:gap-16">
         <SectionTitle title={getTitle} subTitle={getSubTitle} />
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {serviceItems.map((service, index) => (
               <motion.div 
               initial={{ scale: 0, opacity: 0 }}

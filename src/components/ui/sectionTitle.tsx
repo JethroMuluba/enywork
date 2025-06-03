@@ -10,12 +10,12 @@ const SectionTitle = ({title, subTitle} : TitleProps) => {
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true, margin: "-100px" });
   return (
-    <div ref={ref} className="flex flex-col gap-5 px-8">
+    <div ref={ref} className="flex flex-col gap-5 ">
         <motion.h2 
                 initial={{ y: 100, opacity: 0 }}
                 animate={isInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
                 transition={{ duration: 0.5, ease: "easeOut" }}
-                className=" text-4xl lg:text-4xl text-center font-medium text-[#1C2736] lg:px-38"> 
+                className=" text-3xl lg:text-4xl text-center font-medium text-[#1C2736] lg:px-38"> 
             {title} 
         </motion.h2>
     <motion.p 

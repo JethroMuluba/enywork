@@ -15,12 +15,12 @@ export default function RealizationsSection() {
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true, margin: "-100px" });
   return (
-    <section ref={ref} className="bg-white py-20  lg:px-20">
+    <section ref={ref} className="bg-white py-20 px-8 lg:px-20">
         <div className="container-custom">
             <div className="flex flex-col  gap-12 ">
                 <SectionTitle title={getTitle} subTitle={getSubTitle} />      
 
-                <div className=" w-full lg:w-none grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-8">
+                <div className=" w-full lg:w-none grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 ">
                     {realizationItems?.map((item, index) => (
                         <motion.div 
                         initial={{ y: 100, opacity: 0 }}
