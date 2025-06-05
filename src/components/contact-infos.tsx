@@ -4,30 +4,6 @@ import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
 
 
-
-// const benefits = [
-//     {
-//       icon: <ShieldCheck  className="w-11 h-11 text-primary" />,
-//       title: "Sécurité garantie",
-//       description: "Protection maximale de vos données sensibles",
-//     },
-//     {
-//       icon: <MapPin className="w-11 h-11 text-primary" />,
-//       title: "100% local",
-//       description: "Hébergement et support basés à Kinshasa",
-//     },
-//     {
-//       icon: <Headset  className="w-11 h-11 text-primary" />,
-//       title: "Support réactif",
-//       description: "Assistance technique disponible 24/7",
-//     },
-//     {
-//       icon: <Cpu className="w-11 h-11 text-primary" />,
-//       title: "Infrastructure performante",
-//       description: "Équipement dernière génération",
-//     },
-//   ]
-
 const ContactInfos = () => {
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true, margin: "-100px" });
