@@ -830,6 +830,51 @@
             "id": 0,
             "pattern" : "https://res.cloudinary.com/dr8ofciki/image/upload/v1748616126/Enywork/Pattern-Bg.png"
         }
-    ]
+    ],
+
+    "contact" : [
+        {
+            "id" : 0,
+            "title" : "Contactez-Nous",
+            "subTitle" : "Contactez-nous pour toute question ou demande de service."
+        }
+    ],
+
+    "contactForm" : [
+    {
+        "id" : 0,
+        "label" : "Nom",
+        "errorMessage" : "Name must have at least 3 letters"
+    },
+    {
+        "id" : 1,
+        "label" : "Prénom",
+        "errorMessage" : "Name must have at least 3 letters"
+    },
+
+    {
+        "id" : 2,
+        "label" : "Téléphone",
+        "errorMessage" : "Phone is required"
+    },
+
+    {
+        "id" : 3,
+        "label" : "Email",
+        "errorMessage" : "Email must have at least 5 letters"
+    },
+
+    {
+        "id" : 4,
+        "label" : "Message",
+        "errorMessage" : "You must message me to get more informations"
+    },
+
+    {
+        "buttonName" : "ENVOYER LE MESSAGE"
+    }
+]
+
+
 
 }
