@@ -62,16 +62,16 @@ const ContactForm = () => {
                   
                   onSubmit={handleSubmit(onSubmitForm)} className=' flex flex-col gap-[28px]'>
 
-                    <div className=' w-full flex flex-col lg:flex-row gap-8'>
-                      <div className=' flex flex-col items-start  gap-2'>
+                    <div className=' w-full flex flex-col md:flex-row gap-8'>
+                      <div className='md:w-1/2 flex flex-col items-start  gap-2'>
                           <label htmlFor="name" className=' text-base text-[#8D9092]'> {formData[0].label} </label>
-                          <input {...register("name", {required:true, minLength: 3, maxLength:60})} type="text" className=' bg-[#303131] h-[55px] rounded-[5px] px-5 w-[100%] text-[#fff] placeholder:text-[#8D9092] placeholder:opacity-20 outline-none appearance-none caret-[#fff] ' placeholder='Saissisez votre nom' />
+                          <input {...register("name", {required:true, minLength: 3, maxLength:60})} type="text" className=' bg-[#F2F2F2] h-[55px] rounded-[5px] px-5 w-[100%] text-[#fff] placeholder:text-[#8D9092] placeholder:opacity-20 outline-none appearance-none caret-[#fff] ' placeholder='Saissisez votre nom' />
                           {errors.name && <span style={{color: '#DA5643', fontSize: '14px'}}>{formData[0].errorMessage}</span>}
                       </div>
 
-                      <div className=' flex flex-col items-start  gap-2'>
+                      <div className='md:w-1/2 flex flex-col items-start  gap-2'>
                           <label htmlFor="firstname" className=' text-base text-[#8D9092]'> {formData[1].label} </label>
-                          <input {...register("firstname", {required:true, minLength: 3, maxLength:60})} type="text" className=' bg-[#303131] h-[55px] rounded-[5px] px-5 w-[100%] text-[#fff] placeholder:text-[#8D9092] placeholder:opacity-20 outline-none appearance-none caret-[#fff] ' placeholder='Saisissez votre prénom' />
+                          <input {...register("firstname", {required:true, minLength: 3, maxLength:60})} type="text" className=' bg-[#F2F2F2] h-[55px] rounded-[5px] px-5 w-[100%] text-[#fff] placeholder:text-[#8D9092] placeholder:opacity-20 outline-none appearance-none caret-[#fff] ' placeholder='Saisissez votre prénom' />
                           {errors.name && <span style={{color: '#DA5643', fontSize: '14px'}}>{formData[0].errorMessage}</span>}
                       </div>
                     </div>
@@ -79,29 +79,29 @@ const ContactForm = () => {
 
 
                     <div className=' w-full flex flex-col gap-[28px] md:flex-row'>
-                        <div className=' flex flex-col items-start  gap-2'>
-                        <label htmlFor="phone" className=' text-base text-[#8D9092]'>{formData[2].label}</label>
-                        <input {...register("phone", {required:true})} type="number" className=' bg-[#303131] h-[55px] rounded-[5px] px-5 w-[100%] text-[#fff] placeholder:text-[#8D9092] placeholder:opacity-20 outline-none appearance-none caret-[#fff] ' placeholder='Saissisez votre numéro de téléphone' />
-                        {errors.phone && <span style={{color: '#DA5643', fontSize: '14px'}}>{formData[1].errorMessage}</span>}
+                        <div className='md:w-1/2 flex flex-col items-start  gap-2'>
+                            <label htmlFor="phone" className=' text-base text-[#8D9092]'>{formData[2].label}</label>
+                            <input {...register("phone", {required:true})} type="number" className=' bg-[#F2F2F2] h-[55px] rounded-[5px] px-5 w-[100%] text-[#fff] placeholder:text-[#8D9092] placeholder:opacity-20 outline-none appearance-none caret-[#fff] ' placeholder='Saissisez votre numéro de téléphone' />
+                            {errors.phone && <span style={{color: '#DA5643', fontSize: '14px'}}>{formData[1].errorMessage}</span>}
                         </div>
 
-                        <div className=' flex flex-col items-start  gap-2'>
-                        <label htmlFor="email" className=' text-base text-[#8D9092]'>{formData[3].label}</label>
-                        <input {...register("email", {required:true, minLength: 5, maxLength:60})} type="email" className=' bg-[#303131] h-[55px] rounded-[5px] px-5 w-[100%] text-[#fff] placeholder:text-[#8D9092] placeholder:opacity-20 outline-none appearance-none caret-[#fff] ' placeholder='Saissisez votre email' />
-                        {errors.email && <span style={{color: '#DA5643', fontSize: '14px'}}>{formData[2].errorMessage}</span>}
+                        <div className='md:w-1/2  flex flex-col items-start  gap-2'>
+                            <label htmlFor="email" className=' text-base text-[#8D9092]'>{formData[3].label}</label>
+                            <input {...register("email", {required:true, minLength: 5, maxLength:60})} type="email" className=' bg-[#F2F2F2] h-[55px] rounded-[5px] px-5 w-[100%] text-[#fff] placeholder:text-[#8D9092] placeholder:opacity-20 outline-none appearance-none caret-[#fff] ' placeholder='Saissisez votre email' />
+                            {errors.email && <span style={{color: '#DA5643', fontSize: '14px'}}>{formData[2].errorMessage}</span>}
                         </div>
                     </div>
 
                     <div className=' flex flex-col items-start  gap-2'>
                         <label htmlFor="message" className=' text-base text-[#8D9092]'>{formData[4].label}</label>
-                        <textarea {...register("message", {required:true, minLength: 10, maxLength:500})} name="message" id="" className=' bg-[#303131] h-[186px] rounded-[5px] p-5 w-[100%] text-[#fff] placeholder:text-[#8D9092] placeholder:opacity-20 outline-none appearance-none caret-[#fff] ' placeholder='Saissisez votre message'></textarea>
+                        <textarea {...register("message", {required:true, minLength: 10, maxLength:500})} name="message" id="" className=' bg-[#F2F2F2] h-[186px] rounded-[5px] p-5 w-[100%] text-[#fff] placeholder:text-[#8D9092] placeholder:opacity-20 outline-none appearance-none caret-[#fff] ' placeholder='Saissisez votre message'></textarea>
                         {errors.message && <span style={{color: '#DA5643', fontSize: '14px'}}>{formData[3].errorMessage}</span>}  
                     </div>
 
-                    <div className='flex justify-start '>
-                    <button type='submit' className=' bg-[#E10919] hover:bg-[#B00813] px-8 py-4 rounded-lg text-white cursor-pointer flex items-center gap-2 active:border-2 active:border-[#fff]'>{formData[5].buttonName}
+                    <div className='flex justify-center md:justify-start w-full '>
+                      <button type='submit' className=' w-full md:w-auto bg-[#E10919] hover:bg-[#B00813] px-8 py-4 rounded-lg text-white cursor-pointer flex items-center gap-2 active:border-2 active:border-[#fff]'>{formData[5].buttonName}
                       <SendHorizontal  className="w-5 h-5" />
-                    </button>
+                      </button>
                     </div>
 
 
