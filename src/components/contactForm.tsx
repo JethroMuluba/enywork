@@ -46,7 +46,7 @@ const ContactForm = () => {
             };
 
   return (
-    <section ref={ref} className="relative flex justify-center px-8 -mt-16">
+    <section ref={ref} className="relative flex justify-center px-8 -mt-16 mb-20">
       <motion.div 
         initial={{ y: 100, opacity: 0 }}
         animate={isInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
