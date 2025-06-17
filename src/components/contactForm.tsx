@@ -99,14 +99,6 @@ const ContactForm = () => {
                         {errors.message && <span style={{color: '#DA5643', fontSize: '14px'}}>{formData[3].errorMessage}</span>}  
                     </div>
 
-                    <div className='flex justify-center md:justify-start w-full '>
-                      <button type='submit' className=' w-full md:w-auto bg-[#E10919] hover:bg-[#B00813] px-8 py-4 rounded-lg text-white cursor-pointer flex items-center gap-2 active:border-2 active:border-[#3B4E6A]'>{formData[5].buttonName}
-                      <SendHorizontal  className="w-5 h-5" />
-                      </button>
-                    </div>
-
-
-                    
                     {displaySuccesMessage && (
                                         <motion.div 
                                         initial={{ scale: 0, opacity: 0 }}
@@ -118,8 +110,8 @@ const ContactForm = () => {
                                         damping: 20,
                                         delay: 0.1,
                                         }}
-                                        className=" fixed top-[72px] md:top-[58px] right-0 md:right-[150px] lg:right-[400px] xl:right-[550px] items-center text-center bg-[#34B77B] text-white px-4 py-2 rounded">
-                                            Message Sent Successfully! Thank You To Contact Me.
+                                        className="relative top-[2px] lg:top-[1px] flex justify-center text-center bg-[#34B77B] text-white px-8 py-4 rounded-lg">
+                                            Message Sent Successfully! Thank You To Contact Us.
                                         </motion.div>
                                     )}
         
@@ -133,10 +125,20 @@ const ContactForm = () => {
                                         damping: 20,
                                         delay: 0.1,
                                         }}
-                                        className=" fixed top-[72px] md:top-[58px] right-0 md:right-[150px] lg:right-[400px] xl:right-[550px] items-center text-center bg-[#DA5643] text-white px-4 py-2 rounded">
+                                        className=" fixed top-[2px] lg:top-[1px] flex justify-center text-center bg-[#DA5643] text-white px-8 py-2 rounded">
                                             Failed To Send The Message, Please Try Again.
                                         </motion.div>
                                     )}
+
+                    <div className='flex justify-center md:justify-start w-full '>
+                      <button type='submit' className=' w-full md:w-auto bg-[#E10919] hover:bg-[#B00813] px-8 py-4 rounded-lg text-white cursor-pointer flex items-center gap-2 active:border-2 active:border-[#3B4E6A]'>{formData[5].buttonName}
+                      <SendHorizontal  className="w-5 h-5" />
+                      </button>
+                    </div>
+
+
+                    
+
                 </motion.form>
             </div>
           </div>

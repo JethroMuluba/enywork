@@ -31,7 +31,7 @@ const ContactInfos = () => {
                   Notre Adresse
                 </h3>
                 <p className="text-[#3B4E6A] text-lg group-hover:text-white">
-                  Ancienne Galerie Présidentielle, 2è niveau, Local 2m13, Kinshasa/Gombe
+                  Ancienne Galerie Présidentielle, 6è niveau, Local 6B8, Kinshasa/Gombe
                 </p>
               </motion.div>
 
