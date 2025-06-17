@@ -11,8 +11,11 @@ const logos = [
   '/f7a04481-45c2-4635-8b45-0d96077b24e2.png',
   '/omnitech-logo-rakkacash.png',
   '/Logo_Afriland 2.0.png',
+  '/Logo Orange.png',
   '/orange_money.png',
+  '/Airtel_logo-01.png',
   '/images.png',
+  '/vodacom_survey_logo.png',
   '/partenaire_business_m_pesa.png',
 
 
@@ -28,7 +31,7 @@ const PartenersSection = () => {
                   animate={isInView ? { x: 0, opacity: 1 } : { x: 100, opacity: 0 }}
                   transition={{ duration: 0.5, ease: "easeOut" }}
                   className=" text-4xl lg:text-4xl text-center font-medium text-[#1C2736] mb-12"> 
-              Ils nous font confiance
+              Nos partenaires de confiance
           </motion.h2>
           <Marquee gradient={true} gradientWidth={120} speed={40} pauseOnHover={true}>
             {logos?.map((logo, idx) => (
