@@ -6,19 +6,29 @@ import Image from 'next/image'
 const logos = [
   '/LOGO_MIN_ESU 2024.png',
   '/Logo-ADN-BLACK.png',
-  '/LOGO-DARK-RAWBANK.webp',
-  '/Illicocash_Logo_Light-background.png',
+  '/1024px-Rawbank_logo.png',
+  '/esmicom logo white.png',
   '/f7a04481-45c2-4635-8b45-0d96077b24e2.png',
-  '/omnitech-logo-rakkacash.png',
-  '/Logo_Afriland 2.0.png',
-  '/orange_money.png',
+  '/Illicocash_Logo_Light-background.png',
+  '/images.jpeg',
   '/images.png',
+  '/INA LOGO.png',
+  '/logo hEC.png',
+  '/logo inbtp.png',
+  '/logo-white.webp',
+  '/Logo_Afriland 2.0.png',
+  '/omnitech-logo-rakkacash.png',
+  '/orange_money.png',
   '/partenaire_business_m_pesa.png',
-
-
+  '/UNIKIK.jpg',
+  '/Logo Unilu.png',
+  '/INA LOGO.png',
+  '/Logo 1.png',
+  '/Logo 10.png',
+  '/Logo 2.png',
 ]
 
-const PartenersSection = () => {
+const OurClients = () => {
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true, margin: "-100px" })
     return (
@@ -51,4 +61,4 @@ const PartenersSection = () => {
     )
 }
 
-export default PartenersSection;
+export default OurClients;
