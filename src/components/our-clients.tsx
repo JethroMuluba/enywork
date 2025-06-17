@@ -29,7 +29,7 @@ const OurClients = () => {
                   initial={{ x: 100, opacity: 0 }}
                   animate={isInView ? { x: 0, opacity: 1 } : { x: 100, opacity: 0 }}
                   transition={{ duration: 0.5, ease: "easeOut" }}
-                  className=" text-4xl lg:text-4xl text-center font-medium text-[#1C2736] mb-12"> 
+                  className=" text-3xl lg:text-4xl text-center font-medium text-[#1C2736] mb-12"> 
               Nos clients de confiance
           </motion.h2>
           <Marquee gradient={true} gradientWidth={120} speed={40} pauseOnHover={true} direction='right'>
