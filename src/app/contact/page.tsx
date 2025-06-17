@@ -5,6 +5,7 @@ import HeroForAll from '@/components/hero-for-all'
 import data from '@/data/data.json'
 import ContactForm from '@/components/contactForm'
 import ContactInfos from '@/components/contact-infos'
+import MapsEnywork from '@/components/maps-Enywork'
 
 const Contact = () => {
   const getCover = data.about?.[0]?.hero?.[0].cover || "/placeholder.svg";
@@ -16,6 +17,7 @@ const Contact = () => {
         <HeroForAll title={getTitle} subTitle={getSubTitle} cover={getCover} pattern={getPattern} />
         <ContactForm/>
         <ContactInfos/>
+        <MapsEnywork/>
        
     </main>
   )
