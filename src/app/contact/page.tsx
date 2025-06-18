@@ -6,6 +6,10 @@ import data from '@/data/data.json'
 import ContactForm from '@/components/contactForm'
 import ContactInfos from '@/components/contact-infos'
 import MapsEnywork from '@/components/maps-Enywork'
+import NewsletterSection from '@/components/news-letters'
+import WhyChoose from '@/components/why-choose'
+import DiscussBreadge from '@/components/discuss-breadge'
+import TeamSection from '@/components/team-section'
 
 const Contact = () => {
   const getCover = data.about?.[0]?.hero?.[0].cover || "/placeholder.svg";
@@ -18,6 +22,10 @@ const Contact = () => {
         <ContactForm/>
         <ContactInfos/>
         <MapsEnywork/>
+        <NewsletterSection/>
+        <WhyChoose/>
+        <DiscussBreadge/>
+        <TeamSection/>
        
     </main>
   )
