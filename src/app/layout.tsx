@@ -4,6 +4,7 @@ import "./globals.css"
 import Header from "@/components/header"
 import Footer from "@/components/footer"
 import { Outfit } from 'next/font/google'
+import ScrollToTop from '@/components/ScrollToTop'
 
 
 const outfit = Outfit({
@@ -89,6 +90,7 @@ export default function RootLayout({
           {children}
           <Footer/>
         </div>
+        <ScrollToTop />
       </body>
     </html>
   )
