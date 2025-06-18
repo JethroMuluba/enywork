@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
 
 const MapsEnywork = () => {
   const cover = 'https://res.cloudinary.com/dr8ofciki/image/upload/v1750175403/Enywork/maps-cover-enywork.jpg';
@@ -13,21 +14,41 @@ const MapsEnywork = () => {
           onMouseLeave={() => setShowTooltip(false)}
         >
           <a 
-            href="https://www.google.com/maps/search/?api=1&query=Ancienne+Galerie+Présidentielle,+6è+niveau,+Local+6B8,+Kinshasa/Gombe"
+            href="https://maps.app.goo.gl/XwfHzTXsjnRa9oTx8"
             target="_blank"
             rel="noopener noreferrer"
           >
             <div className='bg-[#E10919] rounded-full p-1 w-3 h-3 animate-ping mt-[260px] ml-[70px]' />
           </a>
           
-          {showTooltip && (
-            <div>
-              <div className="absolute bg-white p-3 rounded-lg shadow-lg -top-20 -left-12 w-64 ">
-              <p className="text-sm text-gray-800">Ancienne Galerie Présidentielle, 6è niveau, Local 6B8, Kinshasa/Gombe</p>
-            </div>
-            <div className="absolute -top-6.5 left-17 w-4 h-4 transform rotate-45 bg-white"></div>
-            </div>
-          )}
+          <AnimatePresence>
+            {showTooltip && (
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: 10 }}
+                transition={{ duration: 0.2, ease: "easeOut" }}
+                className="absolute -top-20 -left-12"
+              >
+                <motion.div 
+                  className="bg-white p-3 rounded-lg shadow-lg w-64"
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.95 }}
+                  transition={{ duration: 0.2, ease: "easeOut" }}
+                >
+                  <p className="text-sm text-gray-800">Ancienne Galerie Présidentielle, 6è niveau, Local 6B8, Kinshasa/Gombe</p>
+                </motion.div>
+                <motion.div 
+                  className="absolute top-14 left-29 w-4 h-4 transform rotate-45 bg-white"
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.95 }}
+                  transition={{ duration: 0.2, ease: "easeOut" }}
+                />
+              </motion.div>
+            )}
+          </AnimatePresence>
         </div>
       </div>
     </section>
