@@ -92,7 +92,7 @@ export default function HeroSection() {
                 alt="Digital Innovation"
                 width={648}
                 height={667}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover animate-pulse"
               />
             </div>
           ))}
