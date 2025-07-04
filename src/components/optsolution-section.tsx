@@ -1,6 +1,6 @@
 import Link from "next/link"
 import Image from "next/image"
-import { ArrowRight } from "lucide-react"
+import { ArrowRight, Download } from "lucide-react"
 import data from "@/data/data.json"
 import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
@@ -42,6 +42,19 @@ export default function OptSolutionSection() {
             </p>
           </motion.div>
 
+          <div className="flex  gap-4">
+          <motion.div
+            initial={{ x: 100, opacity: 0 }}
+            animate={isInView ? { x: 0, opacity: 1 } : { x: 100, opacity: 0 }}
+            transition={{ duration: 1.5, ease: "easeOut" }}
+            className="flex justify-center lg:justify-start"
+          >
+            <Link href="/Manuel-d'utilisation-OPT.pdf" download className="bg-[#E10919] hover:bg-[#B00813] px-8 py-4 rounded-lg font-normal text-white cursor-pointer flex items-center gap-2">
+              <span>BROCHURE</span>
+              <Download  className="w-5 h-5" />
+            </Link>
+          </motion.div>
+
           <motion.div
             initial={{ y: 100, opacity: 0 }}
             animate={isInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
@@ -53,6 +66,9 @@ export default function OptSolutionSection() {
               <ArrowRight className="w-5 h-5" />
             </Link>
           </motion.div>
+          </div>
+
+
         </div>
       </div>
     </section>
