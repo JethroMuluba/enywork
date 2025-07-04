@@ -131,8 +131,18 @@
                 {
                     "title" : "Digitalisez votre Travail grâce au Numérique",
                     "subtitle" : "Confiez-nous vos besoin, laissez-vous guider par nos experts et travaillons ensemble sur la réussite de vos projets. ",
-                    "cover" : "https://res.cloudinary.com/dr8ofciki/image/upload/v1744118684/Enywork/hero-cover-v1.webp",
+                    "cover" : "https://res.cloudinary.com/dr8ofciki/image/upload/v1744118684/Enywork/hero-cover-v1.webp"
+
+                },
+
+                {
+                    "id" :1,
                     "image" : "https://res.cloudinary.com/dr8ofciki/image/upload/v1751637126/Enywork/HeroImage-YoungGirl_ooeirw.png"
+                },
+
+                {
+                    "id" :2,
+                    "image" : "https://res.cloudinary.com/dr8ofciki/image/upload/v1745409097/Enywork/enywork-about-image.webp"
                 }
             ]
         },
