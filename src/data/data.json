@@ -191,7 +191,7 @@
                             "image": "https://res.cloudinary.com/dr8ofciki/image/upload/v1745497080/Enywork/vps-bg.webp",
                             "category": "Hébergement VPS",
                             "title": "ISTM Campus",
-                            "link": "/realisations/optsolution"
+                            "link": "https://opsolution.istm-kin.ac.cd/"
                         },
 
                         {
@@ -199,7 +199,7 @@
                             "image": "https://res.cloudinary.com/dr8ofciki/image/upload/v1745497227/Enywork/meeting-house.webp",
                             "category": "Formation sur le Technologie du Web",
                             "title": "Min. ESU",
-                            "link": "/realisations/optsolution"
+                            "link": "http://www.minesu.gouv.cd/"
                         }
                     ]
                 }
