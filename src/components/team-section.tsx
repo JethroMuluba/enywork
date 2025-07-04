@@ -37,7 +37,7 @@ export default function TeamSection() {
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true, margin: "-100px" });
   return (
-    <section ref={ref}  className="bg-white py-20 px-4 md:px-8 lg:px-25">
+    <section ref={ref}  className="bg-white py-20 px-8 lg:px-25">
       <div className="container-custom">
         <div className="flex flex-col items-center gap-12">
             <SectionTitle title={getTitle} subTitle={getSubTitle} />
@@ -63,7 +63,7 @@ export default function TeamSection() {
                     <p className="text-2xl text-[#E10919] text-secondary mb-3">{member.lastname} </p>
                     </div>
 
-                  <p className="text-[#3B4E6A] mb-4">{member.role} </p>
+                  <p className="text-[#3B4E6A] text-lg mb-4">{member.role} </p>
 
                   <div className="flex justify-center gap-6 text-[#E10919] ">
                     <Link href="#" aria-label="Instagram">

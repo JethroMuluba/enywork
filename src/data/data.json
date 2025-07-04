@@ -781,5 +781,100 @@
                 }
             ]
         }
-    ]
+    ],
+    "services" : [
+        {
+            "id" : 0,
+            "title" : "Nos Services",
+            "subTitle" : "Vous offrir un service de qualité est la raison d’être de notre start-up.",
+            "cover" : "url"
+        }
+    ],
+
+    "team" : [
+        {
+            "id": 0,
+            "hero" :[
+                {
+                    "title" : "Notre Équipe",
+                    "subTitle" : "Rencontrer nos spécialistes vous donne un aperçu d’une réalisation réussie de vos projets."
+                }
+            ]
+        },
+
+        {
+            "id": 1,
+            "intro" : [
+                {
+                    "title" : "Derrière chaque innovation, une équipe passionnée !",
+                    "subTitle" : "Notre équipe d’experts en développement, design et stratégie digitale façonne l’avenir numérique avec créativité et excellence."
+                }
+            ]
+        }
+    ],
+
+    "iconeLogo" : [
+        {
+            "id":0,
+            "redIcone" : "https://res.cloudinary.com/dr8ofciki/image/upload/v1748614659/Enywork/E-logo-red.webp"
+        },
+
+        {
+            "id":1,
+            "redIcone" : "https://res.cloudinary.com/dr8ofciki/image/upload/v1748614660/Enywork/E-logo-white.webp"
+        }
+    ],
+
+    "pattern" : [
+        {
+            "id": 0,
+            "pattern" : "https://res.cloudinary.com/dr8ofciki/image/upload/v1748616126/Enywork/Pattern-Bg.png"
+        }
+    ],
+
+    "contact" : [
+        {
+            "id" : 0,
+            "title" : "Contactez-Nous",
+            "subTitle" : "Contactez-nous pour toute question ou demande de service."
+        }
+    ],
+
+    "contactForm" : [
+    {
+        "id" : 0,
+        "label" : "Nom",
+        "errorMessage" : "Name must have at least 3 letters"
+    },
+    {
+        "id" : 1,
+        "label" : "Prénom",
+        "errorMessage" : "Name must have at least 3 letters"
+    },
+
+    {
+        "id" : 2,
+        "label" : "Téléphone",
+        "errorMessage" : "Phone is required"
+    },
+
+    {
+        "id" : 3,
+        "label" : "Email",
+        "errorMessage" : "Email must have at least 5 letters"
+    },
+
+    {
+        "id" : 4,
+        "label" : "Message",
+        "errorMessage" : "You must message me to get more informations"
+    },
+
+    {
+        "buttonName" : "ENVOYER LE MESSAGE"
+    }
+]
+
+
+
 }

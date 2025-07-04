@@ -21,7 +21,8 @@ export default function BrochuresDownload() {
         <div className="flex flex-col lg:flex-row justify-center gap-6 lg:gap-60   items-center ">
 
           <motion.div 
-            animate={isInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
+            initial={{ x: -100, opacity: 0 }}
+            animate={isInView ? { x: 0, opacity: 1 } : { x: -100, opacity: 0 }}
             transition={{ duration: 1, ease: "easeOut" }}
             className="flex flex-col gap-4 ">
             <p className="text-3xl lg:text-4xl font-medium  text-white text-center lg:text-left ">
@@ -35,8 +36,8 @@ export default function BrochuresDownload() {
           </motion.div>
 
           <motion.div
-            initial={{ y: 100, opacity: 0 }}
-            animate={isInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
+            initial={{ x: 100, opacity: 0 }}
+            animate={isInView ? { x: 0, opacity: 1 } : { x: 100, opacity: 0 }}
             transition={{ duration: 1.5, ease: "easeOut" }}
             className="flex justify-center lg:justify-start"
           >

@@ -13,6 +13,7 @@ import PartnersSection from "@/components/parteners-section"
 import TestimonialsSection from "@/components/testimonials-section"
 import BlogSection from "@/components/blog-section"
 import NewsletterSection from "@/components/news-letters"
+import OurClients from "@/components/our-clients"
 // import Footer from "@/components/footer"
 
 export default function Home() {
@@ -27,6 +28,7 @@ export default function Home() {
       <TeamSection />
       <StatisticsSection />
       <PartnersSection />
+      <OurClients/>
       <TestimonialsSection />
       <BlogSection />
       <NewsletterSection />

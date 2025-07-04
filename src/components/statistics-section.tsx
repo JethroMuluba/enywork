@@ -1,7 +1,7 @@
 import Link from "next/link"
 import { ArrowRight } from "lucide-react"
 import { motion, useInView } from 'framer-motion'
-import { useRef, useEffect, useState } from 'react'
+import { useRef, useEffect, useState, useMemo } from 'react'
 import data from '@/data/data.json'
 import { Line } from 'rc-progress'
 
@@ -13,13 +13,12 @@ export default function StatisticsSection() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
-  // Données factorisées pour les stats
-  const stats = [
+  const stats = useMemo(() => [
     { label: "Strategic marketing", value: 80 },
     { label: "eCommerce development", value: 90 },
     { label: "Strategic marketing", value: 75 },
     { label: "Financial guidance", value: 90 },
-  ];
+  ], []);
 
   // Animation des barres
   const [animatedValues, setAnimatedValues] = useState(stats.map(() => 0));
@@ -42,26 +41,26 @@ export default function StatisticsSection() {
         step();
       });
     }
-  }, [isInView]);
+  }, [isInView, stats]);
 
   return (
     <section ref={ref}>
       <div className="grid grid-cols-1 lg:grid-cols-2">
         <div className="relative overflow-hidden flex justify-center items-center lg:items-start py-18 h-[600px] lg:h-full" style={{ backgroundImage: `url(${getCover})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
           <div className="absolute inset-0 bg-[#1C2736] opacity-75"></div>
-          <div className="relative flex flex-col gap-10 z-10 text-center lg:text-left max-w-3xl px-4 md:px-8 lg:px-20">
+          <div className="relative flex flex-col gap-10 z-10 text-center lg:text-left max-w-3xl px-8 lg:px-20">
             <motion.h2 
                 initial={{ y: 100, opacity: 0 }}
                 animate={isInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
                 transition={{ duration: 1, ease: "easeOut" }}
-            className="text-2xl font-medium text-white ">
+            className="text-3xl font-medium text-white ">
               {getTitle}
             </motion.h2>
             <motion.p 
                 initial={{ y: 100, opacity: 0 }}
                 animate={isInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
                 transition={{ duration: 1.5, ease: "easeOut" }}
-            className="text-white">
+            className="text-white text-lg">
               {getSubTitle}
             </motion.p>
 
@@ -78,13 +77,13 @@ export default function StatisticsSection() {
           </div>
         </div>
 
-        <div className="bg-[#1C2736] text-white py-18 px-4 md:px-8 lg:px-20">
+        <div className="bg-[#1C2736] text-white py-18 px-8 lg:px-20">
           <div className="max-w-xl mx-auto flex flex-col gap-8">
             <motion.h2 
                 initial={{ y: 100, opacity: 0 }}
                 animate={isInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
                 transition={{ duration: 1, ease: "easeOut" }}
-            className="text-2xl text-center lg:text-left font-medium text-white">
+            className="text-3xl text-center lg:text-left font-medium text-white">
               {getLeftTitle}
             </motion.h2>
 
@@ -99,7 +98,7 @@ export default function StatisticsSection() {
                     delay: idx * 0.5 
                 }}
                 className="space-y-3" key={idx}>
-                  <div className="flex justify-between items-center">
+                  <div className="flex justify-between items-center text-lg">
                     <span className=" text-light-secondary">{stat.label}</span>
                     <span className=" text-light-secondary">{Math.round(animatedValues[idx])}%</span>
                   </div>

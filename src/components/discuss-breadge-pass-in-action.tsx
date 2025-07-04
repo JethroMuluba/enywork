@@ -9,27 +9,26 @@ import { useRef } from 'react'
 import data from "@/data/data.json"
 
 
-export default function DiscussBreadge() {
+export default function DiscussBreadgePassInAction() {
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true, margin: "-100px" });
     const getPattern = data.pattern?.[0].pattern
 
 
   return (
-    <section ref={ref} style={{ backgroundImage: `url(${getPattern})`, backgroundSize: 'cover', backgroundPosition: 'left' }} className="bg-gradient-to-r from-[#320001] to-[#BD2222]  h-auto lg:h-[317px] flex flex-col justify-center items-center gap-4 py-12 px-8 lg:px-20 3xl:px-45">
+    <section ref={ref} style={{ backgroundImage: `url(${getPattern})`, backgroundSize: 'cover', backgroundPosition: 'left' }} className="bg-gradient-to-r from-[#320001] to-[#BD2222]  h-auto lg:h-[317px] flex flex-col justify-center items-center gap-4 py-12 px-4 lg:px-20 3xl:px-45">
         <motion.h2 
             initial={{ y: 100, opacity: 0 }}
             animate={isInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
             transition={{ duration: 1, ease: "easeOut" }}
-            className="text-3xl lg:text-4xl text-center font-medium text-white">
-            Vous avez un projet digital ? Discutons-en !
-        </motion.h2>
+            className="text-4xl lg:text-4xl text-center font-medium text-white">
+              Passez à l&apos;action avec Enywork !        </motion.h2>
         <motion.p 
                     initial={{ y: 100, opacity: 0 }}
                     animate={isInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
                     transition={{ duration: 1.5, ease: "easeOut" }}
         className =" text-center text-xl text-white" >
-            Nos experts sont là pour vous accompagner dans le réalisation de vos projets innovants.
+            Transformez votre vision en réalité avec nos solutions innovantes.
         </motion.p>
 
         <motion.div

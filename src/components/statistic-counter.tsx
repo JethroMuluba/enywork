@@ -1,13 +1,13 @@
 import { CalendarDays, Briefcase, Users, Medal } from 'lucide-react'
 import { motion, useInView } from 'framer-motion'
-import { useRef, useState, useEffect } from 'react'
+import { useRef, useState, useEffect, useMemo } from 'react'
 // import data from "@/data/data.json"
 
 export default function StatisticCounter() {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: "-100px" })
   const [counters, setCounters] = useState([0, 0, 0, 0])
-  const targetNumbers = [9, 12, 19, 15]
+  const targetNumbers = useMemo(() => [9, 12, 19, 15], [])
 //   const counterData = data?.about?.[5]?.counter
 
   useEffect(() => {
@@ -33,7 +33,7 @@ export default function StatisticCounter() {
 
       return () => intervals.forEach(interval => clearInterval(interval))
     }
-  }, [isInView])
+  }, [isInView, targetNumbers])
 
   const stats = [
     {

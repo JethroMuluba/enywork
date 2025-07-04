@@ -1,13 +1,17 @@
-import Image from "next/image"
-import Link from "next/link"
-import { ArrowLeft, Check, Send } from "lucide-react"
-import Header from "@/components/header"
-import Footer from "@/components/footer"
+import React from 'react'
+import data from '@/data/data.json';
+// import { motion, useInView } from 'framer-motion'
+// import { useRef } from 'react'
+// import Link from "next/link"
+// import Image from "next/image"
+// import { ArrowLeft, Check, SendHorizontal  } from "lucide-react"
+// import NewsletterSection from '@/components/news-letters';
+import BlogPostClient from './BlogPostClient';
 
 // Données simulées pour les articles de blog
 const blogPosts = [
   {
-    id: "1",
+    id: "0",
     title: "Comment optimiser votre stratégie digitale en 2025",
     subtitle: "Un guide complet pour améliorer votre présence en ligne et maximiser vos résultats",
     date: "15 Janvier 2025",
@@ -15,9 +19,9 @@ const blogPosts = [
     author: {
       name: "Yusuf Heri",
       role: "CEO Enywork",
-      avatar: "/placeholder.svg?height=48&width=48",
+      avatar: "https://res.cloudinary.com/dr8ofciki/image/upload/v1745853594/Enywork/yusuf-heri-profile.jpg",
     },
-    heroImage: "/placeholder.svg?height=576&width=1534",
+    heroImage: "https://res.cloudinary.com/dr8ofciki/image/upload/v1746010546/Enywork/blog-1.jpg",
     content: [
       {
         type: "paragraph",
@@ -29,7 +33,7 @@ const blogPosts = [
       },
       {
         type: "image",
-        src: "/placeholder.svg?height=498&width=769",
+        src: "https://res.cloudinary.com/dr8ofciki/image/upload/v1746010546/Enywork/blog-1.jpg",
         alt: "Stratégie digitale illustration",
       },
       {
@@ -46,7 +50,7 @@ const blogPosts = [
       },
       {
         type: "image",
-        src: "/placeholder.svg?height=498&width=769",
+        src: "https://res.cloudinary.com/dr8ofciki/image/upload/v1745497080/Enywork/vps-bg.webp",
         alt: "Analyse de données marketing",
       },
       {
@@ -66,14 +70,14 @@ const blogPosts = [
     comments: [
       {
         author: "Josué Simba",
-        avatar: "/placeholder.svg?height=82&width=82",
+        avatar: "https://res.cloudinary.com/dr8ofciki/image/upload/v1746806585/Enywork/josu%C3%A9-simba-profile.png",
         text: "Excellent article, très instructif ! Je suis content d'apprendre cela.",
         date: "Il y a 2 jours",
       },
     ],
   },
   {
-    id: "2",
+    id: "1",
     title: "Les derniers tendances en développement web 2025",
     subtitle: "Découvrez les technologies et frameworks qui domineront le développement web cette année",
     date: "10 Janvier 2025",
@@ -95,7 +99,7 @@ const blogPosts = [
       },
       {
         type: "image",
-        src: "/placeholder.svg?height=498&width=769",
+        src: "https://res.cloudinary.com/dr8ofciki/image/upload/v1746010543/Enywork/blog-2.jpg",
         alt: "Développement web moderne",
       },
       {
@@ -112,7 +116,7 @@ const blogPosts = [
       },
       {
         type: "image",
-        src: "/placeholder.svg?height=498&width=769",
+        src: "https://res.cloudinary.com/dr8ofciki/image/upload/v1745497227/Enywork/meeting-house.webp",
         alt: "Intelligence artificielle dans le développement",
       },
       {
@@ -132,7 +136,7 @@ const blogPosts = [
     comments: [],
   },
   {
-    id: "3",
+    id: "2",
     title: "L'importance de l'UX/UI dans le développement d'applications",
     subtitle: "Découvrez pourquoi l'expérience utilisateur est cruciale pour le succès de vos applications",
     date: "5 Janvier 2025",
@@ -154,7 +158,7 @@ const blogPosts = [
       },
       {
         type: "image",
-        src: "/placeholder.svg?height=498&width=769",
+        src: "https://res.cloudinary.com/dr8ofciki/image/upload/v1746010543/Enywork/blog-3.jpg",
         alt: "Design UX/UI moderne",
       },
       {
@@ -171,7 +175,7 @@ const blogPosts = [
       },
       {
         type: "image",
-        src: "/placeholder.svg?height=498&width=769",
+        src: "https://res.cloudinary.com/dr8ofciki/image/upload/v1745856936/Enywork/statistics-bg.webp",
         alt: "Processus de design UX",
       },
       {
@@ -195,7 +199,7 @@ const blogPosts = [
 // Données simulées pour les articles connexes
 const relatedPosts = [
   {
-    id: "2",
+    id: "4",
     title: "Les derniers tendances en développement web 2025",
     excerpt: "Découvrez les technologies et frameworks qui domineront le développement web cette année...",
     image: "/placeholder.svg?height=257&width=387",
@@ -206,7 +210,7 @@ const relatedPosts = [
     },
   },
   {
-    id: "3",
+    id: "5",
     title: "L'importance de l'UX/UI dans le développement d'applications",
     excerpt: "Découvrez pourquoi l'expérience utilisateur est cruciale pour le succès de vos applications...",
     image: "/placeholder.svg?height=257&width=387",
@@ -217,7 +221,7 @@ const relatedPosts = [
     },
   },
   {
-    id: "4",
+    id: "6",
     title: "Sécurité web : les meilleures pratiques en 2025",
     excerpt: "Protégez votre application web contre les menaces avec ces conseils de sécurité essentiels...",
     image: "/placeholder.svg?height=257&width=387",
@@ -229,276 +233,35 @@ const relatedPosts = [
   },
 ]
 
-interface PageProps {
-  params :{
+interface BlogPostPageProps {
+  params: Promise<{
     slug: string
-  }
+  }>
+  searchParams?: Promise<{
+    [key: string]: string | string[] | undefined
+  }>
 }
 
-// Approche 1: Utiliser any pour contourner le problème de typage
-export default function BlogPostPage({ params }: PageProps) {
+const BlogPostPage = async ({ params }: BlogPostPageProps) => {
+  const resolvedParams = await params;  
   // Trouver l'article correspondant à l'ID
-  const post = blogPosts.find((post) => post.id === params.slug) || blogPosts[0]
+  const post = blogPosts.find((post) => post.id === resolvedParams.slug) || blogPosts[0];
+  const filteredRelatedPosts = relatedPosts.filter((relatedPost) => relatedPost.id !== resolvedParams.slug);
+  const getCover = data.about?.[0]?.hero?.[0].cover || "/placeholder.svg";
+  const getPattern = data.about?.[0]?.hero?.[0].pattern || "/placeholder.svg";
 
-  // Filtrer les articles connexes pour exclure l'article actuel
-  const filteredRelatedPosts = relatedPosts.filter((relatedPost) => relatedPost.id !== params.slug)
+  return <BlogPostClient 
+    post={post} 
+    filteredRelatedPosts={filteredRelatedPosts}
+    getCover={getCover}
+    getPattern={getPattern}
+  />
+}
 
-  return (
-    <main className="min-h-screen bg-white">
-      <Header />
+export default BlogPostPage
 
-      {/* Hero Section */}
-      <section className="relative w-full h-[576px] bg-hero-gradient overflow-hidden">
-        <div className="absolute inset-0 bg-hero-pattern bg-cover bg-center opacity-20"></div>
-        <div className="container-custom relative z-10 h-full flex items-center">
-          <div className="flex flex-col gap-6 max-w-3xl">
-            <Link href="/blogs" className="flex items-center text-white gap-3">
-              <ArrowLeft className="w-6 h-6" />
-              <span className="text-lg">Retour au blog</span>
-            </Link>
-
-            <div className="flex flex-col gap-3">
-              <h1 className="text-3xl md:text-5xl font-medium text-white">{post.title}</h1>
-              <p className="text-xl text-white">{post.subtitle}</p>
-            </div>
-
-            <div className="flex items-center gap-4">
-              <div className="relative w-12 h-12 rounded-full overflow-hidden">
-                <Image
-                  src={post.author.avatar || "/placeholder.svg"}
-                  alt={post.author.name}
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <div className="text-white">
-                <p>
-                  Par {post.author.name}, {post.author.role}
-                </p>
-                <p>
-                  {post.date} • {post.readTime}
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Article Content */}
-      <section className="py-16">
-        <div className="container-custom">
-          <div className="max-w-3xl mx-auto">
-            {post.content.map((item, index) => {
-              if (item.type === "paragraph") {
-                return (
-                  <p key={index} className="text-secondary-light mb-8">
-                    {item.text}
-                  </p>
-                )
-              } else if (item.type === "heading") {
-                return (
-                  <h2 key={index} className="text-3xl font-medium text-secondary text-center mb-8">
-                    {item.text}
-                  </h2>
-                )
-              } else if (item.type === "image") {
-                return (
-                  <div key={index} className="mb-8">
-                    <Image
-                      src={item.src || "/placeholder.svg"}
-                      alt={item.alt || ""}
-                      width={769}
-                      height={498}
-                      className="rounded-lg w-full"
-                    />
-                  </div>
-                )
-              }
-              return null
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* Key Points Section */}
-      <section className="py-16 bg-light-secondary">
-        <div className="container-custom">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl font-medium text-secondary mb-6">Points clés à retenir</h2>
-            <div className="flex flex-col gap-4">
-              {post.keyPoints.map((point, index) => (
-                <div key={index} className="flex items-start gap-3">
-                  <div className="mt-1.5">
-                    <Check className="w-5 h-5 text-secondary-light" />
-                  </div>
-                  <p className="text-secondary-light">{point}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Comments Section */}
-      <section className="py-16 bg-light-secondary">
-        <div className="container-custom">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl font-medium text-secondary mb-10">Commentaires</h2>
-
-            {/* Existing Comments */}
-            {post.comments.length > 0 ? (
-              <div className="space-y-8 mb-10">
-                {post.comments.map((comment, index) => (
-                  <div key={index} className="flex gap-6">
-                    <div className="relative w-20 h-20 rounded-full overflow-hidden flex-shrink-0">
-                      <Image
-                        src={comment.avatar || "/placeholder.svg"}
-                        alt={comment.author}
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
-                    <div className="flex-1">
-                      <div className="relative">
-                        <div className="bg-white p-4 rounded-lg relative">
-                          <div className="absolute -left-4 top-4 w-4 h-4 bg-white transform rotate-45"></div>
-                          <h3 className="font-medium text-secondary mb-2">{comment.author}</h3>
-                          <p className="text-secondary-light">{comment.text}</p>
-                        </div>
-                        <p className="text-secondary-light mt-2">{comment.date}</p>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            ) : (
-              <p className="text-secondary-light mb-10">
-                Aucun commentaire pour le moment. Soyez le premier à commenter !
-              </p>
-            )}
-
-            {/* Comment Form */}
-            <div className="space-y-6">
-              <div className="bg-white p-6 rounded-lg">
-                <textarea
-                  placeholder="Votre commentaire..."
-                  className="w-full h-24 border-none outline-none resize-none text-secondary-light"
-                ></textarea>
-              </div>
-              <button className="btn-primary flex items-center gap-2">
-                <span>ENVOYER LE MESSAGE</span>
-                <Send className="w-5 h-5" />
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Related Articles Section */}
-      <section className="py-16">
-        <div className="container-custom">
-          <h2 className="text-3xl font-medium text-secondary mb-12">Articles similaires</h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredRelatedPosts.map((relatedPost) => (
-              <div key={relatedPost.id} className="bg-white rounded-lg shadow-lg overflow-hidden">
-                <div className="relative h-64 w-full">
-                  <Image
-                    src={relatedPost.image || "/placeholder.svg"}
-                    alt={relatedPost.title}
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-
-                <div className="p-6 flex flex-col gap-5">
-                  <div>
-                    <h3 className="text-primary font-medium text-lg mb-2">{relatedPost.title}</h3>
-                    <p className="text-secondary-light">{relatedPost.excerpt}</p>
-                  </div>
-
-                  <div className="flex flex-col gap-4">
-                    <div className="flex items-center gap-4">
-                      <div className="relative w-12 h-12 rounded-full overflow-hidden">
-                        <Image
-                          src={relatedPost.author.avatar || "/placeholder.svg"}
-                          alt={relatedPost.author.name}
-                          fill
-                          className="object-cover"
-                        />
-                      </div>
-                      <p className="text-secondary-light">
-                        Par {relatedPost.author.name}, {relatedPost.author.role}
-                      </p>
-                    </div>
-
-                    <Link
-                      href={`/blogs/${relatedPost.id}`}
-                      className="flex items-center text-secondary hover:text-primary transition-colors"
-                    >
-                      <span>Lire plus</span>
-                      <ArrowLeft className="w-4 h-4 ml-2 rotate-180" />
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Newsletter Section */}
-      <section className="py-12 md:py-16 bg-secondary bg-opacity-75 bg-blend-overlay bg-[url('/placeholder.svg?height=278&width=1535')]">
-        <div className="container-custom">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
-            <div>
-              <h2 className="text-2xl md:text-3xl font-medium text-white leading-tight">Restez Connecter avec Nous</h2>
-            </div>
-
-            <div className="flex items-center gap-4">
-              <svg className="hidden md:block w-16 h-16 text-primary" viewBox="0 0 24 24" fill="none">
-                <path
-                  d="M21 5L2 12L9 13M21 5L18 20L9 13M21 5L9 13"
-                  stroke="#E10919"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-              <p className="text-white">
-                Abonnez-vous à notre newsletter pour recevoir les dernières actualités et mises à jour directement dans
-                votre boîte de réception.
-              </p>
-            </div>
-
-            <div>
-              <form className="flex flex-col gap-5">
-                <div className="flex flex-col md:flex-row gap-4">
-                  <input
-                    type="email"
-                    placeholder="Saisissez votre Email"
-                    className="flex-1 px-4 py-2 rounded"
-                    required
-                  />
-                  <button type="submit" className="btn-primary whitespace-nowrap">
-                    <span>S`&apos;`ABONNER</span>
-                    <ArrowLeft className="w-5 h-5 rotate-180" />
-                  </button>
-                </div>
-
-                <p className="text-xs text-white">
-                  Votre adresse email est utilisée par Enywork SARL, en qualité de responsable de traitement, à des fins
-                  de prospection commerciale (nouveautés, actualités, services...). Pour connaître notre Politique de
-                  données personnelles et en savoir plus sur vos droits, veuillez vous rendre sur la page Protection des
-                  données personnelles
-                </p>
-              </form>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <Footer />
-    </main>
-  )
+export async function generateStaticParams() {
+  return blogPosts.map((post) => ({
+    slug: post.id
+  }))
 }

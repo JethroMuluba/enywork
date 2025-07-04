@@ -91,13 +91,13 @@ export default function GalleryAbout() {
 
   return (
     <section ref={ref} className="relative w-full min-h-[719px] bg-[#F2F2F2] py-20">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-8">
         <div className="flex flex-col items-center gap-[50px]">
           {/* Title Section */}
           <SectionTitle title={getTitle} subTitle={getSubTitle} />
 
           {/* Gallery Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-[19px] w-full max-w-[1401px]">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-[19px] w-full max-w-[1401px]">
             {images?.map((image, index) => (
               <motion.div
                 key={index}
@@ -125,7 +125,7 @@ export default function GalleryAbout() {
           >
             <Link 
               href="/gallery"
-              className="flex items-center justify-center gap-[10px] bg-[#E10919] hover:bg-[#B00813] px-[25px] py-[10px] rounded-[4px] transition-colors duration-300"
+              className="flex items-center justify-center gap-[10px] bg-[#E10919] hover:bg-[#B00813] px-8 py-4 rounded-[4px] transition-colors duration-300"
             >
               <span className="text-white text-base ">
                 VOIR PLUS

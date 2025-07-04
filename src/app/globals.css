@@ -2,6 +2,10 @@
 
 @import "tailwindcss";
 
+html {
+  behavior: "smooth",
+}
+
 
 
 @layer base {
@@ -27,6 +31,8 @@
     --ring: 215 20.2% 65.1%;
     --radius: 0.5rem;
   }
+
+
 
   .dark {
     --background: 224 71% 4%;

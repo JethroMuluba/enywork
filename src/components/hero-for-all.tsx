@@ -22,12 +22,12 @@ const HeroForAll = ({title, subTitle, cover, pattern} : HeroProps) => {
     >
         <div className="absolute inset-0 bg-hero-pattern bg-cover bg-center opacity-80 " style={{ backgroundImage: `url(${pattern})`, backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
         <div className="container-custom relative z-10 h-full flex items-center justify-center">
-            <div className="flex flex-col items-center gap-3 text-center px-4 md:px-8 lg:px-20">
+            <div className="flex flex-col items-center gap-3 text-center px-8 lg:px-95">
                 <motion.h1 
                     initial={{ y: 100, opacity: 0 }}
                     animate={isInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
                     transition={{ duration: 1, ease: "easeOut" }}
-                className="text-4xl md:text-5xl lg:text-6xl font-medium text-white">
+                className="text-4xl md:text-5xl lg:text-6xl font-semibold text-white">
                     {title}
                 </motion.h1>
                 <motion.p 

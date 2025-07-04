@@ -9,7 +9,7 @@ const SearchBar = () => {
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true, margin: "-100px" });
   return (
-    <section ref={ref} className="relative flex justify-center px-4 -mt-16">
+    <section ref={ref} className="relative flex justify-center px-8 -mt-16">
       <motion.div 
         initial={{ y: 100, opacity: 0 }}
         animate={isInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
@@ -22,7 +22,7 @@ const SearchBar = () => {
                 <Search className="w-6 h-6 text-[#A1A1AA] mr-2" />
                 <input
                   type="text"
-                  placeholder="RECHERCHE UN ARTICLE"
+                  placeholder="Rechercher un Article"
                   className="bg-transparent border-none outline-none flex-1 text-[#3B4E6A] placeholder-[#A1A1AA] placeholder:text-base text-center md:text-left "
                 />
                 <X className="w-4 h-4 text-[#A1A1AA] cursor-pointer" />

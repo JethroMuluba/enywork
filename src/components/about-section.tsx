@@ -15,10 +15,10 @@ export default function AboutSection() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section ref={ref} className="bg-[#F2F2F2] py-20 px-4 md:px-8 lg:px-25 ">
+    <section ref={ref} className="bg-[#F2F2F2] py-20 px-8 lg:px-25 ">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div className="order-2 lg:order-1 flex justify-center">
-          <div className=" hidden lg:block w-1/2 ">
+          <div className="order-1 flex justify-center">
+          <div className=" w-1/2 ">
             <motion.div
               initial={{ y: 100, opacity: 0 }}
               animate={isInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
@@ -58,7 +58,7 @@ export default function AboutSection() {
                             initial={{ y: 100, opacity: 0 }}
                             animate={isInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
                             transition={{ duration: 1.5, ease: "easeOut" }} 
-              className="text-center lg:text-left">
+              className=" text-lg text-left">
                 {getText1}
               </motion.p>
 
@@ -66,7 +66,7 @@ export default function AboutSection() {
                             initial={{ y: 100, opacity: 0 }}
                             animate={isInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
                             transition={{ duration: 2, ease: "easeOut" }}
-              className="text-center lg:text-left">
+              className="text-lg text-left">
                 {getText2}
               </motion.p>
 

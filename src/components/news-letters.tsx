@@ -39,7 +39,7 @@ export default function NewsletterSection() {
                     animate={isInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
                     transition={{ duration: 1, ease: "easeOut" }}
           >
-            <h2 className="text-2xl md:text-3xl text-center lg:text-left font-medium text-white leading-tight">{getTitle} </h2>
+            <h2 className="text-3xl text-center lg:text-left font-medium text-white leading-tight">{getTitle} </h2>
           </motion.div>
 
           <motion.div
@@ -56,7 +56,7 @@ export default function NewsletterSection() {
                         sizes="8rem"
                     />
                 </div>
-            <p className="text-white text-left ">
+            <p className="text-white text-left text-lg ">
                 {getSubTitle}
             </p>
           </motion.div>
@@ -77,7 +77,7 @@ export default function NewsletterSection() {
                   required
                 />
 
-                  <p className="text-xs text-white text-center font-light lg:text-left">
+                  <p className="text-xs text-white font-light">
                       {getWarning}
                   </p>
 

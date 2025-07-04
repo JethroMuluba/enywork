@@ -97,7 +97,7 @@ return(
                 }}
                 className='flex w-full justify-center items-center text-center gap-[20px] text-sm font-medium py-[20px] px-[27px] hover:bg-[#E10919] hover:text-white'
                 >
-                <Link href='/services'> SERVICE </Link>
+                <Link href='/services'> SERVICES </Link>
             </motion.li>
 
             <motion.li
