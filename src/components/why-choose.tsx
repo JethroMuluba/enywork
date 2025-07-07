@@ -38,7 +38,7 @@ const WhyChoose = () => {
             initial={{ y: 100, opacity: 0 }}
             animate={isInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
             transition={{ duration: 0.5, ease: "easeOut" }}
-            className="text-3xl lg:text-4xl text-center font-medium text-[#1C2736] mb-16">Pourquoi nous choisir ?
+            className="text-3xl lg:text-4xl text-center font-medium text-[#E10919] mb-16">Pourquoi nous choisir ?
         </motion.h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">

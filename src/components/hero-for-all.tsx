@@ -17,7 +17,7 @@ const HeroForAll = ({title, subTitle, cover, pattern} : HeroProps) => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
-        transition={{ duration: 1.5 }}
+        transition={{ duration: 3 }}
         ref = {ref} className="relative w-full h-[576px] bg-gradient-to-r from-[#320001] to-[#BD2222] overflow-hidden " style={{ backgroundImage: `url(${cover})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
     >
         <div className="absolute inset-0 bg-hero-pattern bg-cover bg-center opacity-80 " style={{ backgroundImage: `url(${pattern})`, backgroundSize: 'cover', backgroundPosition: 'center' }}></div>

@@ -15,7 +15,7 @@ const SectionTitle = ({title, subTitle} : TitleProps) => {
                 initial={{ y: 100, opacity: 0 }}
                 animate={isInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
                 transition={{ duration: 0.5, ease: "easeOut" }}
-                className=" text-3xl lg:text-4xl text-center font-medium text-[#1C2736] lg:px-38"> 
+                className=" text-3xl lg:text-4xl text-center font-medium text-[#E10919] lg:px-38"> 
             {title} 
         </motion.h2>
     <motion.p 

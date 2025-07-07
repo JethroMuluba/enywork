@@ -10,7 +10,7 @@ import DiscussBreadgePassInAction from '@/components/discuss-breadge-pass-in-act
 import PartenersSection from '@/components/parteners-section'
 
 const Services = () => {
-  const getCover = data.about?.[0]?.hero?.[0].cover || "/placeholder.svg";
+  const getCover = data.services?.[0].cover || "/placeholder.svg";
   const getPattern = data.about?.[0]?.hero?.[0].pattern || "/placeholder.svg";
   const getTitle = data.services?.[0].title || "Hero Title";
   const getSubTitle = data.services?.[0].subTitle || "Hero Sub-title";

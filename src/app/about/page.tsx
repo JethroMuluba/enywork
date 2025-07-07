@@ -25,6 +25,8 @@ export default function AboutPage() {
     const storyImage = data.about[1].image;
     const storyText1 = data.about?.[1].history?.[0].text1;
     const storyText2 = data.about?.[1].history?.[1].text2;
+    const storyText3= data.about?.[1].history?.[2].text3;
+    const storyText4 = data.about?.[1].history?.[3].text4;
     
     // Notre Mission
     const missionTitle = data.about?.[2].title;
@@ -34,16 +36,19 @@ export default function AboutPage() {
     const missionText2 = data.about?.[2].mission?.[1].text2;
     
     // Notre Vision
-    const visionTitle = data.about?.[3].title;
-    const visionSubTitle = data.about?.[3].subTitle;
-    const visionImage = data.about[3].image;
-    const visionText1 = data.about?.[3].vision?.[0].text1;
-    const visionText2 = data.about?.[3].vision?.[1].text2;
+    // const visionTitle = data.about?.[3].title;
+    // const visionSubTitle = data.about?.[3].subTitle;
+    // const visionImage = data.about[3].image;
+    // const visionText1 = data.about?.[3].vision?.[0].text1;
+    // const visionText2 = data.about?.[3].vision?.[1].text2;
 
     // Nos Valeurs
     const valuesTitle = data.about?.[4].title;
     const valuesSubTitle = data.about?.[4].subTitle;
-    const valuesText = data.about?.[4].text;
+    const valuesTextExc = data.about?.[4].textExcellence;
+    const valuesTextSimp = data.about?.[4].textSimplicité;
+    const valuesTextDeter = data.about?.[4].textDétermination;
+    const valuesTextInnov = data.about?.[4].textInnovation;
     const values1 = data.about?.[4].values?.[0].value1;
     const values2 = data.about?.[4].values?.[0].value2;
     const values3 = data.about?.[4].values?.[0].value3;
@@ -53,13 +58,13 @@ export default function AboutPage() {
     // Créer des refs séparés pour chaque section
     const storyRef = useRef(null);
     const missionRef = useRef(null);
-    const visionRef = useRef(null);
+    // const visionRef = useRef(null);
     const valuesRef = useRef(null);
 
     // Créer des hooks useInView séparés
     const isStoryInView = useInView(storyRef, { once: true, margin: "-100px" });
     const isMissionInView = useInView(missionRef, { once: true, margin: "-100px" });
-    const isVisionInView = useInView(visionRef, { once: true, margin: "-100px" });
+    // const isVisionInView = useInView(visionRef, { once: true, margin: "-100px" });
     const isValuesView = useInView(valuesRef, { once: true, margin: "-100px"})
 
     return (
@@ -75,7 +80,7 @@ export default function AboutPage() {
                                 initial={{ y: 100, opacity: 0 }}
                                 animate={isStoryInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
                                 transition={{ duration: 0.5, ease: "easeOut" }}
-                                className="text-4xl lg:text-4xl text-center lg:text-left font-medium text-[#1C2736]"
+                                className="text-4xl lg:text-4xl text-center lg:text-left font-medium text-[#E10919]"
                             >
                                 {storyTitle}
                             </motion.h2>
@@ -106,6 +111,24 @@ export default function AboutPage() {
                                 className="text-lg text-left"
                             >
                                 {storyText2}
+                            </motion.p>
+
+                            <motion.p
+                                initial={{ y: 100, opacity: 0 }}
+                                animate={isStoryInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
+                                transition={{ duration: 3, ease: "easeOut" }}
+                                className="text-lg text-left"
+                            >
+                                {storyText3}
+                            </motion.p>
+
+                            <motion.p
+                                initial={{ y: 100, opacity: 0 }}
+                                animate={isStoryInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
+                                transition={{ duration: 2, ease: "easeOut" }}
+                                className="text-lg text-left"
+                            >
+                                {storyText4}
                             </motion.p>
                         </div>
                     </div>
@@ -156,7 +179,7 @@ export default function AboutPage() {
                                 initial={{ x: 100, opacity: 0 }}
                                 animate={isMissionInView ? { x: 0, opacity: 1 } : { x: 100, opacity: 0 }}
                                 transition={{ duration: 0.5, ease: "easeOut" }}
-                                className="text-4xl lg:text-4xl text-center lg:text-left font-medium text-[#1C2736]"
+                                className="text-4xl lg:text-4xl text-center lg:text-left font-medium text-[#E10919]"
                             >
                                 {missionTitle}
                             </motion.h2>
@@ -194,7 +217,7 @@ export default function AboutPage() {
             </section>
 
             {/* Notre Vision */}
-            <section className="bg-[#F2F2F2] pt-20 pb-20 lg:py-20 px-8 lg:px-20">
+            {/* <section className="bg-[#F2F2F2] pt-20 pb-20 lg:py-20 px-8 lg:px-20">
                 <div ref={visionRef} className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     <div className="flex flex-col gap-12">
                         <div className="flex flex-col gap-5">
@@ -254,7 +277,7 @@ export default function AboutPage() {
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> */}
 
             <StatisticsSection/>
 
@@ -267,7 +290,7 @@ export default function AboutPage() {
                             initial={{ x: -100, opacity: 0 }}
                             animate={isValuesView ? { x: 0, opacity: 1 } : { x: -100, opacity: 0 }}
                             transition={{ duration: 0.5, ease: "easeOut" }}
-                            className="text-3xl lg:text-4xl text-center  font-medium text-[#1C2736] lg:text-left"
+                            className="text-3xl lg:text-4xl text-center  font-medium text-[#E10919] lg:text-left"
                         >
                             {valuesTitle}
                         </motion.h2>
@@ -285,8 +308,36 @@ export default function AboutPage() {
                             transition={{ duration: 1.5, ease: "easeOut" }}
                             className="text-[#3B4E6A] text-lg text-left "
                         >
-                            {valuesText}
+                            {valuesTextExc}
                         </motion.p>
+
+                        <motion.p
+                            initial={{ x: -100, opacity: 0 }}
+                            animate={isValuesView ? { x: 0, opacity: 1 } : { x: -100, opacity: 0 }}
+                            transition={{ duration: 2, ease: "easeOut" }}
+                            className="text-[#3B4E6A] text-lg text-left "
+                        >
+                            {valuesTextSimp}
+                        </motion.p>
+
+                        <motion.p
+                            initial={{ x: -100, opacity: 0 }}
+                            animate={isValuesView ? { x: 0, opacity: 1 } : { x: -100, opacity: 0 }}
+                            transition={{ duration: 2.5, ease: "easeOut" }}
+                            className="text-[#3B4E6A] text-lg text-left "
+                        >
+                            {valuesTextDeter}
+                        </motion.p>
+
+                        <motion.p
+                            initial={{ x: -100, opacity: 0 }}
+                            animate={isValuesView ? { x: 0, opacity: 1 } : { x: -100, opacity: 0 }}
+                            transition={{ duration: 3   , ease: "easeOut" }}
+                            className="text-[#3B4E6A] text-lg text-left "
+                        >
+                            {valuesTextInnov}
+                        </motion.p>
+                        
                     </div>
                     {/* Colonne droite */}
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">

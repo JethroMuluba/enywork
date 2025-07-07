@@ -11,7 +11,7 @@ import BrochuresDownload from '@/components/brochure-download'
 import PartenersSection from '@/components/parteners-section'
 
 const Realizations = () => {
-  const getCover = data.about?.[0]?.hero?.[0].cover || "/placeholder.svg";
+  const getCover = data.realizations?.[0]?.hero?.[0].cover || "/placeholder.svg";
   const getPattern = data.about?.[0]?.hero?.[0].pattern || "/placeholder.svg";
   const getTitle = data.realizations?.[0]?.hero?.[0].title || "Hero Title";
   const getSubTitle = data.realizations?.[0]?.hero?.[0].subTitle || "Hero Sub-title";

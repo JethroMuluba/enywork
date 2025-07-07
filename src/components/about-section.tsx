@@ -43,7 +43,7 @@ export default function AboutSection() {
                             initial={{ y: 100, opacity: 0 }}
                             animate={isInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
                             transition={{ duration: 0.5, ease: "easeOut" }}
-              className=" text-4xl lg:text-4xl text-center lg:text-left font-medium text-[#1C2736] "> 
+              className=" text-4xl lg:text-4xl text-center lg:text-left font-medium text-[#E10919] "> 
                 {getTitle} 
               </motion.h2>
               <motion.p 

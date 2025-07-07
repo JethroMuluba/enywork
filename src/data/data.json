@@ -616,7 +616,7 @@
             "hero" : [
                 {
                     "id" :0,
-                    "cover" : "https://res.cloudinary.com/dr8ofciki/image/upload/v1746201641/Enywork/about-hero.webp",
+                    "cover" : "https://res.cloudinary.com/dr8ofciki/image/upload/v1751897530/Enywork/about-image.jpg",
                     "pattern" : "https://res.cloudinary.com/dr8ofciki/image/upload/v1744118684/Enywork/hero-cover-v1.webp",
                     "title" : "A Propos de Nous",
                     "subTitle" : "Mieux nous connaître, c'est vous donner de l'assurance."
@@ -638,6 +638,16 @@
                 {
                     "id" :1,
                     "text2" : "Créée depuis le mois de novembre 2017, la start-up ENYWORK vise à connecter les institutions universitaires autour d’une base de données commune facilitant le contrôle d’authenticité des documents académiques livrées et la traçabilité du parcours de l’étudiant."
+                },
+
+                {
+                    "id" :2,
+                    "text3" : "Concernant le volet académique , ENYWORK a mis en place une plate-forme OPTSOLUTION qui prend en compte le processus des inscriptions en ligne, traçabilité du parcours de l'étudiant, authenticité des documents et l'interconnection avec les banques pour les paiements de divers frais académiques."
+                },
+
+                {
+                    "id" :3,
+                    "text4" : "Compte tenu de notre expertrise dans les solutions innovante, nous sommes la première société en RD Congo qui a instauré le système des inscirptions en lugne dans les institutions étatiques et l'interconnection de paiements avec les banques."
                 }
             ]
         },
@@ -646,16 +656,16 @@
             "id" : 2,
             "image" : "https://res.cloudinary.com/dr8ofciki/image/upload/v1745409097/Enywork/enywork-about-image.webp",
             "title" : "Notre Mission",
-            "subTitle" :"Mieux nous connaître, c'est vous donner de l'assurance.",
+            "subTitle" :"Transformer vos besoins en solutions numériques concrètes.",
             "mission" : [
                 {
                     "id" :0,
-                    "text1" : "ENYWORK, start-up congolais, spécialisée dans la conception et le développement de logiciels sur mesure, implantée en RDC, développe les activités autour des différentes prestations informatiques dédiées aux entreprises et autres (organisation, établissement supérieur et universitaire et particulier)."
+                    "text1" : "Nous offrons à nos différents partenaires les solutions innovantes et efficaces qui repondent aux besoins réels de la société Congolaise et d'ailleurs visant la réussite de leurs projets de numérisation grâce à notre expertise reconnue dans le monde numérique."
                 },
 
                 {
                     "id" :1,
-                    "text2" : "Créée depuis le mois de novembre 2017, la start-up ENYWORK vise à connecter les institutions universitaires autour d’une base de données commune facilitant le contrôle d’authenticité des documents académiques livrées et la traçabilité du parcours de l’étudiant."
+                    "text2" : "Nous développond des solutions numériques selon les aspirations ou besoins exprimés par nos partenaires. "
                 }
             ]
         },
@@ -681,8 +691,11 @@
         {
             "id" : 4,
             "title" : "Nos Valeurs",
-            "subTitle" : "Sed ut perspiciatis unde omnis iste ",
-            "text" : "ENYWORK, start-up congolais, spécialisée dans la conception et le développement de logiciels sur mesure, implantée en RDC, développe les activités autour des différentes prestations informatiques dédiées aux entreprises et autres (organisation, établissement supérieur et universitaire et particulier).",
+            "subTitle" : "Excellence, Simplicité, Détermination, Innovation ",
+            "textExcellence" : "L'Excellence guide chacun de nos projets vers des standards élevés et des résultats durables. ",
+            "textSimplicité" : "La Simplicité est au cœur de nos solutions pour garantir clarté, efficacité et accessibilité",
+            "textDétermination" : "La Détermination nous pousse à relever chaque défi avec rigueur et engagement.",
+            "textInnovation" : "L'Innovation alimente notre capacité à imaginer des réponses nouvelles aux besoins numériques actuels.",
             "values" : [
                 {
                     "value1" : "Excellence",
@@ -771,6 +784,7 @@
             "hero" : [
                 {
                     "id" : 0,
+                    "cover": "https://res.cloudinary.com/dr8ofciki/image/upload/v1751899930/Enywork/Realization-Image.jpg",
                     "title" : "Nos Réalisations",
                     "subTitle" : "Ce que nous avons accompli dans le passé peut vous inspirer."
                 }
@@ -799,7 +813,7 @@
             "id" : 0,
             "title" : "Nos Services",
             "subTitle" : "Vous offrir un service de qualité est la raison d’être de notre start-up.",
-            "cover" : "url"
+            "cover" : "https://res.cloudinary.com/dr8ofciki/image/upload/v1751900494/Enywork/Services-Image.jpg"
         }
     ],
 
