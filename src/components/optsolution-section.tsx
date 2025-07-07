@@ -42,10 +42,10 @@ export default function OptSolutionSection() {
             </p>
           </motion.div>
 
-          <div className="flex  gap-4">
+          <div className="flex justify-center items-center  gap-4">
           <motion.div
-            initial={{ x: 100, opacity: 0 }}
-            animate={isInView ? { x: 0, opacity: 1 } : { x: 100, opacity: 0 }}
+            initial={{ y: 100, opacity: 0 }}
+            animate={isInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
             transition={{ duration: 1.5, ease: "easeOut" }}
             className="flex justify-center lg:justify-start"
           >
@@ -58,7 +58,7 @@ export default function OptSolutionSection() {
           <motion.div
             initial={{ y: 100, opacity: 0 }}
             animate={isInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
-            transition={{ duration: 1.5, ease: "easeOut" }}
+            transition={{ duration: 2, ease: "easeOut" }}
             className="flex justify-center lg:justify-start"
           >
             <Link href="https://optsolution.net/" target="blank" className="bg-[#E10919] hover:bg-[#B00813] px-8 py-4 rounded-lg font-normal text-white cursor-pointer flex items-center gap-2">

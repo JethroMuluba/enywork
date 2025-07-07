@@ -85,11 +85,11 @@ export default function RootLayout({
   return (
     <html lang="fr" className={outfit.className}>
       <body>
-        <div>
+        
           <Header/>
           {children}
           <Footer/>
-        </div>
+        
         <ScrollToTop />
       </body>
     </html>
