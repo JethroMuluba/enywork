@@ -56,10 +56,10 @@ const ContactInfos = () => {
 
                 <div className='flex flex-col'>
                   <p className="text-[#3B4E6A] text-lg group-hover:text-white">
-                    Bureau : +243 899 467 398
+                    Administration/Bureau : +243 850 301 852
                   </p>
                   <p className="text-[#3B4E6A] text-lg group-hover:text-white">
-                    Commercial : +243 810 567 390
+                    Commercial : +243 827 964 420
                   </p>
                 </div>
 
