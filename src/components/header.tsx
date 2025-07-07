@@ -123,14 +123,14 @@ export default function Header() {
             >
               BLOGS
             </Link>
-            <Link 
+            {/* <Link 
               href="/contact" 
               className={`text-[#1C2736] transition-colors ${
                 pathname === "/contact" ? "text-[#E10919]" : "hover:text-[#E10919]"
               }`}
             >
               CONTACT
-            </Link>
+            </Link> */}
           </nav>
 
           {/* Contact Button & Mobile Menu */}

@@ -68,8 +68,8 @@ export default function HeroSection() {
         <p className="text-xl lg:text-2xl font-normal text-white text-center lg:text-left">
           {getSubTitle}
         </p>
-        <Link href="/contact" className="bg-[#E10919] hover:bg-[#B00813] px-8 py-4 rounded-lg font-normal text-white cursor-pointer self-center lg:self-start flex items-center gap-2 ">
-          <span>CONTACT</span>
+        <Link href="/services" className="bg-[#E10919] hover:bg-[#B00813] px-8 py-4 rounded-lg font-normal text-white cursor-pointer self-center lg:self-start flex items-center gap-2 ">
+          <span>DÉCOUVRIR</span>
           <ArrowRight className="w-5 h-5" />
         </Link>
       </motion.div>
