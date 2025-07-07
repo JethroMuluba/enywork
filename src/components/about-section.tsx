@@ -11,6 +11,8 @@ export default function AboutSection() {
   const getSubTitle= data.home?.[1]?.aboutUsSection?.[0]?.subtitle;
   const getText1= data.home?.[1]?.aboutUsSection?.[0]?.text1;
   const getText2= data.home?.[1]?.aboutUsSection?.[0]?.text2;
+  const getText3= data.home?.[1]?.aboutUsSection?.[0]?.text3;
+  const getText4= data.home?.[1]?.aboutUsSection?.[0]?.text4;
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
@@ -70,13 +72,30 @@ export default function AboutSection() {
                 {getText2}
               </motion.p>
 
+              <motion.p
+                            initial={{ y: 100, opacity: 0 }}
+                            animate={isInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
+                            transition={{ duration: 2.5, ease: "easeOut" }}
+              className="text-lg text-left">
+                {getText3 }
+              </motion.p>
+
+              <motion.p
+                            initial={{ y: 100, opacity: 0 }}
+                            animate={isInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
+                            transition={{ duration: 3, ease: "easeOut" }}
+              className="text-lg text-left">
+                {getText4 }
+              </motion.p>
+
+
 
             </div>
 
             <motion.div
               initial={{ y: 100, opacity: 0 }}
               animate={isInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
-              transition={{ duration: 2.5, ease: "easeOut" }}
+              transition={{ duration: 3.5, ease: "easeOut" }}
               className="flex justify-center lg:justify-start"
             >
               <Link href="/about" className="bg-[#E10919] hover:bg-[#B00813] px-8 py-4 rounded-lg text-white cursor-pointer flex items-center gap-2">

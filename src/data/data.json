@@ -154,8 +154,10 @@
                     "image" : "https://res.cloudinary.com/dr8ofciki/image/upload/v1745409097/Enywork/enywork-about-image.webp",
                     "title" : "A propos de nous",
                     "subtitle" : "Mieux nous connaître, c'est vous donner de l'assurance.",
-                    "text1" : "ENYWORK, start-up congolais, spécialisée dans la conception et le développement de logiciels sur mesure, implantée en RDC, développe les activités autour des différentes prestations informatiques dédiées aux entreprises et autres (organisation, établissement supérieur et universitaire et particulier).",
-                    "text2" : "Créée depuis le mois de novembre 2017, la start-up ENYWORK vise à connecter les institutions universitaires autour d'une base de données commune facilitant le contrôle d'authenticité des documents académiques livrées et la traçabilité du parcours de l'étudiant."
+                    "text1" : "ENYWORK, start-up congolais, qui est spécialisée dans la conception et le développement de logiciels sur mesure, implantée en RDC. Ainsi, développe les activités autour de différentes prestations informatiques dédiées aux institutions tant publiques que privées et autres... (organisation, établissement supérieur et universitaire et particulier).",
+                    "text2" : "Créée depuis le mois de novembre 2017, la start-up ENYWORK vise à numériser les documents des institutions pour la traçabilité dans la gestion financières et l'authenticités de ces derniers.",
+                    "text3" : "Concernant le volet académique , ENYWORK a mis en place une plate-forme OPTSOLUTION qui prend en compte le processus des inscriptions en ligne, traçabilité du parcours de l'étudiant, authenticité des documents et l'interconnection avec les banques pour les paiements de divers frais académiques.",
+                    "text4" : "Compte tenu de notre expertrise dans les solutions innovante, nous sommes la première société en RD Congo qui a instauré le système des inscirptions en lugne dans les institutions étatiques et l'interconnection de paiements avec les banques."
                 }
             ]
         },
