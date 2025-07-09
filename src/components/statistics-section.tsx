@@ -14,10 +14,10 @@ export default function StatisticsSection() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   const stats = useMemo(() => [
-    { label: "Strategic marketing", value: 80 },
-    { label: "eCommerce development", value: 90 },
-    { label: "Strategic marketing", value: 75 },
-    { label: "Financial guidance", value: 90 },
+    { label: "Développement de Logiciels Saas", value: 90 },
+    { label: "Formation sur les Technologies du Web", value: 75 },
+    { label: "Gestion des Données", value: 90 },
+    { label: "Hébergement VPS Sécurisé", value: 80 },
   ], []);
 
   // Animation des barres

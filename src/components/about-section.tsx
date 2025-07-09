@@ -8,11 +8,11 @@ import { useRef } from 'react'
 export default function AboutSection() {
   const getImage= data.home?.[1]?.aboutUsSection?.[0]?.image;
   const getTitle= data.home?.[1]?.aboutUsSection?.[0]?.title;
-  const getSubTitle= data.home?.[1]?.aboutUsSection?.[0]?.subtitle;
+  // const getSubTitle= data.home?.[1]?.aboutUsSection?.[0]?.subtitle;
   const getText1= data.home?.[1]?.aboutUsSection?.[0]?.text1;
   const getText2= data.home?.[1]?.aboutUsSection?.[0]?.text2;
-  const getText3= data.home?.[1]?.aboutUsSection?.[0]?.text3;
-  const getText4= data.home?.[1]?.aboutUsSection?.[0]?.text4;
+  // const getText3= data.home?.[1]?.aboutUsSection?.[0]?.text3;
+  // const getText4= data.home?.[1]?.aboutUsSection?.[0]?.text4;
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
@@ -38,7 +38,7 @@ export default function AboutSection() {
           </div>
 
           <div className="order-1 lg:order-2 flex flex-col gap-12">
-            <div className="flex flex-col gap-5">
+            <div className="flex flex-col items-center lg:items-start gap-5">
               <motion.h2 
                             initial={{ y: 100, opacity: 0 }}
                             animate={isInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
@@ -46,13 +46,13 @@ export default function AboutSection() {
               className=" text-4xl lg:text-4xl text-center lg:text-left font-medium text-[#E10919] "> 
                 {getTitle} 
               </motion.h2>
-              <motion.p 
+              <motion.div 
                             initial={{ y: 100, opacity: 0 }}
                             animate={isInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
                             transition={{ duration: 1, ease: "easeOut" }}
-              className="text-center lg:text-left text-xl text-[#3B4E6A] "> 
-                {getSubTitle} 
-              </motion.p>
+              className=" w-20 rounded-2xl bg-[#1C2736] py-[2px] "> 
+            
+              </motion.div>
             </div>
 
             <div className="flex flex-col gap-8 text-[#3B4E6A] text-base">
@@ -69,10 +69,10 @@ export default function AboutSection() {
                             animate={isInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
                             transition={{ duration: 2, ease: "easeOut" }}
               className="text-lg text-left">
-                {getText2}
+                {getText2}..
               </motion.p>
 
-              <motion.p
+              {/* <motion.p
                             initial={{ y: 100, opacity: 0 }}
                             animate={isInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
                             transition={{ duration: 2.5, ease: "easeOut" }}
@@ -86,7 +86,7 @@ export default function AboutSection() {
                             transition={{ duration: 3, ease: "easeOut" }}
               className="text-lg text-left">
                 {getText4 }
-              </motion.p>
+              </motion.p> */}
 
 
 
