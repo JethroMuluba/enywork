@@ -30,7 +30,7 @@ export default function AboutPage() {
     
     // Notre Mission
     const missionTitle = data.about?.[2].title;
-    const missionSubTitle = data.about?.[2].subTitle;
+    // const missionSubTitle = data.about?.[2].subTitle;
     const missionImage = data.about[2].image;
     const missionText1 = data.about?.[2].mission?.[0].text1;
     const missionText2 = data.about?.[2].mission?.[1].text2;
@@ -284,6 +284,8 @@ export default function AboutPage() {
                 <div ref={valuesRef} className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     {/* Colonne gauche */}
                     <div className="flex flex-col gap-5 max-w-lg mx-auto lg:mx-0">
+
+                        <div className="flex flex-col gap-5 items-center lg:items-start">
                         <motion.h2
                             initial={{ x: -100, opacity: 0 }}
                             animate={isValuesView ? { x: 0, opacity: 1 } : { x: -100, opacity: 0 }}
@@ -296,10 +298,11 @@ export default function AboutPage() {
                             initial={{ x: -100, opacity: 0 }}
                             animate={isValuesView ? { x: 0, opacity: 1 } : { x: -100, opacity: 0 }}
                             transition={{ duration: 1, ease: "easeOut" }}
-                            className="text-xl text-center text-[#3B4E6A] lg:text-left"
+                            className="w-20 rounded-2xl bg-[#1C2736] py-[2px] "
                         >
-                            {valuesSubTitle}
                         </motion.p>
+                        </div>
+
                         <motion.p
                             initial={{ x: -100, opacity: 0 }}
                             animate={isValuesView ? { x: 0, opacity: 1 } : { x: -100, opacity: 0 }}
