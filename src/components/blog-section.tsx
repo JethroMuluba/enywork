@@ -9,7 +9,7 @@ import data from '@/data/data.json'
 
 export default function BlogSection() {
     const getTitle = data.home?.[9]?.lastBlogSection?.[0].title || "Derniers Actualités";
-    const getSubTitle = data.home?.[9]?.lastBlogSection?.[0].subtitle || "Suivez nos actualités pour rester informé de nos événements et bien plus encore.";
+    // const getSubTitle = data.home?.[9]?.lastBlogSection?.[0].subtitle || "Suivez nos actualités pour rester informé de nos événements et bien plus encore.";
     const blogData = data.home?.[9]?.lastBlogSection?.[0].blog;
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true, margin: "-100px" });
@@ -17,7 +17,7 @@ export default function BlogSection() {
     <section ref={ref} className="py-20 px-8 lg:px-20 2xl:45">
       <div className="container-custom">
         <div className="flex flex-col items-center gap-12 md:gap-16">
-            <SectionTitle title={getTitle} subTitle={getSubTitle} />
+            <SectionTitle title={getTitle} />
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
             {blogData?.map((post, index) => (

@@ -47,14 +47,14 @@ const serviceItems = [
 
 export default function ServicesSection(): JSX.Element {
     const getTitle = data.home?.[4]?.ourServicesSection?.[0]?.title || 'Nos services';
-    const getSubTitle = data.home?.[4]?.ourServicesSection?.[0]?.subtitle || "Vous offrir un service de qualité est la raison d'être de notre start-up.";
+    // const getSubTitle = data.home?.[4]?.ourServicesSection?.[0]?.subtitle || "Vous offrir un service de qualité est la raison d'être de notre start-up.";
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true, margin: "-100px" });
   return (
     <section ref={ref}  className="bg-[#F2F2F2] py-20 px-8 lg:px-20">
       <div className="container-custom">
         <div className="flex flex-col md:items-center gap-12 md:gap-16">
-        <SectionTitle title={getTitle} subTitle={getSubTitle} />
+        <SectionTitle title={getTitle}  />
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {serviceItems.map((service, index) => (
