@@ -21,7 +21,7 @@ export default function AboutPage() {
     
     // Notre Histoire
     const storyTitle = data.about?.[1].title;
-    const storySubTitle = data.about?.[1].subTitle;
+    // const storySubTitle = data.about?.[1].subTitle;
     const storyImage = data.about[1].image;
     const storyText1 = data.about?.[1].history?.[0].text1;
     const storyText2 = data.about?.[1].history?.[1].text2;
@@ -75,7 +75,7 @@ export default function AboutPage() {
             <section className="bg-[#F2F2F2] pt-20 lg:py-20 px-8 lg:px-20">
                 <div ref={storyRef} className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     <div className="flex flex-col gap-12">
-                        <div className="flex flex-col gap-5">
+                        <div className="flex flex-col items-center lg:items-start gap-5">
                             <motion.h2 
                                 initial={{ y: 100, opacity: 0 }}
                                 animate={isStoryInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
@@ -84,14 +84,13 @@ export default function AboutPage() {
                             >
                                 {storyTitle}
                             </motion.h2>
-                            <motion.p 
+                            <motion.div 
                                 initial={{ y: 100, opacity: 0 }}
                                 animate={isStoryInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
                                 transition={{ duration: 1, ease: "easeOut" }}
-                                className="text-center lg:text-left text-xl text-[#3B4E6A]"
+                                className="w-20 rounded-2xl bg-[#1C2736] py-[2px] "
                             >
-                                {storySubTitle}
-                            </motion.p>
+                            </motion.div>
                         </div>
 
                         <div className="flex flex-col gap-8 text-[#3B4E6A] text-base">
@@ -168,13 +167,13 @@ export default function AboutPage() {
                                     alt="Notre Mission"
                                     width={948}
                                     height={967}
-                                    className="w-full h-full object-cover transition-transform duration-600 hover:scale-110"
+                                    className="w-full h-full object-cover transition-transform duration-600 hover:scale-110 mb-12"
                                 />
                             </motion.div>
                         </div>
                     </div>
                     <div className="order-1 lg:order-2 flex flex-col gap-12">
-                        <div className="flex flex-col gap-5">
+                        <div className="flex flex-col items-center lg:items-start gap-5">
                             <motion.h2 
                                 initial={{ x: 100, opacity: 0 }}
                                 animate={isMissionInView ? { x: 0, opacity: 1 } : { x: 100, opacity: 0 }}
@@ -183,14 +182,13 @@ export default function AboutPage() {
                             >
                                 {missionTitle}
                             </motion.h2>
-                            <motion.p 
+                            <motion.div 
                                 initial={{ x: 100, opacity: 0 }}
                                 animate={isMissionInView ? { x: 0, opacity: 1 } : { x: 100, opacity: 0 }}
                                 transition={{ duration: 1, ease: "easeOut" }}
-                                className="text-center lg:text-left text-xl text-[#3B4E6A]"
+                                className="w-20 rounded-2xl bg-[#1C2736] py-[2px] "
                             >
-                                {missionSubTitle}
-                            </motion.p>
+                            </motion.div>
                         </div>
 
                         <div className="flex flex-col gap-8 text-[#3B4E6A] text-base">
