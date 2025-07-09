@@ -616,7 +616,7 @@
             "hero" : [
                 {
                     "id" :0,
-                    "cover" : "https://res.cloudinary.com/dr8ofciki/image/upload/v1751897530/Enywork/about-image.jpg",
+                    "cover" : "https://res.cloudinary.com/dr8ofciki/image/upload/v1752076323/Enywork/Update-About-Us-Image_tjgvai.webp",
                     "pattern" : "https://res.cloudinary.com/dr8ofciki/image/upload/v1744118684/Enywork/hero-cover-v1.webp",
                     "title" : "A Propos de Nous",
                     "subTitle" : "Mieux nous connaître, c'est vous donner de l'assurance."
@@ -784,7 +784,7 @@
             "hero" : [
                 {
                     "id" : 0,
-                    "cover": "https://res.cloudinary.com/dr8ofciki/image/upload/v1751899930/Enywork/Realization-Image.jpg",
+                    "cover": "https://res.cloudinary.com/dr8ofciki/image/upload/v1752077065/Enywork/Update-Realization-Image_xaf3um.webp",
                     "title" : "Nos Réalisations",
                     "subTitle" : "Ce que nous avons accompli dans le passé peut vous inspirer."
                 }
@@ -813,7 +813,7 @@
             "id" : 0,
             "title" : "Nos Services",
             "subTitle" : "Vous offrir un service de qualité est la raison d’être de notre start-up.",
-            "cover" : "https://res.cloudinary.com/dr8ofciki/image/upload/v1751900494/Enywork/Services-Image.jpg"
+            "cover" : "https://res.cloudinary.com/dr8ofciki/image/upload/v1752077065/Enywork/Update-Services-Image_1_dmraax.webp"
         }
     ],
 
