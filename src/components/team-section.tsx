@@ -33,14 +33,14 @@ const teamMembers = [
 
 export default function TeamSection() {
     const getTitle = data.home?.[5]?.ourTeam?.[0].title || 'Notre Équipe';
-    const getSubTitle = data.home?.[5]?.ourTeam?.[0]?.subtitle || 'Rencontrer nos spécialistes vous donne un aperçu d’une réalisation réussie de vos projets.';
+    // const getSubTitle = data.home?.[5]?.ourTeam?.[0]?.subtitle || 'Rencontrer nos spécialistes vous donne un aperçu d’une réalisation réussie de vos projets.';
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true, margin: "-100px" });
   return (
     <section ref={ref}  className="bg-white py-20 px-8 lg:px-25">
       <div className="container-custom">
         <div className="flex flex-col items-center gap-12">
-            <SectionTitle title={getTitle} subTitle={getSubTitle} />
+            <SectionTitle title={getTitle} />
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12 lg:px-40">
             {teamMembers.map((member, index) => (

@@ -9,7 +9,7 @@ import SectionTitle from "./ui/sectionTitle"
 
 export default function RealizationsSection() {
     const getTitle= data.home?.[3]?.ourRealisationSection?.[0]?.title || "Nos Réalisations";
-    const getSubTitle= data.home?.[3]?.ourRealisationSection?.[0]?.subtitle || "Ce que nous avons accompli dans le passé peut vous inspirer.";
+    // const getSubTitle= data.home?.[3]?.ourRealisationSection?.[0]?.subtitle || "Ce que nous avons accompli dans le passé peut vous inspirer.";
     const realizationItems=data.home?.[3]?.ourRealisationSection?.[0]?.realizationItems;
 
     const ref = useRef(null);
@@ -18,7 +18,7 @@ export default function RealizationsSection() {
     <section ref={ref} className="bg-white py-20 px-8 lg:px-20">
         <div className="container-custom">
             <div className="flex flex-col  gap-12 ">
-                <SectionTitle title={getTitle} subTitle={getSubTitle} />      
+                <SectionTitle title={getTitle}  />      
 
                 <div className=" w-full lg:w-none grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 ">
                     {realizationItems?.map((item, index) => (

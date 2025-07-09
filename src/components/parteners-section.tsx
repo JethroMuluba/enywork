@@ -26,13 +26,25 @@ const PartenersSection = () => {
     const isInView = useInView(ref, { once: true, margin: "-100px" })
     return (
       <div ref={ref} className='py-20 px-8 lg:px-20'>
-          <motion.h2 
+
+        <div className='flex flex-col gap-5 items-center'>
+
+        <motion.h2 
                   initial={{ x: 100, opacity: 0 }}
                   animate={isInView ? { x: 0, opacity: 1 } : { x: 100, opacity: 0 }}
                   transition={{ duration: 0.5, ease: "easeOut" }}
-                  className=" text-3xl lg:text-4xl text-center font-medium text-[#E10919] mb-12"> 
+                  className=" text-3xl lg:text-4xl text-center font-medium text-[#E10919] "> 
               Nos partenaires de confiance
           </motion.h2>
+                        <motion.div 
+                            initial={{ y: 100, opacity: 0 }}
+                            animate={isInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
+                            transition={{ duration: 1, ease: "easeOut" }}
+              className=" w-20 rounded-2xl bg-[#1C2736] py-[2px] mb-12"> 
+            
+              </motion.div>
+        </div>
+
           <Marquee gradient={true} gradientWidth={120} speed={40} pauseOnHover={true}>
             {logos?.map((logo, idx) => (
               <motion.div 
