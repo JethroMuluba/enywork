@@ -8,7 +8,7 @@ import { useRef } from 'react'
 
 export default function TestimonialsSection() {
     const getTitle = data.home?.[8]?.testimonialSection?.[0].title || "Ce qu'ils disent de nous";
-    const getSubTitle = data.home?.[8]?.testimonialSection?.[0].subtitle || "Des témoignages forts et authentiques provenant des grandes autorités de ce pays et d'ailleurs.";
+    // const getSubTitle = data.home?.[8]?.testimonialSection?.[0].subtitle || "Des témoignages forts et authentiques provenant des grandes autorités de ce pays et d'ailleurs.";
     const testimonialData = data.home?.[8]?.testimonialSection?.[0].testimonial;
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true, margin: "-100px" });
@@ -16,7 +16,7 @@ export default function TestimonialsSection() {
     <section ref={ref} className="bg-[#F2F2F2] py-20 px-8 lg:px-25 2xl:px-45">
       <div className="container-custom">
         <div className="flex flex-col items-center gap-12 md:gap-16">
-            <SectionTitle title={getTitle} subTitle={getSubTitle} />
+            <SectionTitle title={getTitle} />
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
             {testimonialData?.map((testimonial, index) => (

@@ -8,7 +8,7 @@ import data from '@/data/data.json'
 
 export default function GalleryAbout() {
   const getTitle = data.about?.[7]?.title || "Notre Galerie";
-  const getSubTitle = data.about?.[7]?.subTitle || "Découvrez nos réalisations, notre équipe passionnée et les moments forts qui font vibrer notre agence au quotidien.";
+  // const getSubTitle = data.about?.[7]?.subTitle || "Découvrez nos réalisations, notre équipe passionnée et les moments forts qui font vibrer notre agence au quotidien.";                                                                                                                       
   const images = data.about?.[7]?.images;
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: "-100px" })
@@ -94,7 +94,7 @@ export default function GalleryAbout() {
       <div className="container mx-auto px-8">
         <div className="flex flex-col items-center gap-[50px]">
           {/* Title Section */}
-          <SectionTitle title={getTitle} subTitle={getSubTitle} />
+          <SectionTitle title={getTitle} />
 
           {/* Gallery Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-[19px] w-full max-w-[1401px]">

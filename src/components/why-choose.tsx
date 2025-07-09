@@ -33,13 +33,21 @@ const WhyChoose = () => {
     const isInView = useInView(ref, { once: true, margin: "-100px" });
   return (
     <section ref={ref} className="py-16 bg-[#F2F2F2] px-8 lg:px-20">
-        <div className="container-custom">
+        <div className="container-custom flex flex-col items-center gap-5">
           <motion.h2 
             initial={{ y: 100, opacity: 0 }}
             animate={isInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
             transition={{ duration: 0.5, ease: "easeOut" }}
-            className="text-3xl lg:text-4xl text-center font-medium text-[#E10919] mb-16">Pourquoi nous choisir ?
+            className="text-3xl lg:text-4xl text-center font-medium text-[#E10919]">Pourquoi nous choisir ?
         </motion.h2>
+
+        <motion.div 
+                            initial={{ y: 100, opacity: 0 }}
+                            animate={isInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
+                            transition={{ duration: 1, ease: "easeOut" }}
+              className=" w-20 rounded-2xl bg-[#1C2736] py-[2px] mb-12"> 
+            
+              </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {benefits.map((benefit, index) => (

@@ -44,7 +44,6 @@ export default function AboutPage() {
 
     // Nos Valeurs
     const valuesTitle = data.about?.[4].title;
-    const valuesSubTitle = data.about?.[4].subTitle;
     const valuesTextExc = data.about?.[4].textExcellence;
     const valuesTextSimp = data.about?.[4].textSimplicité;
     const valuesTextDeter = data.about?.[4].textDétermination;
