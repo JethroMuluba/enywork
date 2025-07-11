@@ -394,27 +394,27 @@
                     "testimonial" : [
                         {
                             "id" : 0,
-                            "name" : "Yusuf Heri",
-                            "role" : "CEO & Développeur Web Full-Stack",
-                            "image" : "https://res.cloudinary.com/dr8ofciki/image/upload/v1745853594/Enywork/yusuf-heri-profile.jpg",
-                            "quote" : "Une expérience exceptionnelle ! Leur capacité à s'adapter à nos besoins spécifiques a été un atout majeur dans notre croissance rapide.",
+                            "name" : "Dr TSHIMANGA MUTOMBO Etienne",
+                            "role" : "Le Directeur Général de l'OCC",
+                            "image" : "https://res.cloudinary.com/dr8ofciki/image/upload/v1752233211/Enywork/OCC-Dg_napllo.jpg",
+                            "quote" : "ENYWORK nous a accompagné avec une expertise digitale rare. Leur écoute, leur créativité et leur réactivité ont fait toute la différence.",
                             "highlighted" : true
                         },
 
                         {
                             "id" : 1,
-                            "name" : "Franck Mbuyi",
-                            "role" : "CTO & Développeur Mobile",
-                            "image" : "https://res.cloudinary.com/dr8ofciki/image/upload/v1745853771/Enywork/franck-mbuyi-profile.png",
-                            "quote" : "Une expérience exceptionnelle ! Leur capacité à s'adapter à nos besoins spécifiques a été un atout majeur dans notre croissance rapide.",
+                            "name" : "P.O NIYONSABA SEBIGUNDA Edson",
+                            "role" : "Directeur Général de HEC-Kinshasa ",
+                            "image" : "https://res.cloudinary.com/dr8ofciki/image/upload/v1752231870/Enywork/dg_ISC_Kin-DAiQ-kMF_rsg6xt.jpg",
+                            "quote" : "Enywork SARL a développé la plateforme Optsolution qui a révolutionné notre processus administratif.",
                             "highlighted" : false
                         },
 
                         {
                             "id" : 2,
-                            "name" : "Jethro Muluba",
-                            "role" : "Ui & Ux et Dev Web Full-Stack",
-                            "image" : "https://res.cloudinary.com/dr8ofciki/image/upload/v1745852687/Enywork/jethro-muluba-profile.png",
+                            "name" : "Freddy YODI SHEMBO",
+                            "role" : "DG, APCSC",
+                            "image" : "https://res.cloudinary.com/dr8ofciki/image/upload/v1752232343/Enywork/team3-1_u2egiw.jpg",
                             "quote" : "Une expérience exceptionnelle ! Leur capacité à s'adapter à nos besoins spécifiques a été un atout majeur dans notre croissance rapide.",
                             "highlighted" : true
                         }
