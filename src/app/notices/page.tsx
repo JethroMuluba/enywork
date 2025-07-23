@@ -15,7 +15,7 @@ const Notices = () => {
                                         animate={isInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
                                         transition={{ duration: 0.5, ease: "easeOut" }}
             className='text-[#E10919] font-medium text-4xl pt-20'>
-                Mentions légales/Conditions d&apos;utilisation et Politique de confidentialité
+                Mentions légales / Conditions d&apos;utilisation et Politique de confidentialité
             </motion.h2>
 
             <motion.div 

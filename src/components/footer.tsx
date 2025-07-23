@@ -140,22 +140,9 @@ export default function Footer() {
                 href="/notices"
                 className="text-light-secondary font-light text-lg hover:text-[#E10919]"
                 >
-                Mentions légales 
+                Mentions légales / Conditions d&apos;utilisation et Politique de confidentialité
               </Link>
 
-              <Link 
-                href="/terms"
-                className="text-light-secondary font-light text-lg hover:text-[#E10919]"
-                >
-                Conditions d&apos;utilisation
-              </Link>
-
-              <Link 
-                href="/privacy"
-                className="text-light-secondary font-light text-lg hover:text-[#E10919]"
-                >
-                Politique de confidentialité
-              </Link>
             </div>
           </div>
         </div>
