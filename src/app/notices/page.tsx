@@ -14,8 +14,8 @@ const Notices = () => {
                                         initial={{ y: 100, opacity: 0 }}
                                         animate={isInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
                                         transition={{ duration: 0.5, ease: "easeOut" }}
-            className='text-[#E10919] font-medium text-4xl pt-7'>
-                Mentions légales
+            className='text-[#E10919] font-medium text-4xl pt-20'>
+                Mentions légales/Conditions d&apos;utilisation et Politique de confidentialité
             </motion.h2>
 
             <motion.div 
@@ -104,7 +104,7 @@ const Notices = () => {
                         - Local Hosting :
                     </h4>
                     <p className='text-[#3B4E6A] '>
-                    Ce site web est hébergée par notre propre service d&apos;hébergement, assurant ainsi une sécurité optimale des données et une maîtrise complète de l&apos;infrastructure technique.
+                        Ce site web est hébergée par notre propre service d&apos;hébergement, assurant ainsi une sécurité optimale des données et une maîtrise complète de l&apos;infrastructure technique.
                     </p>
                 </div>
         </div>
@@ -116,11 +116,27 @@ const Notices = () => {
 
                 <div className=' flex flex-col gap-2 pl-6'>
                     <h4 className=' text-xl text-[#E10919]'>
-                        - Utilisation de contenus:
+                        - Utilisation de contenus :
                     </h4>
                     <p className='text-[#3B4E6A] '>
-                    L’ensemble des contenus (textes, images, vidéos, logos, charte graphique…) présents sur ce site sont la propriété exclusive de ENYWORK SARL sauf indication contraire.
-                    Toute reproduction ou utilisation sans autorisation est strictement interdite.
+                        L’ensemble des contenus (textes, images, vidéos, logos, charte graphique…) présents sur ce site sont la propriété exclusive de ENYWORK SARL sauf indication contraire.
+                        Toute reproduction ou utilisation sans autorisation est strictement interdite.
+                    </p>
+                </div>
+        </div>
+
+        <div className='flex flex-col gap-2 pb-20'>
+                <h3 className='text-[#1C2736] text-2xl pt-4' >
+                    5. Responsabilité
+                </h3>
+
+                <div className=' flex flex-col gap-2 pl-6'>
+                    <h4 className=' text-xl text-[#E10919]'>
+                        - Notre engagement :
+                    </h4>
+                    <p className='text-[#3B4E6A] '>
+                        ENYWORK SARL s&apos;engage à fournir des informations à jour et fiables, mais ne peut être tenu responsable des erreurs ou omissions.
+                        L&apos;utilisateur du site reste responsable de l&apos;utilisation des informations fournies.
                     </p>
                 </div>
         </div>
