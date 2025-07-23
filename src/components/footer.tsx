@@ -134,6 +134,29 @@ export default function Footer() {
                 </Link>
               </div>
             </motion.div>
+
+            <div className="flex flex-col gap-2">
+              <Link 
+                href="/notices"
+                className="text-light-secondary font-light text-lg hover:text-[#E10919]"
+                >
+                Mentions légales 
+              </Link>
+
+              <Link 
+                href="/terms"
+                className="text-light-secondary font-light text-lg hover:text-[#E10919]"
+                >
+                Conditions d&apos;utilisation
+              </Link>
+
+              <Link 
+                href="/privacy"
+                className="text-light-secondary font-light text-lg hover:text-[#E10919]"
+                >
+                Politique de confidentialité
+              </Link>
+            </div>
           </div>
         </div>
       </div>

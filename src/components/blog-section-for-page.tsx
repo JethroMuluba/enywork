@@ -37,7 +37,7 @@ export default function BlogSection() {
 
                 <div className="p-6 flex flex-col gap-5">
                   <div>
-                    <h3 className="text-[#E10919] font-medium text-2xl mb-2">{post.title}</h3>
+                    <h3 className="text-[#E10919] © mb-2">{post.title}</h3>
                     <p className="text-[#1C2736] text-lg">{post.subtitle}</p>
                   </div>
 
