@@ -3,7 +3,7 @@
 import HeroForAll from '@/components/hero-for-all'
 import React from 'react'
 import data from '@/data/data.json'
-import SearchBar from '@/components/ui/search-bar'
+// import SearchBar from '@/components/ui/search-bar'
 import BlogSection from '@/components/blog-section-for-page'
 import BlogVedette from '@/components/vedette-blog'
 import NewsletterSection from "@/components/news-letters"
@@ -21,7 +21,7 @@ const Blogs = () => {
   return (
     <main className="min-h-screen pt-[92px] lg:pt-[124px]  ">
         <HeroForAll title={getTitle} subTitle={getSubTitle} cover={getCover} pattern={getPattern} />
-        <SearchBar/>
+        {/* <SearchBar/> */}
         <BlogSection/>
         <BlogVedette/>
         <NewsletterSection/>
