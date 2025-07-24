@@ -25,9 +25,9 @@ const ContactForm = () => {
 
     const onSubmitForm = (data: FormData) => {
 
-      const SERVICE_ID = 'outlook_mail_service';
-      const TEMPLATE_ID = 'contact_formId';
-      const USER_ID = 'yZVMH1wXdomQsAwds';
+      const SERVICE_ID = 'service_4x678np';
+      const TEMPLATE_ID = 'template_g1dr9og';
+      const USER_ID = 'mUnoVjT0IKUxkXaOI';
   
       emailjs.send(
         SERVICE_ID,TEMPLATE_ID, data, USER_ID
