@@ -135,7 +135,11 @@ export default function Footer() {
               </div>
             </motion.div>
 
-            <div className="flex flex-col gap-2">
+            <motion.div 
+                                initial={{ y: 100, opacity: 0 }}
+                                animate={isInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
+                                transition={{ duration: 3.5, ease: "easeOut" }}
+            className="flex flex-col gap-2">
               <Link 
                 href="/notices"
                 className="text-light-secondary font-light text-lg hover:text-[#E10919]"
@@ -143,7 +147,7 @@ export default function Footer() {
                 Mentions légales / Conditions d&apos;utilisation et Politique de confidentialité
               </Link>
 
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>
